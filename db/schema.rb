@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100101231128) do
+ActiveRecord::Schema.define(:version => 20100102230902) do
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "paypal_payment_profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "employees", :force => true do |t|
     t.string   "login",                     :limit => 40
@@ -32,5 +39,22 @@ ActiveRecord::Schema.define(:version => 20100101231128) do
   end
 
   add_index "employees", ["login"], :name => "index_employees_on_login", :unique => true
+
+  create_table "resources", :force => true do |t|
+    t.integer  "role_id"
+    t.string   "path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "resources", ["path"], :name => "index_resources_on_path"
+
+  create_table "roles", :force => true do |t|
+    t.integer  "company_id"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

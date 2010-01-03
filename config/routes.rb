@@ -1,11 +1,20 @@
 ActionController::Routing::Routes.draw do |map|
-  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.login '/login', :controller => 'sessions', :action => 'new'
-  map.register '/register', :controller => 'employees', :action => 'create'
-  map.signup '/signup', :controller => 'employees', :action => 'new'
-  map.resources :employees
+  
+  map.namespace :admin do |admin|
+    admin.root :controller => 'employees', :action => 'dashboard'
+    admin.dashboard '/dashboard', :controller => 'employees', :action => 'dashboard'
+    admin.logout  '/logout', :controller => 'sessions', :action => 'destroy'
+    admin.login   '/login',  :controller => 'sessions', :action => 'new'
+    admin.resources :employees
+    admin.resource :session
+  end
+  # map.logout '/logout', :controller => 'admin/sessions', :action => 'destroy'
+  # map.login '/login', :controller => 'admin/sessions', :action => 'new'
+  # map.register '/register', :controller => 'employees', :action => 'create'
+  # map.signup '/signup', :controller => 'employees', :action => 'new'
+  # map.resources :employees
 
-  map.resource :session
+  # map.resource :session
 
   # The priority is based upon order of creation: first created -> highest priority.
 
