@@ -3,6 +3,14 @@ class Admin::EmployeesController < Admin::AdminController
   include AuthenticatedSystem
   
   def dashboard
+    # session[:firstname] = 'Tyler'
+    # session[:lastname]  = 'Flint'
+    # session[:test] = {}
+    # session[:test][:firstname]  = 'Brittany'
+    # session[:test][:lastname]   = 'Flint'
+  end
+  
+  def index
     
   end
   

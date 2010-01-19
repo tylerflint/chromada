@@ -1,1 +1,5 @@
 <h1>Welcome to the admin interface</h1>
+
+<% test_helper_with_session_validation do |g|
+	g.column :title => 'world'
+end %>

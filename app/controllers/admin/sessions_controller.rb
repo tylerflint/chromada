@@ -1,5 +1,5 @@
 # This controller handles the login/logout function of the site.  
-class Admin::SessionsController < Admin::AdminController
+class Admin::SessionsController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
