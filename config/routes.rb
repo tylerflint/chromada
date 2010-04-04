@@ -1,13 +1,27 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.namespace :admin do |admin|
-    admin.root :controller => 'employees', :action => 'dashboard'
-    admin.dashboard '/dashboard', :controller => 'employees', :action => 'dashboard'
-    admin.logout  '/logout', :controller => 'sessions', :action => 'destroy'
-    admin.login   '/login',  :controller => 'sessions', :action => 'new'
-    admin.resources :employees
-    admin.resource :session
+  map.root                                        :controller => 'static'
+                                                  
+  map.products          '/products.html',         :controller => 'static',        :action => 'products' 
+  map.services          '/services.html',         :controller => 'static',        :action => 'services'
+  map.downloads         '/downloads.html',        :controller => 'static',        :action => 'downloads'
+  map.support           '/support.html',          :controller => 'static',        :action => 'support'
+  map.about             '/about.html',            :controller => 'static',        :action => 'about'
+  map.contact           '/contact.html',          :controller => 'static',        :action => 'contact'
+  
+  map.send_feedback     '/send-feedback.html',    :controller => 'static',        :action => 'send_feedback'
+  map.privacy_policy    '/privacy-policy.html',   :controller => 'static',        :action => 'privacy_policy'
+  map.terms_of_use      '/terms-of-use.html',     :controller => 'static',        :action => 'terms_of_use'
+                                                  
+  map.namespace :admin do |admin|             
+    admin.root                                    :controller => 'employees',     :action => 'dashboard'
+    admin.dashboard     '/dashboard',             :controller => 'employees',     :action => 'dashboard'
+    admin.logout        '/logout',                :controller => 'sessions',      :action => 'destroy'
+    admin.login         '/login',                 :controller => 'sessions',      :action => 'new'
+    admin.resources                               :employees
+    admin.resource                                :session
   end
+  
   # map.logout '/logout', :controller => 'admin/sessions', :action => 'destroy'
   # map.login '/login', :controller => 'admin/sessions', :action => 'new'
   # map.register '/register', :controller => 'employees', :action => 'create'
