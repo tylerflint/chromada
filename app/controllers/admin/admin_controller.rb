@@ -1,6 +1,8 @@
 class Admin::AdminController < ApplicationController
-  before_filter :validate_logged_in
-  layout "admin"
+  include             AuthenticatedSystem
+  before_filter       :validate_logged_in
+  skip_before_filter  :validate_logged_in, :only => [:login]
+  layout              "admin"
   
   protected
   
