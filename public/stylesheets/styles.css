@@ -1,0 +1,110 @@
+/************************************************** GLOBAL STYLES **************************************************/
+
+/* reset */
+body, div, html, p, ol, ul, li						{margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6								{float:left; width:100%; margin:0; padding:0;}
+img													{float:left; border:none;}
+
+/* MAIN PAGE ELEMENTS */
+body 												{background:#FFFFFF; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
+                               		
+/* WRAPPERS */                       		
+.wrapper				 							{margin:0 auto;}
+.page-wrapper 			 							{margin:0 auto; width:960px;}
+
+/* LISTS */
+ul													{float:left; list-style-image:none; list-style-type:none; list-style-position:inside;}
+ul li												{float:left;}
+                                    		
+/* LINKS */                           		
+a													{text-decoration:none; color:#666666;}
+a:hover												{text-decoration:none; color:#00D3D3;}
+                                    		
+/* HEADERS */    
+h1													{}                     		
+h2													{}
+h3													{}
+h4													{}
+h5													{}
+h6													{}
+                                    		
+/* PADDERS */                         		
+                                    		
+/* TEXT FORMATS */                    		
+.uppercase			 			    				{text-transform:uppercase;}
+.capitalize			 			    				{text-transform:capitalize;}
+.lowercase			 			    				{text-transform:lowercase;}
+                     			    		
+.italic				 			    				{font-style:italic;}
+.bold				 			    				{font-weight:bold;}
+.underline			 			    				{text-decoration:underline;}
+
+/* colors */
+.light-grey-text									{color:#999999;}
+.medium-grey-text									{color:#666666;}
+.dark-grey-text										{color:#333333;}
+
+.bright-blue-text									{color:#00D3D3;}
+
+/* FORM ELEMENTS */
+input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C8C8C8 solid 1px; text-transform:capitalize;}
+
+/* VALIDATION */
+
+/* MESSAGING */
+.message 											{float:left; width: 100%; margin:10px 0px 10px 0px; padding:5px; border: 1px solid;}
+
+.success											{}
+.notice 											{color:#516C6B; border-color:#516C6B; background-color:#92BFB3;}
+.warning 											{color:#DA7f3C; border-color:#DA7f3C; background-color:#FFD5B7;}
+.error	 											{color:#DA3C3C; border-color:#DA3C3C; background-color:#FFB7B7;}
+                                    		
+/* SYMBOLS */                         		
+.copyright											{}
+                                    		
+/* DIVIDERS */                        		
+.main-divider										{float:left; width:100%; height:5px; margin:2px 0px; background:url('../images/images-sprite.jpg') no-repeat 0px -190px;}
+                       		
+/* OTHER */                           		
+.no-display 										{display:none;}
+.inactive											{color:#999999;}
+.hand-cursor 										{cursor:pointer;}
+
+/* ALTERNATE CONTENT */
+.flash-alt-content									{float:left; width:100%;}
+
+/************************************************** MAIN ELEMENT STYLES **************************************************/
+.active-link 										{color:#00D3D3;}
+
+/***** MAIN PAGE *****/
+.page												{float:left;}
+.page-body											{min-height:215px;}
+
+/* header */
+#header												{position:relative; float:left; width:100%;}
+#logo												{float:left; width:232px; height:72px; margin:25px 0px; background:url('../images/images-sprite.jpg') no-repeat -245px -55px;}
+#top-nav											{float:left; color:#666666; font-size:10px; margin:0px 300px 0px 0px; text-transform:uppercase;}
+#account-login										{float:left;}
+#site-search										{position:absolute; top:-12px; right:36px;}
+#site-search-icon									{position:absolute; top:3px; right:5px; width:18px; height:18px; background:url('../images/images-sprite.jpg') no-repeat -560px -155px;}
+
+/* footer */
+#footer												{float:left; width:100%; margin:0px 0px 25px 0px;}
+#bottom-nav											{float:left; width:100%; color:#666666; font-size:8px;}
+
+/************************************************** PAGES **************************************************/
+
+/* index (home) */
+#index-page-body									{float:left; margin:75px 0px;}
+#spotlight											{float:left;}
+
+#spotlight-left										{float:left; width:375px;}
+#spotlight-image									{margin:0 auto; width:175px; height:175px; background:url('../images/images-sprite.jpg') no-repeat -50px 0px;}
+
+#spotlight-right									{float:left; width:450px;}
+#spotlight-content									{margin:0 auto; width:100%;}
+#spotlight-content p								{line-height:20px; color:#666666;}
+#spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
+#spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
+#take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}
+#take-a-tour:hover									{text-decoration:underline;}							
