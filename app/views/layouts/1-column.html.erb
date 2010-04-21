@@ -24,14 +24,16 @@
 	
 	<body>		
 		<div class='page-wrapper wrapper'>
-			<div id='main-page' class='page'>
+			<div class='page'>
 				<!-- HEADER -->
 				<div id='page-header'>
 					<%= render :partial => 'shared/header' %>
 				</div>
 				
 				<!-- PAGE BODY -->
-				<%= yield %>
+				<div id='page-body-wrapper'>
+					<%= yield %>
+				</div>
 				
 				<!-- FOOTER -->
 				<div id='page-footer'>
@@ -41,7 +43,7 @@
 		</div>
 		
 		<!-- BEGIN GOOGLE ANALYTICS -->
-			<%= render :partial => 'shared/ga'%>
+		<%= render :partial => 'shared/ga'%>
 		<!-- END GOOGLE ANALYTICS -->		
 		
 	</body>

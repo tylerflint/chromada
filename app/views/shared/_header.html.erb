@@ -1,10 +1,10 @@
-<%= link_to image_tag('', :alt => ''), root_url, :id => 'logo' %>
+<%= link_to image_tag('', :alt => ''), root_url, :id => 'logo', :class=> 'site-image' %>
 
 <!-- HEADER -->
 <div id='header'>
 	
 	<!-- PRIMARY NAV -->
-	<div id='top-nav'>
+	<div id='primary-nav'>
 		<ul>
 			<li><%= link_to "products :", 	products_url, 	:class => (@active == 'products') 	? 'active-link' : '' %></li>
 			<li><%= link_to "services :", 	services_url, 	:class => (@active == 'services') 	? 'active-link' : '' %></li>
@@ -16,8 +16,31 @@
 	</div>
 	
 	<!-- LOGIN -->
-	<div id='account-login'>
-		<span class='bright-blue-text uppercase'>login</span>
+	<div id='account-login-wrapper'>
+		<span class='btn-site-login'>login</span>
+
+		<div id='account-login'>
+			<form>
+				<div id='account-login-new-user' class='site-image'></div>
+				
+				<div id='account-login-returning-user'>
+					<% form_for(:quote, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
+						<span>Returning user login:</span>
+						<div class='form-group'>
+							<span class='form-label'><%= form.label :name, '*Name:'%></span>
+						    <span class='form-field'><%= form.text_field :name, :class => 'required' %></span>
+						</div>
+						
+						<div class='form-group'>
+							<span class='form-label'><%= form.label :password, '*Password:'%></span>
+						    <span class='form-field'><%= form.text_field :password, :class => 'required' %></span>
+						</div>
+						
+						<span>Forgotten Password?</span>
+					<% end %>
+				</div>
+			</form>
+		</div>
 	</div>
 	
 	<!-- SEARCH -->
@@ -27,4 +50,21 @@
 	
 </div>
 
-<div class='main-divider'></div>
+<div class='main-divider site-image'></div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		"use strict";
+
+		var form, Validation, $;
+
+		form = new Validation('account-login-form');
+		function validateAndSubmit()
+		{
+			if (form.validate())
+			{
+				$('account-login-form').submit();
+			}
+		}
+	//]]>
+</script>
