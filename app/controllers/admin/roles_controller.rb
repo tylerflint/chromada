@@ -83,6 +83,6 @@ class Admin::RolesController < Admin::AdminController
     def find_role
       @role = Role.find(params[:id])
     end
-
+    
 end
 
