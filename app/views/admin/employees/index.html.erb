@@ -1,6 +1,23 @@
 <h1>Employees</h1>
 
-<% admin_grid :employee do |grid| %>
-	<% grid.column :title => "ID" %>
-	<% grid.column :title => "Name"%>
-<% end %>
+<div class='page-body'>
+	<div id='employee-grid-page'>
+
+		<h1>Employees</h1>
+		
+		<div id='super-filter-wrapper'>
+			<div id='super-filter'>
+				
+			</div>
+		</div>
+		
+		<div id='employee-grid-wrapper'>
+			<div id='employee-grid'>
+				<% admin_grid :employee do |grid| %>
+					<% grid.column :title => "ID" %>
+					<% grid.column :title => "Name"%>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
