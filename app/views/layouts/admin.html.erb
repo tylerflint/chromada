@@ -2,22 +2,60 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>admin</title>
-	<%= stylesheet_link_tag "admin" %>
-	<%= yield :head %>
-</head>
-<body>
-	<div id="header">
-	</div>
-	<div id="content" class="clear">
-		<div id="left">
-			<%= render :partial => 'admin/shared/menu' %>
+	<head>		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Chromada (http://www.chromada.com)"/>
+		<meta name="abstract" content=""/>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="revisit-after" content="15 Days"/>
+		<meta name="robots" content="index, follow"/>
+		
+		<!-- LOAD CSS --> 
+		<%= stylesheet_link_tag "admin" %>
+		<%= stylesheet_link_tag 'styles' %>
+		
+		<%= stylesheet_link_tag 'base-1.0.1' %>
+		<!-- <style type='text/css'>@import "";</style> -->
+		
+		<!-- LOAD JAVASCRIPT -->
+		<%= javascript_include_tag 'base-1.0.1' %>
+		<!-- <script type="text/javascript" src=""></script> -->
+		
+		<title><%= @title %></title>
+		
+		<%= yield :head %>
+	</head>
+
+	<body>		
+		<div class='page-wrapper wrapper'>
+			<div class='page'>
+				<!-- HEADER -->
+				<div id='page-header'>
+					<%= render :partial => 'shared/header' %>
+				</div>
+				
+				<!-- PAGE BODY -->
+				<div id='page-body-wrapper'>
+					<div id='admin-body-left'>
+						<% render :partial => 'admin/shared/menu'%>
+					</div>
+					
+					<div id='admin-body-right'>
+						<%= yield %>
+					</div>
+				</div>
+				
+				<!-- FOOTER -->
+				<div id='page-footer'>
+					<%= render :partial => 'shared/footer' %>
+				</div>
+			</div>			
 		</div>
-		<div id="main">
-			<%= yield %>
-		</div>
-	</div>
-</body>
+		
+		<!-- BEGIN GOOGLE ANALYTICS -->
+		<%= render :partial => 'shared/ga'%>
+		<!-- END GOOGLE ANALYTICS -->
+		
+	</body>
 </html>

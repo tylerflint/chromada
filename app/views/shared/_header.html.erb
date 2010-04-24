@@ -25,18 +25,16 @@
 				
 				<div id='account-login-returning-user'>
 					<% form_for(:quote, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
-						<span>Returning user login:</span>
+						<h4>Returning user login:</h4>
 						<div class='form-group'>
-							<span class='form-label'><%= form.label :name, '*Name:'%></span>
-						    <span class='form-field'><%= form.text_field :name, :class => 'required' %></span>
+						    <span class='form-field'><%= form.text_field :name, :class => 'required', :value => 'name' %></span>
 						</div>
 						
 						<div class='form-group'>
-							<span class='form-label'><%= form.label :password, '*Password:'%></span>
-						    <span class='form-field'><%= form.text_field :password, :class => 'required' %></span>
+						    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password' %></span>
 						</div>
 						
-						<span>Forgotten Password?</span>
+						<a href=''><span class='site-link'>Forgotten Password?</span></a>
 					<% end %>
 				</div>
 			</form>

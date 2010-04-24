@@ -17,16 +17,16 @@ ul													{float:left; list-style-image:none; list-style-type:none; list-st
 ul li												{float:left;}
                                     		
 /* LINKS */                           		
-a													{text-decoration:none; color:#666666;}
+a													{text-decoration:none; color:#616161;}
 a:hover												{text-decoration:none; color:#00D3D3;}
                                     		
 /* HEADERS */    
-h1													{}                     		
-h2													{}
-h3													{}
-h4													{}
-h5													{}
-h6													{}
+h1													{font-size:15px;}                     		
+h2													{font-size:14px;}
+h3													{font-size:13px;}
+h4													{font-size:12px; color:#616161;}
+h5													{font-size:11px;}
+h6													{font-size:10px;}
                                     		
 /* PADDERS */                         		
                                     		
@@ -47,7 +47,7 @@ h6													{}
 .bright-blue-text									{color:#00D3D3;}
 
 /* FORM ELEMENTS */
-.form-group 										{float:left; width:100%; margin:2px 0px;}
+.form-group 										{float:left; margin:2px 0px;}
 .form-label 										{float:left;}
 label 												{float:left; width:75px; margin:10px 0px 0px 0px;}
 input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C8C8C8 solid 1px; text-transform:capitalize;}
@@ -79,6 +79,7 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 /************************************************** MAIN ELEMENT STYLES **************************************************/
 .active-link 										{color:#00D3D3;}
 .site-image 										{float:left; width:100px; height:100px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px;}
+.site-link			 								{float:left; color:#00D3D3; text-decoration:underline;}
 .main-divider										{width:100%; height:5px; margin:2px 0px; background-position:0px -176px;}
 
 /***** NAVIGATION *****/
@@ -103,6 +104,7 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 /* search */
 #site-search										{position:absolute; top:-12px; right:36px;}
 #site-search-icon									{position:absolute; top:3px; right:5px; width:18px; height:18px; background-position:-560px -155px;}
+#site-search input 									{float:left; padding:0px 2px;}
 
 /***** footer *****/
 #footer												{float:left; width:100%; margin:0px 0px 25px 0px;}
@@ -123,4 +125,8 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 #spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
 #spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
 #take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}
-#take-a-tour:hover									{text-decoration:underline;}							
+#take-a-tour:hover									{text-decoration:underline;}
+
+#account-login-returning-user h4 					{float:left; width:100%; margin:8px 0px;}
+#account-login-returning-user span 					{float:left;}
+#account-login-returning-user input 				{float:left; width:135px; padding:0px 2px;}
