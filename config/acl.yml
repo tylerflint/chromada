@@ -1,0 +1,7 @@
+- customer:
+    - add
+    - delete
+    - view:
+        - firstname
+        - lastname
+ 

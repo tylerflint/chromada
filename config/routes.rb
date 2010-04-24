@@ -16,8 +16,8 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|             
     admin.root                                    :controller => 'employees',     :action => 'dashboard'
     admin.dashboard     '/dashboard',             :controller => 'employees',     :action => 'dashboard'
-    admin.logout        '/logout',                :controller => 'sessions',      :action => 'destroy'
-    admin.login         '/login',                 :controller => 'sessions',      :action => 'new'
+    admin.logout        '/logout',                :controller => 'employees',      :action => 'logout'
+    admin.login         '/login',                 :controller => 'employees',      :action => 'login'
     admin.resources                               :employees
     admin.resource                                :session
   end
