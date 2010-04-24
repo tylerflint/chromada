@@ -1,7 +1,7 @@
 module Admin::AdminHelper
   
-  def admin_grid(model, options={})
-    grid = AdminToolbelt::Grid.new model, options
+  def admin_grid(object, options={})
+    grid = AdminToolbelt::Grid.new(object, options)
     yield grid
     concat grid.output
   end
