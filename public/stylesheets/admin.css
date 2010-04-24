@@ -4,30 +4,47 @@
 /***************************
 		Base		       * 
 ****************************/
-* 				{margin:0; padding:0; outline: none;}
-body, html		{height: 100%;}
-body			{}
-.clear			{min-height: 1px;}
-.clear:after	{content: " "; display: block; height: 0; font-size: 0;	clear: both; visibility: hidden;}
+* 													{margin:0; padding:0; outline: none;}
+body, html											{height: 100%;}
+body												{}
+.clear												{min-height: 1px;}
+.clear:after										{content: " "; display: block; height: 0; font-size: 0;	clear: both; visibility: hidden;}
 /* *html .clear	{height: 1px;} */
-img				{border: none;}
-ul,ol 			{list-style:none;}
+img													{border: none;}
 
 
 /* forms */
 
-/***************************
-		Header		       * 
-****************************/
-#header	{position: relative; width: 100%; height: 100px; background: blue;}
+/************************************************** MAIN ELEMENT STYLES **************************************************/
 
-/***************************
-		Content		       * 
-****************************/
 #admin-body-left									{float:left; width:175px;}
 #admin-body-right 									{float:left; width:750px;}
-/* menu */
 
-/***************************
-		Footer		       * 
-****************************/
+/***** header ******/
+#header												{}
+
+/***** body-left *****/
+
+/***** body-right *****/
+
+/***** toolbar *****/
+.toolbar 											{float:left; width:100%; margin:5px 0px;}
+.toolbar ul li										{float:left; margin:0px 5px;}
+.toolbar.pages ul li 								{text-decoration:underline;}
+.toolbar-btn 										{float:left; width:145px; height:18px; background:#000000;}
+.pages-wrapper 										{float:left; margin:0px 5px; border-left:1px solid #616161; border-right:1px solid #616161;}
+.pages li											{float:left; text-decoration:underline;}
+.pages li.active									{float:left; text-decoration:none;}
+.page 												{}
+.total-pages 										{float:left; margin:0px 12px; text-transform:uppercase;}
+.page-views 										{float:left; text-transform:uppercase;}
+.page-views ul li									{float:left;}
+.page-views ul li.active							{margin:-5px 0px 0px 0px; padding:4px 4px 2px 4px; border:1px solid #616161;}
+
+/************************************************** PAGES **************************************************/
+
+/* employee grid */
+#employee-grid-page 								{float:left; width:100%;}
+
+#super-filter-wrapper 								{float:left; width:100%; height:24px; margin:10px 0px; background:#000000;}
+#super-filter 										{float:left; width:100%;}
