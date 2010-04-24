@@ -3,18 +3,15 @@
 
 		<h1>Employees</h1>
 		
-		<div id='super-filter-wrapper'>
-			<div id='super-filter'>
-				
-			</div>
-		</div>
+		<%= render :partial => 'admin/shared/superFilter'%>
 		
 		<div id='employee-grid-wrapper'>
 			<div id='employee-grid'>
-				<% admin_grid :employee do |grid| %>
-					<% grid.column :title => "ID" %>
-					<% grid.column :title => "Name"%>
-				<% end %>
+				<%= render :partial => 'admin/shared/toolbar'%>
+				<div>
+					
+				</div>
+				<%= render :partial => 'admin/shared/toolbar'%>
 			</div>
 		</div>
 	</div>

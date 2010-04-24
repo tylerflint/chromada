@@ -12,8 +12,8 @@
 		<meta name="robots" content="index, follow"/>
 		
 		<!-- LOAD CSS --> 
-		<%= stylesheet_link_tag "admin" %>
 		<%= stylesheet_link_tag 'styles' %>
+		<%= stylesheet_link_tag "admin" %>
 		
 		<%= stylesheet_link_tag 'base-1.0.1' %>
 		<!-- <style type='text/css'>@import "";</style> -->
@@ -27,7 +27,7 @@
 		<%= yield :head %>
 	</head>
 
-	<body>		
+	<body id='admin-body'>		
 		<div class='page-wrapper wrapper'>
 			<div class='page'>
 				<!-- HEADER -->

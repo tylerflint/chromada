@@ -13,7 +13,7 @@ body 												{background:#FFFFFF; font-family:'Helvetica', Arial, sans-serif
 .page-wrapper 			 							{margin:0 auto; width:960px;}
 
 /* LISTS */
-ul													{float:left; list-style-image:none; list-style-type:none; list-style-position:inside;}
+ul													{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
 ul li												{float:left;}
                                     		
 /* LINKS */                           		
@@ -21,7 +21,7 @@ a													{text-decoration:none; color:#616161;}
 a:hover												{text-decoration:none; color:#00D3D3;}
                                     		
 /* HEADERS */    
-h1													{font-size:15px;}                     		
+h1													{font-size:15px; color:#00D3D3;}                     		
 h2													{font-size:14px;}
 h3													{font-size:13px;}
 h4													{font-size:12px; color:#616161;}
@@ -77,6 +77,7 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 .flash-alt-content									{float:left; width:100%;}
 
 /************************************************** MAIN ELEMENT STYLES **************************************************/
+
 .active-link 										{color:#00D3D3;}
 .site-image 										{float:left; width:100px; height:100px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px;}
 .site-link			 								{float:left; color:#00D3D3; text-decoration:underline;}
@@ -93,6 +94,7 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 
 /***** header ******/
 #header												{position:relative; float:left; width:100%;}
+#header ul li 										{margin:0px 5px;}
 #logo												{width:225px; height:72px; margin:25px 0px; background-position:-163px 0px;}
 
 /* account */
@@ -108,6 +110,7 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 
 /***** footer *****/
 #footer												{float:left; width:100%; margin:0px 0px 25px 0px;}
+#footer ul li 										{margin:0px 5px;}
 
 /************************************************** PAGES **************************************************/
 
