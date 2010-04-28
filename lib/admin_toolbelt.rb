@@ -38,24 +38,30 @@ module AdminToolbelt
     def init_state(params)
       session = grid_session
       
+      params.each { |key, value| set key, value }
+      # now lets set defaults if they don't exist
+      
       # current page p=1
+      set :p, 1 unless get :p
       
       # items per page items=50
+      set :items, 50 unless get :items
       
       # order by order=name,desc
+      
       
       # filters filter[attribute] = 'some query'
       
     end
     
     # get session state
-    def get
-      
+    def get(key)
+      grid_session[key]
     end
     
     # set session state
-    def set
-      
+    def set(key, value)
+      grid_session[key] = value
     end
     
     def reset
