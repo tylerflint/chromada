@@ -17,8 +17,8 @@ img													{border: none;}
 
 /************************************************** MAIN ELEMENT STYLES **************************************************/
 
-#admin-body-left									{float:left; width:175px;}
-#admin-body-right 									{float:left; width:750px;}
+#admin-body-left									{position:relative; z-index:1; float:left; width:150px; margin:100px 0px;}
+#admin-body-right 									{float:left; width:750px; margin:50px 0px; overflow:hidden;}
 
 /***** header ******/
 #header												{}
@@ -43,8 +43,10 @@ img													{border: none;}
 
 /************************************************** PAGES **************************************************/
 
+#employee-shifter 									{float:left; width:1800px;}
+
 /* employee grid */
-#employee-grid-page 								{float:left; width:100%;}
+#employee-grid-page 								{float:left; width:750px; margin:0px 150px 0px 0px;}
 
 #super-filter-wrapper 								{float:left; width:100%; height:24px; margin:10px 0px; background:#000000;}
 #super-filter 										{float:left; width:100%;}
@@ -57,13 +59,16 @@ img													{border: none;}
 .employee-status.out								{background-position:-168px -150px;}
 
 /* employee edit */
-#employee-edit-page 								{float:left; width:100%;}
-#edit-employee-information 							{float:left; width:100%; margin:25px 0px;}
+#employee-edit-page 								{float:left; width:750px}
+
+#edit-employee-information 							{float:left; width:100%; margin:15px 0px;}
 #edit-employee-rolls 								{float:left; width:100%;}
 #edit-employee-rolls ul li							{float:left; width:100%;}
 .edit-employee-rolls-group 							{float:left; width:375px; margin:10px 0px;}
 .edit-employee-rolls-group input					{float:left; width:auto;}
 .edit-employee-rolls-group li 						{margin:2px 15px;}
+
+#edit-employee-controls 							{float:left; width:100%; margin:28px 0px;}
 
 #edit-employee-form 								{float:left; width:625px; margin:0px 0px 0px 5px;}
 #edit-employee-form input							{height:15px; padding:5px; font-size:14px;}
@@ -77,3 +82,4 @@ img													{border: none;}
 #edit-employee-day 									{width:60px;}
 #edit-employee-month 								{width:60px;}
 #edit-employee-year 								{width:65px;}
+#edit-employee-notes 								{width:100%;}

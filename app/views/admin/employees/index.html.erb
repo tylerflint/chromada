@@ -1,7 +1,11 @@
-<div class='page-body shifter'>
+<div id='employee-shifter' class='page-body shifter'>
 	<div id='employee-grid-page'>
 
 		<h1>Employees</h1>
+		
+		<%  admin_grid :employee do |g| %>
+			
+		<%  end %>
 		
 		<%= render :partial => 'admin/shared/superFilter'%>
 		
@@ -69,11 +73,20 @@
 		</div>
 	</div>
 	
-	<div onclick='shiftPage();'>< back</div>
+	<% content_for :admin_body_left do -%>
+		<div id='btn-back' class='site-btn' onclick='shiftPage()'></div>
+	<% end -%>
 	
 	<div id='employee-edit-page'>
 		
 		<h1>Edit Employee Information</h1>
+		
+		<div id='edit-employee-controls'>
+			<div id='btn-save' class='site-btn'></div>
+			<div id='btn-cancel' class='site-btn'></div>
+			<div id='btn-delete' class='site-btn'></div>
+		</div>
+		
 		<div id='edit-employee-information'>
 			
 			<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
@@ -192,10 +205,10 @@
 	{
 		if(shifted)
 		{
-			$(".shifter").animate({"left": "+=" + $(".shifter").width()});
+			$(".shifter").animate({"left": "+=" + $(".shifter").width()/2});
 			shifted = false;
 		}else{
-			$(".shifter").animate({"left": "-=" + $(".shifter").width()});
+			$(".shifter").animate({"left": "-=" + $(".shifter").width()/2});
 			shifted = true;
 		}
 	}
