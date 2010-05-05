@@ -1,4 +1,4 @@
-<div class='page-body'>
+<div class='page-body shifter'>
 	<div id='employee-grid-page'>
 
 		<h1>Employees</h1>
@@ -18,7 +18,7 @@
 						<th>Created 1</th>
 						<th>Created 2</th>
 					</tr>
-					<tr class='even'>
+					<tr class='even' onclick='shiftPage();'>
 						<td><div class='employee-status in'><span class='no-display'>in</span></div></td>
 						<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
 						<td>Steven R Davis</td>
@@ -68,4 +68,135 @@
 			<%= render :partial => 'admin/shared/toolbar'%>
 		</div>
 	</div>
+	
+	<div onclick='shiftPage();'>< back</div>
+	
+	<div id='employee-edit-page'>
+		
+		<h1>Edit Employee Information</h1>
+		<div id='edit-employee-information'>
+			
+			<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
+		
+			<form id='edit-employee-form'>
+				<div class='form-group'>
+					<input id='edit-employee-firstname' type="text" name="firstname" value='First Name'/>
+					<input id='edit-employee-middlename' type="text" name="middlename" value='Middle Name'/>
+					<input id='edit-employee-lastname' type="text" name="lastname" value='Last Name'/>
+				
+					<select id='edit-employee-suffix'>
+						<option value='suffix'>Suffix</option>
+						<option value="sr">Sr.</option>
+						<option value="jr">Jr.</option>
+					</select>
+				</div>
+				
+				<div class='form-group'>
+					<input id='edit-employee-email' type="text" name="email" value='Email'/>
+				
+					<select id='edit-employee-day'>
+						<option value='day'>day</option>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+				
+					<select id='edit-employee-month'>
+						<option value='mon'>mon</option>
+						<option value="jan">jan</option>
+						<option value="feb">feb</option>
+						<option value="mar">mar</option>
+						<option value="apr">apr</option>
+						<option value="may">may</option>
+						<option value="jun">jun</option>
+						<option value="jul">jul</option>
+						<option value="aug">aug</option>
+						<option value="sep">sep</option>
+						<option value="oct">oct</option>
+						<option value="nov">nov</option>
+						<option value="dec">dec</option>
+					</select>
+				
+					<input id='edit-employee-year' type="text" name="year" value='year'/>
+				</div>
+				
+				<div class='form-group'>
+					<input id='edit-employee-notes' type="text" name="notes" value='Notes'/>
+				</div>
+			</form>
+		</div>
+		
+		<div id='edit-employee-rolls'>
+			<h2>Employee Rolls</h2>
+			<form id='edit-employee-rolls-form'>
+				<div class='edit-employee-rolls-group'>
+					<h3>Employee Rolls</h3>
+					<ul>
+						<li><input type="checkbox" name="" value="Sub Role 1" /><span class='checkbox-text'>Sub Role 1</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 2" /><span class='checkbox-text'>Sub Role 2</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 3" /><span class='checkbox-text'>Sub Role 3</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 4" /><span class='checkbox-text'>Sub Role 4</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 5" /><span class='checkbox-text'>Sub Role 5</span></li>
+					</ul>
+				</div>
+				
+				<div class='edit-employee-rolls-group'>
+					<h3>Employee Rolls</h3>
+					<ul>
+						<li><input type="checkbox" name="" value="Sub Role 1" /><span class='checkbox-text'>Sub Role 1</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 2" /><span class='checkbox-text'>Sub Role 2</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 3" /><span class='checkbox-text'>Sub Role 3</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 4" /><span class='checkbox-text'>Sub Role 4</span></li>
+						<li><input type="checkbox" name="" value="Sub Role 5" /><span class='checkbox-text'>Sub Role 5</span></li>
+					</ul>
+				</div>
+			</form>
+		</div>
+		
+	</div>
 </div>
+
+<script type='text/javascript'>
+
+	var shifted = false;
+
+	function shiftPage()
+	{
+		if(shifted)
+		{
+			$(".shifter").animate({"left": "+=" + $(".shifter").width()});
+			shifted = false;
+		}else{
+			$(".shifter").animate({"left": "-=" + $(".shifter").width()});
+			shifted = true;
+		}
+	}
+</script>

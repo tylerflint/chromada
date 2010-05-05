@@ -9,8 +9,9 @@ img													{float:left; border:none;}
 body 												{background:#FFFFFF; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
                                		
 /* WRAPPERS */                       		
+.shifter 											{position:relative;}
 .wrapper				 							{margin:0 auto;}
-.page-wrapper 			 							{margin:0 auto; width:960px;}
+.page-wrapper 			 							{margin:0 auto; width:960px; overflow:hidden;}
 
 /* LISTS */
 ul													{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
@@ -52,10 +53,13 @@ h6													{font-size:10px;}
 label 												{float:left; width:75px; margin:10px 0px 0px 0px;}
 input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C8C8C8 solid 1px; text-transform:capitalize;}
 
+.checkbox-text 										{float:left; margin:5px 0px 0px 5px;}
+
 /* TABLES */
 table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
 table th 											{text-align:left;}
-#table-header 										{border:none;}
+#table-header 										{border:none !important;}
+table tr	 										{cursor:pointer;}
 table tr.even 										{background:#FFFFFF;}
 table tr.odd 										{background:#F7F6F6;}
 table tr:hover 										{border:1px solid #00D3D3;}

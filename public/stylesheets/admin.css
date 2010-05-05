@@ -29,10 +29,10 @@ img													{border: none;}
 
 /***** toolbar *****/
 .toolbar 											{float:left; width:100%; margin:5px 0px;}
-.toolbar ul li										{float:left; margin:0px 5px;}
+.toolbar ul li										{float:left; margin:0px 10px;}
 .toolbar.pages ul li 								{text-decoration:underline;}
 .toolbar-btn 										{float:left; width:145px; height:18px; background:#000000;}
-.pages-wrapper 										{float:left; margin:0px 5px; border-left:1px solid #616161; border-right:1px solid #616161;}
+.pages-wrapper 										{float:left; margin:0px 10px; border-left:1px solid #616161; border-right:1px solid #616161;}
 .pages li											{float:left; text-decoration:underline;}
 .pages li.active									{float:left; text-decoration:none;}
 .page 												{}
@@ -49,12 +49,31 @@ img													{border: none;}
 #super-filter-wrapper 								{float:left; width:100%; height:24px; margin:10px 0px; background:#000000;}
 #super-filter 										{float:left; width:100%;}
 
-#employee-table 									{}
-#employee-table tr:hover							{table-border:1px solid #ff0000;}
-
 .employee-email 									{text-decoration:underline;}
 
 .employee-status 									{float:left; width:15px; height:15px; margin:12px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px;}
 .employee-status.in 								{background-position:-168px -118px;}
 .employee-status.away								{background-position:-168px -134px;}
 .employee-status.out								{background-position:-168px -150px;}
+
+/* employee edit */
+#employee-edit-page 								{float:left; width:100%;}
+#edit-employee-information 							{float:left; width:100%; margin:25px 0px;}
+#edit-employee-rolls 								{float:left; width:100%;}
+#edit-employee-rolls ul li							{float:left; width:100%;}
+.edit-employee-rolls-group 							{float:left; width:375px; margin:10px 0px;}
+.edit-employee-rolls-group input					{float:left; width:auto;}
+.edit-employee-rolls-group li 						{margin:2px 15px;}
+
+#edit-employee-form 								{float:left; width:625px; margin:0px 0px 0px 5px;}
+#edit-employee-form input							{height:15px; padding:5px; font-size:14px;}
+#edit-employee-form .form-group						{margin:3px 0px;}
+#edit-employee-rolls-form 							{float:left;}
+
+#edit-employee-firstname 							{width:164px;}
+#edit-employee-middlename 							{width:164px;}
+#edit-employee-lastname 							{width:210px;}
+#edit-employee-email	 							{width:352px;}
+#edit-employee-day 									{width:60px;}
+#edit-employee-month 								{width:60px;}
+#edit-employee-year 								{width:65px;}
