@@ -9,6 +9,7 @@ img													{float:left; border:none;}
 body 												{background:#FFFFFF; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
                                		
 /* WRAPPERS */                       		
+.shifter 											{position:relative;}
 .wrapper				 							{margin:0 auto;}
 .page-wrapper 			 							{margin:0 auto; width:960px;}
 
@@ -21,7 +22,7 @@ a													{text-decoration:none; color:#616161;}
 a:hover												{text-decoration:none; color:#00D3D3;}
                                     		
 /* HEADERS */    
-h1													{font-size:15px; color:#00D3D3;}                     		
+h1													{font-size:21px; color:#00D3D3;}                     		
 h2													{font-size:14px;}
 h3													{font-size:13px;}
 h4													{font-size:12px; color:#616161;}
@@ -52,10 +53,13 @@ h6													{font-size:10px;}
 label 												{float:left; width:75px; margin:10px 0px 0px 0px;}
 input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C8C8C8 solid 1px; text-transform:capitalize;}
 
+.checkbox-text 										{float:left; margin:5px 0px 0px 5px;}
+
 /* TABLES */
 table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
 table th 											{text-align:left;}
-#table-header 										{border:none;}
+#table-header 										{border:none !important;}
+table tr	 										{cursor:pointer;}
 table tr.even 										{background:#FFFFFF;}
 table tr.odd 										{background:#F7F6F6;}
 table tr:hover 										{border:1px solid #00D3D3;}
@@ -92,13 +96,19 @@ table td 											{padding:15px 0px;}
 .site-link			 								{float:left; color:#00D3D3; text-decoration:underline;}
 .main-divider										{width:100%; height:5px; margin:2px 0px; background-position:0px -176px;}
 
+.site-btn 											{float:left; width:100px; height:36px; margin:0px 2px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px; cursor:pointer;}
+#btn-back 											{width:89px; background-position:-470px -131px;}
+#btn-save 											{width:73px; background-position:-187px -131px;}
+#btn-cancel 										{width:94px; background-position:-268px -131px;}
+#btn-delete 										{width:93px; background-position:-370px -131px;}
+
 /***** NAVIGATION *****/
 #primary-nav										{float:left; color:#666666; font-size:10px; margin:0px 300px 0px 0px; text-transform:uppercase;}
 #secondary-nav										{float:left; width:100%; color:#666666; font-size:8px;}
 
 /***** MAIN PAGE *****/
 .page												{float:left;}
-#page-body-wrapper 									{margin:0px auto; width:805px;}
+#page-body-wrapper 									{float:left; width:805;}
 .page-body											{min-height:215px;}
 
 /***** header ******/
