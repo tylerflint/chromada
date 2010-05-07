@@ -12,6 +12,7 @@ module Admin::AdminHelper
       @id           = :"#{object}_grid"
       @session      = session
       @object_class = convert_to_class object
+      @properties   = {:p => 1, :items => 50, :order => 'id,asc'}
       @columns      = []
       
       # let's set some defaults
@@ -23,7 +24,7 @@ module Admin::AdminHelper
       end
       
       # seed session state with request
-      init_state(params[@id])
+      init_state(params)
     end
     
     def column(options)
@@ -31,32 +32,22 @@ module Admin::AdminHelper
     end
     
     def output
-      # html = ''
-      #       @columns.each do |c|
-      #         html << c[:title]
-      #       end
-      #       html
-      ''
+      
     end
     
   protected
     
     def init_state(params)
-      
-      params.each { |key, value| set key, value } if params
-      # now lets set defaults if they don't exist
-      
-      # current page p=1
-      set :p, 1 unless get :p
-      
-      # items per page items=50
-      set :items, 50 unless get :items
-      
-      # order by order=name,desc
-      
-      
+      @properties.each do |k, v|
+        # see if we have a param
+        value = params[k]
+        # see if there's already a value set
+        value ||= get k
+        # set the default
+        value ||= v
+        set k, value
+      end
       # filters filter[attribute] = 'some query'
-      
     end
     
     # get session state
@@ -74,8 +65,8 @@ module Admin::AdminHelper
     end
     
     def grid_session
-      key = :"#{@id.to_s}_grid"
-      @session[key] = {} unless @session[key]
+      key = :"#{@id.to_s}"
+      @session[key] ||= {} 
       @session[key]
     end
     

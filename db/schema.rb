@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20100424190821) do
     t.datetime "updated_at"
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
-    t.integer  "increment_id",                             :default => 0
+    t.integer  "increment_id"
     t.string   "employee_id",               :limit => 20,  :default => ""
     t.string   "firstname",                 :limit => 20
     t.string   "lastname",                  :limit => 20
