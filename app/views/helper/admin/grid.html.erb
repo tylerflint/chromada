@@ -1,0 +1,18 @@
+<div class='admin-grid-wrapper'>
+	<%= render :partial => 'admin/shared/toolbar'%>
+	<div class='admin-grid'>
+		<table class='admin-table'>
+			<tr class='table-header'>
+				<% @columns.each do |k, v| %>
+					<th><%= v[:name] %></th>
+				<% end %>
+			</tr>
+			<% get_model.each do |m| %>
+				<tr class='even' onclick='shiftPage();'>
+					<%= get_row_html m %>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+	<%= render :partial => 'admin/shared/toolbar'%>
+</div>
