@@ -9,7 +9,17 @@
 			</tr>
 			<% get_model.each do |m| %>
 				<tr class='even' onclick='shiftPage();'>
-					<%= get_row_html m %>
+					<% @columns.each do |k, v| %>
+						<% if (v[:type] == :email) %>
+							<td class='employee-email'><%= mail_to('tylerflint@gmail.com', 'tylerflint@gmail.com') %></td>
+						<% elsif (v[:type] == :image) %>
+							<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
+						<% elsif (v[:type] == :status) %>
+							<td><div class='employee-status in'><span class='no-display'>in</span></div></td>
+						<% else %>
+							<td><%= m.send k %></td>
+						<% end %>
+					<% end %>
 				</tr>
 			<% end %>
 		</table>
