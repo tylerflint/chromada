@@ -94,21 +94,4 @@ module Admin::AdminHelper
     
   end
   
-  class GridColumn < Block
-    
-    def initialize(helper, entity, attribute, options)
-      super helper
-      @entity = entity
-      @attribute = attribute
-      @options = options
-      type = options[:type] ||= 'default'
-      @template = 'admin/grid/column/' + type
-    end
-    
-    def get_value
-      @entity.send @attribute
-    end
-    
-  end
-  
 end
