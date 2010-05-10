@@ -30,12 +30,12 @@ img													{border: none;}
 /***** toolbar *****/
 .toolbar 											{float:left; width:100%; margin:5px 0px;}
 .toolbar ul li										{float:left; margin:0px 10px;}
+.toolbar ul li a 									{cursor:pointer; text-decoration:underline;}
 .toolbar.pages ul li 								{text-decoration:underline;}
 .toolbar-btn 										{float:left; width:145px; height:18px; background:#000000;}
 .pages-wrapper 										{float:left; margin:0px 10px; border-left:1px solid #616161; border-right:1px solid #616161;}
-.pages li											{float:left; text-decoration:underline;}
-.pages li.active									{float:left; text-decoration:none;}
-.page 												{}
+.pages li.active a									{float:left; text-decoration:none;}
+.pages li.active									{color:#616161;}
 .total-pages 										{float:left; margin:0px 12px; text-transform:uppercase;}
 .page-views 										{float:left; text-transform:uppercase;}
 .page-views ul li									{float:left;}
@@ -47,11 +47,12 @@ img													{border: none;}
 
 /* employee grid */
 #employee-grid-page 								{float:left; width:750px; margin:0px 150px 0px 0px;}
+#employee-grid-wrapper	 							{margin:0 auto; width:745px;}
 
 #super-filter-wrapper 								{float:left; width:100%; height:24px; margin:10px 0px; background:#000000;}
 #super-filter 										{float:left; width:100%;}
 
-.employee-email 									{text-decoration:underline;}
+.employee-email a 									{text-decoration:underline;}
 
 .employee-status 									{float:left; width:15px; height:15px; margin:12px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px;}
 .employee-status.in 								{background-position:-168px -118px;}
@@ -61,25 +62,34 @@ img													{border: none;}
 /* employee edit */
 #employee-edit-page 								{float:left; width:750px}
 
-#edit-employee-information 							{float:left; width:100%; margin:15px 0px;}
-#edit-employee-rolls 								{float:left; width:100%;}
-#edit-employee-rolls ul li							{float:left; width:100%;}
-.edit-employee-rolls-group 							{float:left; width:375px; margin:10px 0px;}
-.edit-employee-rolls-group input					{float:left; width:auto;}
-.edit-employee-rolls-group li 						{margin:2px 15px;}
+#edit-employee-controls 							{float:left; width:100%; margin:28px 0px 0px 0px;}
 
-#edit-employee-controls 							{float:left; width:100%; margin:28px 0px;}
+#edit-employee-information 							{float:left; width:100%; margin:50px 0px;}
 
-#edit-employee-form 								{float:left; width:625px; margin:0px 0px 0px 5px;}
-#edit-employee-form input							{height:15px; padding:5px; font-size:14px;}
-#edit-employee-form .form-group						{margin:3px 0px;}
-#edit-employee-rolls-form 							{float:left;}
+#edit-employee-form 								{float:left; width:624px; margin:0px 0px 0px 8px;}
+#edit-employee-form input							{height:24px; padding:5px; font-size:16px;}
+#edit-employee-form select 							{height:36px; padding:6px; font-size:16px; background:none; border:1px solid #C8C8C8;}
+#edit-employee-form .form-group						{width:615px; margin:0px 0px 5px 0px;}
 
-#edit-employee-firstname 							{width:164px;}
-#edit-employee-middlename 							{width:164px;}
-#edit-employee-lastname 							{width:210px;}
-#edit-employee-email	 							{width:352px;}
-#edit-employee-day 									{width:60px;}
-#edit-employee-month 								{width:60px;}
-#edit-employee-year 								{width:65px;}
-#edit-employee-notes 								{width:100%;}
+#edit-employee-name-group input						{margin:0px -1px 0px 0px;}
+#edit-employee-firstname 							{width:155px;}
+#edit-employee-middlename 							{width:155px;}
+#edit-employee-lastname 							{width:155px;}
+#edit-employee-suffix 								{float:right; width:80px; color:#00D3D3;}
+#edit-employee-email	 							{width:290px;}
+#edit-employee-birthday-group 						{float:right; width:290px;}
+#edit-employee-birthday-group span					{float:left; width:112px; font-size:14px;}
+#edit-employee-birthday-group select				{margin:0px -4px 0px 0px;}
+#edit-employee-day 									{width:55px; color:#00D3D3;}
+#edit-employee-month 								{width:55px; color:#00D3D3;}
+#edit-employee-year 								{float:right; width:55px; color:#00D3D3;}
+#edit-employee-notes 								{width:603px;}
+
+#edit-employee-roles 								{float:left; width:100%;}
+#edit-employee-roles form 							{float:left;}
+#edit-employee-roles form h3 						{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
+#edit-employee-roles form ul						{float:left; width:200px; margin:0px 25px 0px 0px;}
+#edit-employee-roles form ul li						{float:left; width:100%; margin:2px 15px; color:#AFAFAF;}
+#edit-employee-roles form input						{float:left; width:auto;}
+
+.edit-employee-roles-group 							{float:left; width:705px; margin:5px 0px; padding:12px; border:10px solid #F5F5F5;}
