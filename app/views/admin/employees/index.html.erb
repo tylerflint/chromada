@@ -3,74 +3,16 @@
 
 		<h1>Employees</h1>
 		
-		<%  admin_grid :employee do |g| %>
-			
-		<%  end %>
-		
 		<%= render :partial => 'admin/shared/superFilter'%>
 		
-		<div id='employee-grid-wrapper'>
-			<%= render :partial => 'admin/shared/toolbar'%>
-			<div id='employee-grid'>
-				<table id='employee-table'>
-					<tr id='table-header'>
-						<th>Status</th>
-						<th>Photo</th>
-						<th>Employee Name</th>
-						<th>Email</th>
-						<th>Birthday</th>
-						<th>Created 1</th>
-						<th>Created 2</th>
-					</tr>
-					<tr class='even' onclick='shiftPage();'>
-						<td><div class='employee-status in'><span class='no-display'>in</span></div></td>
-						<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
-						<td>Steven R Davis</td>
-						<td class='employee-email'><%= mail_to('sdavis@delorum.com', 'sdavis@delorum.com') %></td>
-						<td>01/02/10</td>
-						<td>Created 1 Content</td>
-						<td>Created 2 Content</td>
-					</tr>
-					<tr class='odd'>
-						<td><div class='employee-status away'><span class='no-display'>away</span></div></td>
-						<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
-						<td>Steven R Davis</td>
-						<td class='employee-email'><%= mail_to('sdavis@delorum.com', 'sdavis@delorum.com') %></td>
-						<td>01/02/10</td>
-						<td>Created 1 Content</td>
-						<td>Created 2 Content</td>
-					</tr>
-					<tr class='even'>
-						<td><div class='employee-status out'><span class='no-display'>out</span></div></td>
-						<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
-						<td>Steven R Davis</td>
-						<td class='employee-email'><%= mail_to('sdavis@delorum.com', 'sdavis@delorum.com') %></td>
-						<td>01/02/10</td>
-						<td>Created 1 Content</td>
-						<td>Created 2 Content</td>
-					</tr>
-					<tr class='odd'>
-						<td><div class='employee-status away'><span class='no-display'>away</span></div></td>
-						<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
-						<td>Steven R Davis</td>
-						<td class='employee-email'><%= mail_to('sdavis@delorum.com', 'sdavis@delorum.com') %></td>
-						<td>01/02/10</td>
-						<td>Created 1 Content</td>
-						<td>Created 2 Content</td>
-					</tr>
-					<tr class='even'>
-						<td><div class='employee-status in'><span class='no-display'>in</span></div></td>
-						<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
-						<td>Steven R Davis</td>
-						<td class='employee-email'><%= mail_to('sdavis@delorum.com', 'sdavis@delorum.com') %></td>
-						<td>01/02/10</td>
-						<td>Created 1 Content</td>
-						<td>Created 2 Content</td>
-					</tr>
-				</table>
-			</div>
-			<%= render :partial => 'admin/shared/toolbar'%>
-		</div>
+		<%  admin_grid :employee do |g| %>
+			<% g.add_column :status, :name => 'Status', :type => :status %>
+			<% g.add_column :photo, :name => 'Photo', :type => :image %>
+			<% g.add_column :name, :name => 'Employee Name' %>
+			<% g.add_column :email, :name => 'Email', :type => :email %>
+			<% g.add_column :birthdate, :name => 'Birthday' %>
+		<%  end %>
+		
 	</div>
 	
 	<% content_for :admin_body_left do -%>

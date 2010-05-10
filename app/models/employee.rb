@@ -44,6 +44,18 @@ class Employee < ActiveRecord::Base
     write_attribute :email, (value ? value.downcase : nil)
   end
   
+  def name
+    [firstname, middlename, lastname].join " "
+  end
+  
+  def status
+    ''
+  end
+  
+  def photo
+    ''
+  end
+  
   protected
     
 

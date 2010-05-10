@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
+  
   def initialize
     
   end
