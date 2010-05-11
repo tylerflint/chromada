@@ -6,7 +6,7 @@ module Admin::AdminHelper
     concat grid.to_html
   end
   
-  class Grid < Block
+  class Grid < Blockpile
     
     def initialize(helper, object, session, params, options={})
       super helper
