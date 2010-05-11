@@ -4,3 +4,6 @@
 [submodule "/Users/tylerflint/Sites/chromada/vendor/plugins/mother"]
 	path = /Users/tylerflint/Sites/chromada/vendor/plugins/mother
 	url = git@github.com:tylerflint/mother.git
+[submodule "vendor/plugins/blockpile"]
+	path = vendor/plugins/blockpile
+	url = git@github.com:tylerflint/blockpile.git
