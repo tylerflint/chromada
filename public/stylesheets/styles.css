@@ -23,7 +23,7 @@ a:hover												{text-decoration:none; color:#00D3D3;}
                                     		
 /* HEADERS */    
 h1													{font-size:21px; color:#00D3D3;}                     		
-h2													{font-size:14px;}
+h2													{font-size:18px; color:#00D3D3;}
 h3													{font-size:13px;}
 h4													{font-size:12px; color:#616161;}
 h5													{font-size:11px;}
@@ -58,12 +58,11 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 /* TABLES */
 table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
 table th 											{text-align:left;}
-#table-header 										{border:none !important;}
-table tr	 										{cursor:pointer;}
+#table-header 										{height:25px; outline:none !important;}
+table tr	 										{height:70px; cursor:pointer;}
 table tr.even 										{background:#FFFFFF;}
 table tr.odd 										{background:#F7F6F6;}
-table tr:hover 										{border:1px solid #00D3D3;}
-table td 											{padding:15px 0px;}
+table tr:hover 										{outline:1px solid #00D3D3;}
 
 /* VALIDATION */
 
