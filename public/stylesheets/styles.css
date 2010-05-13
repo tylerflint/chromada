@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6								{float:left; width:100%; margin:0; padding:0;}
 img													{float:left; border:none;}
 
 /* MAIN PAGE ELEMENTS */
-body 												{background:#FFFFFF; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
+body 												{background:#FFFFFF url('../images/bg-texture.jpg') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
                                		
 /* WRAPPERS */                       		
 .shifter 											{position:relative;}
@@ -81,7 +81,7 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 
                        		
 /* OTHER */                           		
-.no-display 										{display:none;}
+.hide		 										{display:none;}
 .inactive											{color:#999999;}
 .hand-cursor 										{cursor:pointer;}
 
@@ -89,42 +89,44 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .flash-alt-content									{float:left; width:100%;}
 
 /************************************************** MAIN ELEMENT STYLES **************************************************/
-
 .active-link 										{color:#00D3D3;}
 .site-image 										{float:left; width:100px; height:100px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px;}
 .site-link			 								{float:left; color:#00D3D3; text-decoration:underline;}
 .main-divider										{width:100%; height:5px; margin:2px 0px; background-position:0px -176px;}
 
-.site-btn 											{float:left; width:100px; height:36px; margin:0px 2px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px; cursor:pointer;}
-#btn-back 											{width:89px; background-position:-470px -131px;}
-#btn-save 											{width:73px; background-position:-187px -131px;}
-#btn-cancel 										{width:94px; background-position:-268px -131px;}
-#btn-delete 										{width:93px; background-position:-370px -131px;}
+.site-btn 											{float:left; width:100px; height:36px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px; cursor:pointer;}
+#btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
+#btn-save 											{width:73px; margin:0px 2px; background-position:-187px -131px;}
+#btn-cancel 										{width:94px; margin:0px 2px; background-position:-268px -131px;}
+#btn-delete 										{width:93px; margin:0px 2px; background-position:-370px -131px;}
+#btn-demo 											{width:164px; margin:25px 0px; background-position:-734px -131px;}
+#btn-get-started									{width:158px; margin:25px 0px; background-position:-567px -131px;}
 
 /***** NAVIGATION *****/
 #primary-nav										{float:left; color:#666666; font-size:10px; margin:0px 300px 0px 0px; text-transform:uppercase;}
+#primary-nav a 										{margin:0px 5px 0px 0px;}
 #secondary-nav										{float:left; width:100%; color:#666666; font-size:8px;}
 
 /***** MAIN PAGE *****/
-.page												{float:left;}
-#page-body-wrapper 									{float:left; width:805;}
+.page												{float:left; width:100%; background:#FFFFFF;}
+#page-body-wrapper 									{margin:0 auto; width:920px;}
 .page-body											{min-height:215px;}
 
 /***** header ******/
 #header												{position:relative; float:left; width:100%;}
-#header ul li 										{margin:0px 5px;}
+#header ul li 										{margin:0px 3px;}
 #logo												{width:225px; height:72px; margin:25px 0px; background-position:-163px 0px;}
 
 /* account */
-#account-login-wrapper								{float:left; width:260px;}
-#account-login										{position:absolute; top:-122px; right:20px; width:260px;}
+#account-login-wrapper								{float:left;}
+#account-login										{display:none; position:absolute; top:-122px; right:20px; width:260px;}
 .btn-site-login 									{background:000000; color:#00D3D3; text-transform:uppercase;}
 #account-login-new-user 							{float:left; width:255px; height:23px; background-position:-168px -73px;}
 
 /* search */
-#site-search										{position:absolute; top:-12px; right:36px;}
+#site-search										{float:left;}
 #site-search-icon									{position:absolute; top:3px; right:5px; width:18px; height:18px; background-position:-560px -155px;}
-#site-search input 									{float:left; padding:0px 2px;}
+#site-search input 									{float:left; padding:0px 2px; border:none;}
 
 /***** footer *****/
 #footer												{float:left; width:100%; margin:0px 0px 25px 0px;}
@@ -133,16 +135,20 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 /************************************************** PAGES **************************************************/
 
 /* index (home) */
-#index-page-body									{float:left; margin:75px 0px;}
+#index-page-body									{float:left; margin:25px 0px;}
 #spotlight											{float:left;}
-.spotlight-content 									{float:left; margin:0px 50px;}
+.spotlight-content 									{float:left; margin:0px 25px;}
 
-#spotlight-left										{float:left; width:165px;}
-#spotlight-image									{margin:0 auto; width:165px; height:176px;}
+#spotlight-left										{position:relative; float:left; width:433px; height:392px;}
+#spotlight-controls 								{position:absolute; top:10px; right:50px; z-index:1;}
+.spotlight-control-image 							{float:left; width:12px; height:4px; margin:0px 2px; border:4px solid #E3E3E3; cursor:pointer;}
+.spotlight-control-image.active						{float:left; background:#E3E3E3;}
+#spotlight-control-pause 							{float:right; width:3px; height:8px; margin:1px 5px; border-left:4px solid #E3E3E3; border-right:4px solid #E3E3E3; cursor:pointer;}
+#spotlight-image									{width:433px; height:392px; background-position:0px -184px;}
 
-#spotlight-right									{float:left; width:436px;}
-#spotlight-body										{margin:0 auto; width:100%;}
-#spotlight-body p									{line-height:20px; color:#666666;}
+#spotlight-right									{float:left; width:375px; margin-top:75px;}
+.spotlight-body										{margin:0 auto; width:100%;}
+.spotlight-body p									{line-height:20px; color:#666666;}
 #spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
 #spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
 #take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}

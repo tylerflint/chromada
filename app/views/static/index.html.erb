@@ -1,16 +1,41 @@
 <div id='index-page-body' class='page-body'>
 	<div id='spotlight'>
 		<div id='spotlight-left' class='spotlight-content'>
+			<div id='spotlight-controls'>
+				<div id='img1' class='spotlight-control-image active' onclick='loadNextSlide();'></div>
+				<div id='img2' class='spotlight-control-image' onclick='loadNextSlide();'></div>
+				<div id='spotlight-control-pause'></div>
+			</div>
 			<div id='spotlight-image' class='site-image'></div>
 		</div>
 		
 		<div id='spotlight-right' class='spotlight-content'>
-			<div id='spotlight-body'>
+			<div id='spotlight-body-chromada' class='spotlight-body'>
 				<span id='spotlight-header'>welcome to chromada</span>
 				<span id='spotlight-sub-header'>web-base tools, superior orginazation, efficient business.</span>
 				<p>Simple tasks are often the most time consuming, unorganized and unmeasured details of a business. Chromada offers intuitive web-based tools to give you an unprecedented level of control and analytics of your business.</p>
-				<span id='take-a-tour' class='hand-cursor'>take a tour ></span>
+				<div id='btn-get-started' class='site-btn'><span class='hide'>get started</span></div>
+			</div>
+			
+			<div id='spotlight-body-ticker' class='spotlight-body' style='display:none;'>
+				<span id='spotlight-header'>introducing ticker.</span>
+				<span id='spotlight-sub-header'>the best way to keep track of your business.</span>
+				<p>There's a new breed of time tracking software in town. Using a simple web based interface, Ticker allows any computer or mobile device to become a quick and easy way for employees to clock in and out of work, and for the employer to watch.</p>
+				<div id='btn-demo' class='site-btn'><span class='hide'>try the demo</span></div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script type='text/javascript'>
+	
+	var images = ['chromada', 'ticker'];
+
+	//<![CDATA[
+	function loadNextSlide()
+	{
+		$('#spotlight-image').fadeOut(1000, function(){$('#spotlight-image').css('background-position', '-438px -184px'); $('#spotlight-image').fadeIn(); $('#img1').removeClass('active'); $('#img2').addClass('active')});
+		$('#spotlight-body-' + images[0]).fadeOut(1000, function(){$('#spotlight-body-' + images[1]).fadeIn(1000)});
+	}
+	//]]>
+</script>
