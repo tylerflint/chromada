@@ -8,7 +8,7 @@
 body, html											{height: 100%;}
 body												{}
 .clear												{min-height: 1px;}
-.clear:after										{content: " "; display: block; height: 0; font-size: 0;	clear: both; visibility: hidden;}
+.clear:after										{content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
 /* *html .clear	{height: 1px;} */
 img													{border: none;}
 
@@ -17,8 +17,9 @@ img													{border: none;}
 
 /************************************************** MAIN ELEMENT STYLES **************************************************/
 
-.admin-menu											{float:left; width:150px; margin:100px 0px;}
-.admin-page 										{float:left; width:750px; margin:50px 0px; overflow:hidden;}
+.admin-menu											{float:left; width:175px; margin:50px 0px;}
+.admin-menu ul li									{float:left; width:100%; margin:2px 0px;}
+.admin-page 										{float:left; width:940px; margin:0px 30px 30px 0px; overflow:hidden;}
 .admin-grid 										{float:left; width:750px;}
 
 /***** header ******/
@@ -44,10 +45,10 @@ img													{border: none;}
 
 /************************************************** PAGES **************************************************/
 
-#employee-shifter 									{float:left; width:1800px;}
+#employee-shifter 									{float:left; width:2000px;}
 
 /* employee grid */
-#employee-grid-page 								{float:left; width:750px; margin:0px 150px 0px 0px;}
+#employee-grid-page 								{}
 #employee-grid-wrapper	 							{margin:0 auto; width:745px;}
 
 #super-filter-wrapper 								{float:left; width:100%; height:24px; margin:10px 0px; background:#000000;}
@@ -61,7 +62,7 @@ img													{border: none;}
 .employee-status.out								{background-position:-168px -150px;}
 
 /* employee edit */
-#employee-edit-page 								{float:left; width:750px}
+#edit-employee-page 								{}
 
 #edit-employee-controls 							{float:left; width:100%; margin:28px 0px 0px 0px;}
 

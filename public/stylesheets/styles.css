@@ -58,7 +58,7 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 /* TABLES */
 table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
 table th 											{text-align:left;}
-#table-header 										{height:25px; outline:none !important;}
+.table-header 										{height:25px; outline:none !important;}
 table tr	 										{height:70px; cursor:pointer;}
 table tr.even 										{background:#FFFFFF;}
 table tr.odd 										{background:#F7F6F6;}
@@ -108,9 +108,10 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 #secondary-nav										{float:left; width:100%; color:#666666; font-size:8px;}
 
 /***** MAIN PAGE *****/
-.page												{float:left; width:100%; background:#FFFFFF;}
+.page												{float:left; width:100%; background:#FFFFFF; overflow:hidden;}
 #page-body-wrapper 									{margin:0 auto; width:920px;}
 .page-body											{min-height:215px;}
+#page-header 										{float:left; margin:0px 0px 50px 0px;}
 
 /***** header ******/
 #header												{position:relative; float:left; width:100%;}
@@ -135,7 +136,7 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 /************************************************** PAGES **************************************************/
 
 /* index (home) */
-#index-page-body									{float:left; margin:25px 0px;}
+#index-page-body									{float:left;}
 #spotlight											{float:left;}
 .spotlight-content 									{float:left; margin:0px 25px;}
 

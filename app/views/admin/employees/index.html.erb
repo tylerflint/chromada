@@ -34,7 +34,7 @@
 			<div id='btn-back' class='site-btn' onclick='shiftPage()'></div>
 		</div>
 	
-		<div id='employee-edit-page' class='admin-page'>
+		<div id='edit-employee-grid' class='admin-grid'>
 		
 			<h1>Edit Employee Information</h1>
 		
@@ -187,16 +187,17 @@
 
 <script type='text/javascript'>
 
-	var shifted = false;
+	var shifted 	= false;
+	var dist	 	= $(".admin-page").width() + parseFloat($(".admin-page").css('margin-right'));
 
 	function shiftPage()
 	{
 		if(shifted)
 		{
-			$(".shifter").animate({"left": "+=" + $(".shifter").width()/2});
+			$(".shifter").animate({"left": "+=" + dist});
 			shifted = false;
 		}else{
-			$(".shifter").animate({"left": "-=" + $(".shifter").width()/2});
+			$(".shifter").animate({"left": "-=" + dist});
 			shifted = true;
 		}
 	}
