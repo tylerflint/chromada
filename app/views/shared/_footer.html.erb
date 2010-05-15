@@ -2,13 +2,13 @@
 
 <div id='footer'>
 	<!-- SECONDARY NAV -->
-	<div id='secondary-nav'>
+	<div id='secondary-nav' class='nav'>
 		<ul>
-			<li><span class='bright-blue-text'>chromada</span> <span class='light-grey-text'>inc</span> :</li>
-			<li><%= link_to "send-feedback", 		send_feedback_url, 		:class => (@active == 'send-feedback') 	? 'active-link' : '' %>:</li>
-			<li><%= link_to "contact", 				contact_url, 			:class => (@active == 'contact') 		? 'active-link' : '' %>:</li>
-			<li><%= link_to "privacy-policy", 		privacy_policy_url, 	:class => (@active == 'privacy-policy') ? 'active-link' : '' %>:</li>
-			<li><%= link_to "terms-of-use", 		terms_of_use_url,		:class => (@active == 'terms-of-use') 	? 'active-link' : '' %>:</li>
+			<li><%= link_to '', 		root_url, 				:id => 'link-index',		 	:class => (@active == 'send-feedback') 	? 'active' : '' %>:</li>
+			<li><%= link_to '', 		send_feedback_url, 		:id => 'link-send-feedback', 	:class => (@active == 'send-feedback') 	? 'active' : '' %>:</li>
+			<li><%= link_to '', 		contact_url, 			:id => 'link-contact-us', 		:class => (@active == 'contact') 		? 'active' : '' %>:</li>
+			<li><%= link_to '', 		privacy_policy_url, 	:id => 'link-privacy-policy', 	:class => (@active == 'privacy-policy') ? 'active' : '' %>:</li>
+			<li><%= link_to '', 		terms_of_use_url, 		:id => 'link-terms-of-use', 	:class => (@active == 'terms-of-use') 	? 'active' : '' %>:</li>
 		</ul>
 	</div>
 </div>

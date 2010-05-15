@@ -1,4 +1,4 @@
-<%= link_to image_tag('', :alt => ''), root_url, :id => 'logo', :class=> 'site-image' %>
+<%= link_to '', root_url, :id => 'logo', :class=> 'site-image' %>
 
 <!-- HEADER -->
 <div id='header'>
@@ -6,20 +6,20 @@
 	<div class='page-divide'></div>
 	
 	<!-- PRIMARY NAV -->
-	<div id='primary-nav'>
+	<div id='primary-nav' class='nav'>
 		<ul>
-			<li><%= link_to "products", 		products_url, 	:class => (@active == 'products') 	? 'active-link' : '' %>::</li>
-			<li><%= link_to "services", 		services_url, 	:class => (@active == 'services') 	? 'active-link' : '' %>::</li>
-			<li><%= link_to "downloads", 		downloads_url, 	:class => (@active == 'downloads') 	? 'active-link' : '' %>::</li>
-			<li><%= link_to "support", 			support_url, 	:class => (@active == 'support') 	? 'active-link' : '' %>::</li>
-			<li><%= link_to "about", 			about_url, 		:class => (@active == 'about') 		? 'active-link' : '' %>::</li>
-			<li><%= link_to "contact", 			contact_url,	:class => (@active == 'contact') 	? 'active-link' : '' %>::</li>
+			<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %>::</li>
+			<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %>::</li>
+			<li><%= link_to '', downloads_url, 	:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %>::</li>
+			<li><%= link_to '', support_url, 	:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %>::</li>
+			<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %>::</li>
+			<li><%= link_to '', contact_url,	:id => 'link-contact', 		:class => (@active == 'contact') 	? 'active' : '' %>::</li>
 		</ul>
 	</div>
 	
 	<!-- LOGIN -->
 	<div id='account-login-wrapper'>
-		<span class='btn-site-login'>login</span>
+		<span id='btn-site-login' class='site-image'></span>
 
 		<div id='account-login'>
 			<form>
