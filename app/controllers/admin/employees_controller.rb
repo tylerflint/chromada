@@ -41,6 +41,18 @@ class Admin::EmployeesController < Admin::AdminController
   # render new.rhtml
   def new
     @employee = Employee.new
+    render :template => 'admin/employees/edit.html.erb'
+  end
+  
+  def edit
+    @employee = Employee.find(params[:id])
+  end
+ 
+  def update
+    @employee = Employee.find(params[:id])
+    @employee.update_attributes(params[:employee])
+    @employee.save
+    redirect_to edit_admin_employee_path @employee
   end
  
   def create
