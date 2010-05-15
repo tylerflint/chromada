@@ -92,7 +92,7 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .active-link 										{color:#00D3D3;}
 .site-image 										{float:left; width:100px; height:100px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px;}
 .site-link			 								{float:left; color:#00D3D3; text-decoration:underline;}
-.main-divider										{width:100%; height:5px; margin:2px 0px; background-position:0px -176px;}
+.page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
 
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/site-sprite.jpg') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
