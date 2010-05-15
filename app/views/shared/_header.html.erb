@@ -3,15 +3,17 @@
 <!-- HEADER -->
 <div id='header'>
 	
+	<div class='main-divider site-image'></div>
+	
 	<!-- PRIMARY NAV -->
 	<div id='primary-nav'>
 		<ul>
-			<li><%= link_to "products :", 	products_url, 	:class => (@active == 'products') 	? 'active-link' : '' %></li>
-			<li><%= link_to "services :", 	services_url, 	:class => (@active == 'services') 	? 'active-link' : '' %></li>
-			<li><%= link_to "downloads :", 	downloads_url, 	:class => (@active == 'downloads') 	? 'active-link' : '' %></li>
-			<li><%= link_to "support :", 	support_url, 	:class => (@active == 'support') 	? 'active-link' : '' %></li>
-			<li><%= link_to "about :", 		about_url, 		:class => (@active == 'about') 		? 'active-link' : '' %></li>
-			<li><%= link_to "contact :", 	contact_url,	:class => (@active == 'contact') 	? 'active-link' : '' %></li>
+			<li><%= link_to "products", 		products_url, 	:class => (@active == 'products') 	? 'active-link' : '' %>::</li>
+			<li><%= link_to "services", 		services_url, 	:class => (@active == 'services') 	? 'active-link' : '' %>::</li>
+			<li><%= link_to "downloads", 		downloads_url, 	:class => (@active == 'downloads') 	? 'active-link' : '' %>::</li>
+			<li><%= link_to "support", 			support_url, 	:class => (@active == 'support') 	? 'active-link' : '' %>::</li>
+			<li><%= link_to "about", 			about_url, 		:class => (@active == 'about') 		? 'active-link' : '' %>::</li>
+			<li><%= link_to "contact", 			contact_url,	:class => (@active == 'contact') 	? 'active-link' : '' %>::</li>
 		</ul>
 	</div>
 	
@@ -45,7 +47,6 @@
 	<div id='site-search'>
 		<input value='search'></input><span id='site-search-icon' class='hand-cursor'></span>
 	</div>
-	
 </div>
 
 <div class='main-divider site-image'></div>

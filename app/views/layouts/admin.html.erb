@@ -32,25 +32,19 @@
 	<body id='admin-body'>		
 		<div class='page-wrapper wrapper'>
 			<div class='page'>
-				<!-- HEADER -->
-				<div id='page-header'>
-					<%= render :partial => 'shared/header' %>
-				</div>
-				
-				<!-- PAGE BODY -->
 				<div id='page-body-wrapper'>
-					<div id='admin-body-left'>
-						<%= yield :admin_body_left %>
+					<!-- HEADER -->
+					<div id='page-header'>
+						<%= render :partial => 'shared/header' %>
 					</div>
-					
-					<div id='admin-body-right'>
-						<%= yield %>
-					</div>
-				</div>
 				
-				<!-- FOOTER -->
-				<div id='page-footer'>
-					<%= render :partial => 'shared/footer' %>
+					<!-- PAGE BODY -->
+						<%= yield %>
+				
+					<!-- FOOTER -->
+					<div id='page-footer'>
+						<%= render :partial => 'shared/footer' %>
+					</div>
 				</div>
 			</div>			
 		</div>
