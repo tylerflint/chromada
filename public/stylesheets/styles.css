@@ -100,8 +100,11 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 #btn-save 											{width:73px; margin:0px 2px; background-position:-187px -131px;}
 #btn-cancel 										{width:94px; margin:0px 2px; background-position:-268px -131px;}
 #btn-delete 										{width:93px; margin:0px 2px; background-position:-370px -131px;}
-#btn-demo 											{width:164px; margin:25px 0px; background-position:-734px -131px;}
-#btn-get-started									{width:158px; margin:25px 0px; background-position:-567px -131px;}
+#btn-try-demo 										{width:164px; margin:25px 0px; background-position:-254px -74px;}
+#btn-get-started									{width:158px; margin:25px 0px; background-position:-255px -37px;}
+
+#btn-try-demo:hover									{background-position:-419px -74px;}
+#btn-get-started:hover								{background-position:-414px -37px;}
 
 /***** NAVIGATION *****/
 .nav a 												{float:left; margin:0px 5px 0px 0px; width:50px; height:12px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
@@ -139,16 +142,19 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 .page												{float:left; width:100%; background:#FFFFFF; overflow:hidden;}
 #page-body-wrapper 									{margin:0 auto; width:920px;}
 .page-body											{margin:15px 0px;}
-#page-header 										{float:left; margin:25px 0px 0px 0px;}
+#page-header 										{float:left; width:100%; margin:25px 0px 0px 0px;}
 
 /***** header ******/
 #header												{position:relative; float:left; width:100%; margin:25px 0px 0px 0px;}
 #header ul li 										{margin:0px 3px;}
 #logo												{width:254px; height:80px;}
 
+#sign-up 											{float:right; width:200px; height:30px; background-position:-573px -37px;}
+#sign-up:hover										{background-position:-573px 0px;}
+
 /* account */
 #account-login-wrapper								{float:left;}
-#account-login										{display:none; position:absolute; top:-122px; right:20px; width:260px;}
+#account-login										{width:260px;}
 #btn-site-login 									{width:32px; height:12px; background-position:-560px -24px;}
 #account-login-new-user 							{float:left; width:255px; height:23px; background-position:-168px -73px;}
 
@@ -163,7 +169,7 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 
 /************************************************** PAGES **************************************************/
 
-/* index (home) */
+/* INDEX (HOME) */
 #index-page-body									{float:left;}
 #spotlight											{float:left;}
 .spotlight-content 									{float:left; margin:0px 25px; overflow:hidden;}
@@ -181,9 +187,10 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 #spotlight-image-chromada 							{background-position:-645px 0px;}
 #spotlight-image-ticker								{background-position:-430px 0px;}
 
-#spotlight-right									{float:left; width:375px; margin-top:75px;}
-.spotlight-body										{float:left; width:375px; margin:0px 58px 0px 0px;}
-.spotlight-body p									{line-height:20px; color:#666666;}
+#spotlight-right									{float:left; width:375px;}
+.spotlight-body-wrapper 							{float:left; width:405px;}
+.spotlight-body										{float:left; width:375px; margin:75px 0px 0px 0px;}
+.spotlight-body p									{float:left; width:100%; line-height:20px; color:#666666;}
 #spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
 #spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
 #take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}
