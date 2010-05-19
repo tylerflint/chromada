@@ -1,0 +1,27 @@
+<div id='edit-employee-controls'>
+	<div id='btn-save' class='site-btn' onclick="$('#edit-employee-form').submit();"></div>
+	<div id='btn-cancel' class='site-btn'></div>
+	<div id='btn-delete' class='site-btn'></div>
+</div>
+
+<div id='edit-employee-information'>
+	
+	<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
+
+	<% form_for employee, :url => (employee.new_record? ? admin_employees_path : admin_employee_path), :html => {:id => 'edit-employee-form'} do |f| -%>
+	  	<div class='form-group'>
+			<div id='edit-employee-name-group'>
+				<input id='edit-employee-firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>'/>
+				<input id='edit-employee-lastname' type="text" name="employee[lastname]" value='<%= employee.lastname ||= 'Last Name' %>'/>
+			</div>
+		</div>
+	
+		<div class='form-group'>
+			<input id='edit-employee-email' type="text" name="employee[email]" value='<%= employee.email ||= 'Email' %>'/>
+		</div>
+	
+		<div class='form-group'>
+			<input id='edit-employee-notes' type="text" name="employee[notes]" value='<%= employee.notes ||= 'Notes' %>'/>
+		</div>
+	<% end -%>
+</div>
