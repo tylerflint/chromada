@@ -58,7 +58,7 @@ input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C
 /* TABLES */
 table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
 table th 											{text-align:left;}
-.table-header 										{height:25px; outline:none !important;}
+.table-header 										{height:25px; outline:none !important; background:#999999;}
 table tr	 										{height:70px; cursor:pointer;}
 table tr.even 										{background:#FFFFFF;}
 table tr.odd 										{background:#F7F6F6;}
@@ -94,6 +94,7 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .site-image 										{float:left; width:100px; height:100px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
 .site-link			 								{float:left; color:#00D3D3; text-decoration:underline;}
 .page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
+.pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
 
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
@@ -149,19 +150,22 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 #header ul li 										{margin:0px 3px;}
 #logo												{width:254px; height:80px;}
 
-#sign-up 											{float:right; width:200px; height:30px; background-position:-573px -37px;}
-#sign-up:hover										{background-position:-573px 0px;}
+#sign-up 											{float:right; width:220px; height:30px; background-position:-584px -68px;}
+#sign-up:hover										{background-position:-573px -37px;}
 
 /* account */
-#account-login-wrapper								{float:right;}
+#account-login-wrapper								{float:left;}
 #account-login										{display:none; position:absolute; top:25px; right:0px; z-index:1; width:260px; padding:10px; background:#EEEEEE; border:10px solid #00D3D3;}
 #btn-site-login 									{width:32px; height:12px; background-position:-560px -24px; cursor:pointer;}
 #account-login-new-user 							{float:left; width:255px; height:23px; background-position:-168px -73px;}
 
 /* search */
-#site-search										{float:left;}
-#site-search-icon									{position:absolute; top:3px; right:5px; width:18px; height:18px; background-position:-560px -155px;}
-#site-search input 									{float:left; padding:0px 2px; border:none;}
+#site-search										{float:left; width:150px;}
+#site-search-icon									{float:right; width:12px; height:12px; background-position:-571px 0px;}
+#site-search input 									{float:left; width:125px; height:12px; padding:0px 2px; border:none; text-transform:uppercase;}
+
+/* additional */
+#header-additional 									{float:right;}
 
 /***** footer *****/
 #footer												{float:left; width:100%; margin:0px 0px 25px 0px;}
@@ -171,8 +175,13 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 
 /* INDEX (HOME) */
 #index-page-body									{float:left;}
-#spotlight											{float:left;}
+#spotlight											{float:left; position:relative;}
 .spotlight-content 									{float:left; margin:0px 25px; overflow:hidden;}
+
+/* spotlight */
+.window												{position:relative; overflow:hidden; height:392px;}
+.image-reel 										{position:absolute; top:0; left:0;}
+.content-reel 										{position:absolute; top:0; left:0;}
 
 #spotlight-left										{position:relative; float:left; width:433px; height:392px;}
 #spotlight-controls 								{position:absolute; top:10px; right:50px; z-index:1;}
@@ -183,6 +192,8 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 .spotlight-image 									{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
 #spotlight-image-bg									{width:433px; height:392px;}
 .spotlight-image-logo								{margin:50px 95px; width:215px; height:275px;}
+
+#spotlight-cover 									{position:absolute; top:0px; left:425px; width:40px; height:392px; background-position:-860px 0px;}
 
 #spotlight-image-chromada 							{background-position:-645px 0px;}
 #spotlight-image-ticker								{background-position:-430px 0px;}

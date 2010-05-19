@@ -11,14 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20100519014524) do
 
-  create_table "blogs", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.string   "subject"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "paypal_payment_profile_id"
