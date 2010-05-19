@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100515210940) do
+ActiveRecord::Schema.define(:version => 20100519014524) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -34,14 +34,9 @@ ActiveRecord::Schema.define(:version => 20100515210940) do
     t.datetime "updated_at"
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
-    t.integer  "increment_id"
     t.string   "employee_id",               :limit => 20,  :default => ""
     t.string   "firstname",                 :limit => 20
     t.string   "lastname",                  :limit => 20
-    t.string   "middlename",                :limit => 20,  :default => ""
-    t.string   "prefix",                    :limit => 10,  :default => ""
-    t.string   "suffix",                    :limit => 10,  :default => ""
-    t.date     "birthdate"
     t.integer  "is_active",                                :default => 1
     t.text     "notes"
   end
