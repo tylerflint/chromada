@@ -8,7 +8,7 @@
 				<% end %>
 			</tr>
 			<% get_model.each do |m| %>
-				<tr class='even' title='Click to Edit' onclick='shiftPage();'>
+				<tr class='even' title='Click to Edit' onclick='window.location = "<%= get_edit_url m.id %>"'>
 					<% @columns.each do |k, v| %>
 						<% if (v[:type] == :email) %>
 							<td class='employee-email'><%= mail_to('tylerflint@gmail.com', 'tylerflint@gmail.com') %></td>

@@ -2,6 +2,7 @@ class AdminGrid < Blockpile
   
   def initialize(helper, object, session, params, options={})
     super helper
+    @object       = object
     @template     = 'admin_grid'
     @id           = :"#{object}_grid"
     @session      = session
@@ -23,6 +24,19 @@ class AdminGrid < Blockpile
   
   def add_column(attribute, options)
     @columns[attribute] = options
+  end
+  
+  def get_edit_url(id)
+    # edit_admin_employee
+    if @url_prefix
+      eval "edit_#{@url_prefix}_#{@object.to_s}_url(#{id})"
+    else
+      eval "edit_#{@object.to_s}_url(#{id})"
+    end
+  end
+  
+  def get_new_url
+    
   end
   
 protected

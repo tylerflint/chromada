@@ -18,7 +18,7 @@
 		
 			<%= render :partial => 'admin/shared/superFilter'%>
 		
-			<%  admin_grid :employee do |g| %>
+			<%  admin_grid :employee, :url_prefix => 'admin' do |g| %>
 				<% g.add_column :status, :name => 'Status', :type => :status %>
 				<% g.add_column :photo, :name => 'Photo', :type => :image %>
 				<% g.add_column :name, :name => 'Employee Name' %>
