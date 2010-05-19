@@ -153,9 +153,9 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 #sign-up:hover										{background-position:-573px 0px;}
 
 /* account */
-#account-login-wrapper								{float:left;}
-#account-login										{width:260px;}
-#btn-site-login 									{width:32px; height:12px; background-position:-560px -24px;}
+#account-login-wrapper								{float:right;}
+#account-login										{display:none; position:absolute; top:25px; right:0px; z-index:1; width:260px; padding:10px; background:#EEEEEE; border:10px solid #00D3D3;}
+#btn-site-login 									{width:32px; height:12px; background-position:-560px -24px; cursor:pointer;}
 #account-login-new-user 							{float:left; width:255px; height:23px; background-position:-168px -73px;}
 
 /* search */
@@ -189,7 +189,7 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 
 #spotlight-right									{float:left; width:375px;}
 .spotlight-body-wrapper 							{float:left; width:405px;}
-.spotlight-body										{float:left; width:375px; margin:75px 0px 0px 0px;}
+.spotlight-body										{float:left; width:375px; margin:75px 50px 0px 0px;}
 .spotlight-body p									{float:left; width:100%; line-height:20px; color:#666666;}
 #spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
 #spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
