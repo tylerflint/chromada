@@ -41,7 +41,6 @@ class Admin::EmployeesController < Admin::AdminController
   # render new.rhtml
   def new
     @employee = Employee.new
-    render :template => 'admin/employees/edit.html.erb'
   end
   
   def edit
@@ -56,20 +55,27 @@ class Admin::EmployeesController < Admin::AdminController
   end
  
   def create
-    logout_keeping_session!
+    # logout_keeping_session!
     @employee = Employee.new(params[:employee])
+    @employee.generate_password #if params[:employee][:generate_password] == 1
     success = @employee && @employee.save
     if success && @employee.errors.empty?
             # Protects against session fixation attacks, causes request forgery
       # protection if visitor resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
       # reset session
-      self.current_employee = @employee # !! now logged in
-      redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
+      # self.current_employee = @employee # !! now logged in
+      # redirect_back_or_default('/')
+      render :action => 'index'
+      flash[:notice] = "Employee was successfully created."
     else
-      flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
-      render :action => 'new'
+      errors = ""
+      @employee.errors.each do |k, v|
+        errors << k + ": " + v + "<br />"
+      end
+      render :text => errors
+      # flash[:error]  = "Unable to create a new employee."
+      # render :action => 'new'
     end
   end
   

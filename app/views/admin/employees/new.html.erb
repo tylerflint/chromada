@@ -1,19 +1,9 @@
-<h1>Sign up as a new user</h1>
-<% @employee.password = @employee.password_confirmation = nil %>
+<div id='employee-edit-page'>
+	
+	<h1>New Employee</h1>
 
-<%= error_messages_for :employee %>
-<% form_for :employee, :url => employees_path do |f| -%>
-<p><%= label_tag 'login' %><br/>
-<%= f.text_field :login %></p>
-
-<p><%= label_tag 'email' %><br/>
-<%= f.text_field :email %></p>
-
-<p><%= label_tag 'password' %><br/>
-<%= f.password_field :password %></p>
-
-<p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
-<%= f.password_field :password_confirmation %></p>
-
-<p><%= submit_tag 'Sign up' %></p>
-<% end -%>
+	<%= render :partial => "form", :locals => {:employee => @employee} %>
+	
+	<%= render :partial => "roles" %>
+	
+</div>
