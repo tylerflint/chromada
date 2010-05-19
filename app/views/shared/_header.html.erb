@@ -21,21 +21,19 @@
 	
 	<!-- LOGIN -->
 	<div id='account-login-wrapper'>
-		<span id='btn-site-login' class='site-image'></span>
+		<span id='btn-site-login' class='site-image' onclick='showLogin();'></span>
 
 		<div id='account-login'>
 			<form>
-				<div id='account-login-new-user' class='site-image'></div>
-				
 				<div id='account-login-returning-user'>
 					<% form_for(:quote, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
 						<h4>Returning user login:</h4>
 						<div class='form-group'>
-						    <span class='form-field'><%= form.text_field :name, :class => 'required', :value => 'name' %></span>
+						    <span class='form-field'><%= form.text_field :name, :class => 'required', :value => 'name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
 						</div>
 						
 						<div class='form-group'>
-						    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password' %></span>
+						    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
 						</div>
 						
 						<a href=''><span class='site-link'>Forgotten Password?</span></a>
@@ -45,10 +43,24 @@
 		</div>
 	</div>
 	
-	<!-- SEARCH -->
+	<!-- SEARCH
 	<div id='site-search'>
 		<input value='search'></input><span id='site-search-icon' class='hand-cursor'></span>
 	</div>
-	
+	 -->
 	<div class='page-divide'></div>
 </div>
+
+<script type='text/javascript'>
+	//<![CDATA[
+		function showLogin()
+		{
+			$('#account-login').show();
+		}
+		
+		function hideLogin()
+		{
+			$('#account-login').hide();
+		}
+	//]]>
+</script>
