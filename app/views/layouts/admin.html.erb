@@ -39,7 +39,23 @@
 					</div>
 				
 					<!-- PAGE BODY -->
-						<%= yield %>
+					<div id="content" class="clear">
+						<div id="left">
+							<!-- replace the following with a blockpile -->
+							<ul>
+								<li>
+									<%= link_to 'Employees', admin_employees_url %>
+								</li>
+								<li>
+									<%= link_to "ACL Roles"  %>
+								</li>
+							</ul>
+							<!-- end replace -->
+						</div>
+						<div id="main">
+							<%= yield %>
+						</div>
+					</div>
 				
 					<!-- FOOTER -->
 					<div id='page-footer'>

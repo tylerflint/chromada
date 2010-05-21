@@ -41,12 +41,18 @@ class Admin::EmployeesController < Admin::AdminController
   # render new.rhtml
   def new
     @employee = Employee.new
+    if params[:ajax] == "1"
+      render :layout => false
+    end
   end
   
   def edit
     @employee = Employee.find(params[:id])
+    if params[:ajax] == "1"
+      render :layout => false
+    end
   end
- 
+  
   def update
     @employee = Employee.find(params[:id])
     @employee.update_attributes(params[:employee])
