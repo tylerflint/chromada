@@ -92,7 +92,7 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 
 .active-link 										{color:#00D3D3;}
 .site-image 										{float:left; width:100px; height:100px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
-.site-link			 								{float:left; color:#00D3D3; text-decoration:underline;}
+.site-link			 								{color:#00D3D3; text-decoration:underline; cursor:pointer;}
 .page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
 .pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
 
@@ -103,13 +103,18 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 #btn-delete 										{width:93px; margin:0px 2px; background-position:-370px -131px;}
 #btn-try-demo 										{width:164px; margin:25px 0px; background-position:-254px -74px;}
 #btn-get-started									{width:158px; margin:25px 0px; background-position:-255px -37px;}
+#btn-next											{width:84px; margin:25px 0px; background-position:0px -82px;}
+.btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
 
 #btn-try-demo:hover									{background-position:-419px -74px;}
 #btn-get-started:hover								{background-position:-414px -37px;}
+#btn-next:hover										{background-position:-86px -82px;}
+.btn-close:hover 									{background-position:-668px -4px;}
 
 /***** NAVIGATION *****/
 .nav a 												{float:left; margin:0px 5px 0px 0px; width:50px; height:12px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
 a#link-index										{height:6px; width:56px; background-position:-594px 0px;}
+.nav-link-divide 									{width:5px; height:8px; margin:1px 0px; background-position:-560px -12px;}
 
 /* primary nav */
 a#link-products 									{width:55px; background-position:-255px -24px;}
@@ -143,21 +148,35 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 .page												{float:left; width:100%; background:#FFFFFF; overflow:hidden;}
 #page-body-wrapper 									{margin:0 auto; width:920px;}
 .page-body											{margin:15px 0px;}
-#page-header 										{float:left; width:100%; margin:25px 0px 0px 0px;}
+#page-header 										{position:relative; float:left; width:100%; margin:20px 0px 0px 0px;}
 
 /***** header ******/
 #header												{position:relative; float:left; width:100%; margin:25px 0px 0px 0px;}
 #header ul li 										{margin:0px 3px;}
 #logo												{width:254px; height:80px;}
 
-#sign-up 											{float:right; width:220px; height:30px; background-position:-584px -68px;}
-#sign-up:hover										{background-position:-573px -37px;}
+#site-register 										{float:right; width:220px; height:30px; background-position:-584px -68px; cursor:pointer;}
+#site-register:hover								{background-position:-573px -37px;}
 
 /* account */
-#account-login-wrapper								{float:left;}
-#account-login										{display:none; position:absolute; top:25px; right:0px; z-index:1; width:260px; padding:10px; background:#EEEEEE; border:10px solid #00D3D3;}
 #btn-site-login 									{width:32px; height:12px; background-position:-560px -24px; cursor:pointer;}
 #account-login-new-user 							{float:left; width:255px; height:23px; background-position:-168px -73px;}
+
+.account-body 										{float:left; width:100%;}
+.account-body .page-title							{float:left; width:100%; margin:10px 0px;}
+.account-body p 									{float:left; width:100%; margin:10px 0px;}
+.account-body .form-group 							{margin:-1px 0px;}
+.account-nav 										{float:left; width:100%;}
+.account-form 										{float:left; width:100%;}
+.account-form-body		 							{float:left; width:100%; margin:10px 0px;}
+
+/*- register -*/
+#account-register-wrapper							{display:none; position:absolute; top:50px; right:0px; z-index:1; width:325px; padding:10px; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
+#account-register									{margin:0 auto; width:275px;}
+
+/*- login -*/
+#account-login-wrapper								{display:none; position:absolute; top:50px; right:0px; z-index:1; width:260px; padding:10px; background:url('../images/vertical-tiles-sprite.png') repeat-y 0px 0px;}
+#account-login										{}
 
 /* search */
 #site-search										{float:left; width:150px;}
@@ -170,6 +189,10 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 /***** footer *****/
 #footer												{float:left; width:100%; margin:0px 0px 25px 0px;}
 #footer ul li 										{margin:0px 5px;}
+
+/***** MODAL *****/
+.modal-top 											{}
+.modal-bottom 										{}
 
 /************************************************** PAGES **************************************************/
 

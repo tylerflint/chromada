@@ -1,6 +1,58 @@
-<%= link_to '', root_url, :id => 'logo', :class=> 'site-image' %>
+<%= link_to '', root_url, :id => 'logo', :class => 'site-image' %>
 
-<%= link_to '', root_url, :id => 'sign-up', :class=> 'site-image' %>
+<span id='site-register' class='site-image' onclick='showRegister();'></span>
+
+<!-- REGISTER -->
+<div id='' class='modal-top site-image'></div>
+<div id='account-register-wrapper' class='modal'>
+
+	<div id='account-register'>
+		
+		<span class='site-image btn-close' onclick='closeWindow();'></span>
+		
+		<div class='account-nav'>
+			<div></div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<div class='page-divide'></div>
+		
+		<div class='account-body'>
+			<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
+				
+				<h1 class='page-title'>Welcome To Chromada</h1>
+				<p>Before we can really know what would be the best solution for you, we just need to get to know you a little better. Please fill out the simple form below to help us out.</p>
+				
+				<div class='account-form-body'>
+					<div class='form-group'>
+					    <span class='form-field'><%= form.text_field :firstname, :class => 'required', :value => 'first name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+					</div>
+				
+					<div class='form-group'>
+					    <span class='form-field'><%= form.text_field :lastname, :class => 'required', :value => 'last name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+					</div>
+				
+					<div class='form-group'>
+					    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+					</div>
+		
+					<div class='form-group'>
+					    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+					</div>
+				</div>
+		
+				<div id='btn-next' class='site-btn'></div>
+			<% end %>
+		</div>
+		
+		<div>Already Registered? <span class='site-link float-none' onclick='showLogin();'>Login Here</span></div>
+	</div>
+</div>
+<div id='' class='modal-bottom site-image'></div>
 
 <!-- HEADER -->
 <div id='header'>
@@ -10,38 +62,47 @@
 	<!-- PRIMARY NAV -->
 	<div id='primary-nav' class='nav'>
 		<ul>
-			<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %>::</li>
-			<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %>::</li>
-			<li><%= link_to '', downloads_url, 	:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %>::</li>
-			<li><%= link_to '', support_url, 	:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %>::</li>
-			<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %>::</li>
+			<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
+			<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
+			<li><%= link_to '', downloads_url, 	:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
+			<li><%= link_to '', support_url, 	:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
+			<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
 			<li><%= link_to '', contact_url,	:id => 'link-contact', 		:class => (@active == 'contact') 	? 'active' : '' %></li>
 		</ul>
 	</div>
 	
 	<div id='header-additional'>
+		
+		<span id='btn-site-login' class='site-image' onclick='showLogin();'></span>
 	
 		<!-- LOGIN -->
-		<div id='account-login-wrapper'>
-			<span id='btn-site-login' class='site-image' onclick='showLogin();'></span>
+		<div id='account-login-wrapper' class='modal'>
+			
+			<span class='site-image btn-close' onclick='closeWindow();'></span>
 
 			<div id='account-login'>
-				<form>
-					<div id='account-login-returning-user'>
-						<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
-							<h4>Returning user login:</h4>
-							<div class='form-group'>
-							    <span class='form-field'><%= form.text_field :name, :class => 'required', :value => 'name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-							</div>
+				<div class='account-body'>
+					<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
 						
+						<h1 class='page-title'>login</h1>
+						<p>Welcome back.</p>
+						
+						<div class='account-form-body'>						
+							<div class='form-group'>
+							    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+							</div>
+				
 							<div class='form-group'>
 							    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
 							</div>
-						
-							<a href=''><span class='site-link'>Forgotten Password?</span></a>
-						<% end %>
-					</div>
-				</form>
+						</div>
+				
+						<div id='btn-next' class='site-btn'></div>
+					<% end %>
+				</div>
+				
+				<div class='site-link'>Forgot Your Password?</div>
+				<div>New? <span class='site-link float-none' onclick='showRegister();'>Sign Up</span></div>
 			</div>
 		</div>
 		
@@ -62,14 +123,31 @@
 
 <script type='text/javascript'>
 	//<![CDATA[
+		function closeWindow()
+		{
+			$('.modal').fadeOut(250);
+		}
+	
 		function showLogin()
 		{
-			$('#account-login').show();
+			$('#account-login-wrapper').fadeIn(250);
+			$('#account-register-wrapper').fadeOut(250);
 		}
 		
 		function hideLogin()
 		{
-			$('#account-login').hide();
+			$('#account-login-wrapper').fadeOut(250);
+		}
+		
+		function showRegister()
+		{
+			$('#account-register-wrapper').fadeIn(250);
+			$('#account-login-wrapper').fadeOut(250);
+		}
+		
+		function hideRegister()
+		{
+			$('#account-register-wrapper').fadeOut(250);
 		}
 	//]]>
 </script>
