@@ -1,7 +1,7 @@
 <div id='edit-employee-controls'>
-	<div id='btn-save' class='site-btn' onclick="$('#edit-employee-form').submit();"></div>
-	<div id='btn-cancel' class='site-btn'></div>
-	<div id='btn-delete' class='site-btn'></div>
+	<div id='btn-save' class='site-btn' onclick="save()"></div>
+	<div id='btn-cancel' class='site-btn' onclick="cancel()"></div>
+	<div id='btn-delete' class='site-btn' onclick="destroy()"></div>
 </div>
 
 <div id='edit-employee-information'>
@@ -25,3 +25,26 @@
 		</div>
 	<% end -%>
 </div>
+<script type="text/javascript" charset="utf-8">
+	function save () {
+		if (gridUseAjax) {
+			backToGrid();
+		} else {
+			$('#edit-employee-form').submit();
+		}
+	}
+	function cancel () {
+		if (gridUseAjax) {
+			backToGrid();
+		} else {
+			
+		}
+	}
+	function destroy () {
+		if (gridUseAjax) {
+			backToGrid();
+		} else {
+			
+		}
+	}
+</script>

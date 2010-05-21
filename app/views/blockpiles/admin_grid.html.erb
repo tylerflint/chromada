@@ -1,28 +1,57 @@
-<div class='admin-grid-wrapper'>
-	<%= render :partial => 'admin/shared/toolbar'%>
-	<div class='admin-grid'>
-		<table class='admin-table'>
-			<tr class='table-header'>
-				<% @columns.each do |k, v| %>
-					<th><%= v[:name] %></th>
-				<% end %>
-			</tr>
-			<% get_model.each do |m| %>
-				<tr class='even' title='Click to Edit' onclick='shiftPage();'>
+<div id='admin-grid-wrapper' class='clear'>
+	
+	<div id="admin-grid">
+		<h1><%= @title %></h1>
+
+		<%= render :partial => 'admin/shared/superFilter'%>
+		<%= render :partial => 'admin/shared/toolbar'%>
+		<div class='admin-grid'>
+			<table class='admin-table'>
+				<tr class='table-header'>
 					<% @columns.each do |k, v| %>
-						<% if (v[:type] == :email) %>
-							<td class='employee-email'><%= mail_to('tylerflint@gmail.com', 'tylerflint@gmail.com') %></td>
-						<% elsif (v[:type] == :image) %>
-							<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
-						<% elsif (v[:type] == :status) %>
-							<td><div class='employee-status in'><span class='hide'>in</span></div></td>
-						<% else %>
-							<td><%= m.send k %></td>
-						<% end %>
+						<th><%= v[:name] %></th>
 					<% end %>
 				</tr>
-			<% end %>
-		</table>
+				<% get_model.each do |m| %>
+					<tr class='even' title='Click to Edit' onclick='edit("<%= get_edit_url m.id %>")'>
+						<% @columns.each do |k, v| %>
+							<% if (v[:type] == :email) %>
+								<td class='employee-email'><%= mail_to('tylerflint@gmail.com', 'tylerflint@gmail.com') %></td>
+							<% elsif (v[:type] == :image) %>
+								<td><%= link_to image_tag('temp/employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'employee-photo-######', :class=> 'employee-photo' %></td>
+							<% elsif (v[:type] == :status) %>
+								<td><div class='employee-status in'><span class='hide'>in</span></div></td>
+							<% else %>
+								<td><%= m.send k %></td>
+							<% end %>
+						<% end %>
+					</tr>
+				<% end %>
+			</table>
+		</div>
+		<%= render :partial => 'admin/shared/toolbar' %>
 	</div>
-	<%= render :partial => 'admin/shared/toolbar' %>
+	
+	<div id="admin-grid-entity-wrapper">
+		<!-- entity edit form will go here -->
+	</div>	
 </div>
+
+<script type="text/javascript" charset="utf-8">
+	var gridUseAjax = <%= @use_ajax ? true : false %>;
+	function edit (url) {
+		<% if @use_ajax %>
+			$.get(url + "?ajax=1", function(data){
+				$("#admin-grid-entity-wrapper").html(data);
+				$("#admin-grid-wrapper").animate({"margin-left": "-=" + "750"});
+			})
+		<% else %>
+			window.location = url
+		<% end %>
+	}
+	function backToGrid () {
+		$("#admin-grid-wrapper").animate({"margin-left": "+=" + "750"}, function(){
+			$("#admin-grid-entity-wrapper").html('');
+		});
+	}
+</script>
