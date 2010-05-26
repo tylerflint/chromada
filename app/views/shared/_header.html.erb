@@ -1,58 +1,117 @@
 <%= link_to '', root_url, :id => 'logo', :class => 'site-image' %>
 
-<span id='site-register' class='site-image' onclick='showRegister();'></span>
+<span id='btn-account-register' class='site-image' onclick='showRegister();'></span>
 
 <!-- REGISTER -->
-<div id='' class='modal-top site-image'></div>
 <div id='account-register-wrapper' class='modal'>
 
-	<div id='account-register'>
+	<div id='account-register-modal-top' class='modal-image'></div>
+	<div id='account-register-background'>
+		<div id='account-register'>
+			
+			<span class='site-image btn-close' onclick='closeWindow();'></span>
+			
+			<div id='account-register-body'>
 		
-		<span class='site-image btn-close' onclick='closeWindow();'></span>
-		
-		<div class='account-nav'>
-			<div></div>
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-		
-		<div class='page-divide'></div>
-		
-		<div class='account-body'>
-			<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
-				
-				<h1 class='page-title'>Welcome To Chromada</h1>
-				<p>Before we can really know what would be the best solution for you, we just need to get to know you a little better. Please fill out the simple form below to help us out.</p>
-				
-				<div class='account-form-body'>
-					<div class='form-group'>
-					    <span class='form-field'><%= form.text_field :firstname, :class => 'required', :value => 'first name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-					</div>
-				
-					<div class='form-group'>
-					    <span class='form-field'><%= form.text_field :lastname, :class => 'required', :value => 'last name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-					</div>
-				
-					<div class='form-group'>
-					    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-					</div>
-		
-					<div class='form-group'>
-					    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-					</div>
+				<div class='account-nav'>
+					<span id='account-register-nav-title' class='site-image'></span>
+					<ul class='account-nav-steps'>
+						<li id='account-register-nav-step1' class='account-nav-step site-image active' onclick='toStep(1)'></li>
+						<li id='account-register-nav-step2' class='account-nav-step site-image' onclick='toStep(2)'></li>
+						<li id='account-register-nav-step3' class='account-nav-step site-image' onclick='toStep(3)'></li>
+					</ul>
 				</div>
 		
-				<div id='btn-next' class='site-btn'></div>
-			<% end %>
-		</div>
+				<div class='page-divide'></div>
+				
+				<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
+					<div id='account-register-shifter' class='shifter'>
+						<div id='account-body-step1' class='account-body'>
+					
+							<h1 id='account-register-title' class='title-image'><span class='hide'>Welcome To Chromada</span></h1>
+							<p>Before we can really know what would be the best solution for you, we just need to get to know you a little better. Please fill out the simple form below to help us out.</p>
 		
-		<div>Already Registered? <span class='site-link float-none' onclick='showLogin();'>Login Here</span></div>
+							<div class='account-body-form'>
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :firstname, :class => 'required', :value => 'first name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+		
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :lastname, :class => 'required', :value => 'last name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+		
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+							</div>
+
+							<div id='btn-next' class='site-btn'></div>
+						
+							<div>Already Registered? <span class='site-link float-none' onclick='showLogin();'>Login Here</span></div>
+						</div>
+						
+						<div id='account-body-step2' class='account-body'>
+					
+							<h1 id='' class=''><span class=''>Step 2</span></h1>
+							<p>Now we just need to gather a little bit more about your company.</p>
+		
+							<div class='account-body-form'>
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :firstname, :class => 'required', :value => 'first name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+		
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :lastname, :class => 'required', :value => 'last name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+		
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+							</div>
+
+							<div id='btn-next' class='site-btn'></div>
+						</div>
+						
+						<div id='account-body-step3' class='account-body'>
+					
+							<h1 id='' class=''><span class=''>Step 3</span></h1>
+							<p>Thanks! Thats all we needed to help you get started.</p>
+		
+							<div class='account-body-form'>
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :firstname, :class => 'required', :value => 'first name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+		
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :lastname, :class => 'required', :value => 'last name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+		
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+
+								<div class='form-group'>
+								    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+								</div>
+							</div>
+
+							<div id='btn-next' class='site-btn'></div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
 	</div>
+	<div id='account-register-modal-bottom' class='modal-image'></div>
 </div>
-<div id='' class='modal-bottom site-image'></div>
 
 <!-- HEADER -->
 <div id='header'>
@@ -78,32 +137,39 @@
 		<!-- LOGIN -->
 		<div id='account-login-wrapper' class='modal'>
 			
-			<span class='site-image btn-close' onclick='closeWindow();'></span>
-
-			<div id='account-login'>
-				<div class='account-body'>
-					<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
+			<div id='account-login-modal-top' class='modal-image'></div>
+			<div id='account-login-background'>
+				<div id='account-login'>
+					
+					<span class='site-image btn-close' onclick='closeWindow();'></span>
+					
+					<div id='account-login-body'>
+						<div class='account-body'>
+							<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
 						
-						<h1 class='page-title'>login</h1>
-						<p>Welcome back.</p>
+								<h1 id='account-login-title' class='title-image'><span class='hide'>Login</span></h1>
+								<p>Welcome back. Login below to view, and manage your account.</p>
 						
-						<div class='account-form-body'>						
-							<div class='form-group'>
-							    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-							</div>
+								<div class='account-form-body'>						
+									<div class='form-group'>
+									    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+									</div>
 				
-							<div class='form-group'>
-							    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-							</div>
+									<div class='form-group'>
+									    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+									</div>
+								</div>
+				
+								<div id='btn-next' class='site-btn'></div>
+							<% end %>
 						</div>
 				
-						<div id='btn-next' class='site-btn'></div>
-					<% end %>
+						<div class='site-link'>Forgot Your Password?</div>
+						<div>New? <span class='site-link float-none' onclick='showRegister();'>Sign Up</span></div>
+					</div>
 				</div>
-				
-				<div class='site-link'>Forgot Your Password?</div>
-				<div>New? <span class='site-link float-none' onclick='showRegister();'>Sign Up</span></div>
 			</div>
+			<div id='account-login-modal-bottom' class='modal-image'></div>
 		</div>
 		
 		<div class='pipe' style='height:12px;'></div>

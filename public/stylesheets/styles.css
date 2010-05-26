@@ -7,6 +7,7 @@ img													{float:left; border:none;}
 
 /* MAIN PAGE ELEMENTS */
 body 												{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
+body p 												{float:left; width:100%; line-height:20px; color:#666666;}
                                		
 /* WRAPPERS */                       		
 .shifter 											{position:relative;}
@@ -95,6 +96,8 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .site-link			 								{color:#00D3D3; text-decoration:underline; cursor:pointer;}
 .page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
 .pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
+.modal-image 										{float:left; width:100%; height:25px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
+.title-image 										{float:left; width:100px; height:100px; margin:15px 0px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
 
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
@@ -103,12 +106,12 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 #btn-delete 										{width:93px; margin:0px 2px; background-position:-370px -131px;}
 #btn-try-demo 										{width:164px; margin:25px 0px; background-position:-254px -74px;}
 #btn-get-started									{width:158px; margin:25px 0px; background-position:-255px -37px;}
-#btn-next											{width:84px; margin:25px 0px; background-position:0px -82px;}
+#btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
 .btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
 
 #btn-try-demo:hover									{background-position:-419px -74px;}
 #btn-get-started:hover								{background-position:-414px -37px;}
-#btn-next:hover										{background-position:-86px -82px;}
+#btn-next:hover										{background-position:-86px -81px;}
 .btn-close:hover 									{background-position:-668px -4px;}
 
 /***** NAVIGATION *****/
@@ -155,28 +158,60 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 #header ul li 										{margin:0px 3px;}
 #logo												{width:254px; height:80px;}
 
-#site-register 										{float:right; width:220px; height:30px; background-position:-584px -68px; cursor:pointer;}
-#site-register:hover								{background-position:-573px -37px;}
-
 /* account */
 #btn-site-login 									{width:32px; height:12px; background-position:-560px -24px; cursor:pointer;}
-#account-login-new-user 							{float:left; width:255px; height:23px; background-position:-168px -73px;}
 
-.account-body 										{float:left; width:100%;}
+.account-body 										{float:left; width:236px;}
 .account-body .page-title							{float:left; width:100%; margin:10px 0px;}
 .account-body p 									{float:left; width:100%; margin:10px 0px;}
 .account-body .form-group 							{margin:-1px 0px;}
 .account-nav 										{float:left; width:100%;}
 .account-form 										{float:left; width:100%;}
-.account-form-body		 							{float:left; width:100%; margin:10px 0px;}
+.account-body-form		 							{float:left; width:100%; margin:10px 0px;}
+
+/*- account nav -*/
+#account-register-nav-title 						{float:left; width:49px; height:17px; background-position:-174px -88px;}
+
+.account-nav-step 									{float:left; width:6px; height:12px; margin:0px 8px; cursor:pointer;}
+#account-register-nav-step1 						{background-position:-533px -117px;}
+#account-register-nav-step2 						{width:9px; background-position:-539px -117px;}
+#account-register-nav-step3 						{width:9px; background-position:-548px -117px;}
+
+#account-register-nav-step1:hover					{background-position:-507px -117px;}
+#account-register-nav-step2:hover					{background-position:-513px -117px;}
+#account-register-nav-step3:hover					{background-position:-522px -117px;}
+
+#account-register-nav-step1.active					{background-position:-480px -117px;}
+#account-register-nav-step2.active					{width:8px; background-position:-488px -117px;}
+#account-register-nav-step3.active					{width:9px; background-position:-496px -117px;}
 
 /*- register -*/
-#account-register-wrapper							{display:none; position:absolute; top:50px; right:0px; z-index:1; width:325px; padding:10px; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
-#account-register									{margin:0 auto; width:275px;}
+#btn-account-register 								{float:right; width:220px; height:30px; background-position:-584px -68px; cursor:pointer;}
+#btn-account-register:hover							{background-position:-573px -37px;}
+
+#account-register-wrapper		 					{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
+#account-register-modal-top 						{height:10px; background-position:-401px -290px;}
+#account-register-background 		 				{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
+#account-register-modal-bottom 						{height:15px; background-position:-401px -301px;}
+
+#account-register									{margin:5px auto; width:300px;}
+#account-register-body	 							{margin:0 auto; width:236px; padding:36px 0px;}
+#account-register-title 							{width:235px; height:21px; background-position:-241px -112px;}
+
+#account-register-shifter 							{float:left; width:2000px;}
 
 /*- login -*/
-#account-login-wrapper								{display:none; position:absolute; top:50px; right:0px; z-index:1; width:260px; padding:10px; background:url('../images/vertical-tiles-sprite.png') repeat-y 0px 0px;}
+#account-login-wrapper								{display:none; position:absolute; top:50px; right:0px; z-index:1; width:260px; padding:10px;}
 #account-login										{}
+
+#account-login-wrapper		 						{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
+#account-login-modal-top 							{height:10px; background-position:-401px -290px;}
+#account-login-background 		 					{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
+#account-login-modal-bottom 						{height:15px; background-position:-401px -301px;}
+
+#account-login										{margin:5px auto; width:300px;}
+#account-login-body	 								{margin:0 auto; width:236px; padding:36px 0px;}
+#account-login-title	 							{width:52px; height:21px; background-position:-185px -112px;}
 
 /* search */
 #site-search										{float:left; width:150px;}
@@ -224,12 +259,7 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 #spotlight-right									{float:left; width:375px;}
 .spotlight-body-wrapper 							{float:left; width:405px;}
 .spotlight-body										{float:left; width:375px; margin:75px 50px 0px 0px;}
-.spotlight-body p									{float:left; width:100%; line-height:20px; color:#666666;}
 #spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
 #spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
 #take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}
 #take-a-tour:hover									{text-decoration:underline;}
-
-#account-login-returning-user h4 					{float:left; width:100%; margin:8px 0px;}
-#account-login-returning-user span 					{float:left;}
-#account-login-returning-user input 				{float:left; width:135px; padding:0px 2px;}
