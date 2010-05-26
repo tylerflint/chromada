@@ -9,27 +9,44 @@ class Admin::EmployeesController < Admin::AdminController
   end
   
   def login
-    if request.post?
-      logout_keeping_session!
-      employee = Employee.authenticate(params[:login], params[:password])
-      if employee
-        # Protects against session fixation attacks, causes request forgery
-        # protection if user resubmits an earlier form using back
-        # button. Uncomment if you understand the tradeoffs.
-        # reset_session
-        self.current_employee = employee
-        new_cookie_flag = (params[:remember_me] == "1")
-        handle_remember_cookie! new_cookie_flag
-        redirect_to admin_dashboard_path
-      else
-        note_failed_signin
-        @login       = params[:login]
-        @remember_me = params[:remember_me]
-        render :action => 'login'
+    respond_to do |format|
+      format.html do
+        
       end
-    else
-      render :layout => false
+      format.js do
+        employee = Employee.authenticate(cookies[:login], cookies[:password])
+        if employee
+          self.current_employee = employee
+          cookies[:login]     = ''
+          cookies[:password]  = ''
+          render :js => "window.location = '/admin/dashboard'"
+        else
+          # somehow display an error here
+          render :js => "alert('username and password does not match any within the system')"
+        end
+      end
     end
+    # if request.post?
+    #   logout_keeping_session!
+    #   employee = Employee.authenticate(params[:login], params[:password])
+    #   if employee
+    #     # Protects against session fixation attacks, causes request forgery
+    #     # protection if user resubmits an earlier form using back
+    #     # button. Uncomment if you understand the tradeoffs.
+    #     # reset_session
+    #     self.current_employee = employee
+    #     new_cookie_flag = (params[:remember_me] == "1")
+    #     handle_remember_cookie! new_cookie_flag
+    #     redirect_to admin_dashboard_path
+    #   else
+    #     note_failed_signin
+    #     @login       = params[:login]
+    #     @remember_me = params[:remember_me]
+    #     render :action => 'login'
+    #   end
+    # else
+    #   render :layout => false
+    # end
   end
 
   def logout

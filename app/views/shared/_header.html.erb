@@ -24,7 +24,7 @@
 		
 				<div class='page-divide'></div>
 				
-				<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
+				<% form_for(:employee, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
 					<div id='account-register-shifter' class='shifter'>
 						<div id='account-body-step1' class='account-body'>
 					
@@ -145,7 +145,7 @@
 					
 					<div id='account-login-body'>
 						<div class='account-body'>
-							<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
+							<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post, :onsubmit => 'return loginPost()' }) do |form| %>
 						
 								<h1 id='account-login-title' class='title-image'><span class='hide'>Login</span></h1>
 								<p>Welcome back. Login below to view, and manage your account.</p>
@@ -156,10 +156,10 @@
 									</div>
 				
 									<div class='form-group'>
-									    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+									    <span class='form-field'><%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
 									</div>
 								</div>
-				
+								<%= form.submit %>
 								<div id='btn-next' class='site-btn'></div>
 							<% end %>
 						</div>
@@ -189,6 +189,15 @@
 
 <script type='text/javascript'>
 	//<![CDATA[
+		// $(document).ready(function(){
+		// 	alert($('#account-login-form').id)
+		// 	$('#account-login-form').submit(function(){
+		// 		loginPost()
+		// 		alert('aaaah yeah!')
+		// 		return false
+		// 	})
+		// })
+		
 		function closeWindow()
 		{
 			$('.modal').fadeOut(250);
@@ -214,6 +223,15 @@
 		function hideRegister()
 		{
 			$('#account-register-wrapper').fadeOut(250);
+		}
+		
+		function loginPost() 
+		{
+			// validity token?
+			setCookie('login', $('#login_email').val())
+			setCookie('password', $('#login_password').val())
+			loadScript('/admin/login.js')
+			return false
 		}
 	//]]>
 </script>
