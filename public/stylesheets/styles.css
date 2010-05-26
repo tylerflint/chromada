@@ -85,6 +85,7 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .hide		 										{display:none;}
 .inactive											{color:#999999;}
 .hand-cursor 										{cursor:pointer;}
+.float-left 										{float:left;}
 
 /* ALTERNATE CONTENT */
 .flash-alt-content									{float:left; width:100%;}
@@ -158,60 +159,61 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 #header ul li 										{margin:0px 3px;}
 #logo												{width:254px; height:80px;}
 
-/* account */
+/* account modal */
 #btn-site-login 									{width:32px; height:12px; background-position:-560px -24px; cursor:pointer;}
 
-.account-body 										{float:left; width:236px;}
-.account-body .page-title							{float:left; width:100%; margin:10px 0px;}
-.account-body p 									{float:left; width:100%; margin:10px 0px;}
-.account-body .form-group 							{margin:-1px 0px;}
-.account-nav 										{float:left; width:100%;}
-.account-form 										{float:left; width:100%;}
-.account-body-form		 							{float:left; width:100%; margin:10px 0px;}
+.account-modal-body 								{margin:0 auto; width:236px; padding:36px 0px; overflow:hidden;}
+.account-modal-body .page-title						{float:left; width:100%; margin:10px 0px;}
+.account-modal-body p 								{float:left; width:100%; margin:10px 0px;}
+.account-modal-body .form-group 					{margin:-1px 0px;}
+.account-modal-content 								{float:left; width:236px;}
+.account-modal-nav 									{float:left; width:100%;}
+.account-modal-form 								{float:left; width:100%;}
+.account-modal-body-form		 					{float:left; width:100%; margin:10px 0px;}
 
-/*- account nav -*/
-#account-register-nav-title 						{float:left; width:49px; height:17px; background-position:-174px -88px;}
+/*- account modal nav -*/
+#account-modal-register-nav-title 					{float:left; width:49px; height:17px; background-position:-174px -88px;}
 
-.account-nav-step 									{float:left; width:6px; height:12px; margin:0px 8px; cursor:pointer;}
-#account-register-nav-step1 						{background-position:-533px -117px;}
-#account-register-nav-step2 						{width:9px; background-position:-539px -117px;}
-#account-register-nav-step3 						{width:9px; background-position:-548px -117px;}
+.account-modal-nav-step 							{float:left; width:6px; height:12px; margin:0px 8px; cursor:pointer;}
+#account-modal-register-nav-step1 					{background-position:-533px -117px;}
+#account-modal-register-nav-step2 					{width:9px; background-position:-539px -117px;}
+#account-modal-register-nav-step3 					{width:9px; background-position:-548px -117px;}
 
-#account-register-nav-step1:hover					{background-position:-507px -117px;}
-#account-register-nav-step2:hover					{background-position:-513px -117px;}
-#account-register-nav-step3:hover					{background-position:-522px -117px;}
+#account-modal-register-nav-step1:hover				{background-position:-507px -117px;}
+#account-modal-register-nav-step2:hover				{background-position:-513px -117px;}
+#account-modal-register-nav-step3:hover				{background-position:-522px -117px;}
 
-#account-register-nav-step1.active					{background-position:-480px -117px;}
-#account-register-nav-step2.active					{width:8px; background-position:-488px -117px;}
-#account-register-nav-step3.active					{width:9px; background-position:-496px -117px;}
+#account-modal-register-nav-step1.active			{background-position:-480px -117px;}
+#account-modal-register-nav-step2.active			{width:8px; background-position:-488px -117px;}
+#account-modal-register-nav-step3.active			{width:9px; background-position:-496px -117px;}
 
-/*- register -*/
+/*- register modal -*/
 #btn-account-register 								{float:right; width:220px; height:30px; background-position:-584px -68px; cursor:pointer;}
 #btn-account-register:hover							{background-position:-573px -37px;}
 
-#account-register-wrapper		 					{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
-#account-register-modal-top 						{height:10px; background-position:-401px -290px;}
-#account-register-background 		 				{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
-#account-register-modal-bottom 						{height:15px; background-position:-401px -301px;}
+#account-modal-register-wrapper		 				{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
+#account-modal-register-top		 					{height:10px; background-position:-401px -290px;}
+#account-modal-register-background 		 			{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
+#account-modal-register-bottom		 				{height:15px; background-position:-401px -301px;}
 
-#account-register									{margin:5px auto; width:300px;}
-#account-register-body	 							{margin:0 auto; width:236px; padding:36px 0px;}
-#account-register-title 							{width:235px; height:21px; background-position:-241px -112px;}
+#account-modal-register								{margin:5px auto; width:300px;}
+#account-modal-register-body	 					{}
+#account-modal-register-title 						{width:235px; height:21px; background-position:-241px -112px;}
 
-#account-register-shifter 							{float:left; width:2000px;}
+#account-modal-register-shifter 					{float:left;}
 
-/*- login -*/
-#account-login-wrapper								{display:none; position:absolute; top:50px; right:0px; z-index:1; width:260px; padding:10px;}
-#account-login										{}
+/*- login modal -*/
+#account-modal-login-wrapper						{display:none; position:absolute; top:50px; right:0px; z-index:1; width:260px; padding:10px;}
+#account-modal-login								{}
 
-#account-login-wrapper		 						{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
-#account-login-modal-top 							{height:10px; background-position:-401px -290px;}
-#account-login-background 		 					{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
-#account-login-modal-bottom 						{height:15px; background-position:-401px -301px;}
+#account-modal-login-wrapper		 				{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
+#account-modal-login-top	 						{height:10px; background-position:-401px -290px;}
+#account-modal-login-background 		 			{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
+#account-modal-login-bottom		 					{height:15px; background-position:-401px -301px;}
 
-#account-login										{margin:5px auto; width:300px;}
-#account-login-body	 								{margin:0 auto; width:236px; padding:36px 0px;}
-#account-login-title	 							{width:52px; height:21px; background-position:-185px -112px;}
+#account-modal-login								{margin:5px auto; width:300px;}
+#account-modal-login-body	 						{}
+#account-modal-login-title	 						{width:52px; height:21px; background-position:-185px -112px;}
 
 /* search */
 #site-search										{float:left; width:150px;}
