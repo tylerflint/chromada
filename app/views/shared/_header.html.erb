@@ -143,15 +143,9 @@
 					
 					<span class='site-image btn-close' onclick='closeWindow();'></span>
 					
-<<<<<<< HEAD
-					<div id='account-login-body'>
-						<div class='account-body'>
-							<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post, :onsubmit => 'return loginPost()' }) do |form| %>
-=======
 					<div id='account-modal-login-body' class='account-modal-body'>
 						<div class='account-modal-body'>
-							<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post }) do |form| %>
->>>>>>> 7a2b9fd9eaff0f2498ea7510ecacc1ded57aeb4a
+							<% form_for(:login, :url => { :controller => "", :action => "" }, :html => { :id => 'account-login-form', :class => 'form', :method => :post, :onsubmit => 'return loginPost()' }) do |form| %>
 						
 								<h1 id='account-modal-login-title' class='title-image'><span class='hide'>Login</span></h1>
 								<p>Welcome back. Login below to view, and manage your account.</p>
@@ -195,16 +189,6 @@
 
 <script type='text/javascript'>
 	//<![CDATA[
-<<<<<<< HEAD
-		// $(document).ready(function(){
-		// 	alert($('#account-login-form').id)
-		// 	$('#account-login-form').submit(function(){
-		// 		loginPost()
-		// 		alert('aaaah yeah!')
-		// 		return false
-		// 	})
-		// })
-=======
 		
 		var curStep = 1;
 		var shiftPos = parseFloat($('.account-modal-content').css('width')) + parseFloat($('.account-modal-content').css('margin-left')) + parseFloat($('.account-modal-content').css('margin-right'));
@@ -227,7 +211,6 @@
 		        left: -shiftPos
 		    }, 250 );
 		}
->>>>>>> 7a2b9fd9eaff0f2498ea7510ecacc1ded57aeb4a
 		
 		function closeWindow()
 		{
