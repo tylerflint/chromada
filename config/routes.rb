@@ -1,31 +1,38 @@
 Chromada::Application.routes.draw do |map|
   
-  # replace these soon
   
-  map.root                                        :controller => 'static'
-                                                  
-  map.products          '/products.html',         :controller => 'static',        :action => 'products' 
-  map.services          '/services.html',         :controller => 'static',        :action => 'services'
-  map.downloads         '/downloads.html',        :controller => 'static',        :action => 'downloads'
-  map.support           '/support.html',          :controller => 'static',        :action => 'support'
-  map.about             '/about.html',            :controller => 'static',        :action => 'about'
-  map.contact           '/contact.html',          :controller => 'static',        :action => 'contact'
+  root :to => "static#index"
   
-  map.send_feedback     '/send-feedback.html',    :controller => 'static',        :action => 'send_feedback'
-  map.privacy_policy    '/privacy-policy.html',   :controller => 'static',        :action => 'privacy_policy'
-  map.terms_of_use      '/terms-of-use.html',     :controller => 'static',        :action => 'terms_of_use'
-                                                  
-  map.namespace :admin do |admin|             
-    admin.root                                    :controller => 'employees',     :action => 'dashboard'
-    admin.dashboard     '/dashboard',             :controller => 'employees',     :action => 'dashboard'
-    admin.logout        '/logout',                :controller => 'employees',     :action => 'logout'
-    admin.login         '/login.:format',                 :controller => 'employees',     :action => 'login'
-    admin.resources                               :employees
-    admin.resource                                :session
+  match "products.html"       => "static#products", :as => "products"
+  match "services.html"       => "static#services", :as => "services"      
+  match "downloads.html"      => "static#downloads", :as => "downloads"
+  match "support.html"        => "static#support", :as => "support"
+  match "about.html"          => "static#about", :as => "about"
+  match "contact.html"        => "static#contact", :as => "contact"                                        
+  match "feedback.html"       => "static#feedback", :as => "feedback"
+  match "privacy-policy.html" => "static#privacy_policy", :as => "privacy_policy"
+  match "terms-of-use.html"   => "static#terms_of_use", :as => "terms_of_use"
+  
+  namespace :admin do
+    root :to              => "employees#dashboard"
+    match "dashboard"     => "employees#dashboard"
+    match "logout"        => "employees#logout"
+    match "login.:format" => "employees#login"
+    resources :employees
+    resources :session
   end
   
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  # map.namespace :admin do |admin|             
+  #   admin.root                                    :controller => 'employees',     :action => 'dashboard'
+  #   admin.dashboard     '/dashboard',             :controller => 'employees',     :action => 'dashboard'
+  #   admin.logout        '/logout',                :controller => 'employees',     :action => 'logout'
+  #   admin.login         '/login.:format',                 :controller => 'employees',     :action => 'login'
+  #   admin.resources                               :employees
+  #   admin.resource                                :session
+  # end
+  
+  # map.connect ':controller/:action/:id'
+  # map.connect ':controller/:action/:id.:format'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
