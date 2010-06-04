@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100519014524) do
+ActiveRecord::Schema.define(:version => 20100604030027) do
+
+  create_table "blogs", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "subject"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -33,6 +41,14 @@ ActiveRecord::Schema.define(:version => 20100519014524) do
     t.text     "notes"
   end
 
+  create_table "employees_roles", :id => false, :force => true do |t|
+    t.integer "employee_id"
+    t.integer "role_id"
+  end
+
+  add_index "employees_roles", ["employee_id"], :name => "index_employees_roles_on_employee_id"
+  add_index "employees_roles", ["role_id"], :name => "index_employees_roles_on_role_id"
+
   create_table "resources", :force => true do |t|
     t.integer  "role_id"
     t.string   "path"
@@ -48,11 +64,6 @@ ActiveRecord::Schema.define(:version => 20100519014524) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "roles_resources", :force => true do |t|
-    t.integer "roles_id"
-    t.integer "resources_id"
   end
 
   create_table "sessions", :force => true do |t|

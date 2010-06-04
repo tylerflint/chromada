@@ -1,10 +1,9 @@
 require 'digest/sha1'
 
 class Employee < ActiveRecord::Base
-  # include Authentication
-  # include Authentication::ByPassword
-  # include Authentication::ByCookieToken
-
+  
+  has_and_belongs_to_many :roles
+  
   mattr_accessor :name_regex, :bad_name_message,
     :email_name_regex, :domain_head_regex, :domain_tld_regex, :email_regex, :bad_email_message
     
@@ -19,12 +18,12 @@ class Employee < ActiveRecord::Base
   validates_uniqueness_of   :email
   validates_format_of       :email,    :with => self.email_regex, :message => self.bad_email_message
   
-  attr_accessor :password
+  attr_accessor             :password
   validates_presence_of     :password,                   :if => :password_required?
   validates_presence_of     :password_confirmation,      :if => :password_required?
   validates_confirmation_of :password,                   :if => :password_required?
   validates_length_of       :password, :within => 6..40, :if => :password_required?
-  before_save :encrypt_password
+  before_save               :encrypt_password
 
   
 
