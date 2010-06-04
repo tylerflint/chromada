@@ -3,21 +3,21 @@ Chromada::Application.routes.draw do |map|
   
   root :to => "static#index"
   
-  match "products.html"       => "static#products", :as => "products"
-  match "services.html"       => "static#services", :as => "services"      
-  match "downloads.html"      => "static#downloads", :as => "downloads"
-  match "support.html"        => "static#support", :as => "support"
-  match "about.html"          => "static#about", :as => "about"
-  match "contact.html"        => "static#contact", :as => "contact"                                        
-  match "feedback.html"       => "static#feedback", :as => "feedback"
-  match "privacy-policy.html" => "static#privacy_policy", :as => "privacy_policy"
-  match "terms-of-use.html"   => "static#terms_of_use", :as => "terms_of_use"
+  match "products.html"         => "static#products",         :as => "products"
+  match "services.html"         => "static#services",         :as => "services"      
+  match "downloads.html"        => "static#downloads",        :as => "downloads"
+  match "support.html"          => "static#support",          :as => "support"
+  match "about.html"            => "static#about",            :as => "about"
+  match "contact.html"          => "static#contact",          :as => "contact"                                        
+  match "feedback.html"         => "static#feedback",         :as => "feedback"
+  match "privacy-policy.html"   => "static#privacy_policy",   :as => "privacy_policy"
+  match "terms-of-use.html"     => "static#terms_of_use",     :as => "terms_of_use"
   
   namespace :admin do
-    root :to              => "employees#dashboard"
-    match "dashboard"     => "employees#dashboard"
-    match "logout"        => "employees#logout"
-    match "login.:format" => "employees#login"
+    root :to                    => "employees#dashboard"
+    match "dashboard"           => "employees#dashboard"
+    match "logout"              => "employees#logout"
+    match "login.:format"       => "employees#login"
     resources :employees
     resources :session
   end

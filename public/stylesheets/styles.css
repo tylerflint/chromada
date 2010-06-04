@@ -94,7 +94,7 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 
 .active-link 										{color:#00D3D3;}
 .site-image 										{float:left; width:100px; height:100px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
-.site-link			 								{color:#00D3D3; text-decoration:underline; cursor:pointer;}
+.site-link			 								{width:100%; color:#00D3D3; text-decoration:underline; cursor:pointer;}
 .page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
 .pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
 .modal-image 										{float:left; width:100%; height:25px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
@@ -117,7 +117,6 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 
 /***** NAVIGATION *****/
 .nav a 												{float:left; margin:0px 5px 0px 0px; width:50px; height:12px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
-a#link-index										{height:6px; width:56px; background-position:-594px 0px;}
 .nav-link-divide 									{width:5px; height:8px; margin:1px 0px; background-position:-560px -12px;}
 
 /* primary nav */
@@ -143,13 +142,14 @@ a#link-about.active 								{background-position:-474px 0px;}
 a#link-contact.active 								{background-position:-510px 0px;}
 
 /* secondary nav */
-a#link-send-feedback								{height:6px; width:62px; background-position:-594px -7px;}
-a#link-contact-us 									{height:6px; width:46px; background-position:-594px -14px;}
-a#link-privacy-policy								{height:8px; width:86px; background-position:-594px -21px;}
-a#link-terms-of-use									{height:6px; width:57px; background-position:-594px -30px;}
+a#link-index										{height:6px; width:56px; background-position:-593px 0px;}
+a#link-send-feedback								{height:6px; width:62px; background-position:-593px -7px;}
+a#link-contact-us 									{height:6px; width:46px; background-position:-593px -14px;}
+a#link-privacy-policy								{height:8px; width:86px; background-position:-593px -21px;}
+a#link-terms-of-use									{height:6px; width:57px; background-position:-593px -30px;}
 
 /***** MAIN PAGE *****/
-.page												{float:left; width:100%; background:#FFFFFF; overflow:hidden;}
+.page												{float:left; width:100%; background:#FFFFFF;}
 #page-body-wrapper 									{margin:0 auto; width:920px;}
 .page-body											{margin:15px 0px;}
 #page-header 										{position:relative; float:left; width:100%; margin:20px 0px 0px 0px;}
@@ -185,7 +185,10 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 
 #account-modal-register-nav-step1.active			{background-position:-480px -117px;}
 #account-modal-register-nav-step2.active			{width:8px; background-position:-488px -117px;}
-#account-modal-register-nav-step3.active			{width:9px; background-position:-496px -117px;}
+#account-modal-register-nav-step3.active			{width:9px; background-position:-497px -117px;}
+
+#account-modal-register-nav-step2.inactive			{width:8px; background-position:-539px -117px; cursor:default;}
+#account-modal-register-nav-step3.inactive			{width:9px; background-position:-548px -117px; cursor:default;}
 
 /*- register modal -*/
 #btn-account-register 								{float:right; width:220px; height:30px; background-position:-584px -68px; cursor:pointer;}
@@ -253,7 +256,7 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-594px 
 #spotlight-image-bg									{width:433px; height:392px;}
 .spotlight-image-logo								{margin:50px 95px; width:215px; height:275px;}
 
-#spotlight-cover 									{position:absolute; top:0px; left:425px; width:40px; height:392px; background-position:-860px 0px;}
+#spotlight-cover 									{position:absolute; top:0px; left:425px; width:40px; height:392px; background-position:-978px 0px;}
 
 #spotlight-image-chromada 							{background-position:-645px 0px;}
 #spotlight-image-ticker								{background-position:-430px 0px;}

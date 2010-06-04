@@ -17,8 +17,8 @@
 					<span id='account-modal-register-nav-title' class='site-image'></span>
 					<ul class='account-modal-nav-steps'>
 						<li id='account-modal-register-nav-step1' class='account-modal-nav-step site-image active' onclick='toStep(1)'></li>
-						<li id='account-modal-register-nav-step2' class='account-modal-nav-step site-image' onclick='toStep(2)'></li>
-						<li id='account-modal-register-nav-step3' class='account-modal-nav-step site-image' onclick='toStep(3)'></li>
+						<li id='account-modal-register-nav-step2' class='account-modal-nav-step site-image inactive'></li>
+						<li id='account-modal-register-nav-step3' class='account-modal-nav-step site-image inactive'></li>
 					</ul>
 				</div>
 		
@@ -191,25 +191,46 @@
 	//<![CDATA[
 		
 		var curStep = 1;
+		var prevStep = 0;
 		var shiftPos = parseFloat($('.account-modal-content').css('width')) + parseFloat($('.account-modal-content').css('margin-left')) + parseFloat($('.account-modal-content').css('margin-right'));
 		var shifterWidth = $('.account-modal-content').size() * parseFloat($('.account-modal-content').css('width')) + parseFloat($('.account-modal-content').css('margin-left')) + parseFloat($('.account-modal-content').css('margin-right'));
 		$('#account-modal-register-shifter').css({'width' : shifterWidth});
 		
+		var registerNum = $('.account-modal-nav-steps li').size();
+		
 		function nextStep()
 		{
-			$('#account-modal-register-shifter').animate({
-		        left: -shiftPos*curStep
-		    }, 250 );
-		
-			curStep ++;
+			if(curStep >= registerNum)
+			{
+				curStep = registerNum;
+			}else{
+				$('#account-modal-register-shifter').animate({
+			        left: -shiftPos*curStep
+			    }, 250 );
+
+				curStep ++;
+			}
+			
+			$('#account-modal-register-nav-step' + (curStep - 1)).removeClass('active');
+			
+			$('#account-modal-register-nav-step' + curStep).removeClass('inactive');
+			$('#account-modal-register-nav-step' + curStep).addClass('active');
+			$('#account-modal-register-nav-step' + curStep).attr('onclick', 'toStep(' + curStep + ')');
 		}
 		
 		function toStep($step)
 		{
+			prevStep = curStep;
 			
-			$('#account-modal-register-shifter').animate({
-		        left: -shiftPos
-		    }, 250 );
+			if(curStep != $step)
+			{
+				$('#account-modal-register-shifter').animate({
+			        left: (0 - (shifterWidth/registerNum)*(curStep - $step))
+			    }, 250 );
+			
+				$('#account-modal-register-nav-step' + prevStep).removeClass('active');
+				$('#account-modal-register-nav-step' + curStep).addClass('active');
+			}
 		}
 		
 		function closeWindow()
