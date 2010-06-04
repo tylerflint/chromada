@@ -1,74 +1,93 @@
-ActionController::Routing::Routes.draw do |map|
+Chromada::Application.routes.draw do |map|
   
-  map.root                                        :controller => 'static'
-                                                  
-  map.products          '/products.html',         :controller => 'static',        :action => 'products' 
-  map.services          '/services.html',         :controller => 'static',        :action => 'services'
-  map.downloads         '/downloads.html',        :controller => 'static',        :action => 'downloads'
-  map.support           '/support.html',          :controller => 'static',        :action => 'support'
-  map.about             '/about.html',            :controller => 'static',        :action => 'about'
-  map.contact           '/contact.html',          :controller => 'static',        :action => 'contact'
   
-  map.send_feedback     '/send-feedback.html',    :controller => 'static',        :action => 'send_feedback'
-  map.privacy_policy    '/privacy-policy.html',   :controller => 'static',        :action => 'privacy_policy'
-  map.terms_of_use      '/terms-of-use.html',     :controller => 'static',        :action => 'terms_of_use'
-                                                  
-  map.namespace :admin do |admin|             
-    admin.root                                    :controller => 'employees',     :action => 'dashboard'
-    admin.dashboard     '/dashboard',             :controller => 'employees',     :action => 'dashboard'
-    admin.logout        '/logout',                :controller => 'employees',     :action => 'logout'
-    admin.login         '/login.:format',                 :controller => 'employees',     :action => 'login'
-    admin.resources                               :employees
-    admin.resource                                :session
+  root :to => "static#index"
+  
+  match "products.html"       => "static#products", :as => "products"
+  match "services.html"       => "static#services", :as => "services"      
+  match "downloads.html"      => "static#downloads", :as => "downloads"
+  match "support.html"        => "static#support", :as => "support"
+  match "about.html"          => "static#about", :as => "about"
+  match "contact.html"        => "static#contact", :as => "contact"                                        
+  match "feedback.html"       => "static#feedback", :as => "feedback"
+  match "privacy-policy.html" => "static#privacy_policy", :as => "privacy_policy"
+  match "terms-of-use.html"   => "static#terms_of_use", :as => "terms_of_use"
+  
+  namespace :admin do
+    root :to              => "employees#dashboard"
+    match "dashboard"     => "employees#dashboard"
+    match "logout"        => "employees#logout"
+    match "login.:format" => "employees#login"
+    resources :employees
+    resources :session
   end
   
-  # map.logout '/logout', :controller => 'admin/sessions', :action => 'destroy'
-  # map.login '/login', :controller => 'admin/sessions', :action => 'new'
-  # map.register '/register', :controller => 'employees', :action => 'create'
-  # map.signup '/signup', :controller => 'employees', :action => 'new'
-  # map.resources :employees
-
-  # map.resource :session
-
-  # The priority is based upon order of creation: first created -> highest priority.
+  # map.namespace :admin do |admin|             
+  #   admin.root                                    :controller => 'employees',     :action => 'dashboard'
+  #   admin.dashboard     '/dashboard',             :controller => 'employees',     :action => 'dashboard'
+  #   admin.logout        '/logout',                :controller => 'employees',     :action => 'logout'
+  #   admin.login         '/login.:format',                 :controller => 'employees',     :action => 'login'
+  #   admin.resources                               :employees
+  #   admin.resource                                :session
+  # end
+  
+  # map.connect ':controller/:action/:id'
+  # map.connect ':controller/:action/:id.:format'
+  
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
 
   # Sample of regular route:
-  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
+  #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
+  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
+  #   resources :products
 
   # Sample resource route with options:
-  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
+  #   resources :products do
+  #     member do
+  #       get :short
+  #       post :toggle
+  #     end
+  #
+  #     collection do
+  #       get :sold
+  #     end
+  #   end
 
   # Sample resource route with sub-resources:
-  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
   # Sample resource route with more complex sub-resources
-  #   map.resources :products do |products|
-  #     products.resources :comments
-  #     products.resources :sales, :collection => { :recent => :get }
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get :recent, :on => :collection
+  #     end
   #   end
 
   # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
   #   end
 
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
 
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id(.:format)))'
 end

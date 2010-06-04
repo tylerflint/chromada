@@ -67,7 +67,7 @@ protected
   end
   
   def get_model
-    @object_class.find(:all)
+    @object_class.where
   end
   
   def reset

@@ -8,7 +8,7 @@
 	
 	<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
 
-	<% form_for employee, :url => (employee.new_record? ? admin_employees_path : admin_employee_path), :html => {:id => 'edit-employee-form'} do |f| -%>
+	<%= form_for employee, :url => (employee.new_record? ? admin_employees_path : admin_employee_path), :html => {:id => 'edit-employee-form'} do |f| -%>
 	  	<div class='form-group'>
 			<div id='edit-employee-name-group'>
 				<input id='edit-employee-firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>'/>

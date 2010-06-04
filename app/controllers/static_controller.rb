@@ -1,9 +1,5 @@
 class StaticController < ApplicationController
   
-  def initialize
-    
-  end
-  
   def index
     @active = 'index'
     @title="Chromada - Home"
@@ -34,7 +30,7 @@ class StaticController < ApplicationController
     @title="Chromada - Products"
   end
   
-  def send_feedback
+  def feedback
     @active = 'send-feedback'
     @title="Chromada - Send Feedback"
   end
