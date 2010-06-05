@@ -52,7 +52,7 @@ h6													{font-size:10px;}
 .form-group 										{float:left; margin:2px 0px;}
 .form-label 										{float:left;}
 label 												{float:left; width:75px; margin:10px 0px 0px 0px;}
-input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C8C8C8 solid 1px; text-transform:capitalize;}
+input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
 
 .checkbox-text 										{float:left; margin:5px 0px 0px 5px;}
 
@@ -98,7 +98,8 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
 .pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
 .modal-image 										{float:left; width:100%; height:25px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-.title-image 										{float:left; width:100px; height:100px; margin:15px 0px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
+.title-image 										{float:left; width:100px; height:100px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
+.page-title 										{margin:25px 0px;}
 
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
@@ -108,11 +109,13 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 #btn-try-demo 										{width:164px; margin:25px 0px; background-position:-254px -74px;}
 #btn-get-started									{width:158px; margin:25px 0px; background-position:-255px -37px;}
 #btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
+#btn-login											{width:91px; margin:25px 0px; background-position:0px -118px;}
 .btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
 
 #btn-try-demo:hover									{background-position:-419px -74px;}
 #btn-get-started:hover								{background-position:-414px -37px;}
 #btn-next:hover										{background-position:-86px -81px;}
+#btn-login:hover									{background-position:-92px -118px;}
 .btn-close:hover 									{background-position:-668px -4px;}
 
 /***** NAVIGATION *****/
@@ -161,12 +164,13 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-593px 
 
 /* account modal */
 #btn-site-login 									{width:32px; height:12px; background-position:-560px -24px; cursor:pointer;}
+#btn-site-logout 									{width:32px; height:12px; background-position:-560px -24px; cursor:pointer;}
 
 .account-modal-body 								{margin:0 auto; width:236px; padding:36px 0px; overflow:hidden;}
 .account-modal-body .page-title						{float:left; width:100%; margin:10px 0px;}
 .account-modal-body p 								{float:left; width:100%; margin:10px 0px;}
 .account-modal-body .form-group 					{margin:-1px 0px;}
-.account-modal-content 								{float:left; width:236px;}
+.account-modal-content 								{float:left; width:236px; margin:25px 0px;}
 .account-modal-nav 									{float:left; width:100%;}
 .account-modal-form 								{float:left; width:100%;}
 .account-modal-body-form		 					{float:left; width:100%; margin:10px 0px;}
@@ -175,9 +179,9 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-593px 
 #account-modal-register-nav-title 					{float:left; width:49px; height:17px; background-position:-174px -88px;}
 
 .account-modal-nav-step 							{float:left; width:6px; height:12px; margin:0px 8px; cursor:pointer;}
-#account-modal-register-nav-step1 					{background-position:-533px -117px;}
+#account-modal-register-nav-step1 					{background-position:-532px -117px;}
 #account-modal-register-nav-step2 					{width:9px; background-position:-539px -117px;}
-#account-modal-register-nav-step3 					{width:9px; background-position:-548px -117px;}
+#account-modal-register-nav-step3 					{width:9px; background-position:-549px -117px;}
 
 #account-modal-register-nav-step1:hover				{background-position:-507px -117px;}
 #account-modal-register-nav-step2:hover				{background-position:-513px -117px;}
@@ -185,7 +189,7 @@ a#link-terms-of-use									{height:6px; width:57px; background-position:-593px 
 
 #account-modal-register-nav-step1.active			{background-position:-480px -117px;}
 #account-modal-register-nav-step2.active			{width:8px; background-position:-488px -117px;}
-#account-modal-register-nav-step3.active			{width:9px; background-position:-497px -117px;}
+#account-modal-register-nav-step3.active			{width:9px; background-position:-498px -117px;}
 
 #account-modal-register-nav-step2.inactive			{width:8px; background-position:-539px -117px; cursor:default;}
 #account-modal-register-nav-step3.inactive			{width:9px; background-position:-548px -117px; cursor:default;}
