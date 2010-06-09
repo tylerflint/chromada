@@ -72,36 +72,27 @@ img													{border: none;}
 #edit-employee-page 								{}
 
 #edit-employee-controls 							{float:left; width:100%; margin:28px 0px 0px 0px;}
+#edit-employee-information 							{float:left; width:450px; margin:0px 25px 0px 0px;}
+#edit-employee-roles 								{float:left; width:270px;}
 
-#edit-employee-information 							{float:left; width:100%; margin:50px 0px;}
-
-#edit-employee-form 								{float:left; width:624px; margin:0px 0px 0px 8px;}
+#edit-employee-form 								{float:left; width:100%; margin:20px 0px;}
 #edit-employee-form input							{height:24px; padding:5px; font-size:16px;}
 #edit-employee-form select 							{height:36px; padding:6px; font-size:16px; background:none; border:1px solid #C8C8C8;}
-#edit-employee-form .form-group						{width:615px; margin:0px 0px 5px 0px;}
+#edit-employee-form .form-group						{width:100%; margin:8px 0px;}
 
 #edit-employee-name-group input						{margin:0px -1px 0px 0px;}
 #edit-employee-firstname 							{width:155px;}
-#edit-employee-middlename 							{width:155px;}
 #edit-employee-lastname 							{width:155px;}
-#edit-employee-suffix 								{float:right; width:80px; color:#00D3D3;}
-#edit-employee-email	 							{width:290px;}
-#edit-employee-birthday-group 						{float:right; width:290px;}
-#edit-employee-birthday-group span					{float:left; width:112px; font-size:14px;}
-#edit-employee-birthday-group select				{margin:0px -4px 0px 0px;}
-#edit-employee-day 									{width:55px; color:#00D3D3;}
-#edit-employee-month 								{width:55px; color:#00D3D3;}
-#edit-employee-year 								{float:right; width:55px; color:#00D3D3;}
-#edit-employee-notes 								{width:603px;}
+#edit-employee-email	 							{width:100%;}
+#edit-employee-notes 								{width:100%;}
 
-#edit-employee-roles 								{float:left; width:100%;}
-#edit-employee-roles form 							{float:left;}
+#edit-employee-roles form 							{float:left; width:100%;}
 #edit-employee-roles form h3 						{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
 #edit-employee-roles form ul						{float:left; width:200px; margin:0px 25px 0px 0px;}
 #edit-employee-roles form ul li						{float:left; width:100%; margin:2px 15px; color:#AFAFAF;}
 #edit-employee-roles form input						{float:left; width:auto;}
 
-.edit-employee-roles-group 							{float:left; width:705px; margin:5px 0px; padding:12px; border:10px solid #F5F5F5;}
+.edit-employee-roles-group 							{float:left; width:225px; margin:5px 0px; padding:12px; border:10px solid #F5F5F5;}
 
 /* admin grid */
 
