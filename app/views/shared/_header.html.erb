@@ -1,6 +1,10 @@
 <%= link_to '', root_url, :id => 'logo', :class => 'site-image' %>
 
-<span id='btn-account-register' class='site-image' onclick='showRegister();'></span>
+<% if(logged_in?) %>
+	<span id='btn-account-register' class='site-image' onclick='showRegister();'></span>
+<% else %>
+	<span id='btn-account-register' class='site-image' onclick='showRegister();'></span>
+<% end %>
 
 <!-- REGISTER -->
 <div id='account-modal-register-wrapper' class='modal'>
@@ -132,7 +136,11 @@
 	
 	<div id='header-additional'>
 		
-		<span id='btn-site-login' class='site-image' onclick='showLogin();'></span>
+		<% if(logged_in?) %>
+			<span id='btn-site-logout' class='site-image' onclick='alert("logout")'></span>
+		<% else %>
+			<span id='btn-site-login' class='site-image' onclick='showLogin();'></span>
+		<% end %>
 	
 		<!-- LOGIN -->
 		<div id='account-modal-login-wrapper' class='modal'>
@@ -160,7 +168,7 @@
 									</div>
 								</div>
 								<%= form.submit %>
-								<div id='btn-next' class='site-btn'></div>
+								<div id='btn-login' class='site-btn'></div>
 							<% end %>
 						</div>
 				
@@ -225,11 +233,13 @@
 			if(curStep != $step)
 			{
 				$('#account-modal-register-shifter').animate({
-			        left: (0 - (shifterWidth/registerNum)*(curStep - $step))
+			        left: (0 - (shifterWidth/registerNum)*($step - 1))
 			    }, 250 );
 			
 				$('#account-modal-register-nav-step' + prevStep).removeClass('active');
-				$('#account-modal-register-nav-step' + curStep).addClass('active');
+				$('#account-modal-register-nav-step' + $step).addClass('active');
+				
+				curStep = $step
 			}
 		}
 		
