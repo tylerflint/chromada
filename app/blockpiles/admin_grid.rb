@@ -1,13 +1,11 @@
 class AdminGrid < Blockpile
   
-  def initialize(helper, object, session, params, options={})
-    super helper
+  # def initialize(helper, object, session, params, options={})
+  def build(object, options={})
     @object       = object
-    @template     = 'admin_grid'
     @id           = :"#{object}_grid"
     @title        = @object.to_s.capitalize + "s"
     @use_ajax     = false 
-    @session      = session
     @object_class = convert_to_class object
     @properties   = {:p => 1, :items => 50, :order => 'id,asc'}
     @columns      = {}
