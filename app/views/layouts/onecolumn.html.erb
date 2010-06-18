@@ -28,17 +28,19 @@
 	<body id='1-column-body'>		
 		<div class='page-wrapper wrapper'>
 			<div class='page'>
-				<div id='page-body-wrapper'>
+				<div class='page-body-wrapper'>
 					<!-- HEADER -->
-					<div id='page-header'>
+					<div class='page-header'>
 						<%= render :partial => 'shared/header' %>
 					</div>
 				
 					<!-- PAGE BODY -->
-					<%= yield %>
+					<div class="page-body">
+						<%= yield %>
+					</div>
 				
 					<!-- FOOTER -->
-					<div id='page-footer'>
+					<div class='page-footer'>
 						<%= render :partial => 'shared/footer' %>
 					</div>
 				</div>

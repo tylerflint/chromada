@@ -11,14 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20100604030027) do
 
-  create_table "blogs", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.string   "subject"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "paypal_payment_profile_id"
@@ -64,6 +56,11 @@ ActiveRecord::Schema.define(:version => 20100604030027) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "roles_resources", :force => true do |t|
+    t.integer "roles_id"
+    t.integer "resources_id"
   end
 
   create_table "sessions", :force => true do |t|

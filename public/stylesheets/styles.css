@@ -12,7 +12,6 @@ body p 												{float:left; width:100%; line-height:20px; color:#666666;}
 /* WRAPPERS */                       		
 .shifter 											{position:relative;}
 .wrapper				 							{margin:0 auto;}
-.page-wrapper 			 							{margin:0 auto; width:960px;}
 
 /* LISTS */
 ul													{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
@@ -52,7 +51,8 @@ h6													{font-size:10px;}
 .form-group 										{float:left; margin:2px 0px;}
 .form-label 										{float:left;}
 label 												{float:left; width:75px; margin:10px 0px 0px 0px;}
-input												{float:left; width:175px; height:20px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
+input												{float:left; width:175px; height:20px; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
+textarea 											{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
 
 .checkbox-text 										{float:left; margin:5px 0px 0px 5px;}
 
@@ -103,15 +103,18 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
-#btn-save 											{width:73px; margin:0px 2px; background-position:-187px -131px;}
-#btn-cancel 										{width:94px; margin:0px 2px; background-position:-268px -131px;}
-#btn-delete 										{width:93px; margin:0px 2px; background-position:-370px -131px;}
+#btn-save 											{width:65px; margin:0px 2px; background-position:0px -74px;}
+#btn-cancel 										{width:94px; margin:0px 2px; background-position:-1084px -38px;}
+#btn-delete 										{width:94px; margin:0px 2px; background-position:-66px -74px;}
 #btn-try-demo 										{width:164px; margin:25px 0px; background-position:-254px -74px;}
 #btn-get-started									{width:158px; margin:25px 0px; background-position:-255px -37px;}
 #btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
 #btn-login											{width:91px; margin:25px 0px; background-position:0px -118px;}
 .btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
 
+#btn-save:hover										{background-position:-160px -74px;}
+#btn-cancel:hover									{}
+#btn-delete:hover									{background-position:-226px -74px;}
 #btn-try-demo:hover									{background-position:-419px -74px;}
 #btn-get-started:hover								{background-position:-414px -37px;}
 #btn-next:hover										{background-position:-86px -81px;}
@@ -152,10 +155,13 @@ a#link-privacy-policy								{height:8px; width:86px; background-position:-593px
 a#link-terms-of-use									{height:6px; width:57px; background-position:-593px -30px;}
 
 /***** MAIN PAGE *****/
+.page-wrapper 			 							{margin:0 auto; width:960px;}
 .page												{float:left; width:100%; background:#FFFFFF;}
-#page-body-wrapper 									{margin:0 auto; width:920px;}
-.page-body											{margin:15px 0px;}
-#page-header 										{position:relative; float:left; width:100%; margin:20px 0px 0px 0px;}
+.page-body-wrapper 									{margin:0 auto; width:920px;}
+.page-body											{float:left;}
+.page-header 										{position:relative; float:left; width:100%; margin:20px 0px;}
+.page-content-wrapper 								{float:left;}
+.page-footer 										{float:left; width:100%; margin:15px 0px;}
 
 /***** header ******/
 #header												{position:relative; float:left; width:100%; margin:25px 0px 0px 0px;}

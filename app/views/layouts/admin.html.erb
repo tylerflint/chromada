@@ -32,15 +32,16 @@
 	<body id='admin-body'>		
 		<div class='page-wrapper wrapper'>
 			<div class='page'>
-				<div id='page-body-wrapper'>
+				<div class='page-body-wrapper'>
 					<!-- HEADER -->
-					<div id='page-header'>
+					<div class='page-header'>
 						<%= render :partial => 'shared/header' %>
 					</div>
 				
 					<!-- PAGE BODY -->
-					<div id="content" class="clear">
-						<div id="left">
+					<div class="page-body">
+						<div id='admin-primary-nav'>
+							
 							<!-- replace the following with a blockpile -->
 							<ul>
 								<li>
@@ -51,14 +52,16 @@
 								</li>
 							</ul>
 							<!-- end replace -->
+							
 						</div>
-						<div id="main">
+						
+						<div id="admin-page-body">
 							<%= yield %>
 						</div>
 					</div>
 				
 					<!-- FOOTER -->
-					<div id='page-footer'>
+					<div class='page-footer'>
 						<%= render :partial => 'shared/footer' %>
 					</div>
 				</div>

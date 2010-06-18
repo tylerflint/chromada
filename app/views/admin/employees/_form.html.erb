@@ -1,27 +1,39 @@
 <div id='edit-employee-controls'>
-	<div id='btn-save' class='site-btn' onclick="save()"></div>
-	<div id='btn-cancel' class='site-btn' onclick="cancel()"></div>
-	<div id='btn-delete' class='site-btn' onclick="destroy()"></div>
+	<div id='btn-save' class='admin-btn' onclick="save()"></div>
+	<div id='btn-cancel' class='admin-btn' onclick="cancel()"></div>
+	<div id='btn-delete' class='admin-btn' onclick="destroy()"></div>
 </div>
 
 <div id='edit-employee-information'>
 	
 	<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
+	<span id='edit-employee-name'>superlonglastname, superlongfistname</span>
 
 	<%= form_for employee, :url => (employee.new_record? ? admin_employees_path : admin_employee_path), :html => {:id => 'edit-employee-form'} do |f| -%>
 	  	<div class='form-group'>
 			<div id='edit-employee-name-group'>
-				<input id='edit-employee-firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>'/>
-				<input id='edit-employee-lastname' type="text" name="employee[lastname]" value='<%= employee.lastname ||= 'Last Name' %>'/>
+				<input id='edit-employee-firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>' onfocus='if(this.value=="First Name")value=""' onblur='if(this.value=="")this.value="First Name"'/>
+				<input id='edit-employee-lastname' type="text" name="employee[lastname]" value='<%= employee.lastname ||= 'Last Name' %>' onfocus='if(this.value=="Last Name")value=""' onblur='if(this.value=="")this.value="Last Name"'/>
 			</div>
 		</div>
-	
+		
 		<div class='form-group'>
-			<input id='edit-employee-email' type="text" name="employee[email]" value='<%= employee.email ||= 'Email' %>'/>
+			<input id='edit-employee-email' type="text" name="employee[email]" value='<%= employee.email ||= 'Email' %>' onfocus='if(this.value=="Employee Email")value=""' onblur='if(this.value=="")this.value="Employee Email"'/>
 		</div>
-	
+		
+		<div id='edit-employee-authentication-group'>
+			<div class='form-group'>
+				<input type="checkbox" name="" /><span class='checkbox-text'>Generate ID</span><span class='uppercase'>or</span><input type="checkbox" name="" id='edit-employee-custom-id-checkbox' /><input id='edit-employee-custom-id' type="text" name="" value='Create Custom ID' onfocus='if(this.value=="Create Custom ID")value=""' onblur='if(this.value=="")this.value="Create Custom ID"'/>
+			</div>
+			
+			<div class='form-group'>
+				<input type="checkbox" name="" /><span class='checkbox-text'>Generate Password</span><span class='uppercase'>or</span><input type="checkbox" name="" id='edit-employee-custom-password-checkbox' /><input id='edit-employee-custom-password' type="text" name="" value='Create Custom Password' onfocus='if(this.value=="Create Custom Password")value=""' onblur='if(this.value=="")this.value="Create Custom Password"'/>
+			</div>
+		</div>
+		
 		<div class='form-group'>
-			<input id='edit-employee-notes' type="text" name="employee[notes]" value='<%= employee.notes ||= 'Notes' %>'/>
+			<textarea id='edit-employee-notes' form='edit-employee-form' name="employee[notes]" value='<%= employee.notes ||= 'Notes' %>' onfocus='if(this.value=="Notes")value=""' onblur='if(this.value=="")this.value="Notes"'>
+			</textarea>
 		</div>
 	<% end -%>
 </div>
