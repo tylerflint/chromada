@@ -23,20 +23,20 @@
 		
 		<div id='edit-employee-authentication-group'>
 			<div class='form-group'>
-				<input type="checkbox" name="" /><span class='checkbox-text'>Generate ID</span><span class='uppercase'>or</span><input type="checkbox" name="" id='edit-employee-custom-id-checkbox' /><input id='edit-employee-custom-id' type="text" name="" value='Create Custom ID' onfocus='if(this.value=="Create Custom ID")value=""' onblur='if(this.value=="")this.value="Create Custom ID"'/>
+				<div class='authentication-group-pure'><input type="checkbox" class='checkbox' name="" /><span class='checkbox-text'>Generate ID</span><span class='uppercase'>or</span></div><div class='authentication-group-hybrid'><input type="checkbox" class='checkbox' name="" id='edit-employee-custom-id-checkbox' /><input id='edit-employee-custom-id' type="text" name="" value='Create Custom ID' onfocus='if(this.value=="Create Custom ID")value=""' onblur='if(this.value=="")this.value="Create Custom ID"'/></div>
 			</div>
 			
 			<div class='form-group'>
-				<input type="checkbox" name="" /><span class='checkbox-text'>Generate Password</span><span class='uppercase'>or</span><input type="checkbox" name="" id='edit-employee-custom-password-checkbox' /><input id='edit-employee-custom-password' type="text" name="" value='Create Custom Password' onfocus='if(this.value=="Create Custom Password")value=""' onblur='if(this.value=="")this.value="Create Custom Password"'/>
+				<div class='authentication-group-pure'><input type="checkbox" class='checkbox' name="" /><span class='checkbox-text'>Generate Password</span><span class='uppercase'>or</span></div><div class='authentication-group-hybrid'><input type="checkbox" class='checkbox' name="" id='edit-employee-custom-password-checkbox' /><input id='edit-employee-custom-password' type="text" name="" value='Create Custom Password' onfocus='if(this.value=="Create Custom Password")value=""' onblur='if(this.value=="")this.value="Create Custom Password"'/></div>
 			</div>
 		</div>
 		
 		<div class='form-group'>
-			<textarea id='edit-employee-notes' form='edit-employee-form' name="employee[notes]" value='<%= employee.notes ||= 'Notes' %>' onfocus='if(this.value=="Notes")value=""' onblur='if(this.value=="")this.value="Notes"'>
-			</textarea>
+			<textarea id='edit-employee-notes' form='edit-employee-form' name="employee[notes]" value='<%= employee.notes ||= 'Notes' %>' onfocus='if(this.value=="Notes")value=""' onblur='if(this.value=="")this.value="Notes"'></textarea>
 		</div>
 	<% end -%>
 </div>
+
 <script type="text/javascript" charset="utf-8">
 	function save () {
 		if (gridUseAjax) {
