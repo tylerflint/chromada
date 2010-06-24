@@ -4,8 +4,7 @@ class Employee < ActiveRecord::Base
   
   has_and_belongs_to_many :roles
   
-  mattr_accessor :name_regex, :bad_name_message,
-    :email_name_regex, :domain_head_regex, :domain_tld_regex, :email_regex, :bad_email_message
+  mattr_accessor :name_regex, :bad_name_message, :email_name_regex, :domain_head_regex, :domain_tld_regex, :email_regex, :bad_email_message
     
   self.email_name_regex  = '[\w\.%\+\-]+'.freeze
   self.domain_head_regex = '(?:[A-Z0-9\-]+\.)+'.freeze
