@@ -5,8 +5,8 @@
 
 		<%= render :partial => 'admin/shared/superFilter'%>
 		<%= render :partial => 'admin/shared/toolbar'%>
-		<div class='admin-grid'>
-			<table class='admin-table'>
+		<div id='admin-grid-body'>
+			<table id='admin-table'>
 				<tr class='table-header'>
 					<% @columns.each do |k, v| %>
 						<th><%= v[:name] %></th>
