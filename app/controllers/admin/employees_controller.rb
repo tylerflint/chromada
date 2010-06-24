@@ -1,11 +1,7 @@
 class Admin::EmployeesController < Admin::AdminController
   # Be sure to include AuthenticationSystem in Application Controller instead
   def dashboard
-    # session[:firstname] = 'Tyler'
-    # session[:lastname]  = 'Flint'
-    # session[:test] = {}
-    # session[:test][:firstname]  = 'Brittany'
-    # session[:test][:lastname]   = 'Flint'
+    
   end
   
   def login

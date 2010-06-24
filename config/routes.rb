@@ -1,4 +1,6 @@
 Chromada::Application.routes.draw do |map|
+  resources :roles
+
   
   
   root :to => "static#index"
@@ -20,7 +22,6 @@ Chromada::Application.routes.draw do |map|
     match "login.:format"       => "employees#login"
     resources :employees
     resources :roles
-    resources :session
   end
   
   # map.namespace :admin do |admin|             
