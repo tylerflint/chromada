@@ -3,6 +3,7 @@ Given /^I am currently not logged in$/ do
 end
 
 When /^I click the login link$/ do
+  visit "/"
   pending # express the regexp above with the code you wish you had
 end
 
