@@ -19,6 +19,7 @@ Chromada::Application.routes.draw do |map|
     match "logout"              => "employees#logout"
     match "login.:format"       => "employees#login"
     resources :employees
+    resources :roles
     resources :session
   end
   
@@ -26,7 +27,7 @@ Chromada::Application.routes.draw do |map|
   #   admin.root                                    :controller => 'employees',     :action => 'dashboard'
   #   admin.dashboard     '/dashboard',             :controller => 'employees',     :action => 'dashboard'
   #   admin.logout        '/logout',                :controller => 'employees',     :action => 'logout'
-  #   admin.login         '/login.:format',                 :controller => 'employees',     :action => 'login'
+  #   admin.login         '/login.:format',         :controller => 'employees',     :action => 'login'
   #   admin.resources                               :employees
   #   admin.resource                                :session
   # end
