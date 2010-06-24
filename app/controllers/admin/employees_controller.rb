@@ -7,7 +7,11 @@ class Admin::EmployeesController < Admin::AdminController
   def login
     respond_to do |format|
       format.html do
-        
+        employee = Employee.authenticate(params[:login], params[:password])
+        if employee
+          self.current_employee = employee
+          redirect_to admin_dashboard_path
+        end
       end
       format.js do
         employee = Employee.authenticate(cookies[:login], cookies[:password])

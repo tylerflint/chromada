@@ -15,11 +15,12 @@ Chromada::Application.routes.draw do |map|
   match "privacy-policy.html"   => "static#privacy_policy",   :as => "privacy_policy"
   match "terms-of-use.html"     => "static#terms_of_use",     :as => "terms_of_use"
   
+  
   namespace :admin do
     root :to                    => "employees#dashboard"
     match "dashboard"           => "employees#dashboard"
-    match "logout"              => "employees#logout"
-    match "login.:format"       => "employees#login"
+    match "logout"              => "employees#logout",    :as => "logout"
+    match "login"               => "employees#login",     :as => "login"
     resources :employees
     resources :roles
   end
