@@ -1,7 +1,4 @@
 Chromada::Application.routes.draw do |map|
-  resources :roles
-
-  
   
   root :to => "static#index"
   

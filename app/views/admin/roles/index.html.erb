@@ -1,0 +1,28 @@
+<div id='edit-employee-controls'>
+	<div id='btn-save' class='admin-btn' onclick="save()"></div>
+	<div id='btn-cancel' class='admin-btn' onclick="cancel()"></div>
+	<div id='btn-delete' class='admin-btn' onclick="destroy()"></div>
+</div>
+
+<div id='edit-employee-information'>
+	
+	<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
+	<span id='edit-employee-name'>superlonglastname, superlongfistname</span>
+	
+</div>
+
+<div id='edit-employee-roles'>
+	<h2>Assign Employee roles</h2>
+	<form id='edit-employee-roles-form'>
+		<div class='edit-employee-roles-group'>
+			<ul>
+				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 1</span></li>
+				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 2</span></li>
+				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 3</span></li>
+				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 4</span></li>
+				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 5</span></li>
+				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 6</span></li>
+			</ul>
+		</div>
+	</form>
+</div>
