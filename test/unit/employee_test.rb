@@ -1,10 +1,16 @@
 require 'test_helper'
 
 class EmployeeTest < ActiveSupport::TestCase
-  # Be sure to include AuthenticatedTestHelper in test/test_helper.rb instead.
-  # Then, you can remove it from this and the functional test.
-  include AuthenticatedTestHelper
+  # include AuthenticatedTestHelper
   fixtures :employees
+  
+  should belong_to(:company)
+  should have_and_belong_to_many(:roles)
+  
+  should validate_presence_of(:email)
+  should ensure_length_of(:email).is_at_least(6).is_at_most(100)
+  should validate_uniqueness_of(:email)
+  
   
   should "create employee" do
     assert_difference 'Employee.count' do
@@ -12,9 +18,6 @@ class EmployeeTest < ActiveSupport::TestCase
       assert !employee.new_record?, "#{employee.errors.full_messages.to_sentence}"
     end
   end
-  
-  
-  
 
 protected
   def create_employee(options = {})

@@ -3,6 +3,7 @@ require 'digest/sha1'
 class Employee < ActiveRecord::Base
   
   has_and_belongs_to_many :roles
+  belongs_to :company
   
   mattr_accessor :name_regex, :bad_name_message, :email_name_regex, :domain_head_regex, :domain_tld_regex, :email_regex, :bad_email_message
     

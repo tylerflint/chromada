@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100604030027) do
+ActiveRecord::Schema.define(:version => 20100625043309) do
+
+  create_table "blogs", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "subject"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -19,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20100604030027) do
   end
 
   create_table "employees", :force => true do |t|
+    t.integer  "company_id"
     t.string   "email",                     :limit => 100
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
@@ -56,11 +65,6 @@ ActiveRecord::Schema.define(:version => 20100604030027) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "roles_resources", :force => true do |t|
-    t.integer "roles_id"
-    t.integer "resources_id"
   end
 
   create_table "sessions", :force => true do |t|
