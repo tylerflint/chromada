@@ -19,10 +19,8 @@ class Employee < ActiveRecord::Base
   validates_format_of       :email,    :with => self.email_regex, :message => self.bad_email_message
   
   attr_accessor             :password
-  validates_presence_of     :password,                   :if => :password_required?
-  validates_presence_of     :password_confirmation,      :if => :password_required?
-  validates_confirmation_of :password,                   :if => :password_required?
-  validates_length_of       :password, :within => 6..40, :if => :password_required?
+  validates_presence_of     :password                  
+  validates_length_of       :password, :within => 6..40
   before_save               :encrypt_password
 
   
@@ -30,7 +28,7 @@ class Employee < ActiveRecord::Base
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :password, :password_confirmation, :firstname, :lastname, :notes
+  attr_accessible :email, :password, :firstname, :lastname, :notes
 
 
   class << self
@@ -57,10 +55,6 @@ class Employee < ActiveRecord::Base
     # This provides a modest increased defense against a dictionary attack if
     # your db were ever compromised, but will invalidate existing passwords.
     # See the README and the file config/initializers/site_keys.rb
-    #
-    # It may not be obvious, but if you set REST_AUTH_SITE_KEY to nil and
-    # REST_AUTH_DIGEST_STRETCHES to 1 you'll have backwards compatibility with
-    # older versions of restful-authentication.
     def password_digest(password, salt)
       digest = REST_AUTH_SITE_KEY
       REST_AUTH_DIGEST_STRETCHES.times do

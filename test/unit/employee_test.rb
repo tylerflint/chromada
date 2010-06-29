@@ -11,6 +11,8 @@ class EmployeeTest < ActiveSupport::TestCase
   should ensure_length_of(:email).is_at_least(6).is_at_most(100)
   should validate_uniqueness_of(:email)
   
+  should validate_presence_of(:password)
+  should ensure_length_of(:password).is_at_least(6).is_at_most(40)
   
   should "create employee" do
     assert_difference 'Employee.count' do

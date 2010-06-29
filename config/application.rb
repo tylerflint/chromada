@@ -32,9 +32,10 @@ module Chromada
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
-      # g.orm             :active_record
-      # g.template_engine :erb
-      g.test_framework  :shoulda, :fixture => true
+      g.stylesheets false
+      g.test_framework  :shoulda
+      g.fallbacks[:shoulda] = :test_unit
+      g.fixture_replacement :factory_girl
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.
