@@ -17,7 +17,7 @@ Chromada::Application.routes.draw do |map|
     root :to                    => "employees#dashboard"
     match "dashboard"           => "employees#dashboard"
     match "logout"              => "employees#logout",    :as => "logout"
-    match "login(.:format)"               => "employees#login",     :as => "login"
+    match "login(.:format)"     => "employees#login",     :as => "login"
     resources :employees
     resources :roles
   end

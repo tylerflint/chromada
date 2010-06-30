@@ -167,8 +167,7 @@
 									    <span class='form-field'><%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
 									</div>
 								</div>
-								<%= form.submit %>
-								<div id='btn-login' class='site-btn'></div>
+								<div type="submit" id='btn-login' class='site-btn' onclick="loginPost()"></div>
 							<% end %>
 						</div>
 				

@@ -7,7 +7,7 @@
 <div id='edit-employee-information'>
 	
 	<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
-	<span id='edit-employee-name'>superlonglastname, superlongfistname</span>
+	<span id='edit-employee-name'><%= employee.lastname %>, <%= employee.firstname %></span>
 
 	<%= form_for employee, :url => (employee.new_record? ? admin_employees_path : admin_employee_path), :html => {:id => 'edit-employee-form'} do |f| -%>
 	  	<div class='form-group'>
@@ -23,11 +23,25 @@
 		
 		<div id='edit-employee-authentication-group'>
 			<div class='form-group'>
-				<div class='authentication-group-pure'><input type="checkbox" class='checkbox' name="" /><span class='checkbox-text'>Generate ID</span><span class='uppercase'>or</span></div><div class='authentication-group-hybrid'><input type="checkbox" class='checkbox' name="" id='edit-employee-custom-id-checkbox' /><input id='edit-employee-custom-id' type="text" name="" value='Create Custom ID' onfocus='if(this.value=="Create Custom ID")value=""' onblur='if(this.value=="")this.value="Create Custom ID"'/></div>
+				<div class='authentication-group-hybrid'>
+					<input id='edit-employee-custom-id' type="text" name="" value='Employee ID' onfocus='if(this.value=="Employee ID")value=""' onblur='if(this.value=="")this.value="Employee ID"'/>
+				</div>
+				<div class='authentication-group-pure'>
+					<span class='uppercase'>or</span>
+					<input type="checkbox" class='checkbox' name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
+					<span class='checkbox-text'>Auto Generate</span>
+				</div>
 			</div>
 			
 			<div class='form-group'>
-				<div class='authentication-group-pure'><input type="checkbox" class='checkbox' name="" /><span class='checkbox-text'>Generate Password</span><span class='uppercase'>or</span></div><div class='authentication-group-hybrid'><input type="checkbox" class='checkbox' name="" id='edit-employee-custom-password-checkbox' /><input id='edit-employee-custom-password' type="text" name="" value='Create Custom Password' onfocus='if(this.value=="Create Custom Password")value=""' onblur='if(this.value=="")this.value="Create Custom Password"'/></div>
+				<div class='authentication-group-hybrid'>
+					<input id='edit-employee-custom-password' type="text" name="" value='Password' onfocus='if(this.value=="Password")value=""' onblur='if(this.value=="")this.value="Password"'/>
+				</div>
+				<div class='authentication-group-pure'>
+					<span class='uppercase'>or</span>
+					<input type="checkbox" class='checkbox' name="generate-password" onchange="autoGeneratePassword(this)"/>
+					<span class='checkbox-text'>Auto Generate</span>
+				</div>
 			</div>
 		</div>
 		
@@ -38,6 +52,12 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
+	function autoGenerateEmployeeId (checkbox) {
+		alert("click")
+	}
+	function autoGeneratePassword (checkbox) {
+		alert("click2")
+	}
 	function save () {
 		if (gridUseAjax) {
 			backToGrid();
