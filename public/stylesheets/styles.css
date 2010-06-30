@@ -103,16 +103,17 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
-#btn-save 											{width:65px; margin:0px 2px; background-position:0px -74px;}
+#btn-save 											{width:73px; margin:0px 2px; background-position:-1009px -38px;}
 #btn-cancel 										{width:94px; margin:0px 2px; background-position:-1084px -38px;}
 #btn-delete 										{width:94px; margin:0px 2px; background-position:-66px -74px;}
 #btn-try-demo 										{width:164px; margin:25px 0px; background-position:-254px -74px;}
 #btn-get-started									{width:158px; margin:25px 0px; background-position:-255px -37px;}
 #btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
 #btn-login											{width:91px; margin:25px 0px; background-position:0px -118px;}
+#btn-new 											{width:65px; margin:0px 2px; background-position:0px -74px;}
 .btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
 
-#btn-save:hover										{background-position:-160px -74px;}
+#btn-save:hover										{background-position:-1009px -1px;}
 #btn-cancel:hover									{}
 #btn-delete:hover									{background-position:-226px -74px;}
 #btn-try-demo:hover									{background-position:-419px -74px;}
