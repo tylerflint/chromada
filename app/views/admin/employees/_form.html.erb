@@ -20,7 +20,7 @@
 		<div class='form-group'>
 			<input id='edit-employee-email' type="text" name="employee[email]" value='<%= employee.email ||= 'Email' %>' onfocus='if(this.value=="Employee Email")value=""' onblur='if(this.value=="")this.value="Employee Email"'/>
 		</div>
-		
+
 		<div id='edit-employee-authentication-group'>
 			<div class='form-group'>
 				<div class='authentication-group-hybrid'>
@@ -53,14 +53,25 @@
 
 <script type="text/javascript" charset="utf-8">
 	function autoGenerateEmployeeId (checkbox) {
-		alert("click")
+		if (checkbox.checked) {
+			$("#edit-employee-custom-id").val("").attr('disabled', true)
+		} else {
+			$("#edit-employee-custom-id").removeAttr('disabled')
+		}
 	}
 	function autoGeneratePassword (checkbox) {
-		alert("click2")
+		if (checkbox.checked) {
+			$("#edit-employee-custom-password").val('').attr('disabled', true)
+		} else {
+			$("#edit-employee-custom-password").removeAttr('disabled')
+		}
 	}
 	function save () {
-		if (gridUseAjax) {
-			backToGrid();
+		if (false) {
+			$.post('<%= admin_employee_path employee.id, :format => :js %>'
+				,$("#edit-employee-form").serialize()
+				,function(){alert('done')}
+			)
 		} else {
 			$('#edit-employee-form').submit();
 		}

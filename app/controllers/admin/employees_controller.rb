@@ -74,7 +74,16 @@ class Admin::EmployeesController < Admin::AdminController
     @employee = Employee.find(params[:id])
     @employee.update_attributes(params[:employee])
     @employee.save
-    redirect_to edit_admin_employee_path @employee
+    respond_to do |format|
+      format.html do
+        # render :text => @employee.errors.to_s
+        redirect_to admin_employees_path @employee
+      end
+      format.js do
+        render :text => "success"
+      end
+    end
+    
   end
  
   def create

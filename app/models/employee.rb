@@ -19,8 +19,8 @@ class Employee < ActiveRecord::Base
   validates_format_of       :email,    :with => self.email_regex, :message => self.bad_email_message
   
   attr_accessor             :password
-  validates_presence_of     :password                  
-  validates_length_of       :password, :within => 6..40
+  # validates_presence_of     :password                  
+  # validates_length_of       :password, :within => 6..40
   before_save               :encrypt_password
 
   
