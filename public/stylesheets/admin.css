@@ -40,12 +40,13 @@ img													{border: none;}
 .toolbar ul li										{float:left; margin:0px 10px;}
 .toolbar ul li a 									{cursor:pointer; text-decoration:underline;}
 .toolbar.pages ul li 								{text-decoration:underline;}
-.toolbar-btn 										{float:left; width:145px; height:18px; background:#000000;}
-.pages-wrapper 										{float:left; margin:0px 10px; border-left:1px solid #616161; border-right:1px solid #616161;}
+.toolbar-btn 										{float:left; width:138px; height:17px; padding:4px 0px 0px 8px; background:#FF0000; cursor:pointer;}
+.toolbar-btn-text									{float:left; color:#FFFFFF;}
+.pages-wrapper 										{float:left; margin:1px 10px; padding:3px 0px; border-left:1px solid #616161; border-right:1px solid #616161;}
 .pages li.active a									{float:left; text-decoration:none;}
 .pages li.active									{color:#616161;}
 .total-pages 										{float:left; margin:0px 12px; text-transform:uppercase;}
-.page-views 										{float:left; text-transform:uppercase;}
+.page-views 										{float:left; margin:1px 0px; padding:3px 0px; text-transform:uppercase;}
 .page-views ul li									{float:left;}
 .page-views ul li.active							{margin:-5px 0px 0px 0px; padding:4px 4px 2px 4px; border:1px solid #616161;}
 
@@ -57,8 +58,13 @@ img													{border: none;}
 #employee-grid-page 								{}
 #employee-grid-wrapper	 							{margin:0 auto; width:745px;}
 
-#super-filter-wrapper 								{float:left; width:100%; height:24px; margin:10px 0px; background:#000000;}
-#super-filter 										{float:left; width:100%;}
+#super-filter-wrapper 								{float:left; width:100%; margin:10px 0px;}
+.super-filter 										{float:left; width:100%; margin:5px 0px;}
+.super-filter select 								{height:38px; border:none;}
+.super-field 										{float:left; width:244px; height:28px; margin:0px 1px; font-size:18px; color:#FFFFFF; background:#000000; border:none;}
+#super-search 										{background:#000000;}
+#super-category 									{background:#000000;}
+#super-operand 										{background:#000000;}
 
 .employee-email a 									{text-decoration:underline;}
 
