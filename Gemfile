@@ -7,6 +7,9 @@ gem 'rails', '3.0.0.beta4'
 
 gem 'mysql'
 
+gem "mongoid", ">= 2.0.0.beta9"
+gem "bson_ext", "1.0.4"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
