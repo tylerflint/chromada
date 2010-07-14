@@ -32,6 +32,7 @@ module Chromada
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
+      g.orm :mongoid
       g.stylesheets false
       g.test_framework  :shoulda
       g.fallbacks[:shoulda] = :test_unit
