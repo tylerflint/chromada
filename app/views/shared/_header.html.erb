@@ -1,10 +1,5 @@
 <%= link_to '', root_url, :id => 'logo', :class => 'site-image' %>
-
-<% if(logged_in?) %>
-	
-<% else %>
 	<span id='btn-account-register' class='site-image' onclick='showRegister();'></span>
-<% end %>
 
 <!-- REGISTER -->
 <div id='account-modal-register-wrapper' class='modal'>
@@ -136,11 +131,7 @@
 	
 	<div id='header-additional'>
 		
-		<% if(logged_in?) %>
-			<span id='btn-site-logout' class='site-image' onclick='alert("logout")'></span>
-		<% else %>
 			<span id='btn-site-login' class='site-image' onclick='showLogin();'></span>
-		<% end %>
 	
 		<!-- LOGIN -->
 		<div id='account-modal-login-wrapper' class='modal'>

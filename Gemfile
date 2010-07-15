@@ -11,6 +11,7 @@ gem "mongoid", ">= 2.0.0.beta9"
 gem "mongo_session_store", "2.0.0.pre"
 
 gem "bson_ext", "1.0.4"
+gem "devise", "1.1.rc2"
 
 # Use unicorn as the web server
 # gem 'unicorn'
