@@ -6,6 +6,7 @@ gem 'rails', '3.0.0.beta4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
+gem 'haml'
 
 gem "mongoid", ">= 2.0.0.beta9"
 gem "mongo_session_store", "2.0.0.pre"
