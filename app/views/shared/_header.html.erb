@@ -1,7 +1,7 @@
 <%= link_to '', root_url, :id => 'logo', :class => 'site-image' %>
 
 <% if(logged_in?) %>
-	
+	<span id='btn-admin-panel' class='site-image' onclick='window.open("http://localhost:3000/admin")'></span>
 <% else %>
 	<span id='btn-account-register' class='site-image' onclick='showRegister();'></span>
 <% end %>
