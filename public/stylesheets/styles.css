@@ -103,23 +103,24 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
 #btn-save 											{width:73px; margin:0px 2px; background-position:-1009px -38px;}
+#btn-save:hover										{background-position:-1009px -1px;}
 #btn-cancel 										{width:94px; margin:0px 2px; background-position:-1084px -38px;}
+#btn-cancel:hover									{}
 #btn-delete 										{width:94px; margin:0px 2px; background-position:-66px -74px;}
+#btn-delete:hover									{background-position:-226px -74px;}
 #btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
+#btn-next:hover										{background-position:-86px -81px;}
 #btn-login											{width:91px; margin:25px 0px; background-position:0px -118px;}
+#btn-login:hover									{background-position:-92px -118px;}
 #btn-new 											{width:65px; margin:0px 2px; background-position:0px -74px;}
 .btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
-#btn-account-register 								{float:right; width:220px; height:30px; background-position:-336px -90px; cursor:pointer;}
-#btn-admin-panel	 								{float:right; width:150px; height:30px; background-position:-501px -90px; cursor:pointer;}
-
-#btn-save:hover										{background-position:-1009px -1px;}
-#btn-cancel:hover									{}
-#btn-delete:hover									{background-position:-226px -74px;}
-#btn-next:hover										{background-position:-86px -81px;}
-#btn-login:hover									{background-position:-92px -118px;}
 .btn-close:hover 									{background-position:-668px -4px;}
-#btn-account-register:hover							{background-position:-336px -126px;}
+#btn-account-register 								{float:right; width:220px; height:30px; background-position:-280px -90px; cursor:pointer;}
+#btn-account-register:hover							{background-position:-280px -126px;}
+#btn-admin-panel	 								{float:right; width:150px; height:30px; background-position:-501px -90px; cursor:pointer;}
 #btn-admin-panel:hover 								{background-position:-501px -126px;}
+#btn-site-login 									{width:32px; height:12px; background-position:-255px -35px; cursor:pointer;}
+#btn-site-logout 									{width:40px; height:12px; background-position:-288px -35px; cursor:pointer;}
 
 /***** NAVIGATION *****/
 .nav a 												{float:left; margin:0px 5px 0px 0px; width:50px; height:12px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
@@ -169,9 +170,6 @@ a#link-terms-of-use									{height:6px; width:59px; background-position:-539px 
 #logo												{width:254px; height:80px;}
 
 /* account modal */
-#btn-site-login 									{width:32px; height:12px; background-position:-255px -24px; cursor:pointer;}
-#btn-site-logout 									{width:40px; height:12px; background-position:-288px -35px; cursor:pointer;}
-
 .account-modal-body 								{margin:0 auto; width:236px; padding:36px 0px; overflow:hidden;}
 .account-modal-body .page-title						{float:left; width:100%; margin:10px 0px;}
 .account-modal-body p 								{float:left; width:100%; margin:10px 0px;}
