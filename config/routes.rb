@@ -25,7 +25,7 @@ Chromada::Application.routes.draw do |map|
     root :to                    => "employees#dashboard"
     match "dashboard"           => "employees#dashboard"
     resources :companies
-    resources :employees
+    # resources :employees
     resources :roles
   end
   
