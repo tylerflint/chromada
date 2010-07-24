@@ -7,7 +7,7 @@ Chromada::Application.routes.draw do |map|
   post 'login',  :to => 'sessions#create',    :as => "user_session", :format => :html
   get 'login',  :to => 'sessions#new',       :as => "new_user_session"
   get 'logout', :to => 'sessions#destroy',   :as => "destroy_user_session"
-  get 'signup', :to => 'registrations#new',  :as => "new_user_registration"
+  get 'signup', :to => 'devise/registrations#new',  :as => "new_user_registration"
   
   root :to => "static#index"
   
