@@ -48,10 +48,12 @@ h6													{font-size:10px;}
 .bright-blue-text									{color:#00D3D3;}
 
 /* FORM ELEMENTS */
-.form-group 										{float:left; margin:2px 0px;}
+form 												{float:left; width:100%; margin:2px 0px;}
+.form-group 										{float:left; width:100%; margin:2px 0px;}
 .form-label 										{float:left;}
-label 												{float:left; width:75px; margin:10px 0px 0px 0px;}
-input												{float:left; width:175px; height:20px; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
+.form-field 										{float:left;}
+label 												{float:left; margin:8px 0px 0px 0px;}
+input												{float:left; height:20px; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
 textarea 											{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
 
 .checkbox-text 										{float:left; margin:5px 0px 0px 5px;}
@@ -97,8 +99,9 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
 .pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
 .modal-image 										{float:left; width:100%; height:25px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-.title-image 										{float:left; width:100px; height:100px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
 .page-title 										{margin:25px 0px;}
+
+#chromada-icon 										{float:left; width:181px; height:195px; background-position:-711px 0px;}
 
 .site-btn 											{float:left; width:100px; height:36px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 #btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
@@ -110,8 +113,8 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 #btn-delete:hover									{background-position:-226px -74px;}
 #btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
 #btn-next:hover										{background-position:-86px -81px;}
-#btn-login											{width:91px; margin:25px 0px; background-position:0px -118px;}
-#btn-login:hover									{background-position:-92px -118px;}
+#btn-login											{width:91px; margin:25px 0px; background-position:0px -86px;}
+#btn-login:hover									{background-position:0px -123px;}
 #btn-new 											{width:65px; margin:0px 2px; background-position:0px -74px;}
 .btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
 .btn-close:hover 									{background-position:-668px -4px;}
@@ -159,7 +162,7 @@ a#link-terms-of-use									{height:6px; width:59px; background-position:-539px 
 .page-wrapper 			 							{margin:0 auto; width:960px;}
 .page												{float:left; width:100%; background:#FFFFFF;}
 .page-body-wrapper 									{margin:0 auto; width:920px;}
-.page-body											{float:left;}
+.page-body											{float:left; width:100%;}
 .page-header 										{position:relative; float:left; width:100%; margin:20px 0px;}
 .page-content-wrapper 								{float:left;}
 .page-footer 										{float:left; width:100%; margin:15px 0px;}
@@ -221,12 +224,12 @@ a#link-terms-of-use									{height:6px; width:59px; background-position:-539px 
 
 #account-modal-login								{margin:5px auto; width:300px;}
 #account-modal-login-body	 						{}
-#account-modal-login-title	 						{width:52px; height:21px; background-position:-185px -112px;}
+#account-modal-login-title	 						{width:52px; height:21px; background-position:-647px -59px;}
 
 /* search */
 #site-search										{float:left; width:150px;}
-#site-search-icon									{float:right; width:12px; height:12px; background-position:-573px -20px;}
-#site-search input 									{float:left; width:125px; height:12px; padding:0px 2px; border:none; text-transform:uppercase;}
+#site-search-icon									{float:right; width:12px; height:12px; margin:-2px 0px 0px 0px; background-position:-573px -20px;}
+#site-search input 									{float:left; width:125px; height:12px; margin:-2px 0px 0px 0px; padding:0px 2px; border:none; text-transform:uppercase;}
 
 /* additional */
 #header-additional 									{float:right;}
@@ -279,3 +282,15 @@ a#link-terms-of-use									{height:6px; width:59px; background-position:-539px 
 #spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
 #take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}
 #take-a-tour:hover									{text-decoration:underline;}
+
+/* LOGIN */
+#account-login-wrapper 								{margin:150px auto; width:500px; overflow:hidden;}
+#account-login-body 								{float:right; width:250px;}
+#account-login-header 								{float:left; width:100%; margin:0px 0px 10px 0px;}
+#account-login-title		 						{width:52px; height:21px; background-position:-647px -59px;}
+
+/* REGISTER */
+#account-register-wrapper							{margin:150px auto; width:500px; overflow:hidden;}
+#account-register-body 								{float:right; width:250px;}
+#account-register-header							{float:left; width:100%; margin:0px 0px 10px 0px;}
+#account-register-title 							{width:235px; height:21px; background-position:-254px -59px;}

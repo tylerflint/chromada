@@ -1,17 +1,30 @@
-<h2>Sign in</h2>
+<div id='account-login-wrapper'>
+	
+	<div id='chromada-icon' class='site-image'><span class='hide'>chromada</span></div>
+	
+	<div id='account-login-body'>
+		<div id='account-login-header'>
+			<h1 id='account-login-title' class='site-image'><span class='hide'>Login</span></h1>
+		</div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
+			<div class='form-group'>
+			    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+			</div>
+	
+			<div class='form-group'>
+			    <span class='form-field'><%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+			</div>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+			<% if devise_mapping.rememberable? -%>
+				<div class='form-group'>
+					<span class='form-field'><%= form.check_box :remember_me %></span><span class='form-label'> <%= form.label :remember_me %></span>
+				</div>
+			<% end -%>
+	
+			<span class='form-field'><%= form.submit :html => {:id => 'btn-login', :class => 'site-btn'} %></span>
+		<% end %>
 
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
-
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
-
-<%= render :partial => "devise/shared/links" %>
+		<%= render :partial => "devise/shared/links" %>
+	</div>
+</div>
