@@ -1,4 +1,4 @@
-class Company < ActiveRecord::Base
-  has_many :employees
-  has_many :roles
+class Company
+  include Mongoid::Document
+  field :name, :type => String
 end
