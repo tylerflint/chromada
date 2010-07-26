@@ -40,22 +40,20 @@ class Admin::CompaniesController < Admin::AdminController
   # POST /companies
   # POST /companies.xml
   def create
-    render :text => current_user.class
-    # exit
-    # @company = Company.create(params[:company])
-    # # @company = current_user.companies.create(params[:company])
-    # 
-    # respond_to do |format|
-    #   if @company.save 
-    #   # if @company
-    #     add_company_to_user(@company)
-    #     format.html { redirect_to(admin_company_url(@company), :notice => 'Company was successfully created.') }
-    #     format.xml  { render :xml => @company, :status => :created, :location => @company }
-    #   else
-    #     format.html { render :action => "new" }
-    #     format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
-    #   end
-    # end
+    @company = Company.create(params[:company])
+    # @company = current_user.companies.create(params[:company])
+    
+    respond_to do |format|
+      if @company.save 
+      # if @company
+        add_company_to_user(@company)
+        format.html { redirect_to(admin_company_url(@company), :notice => 'Company was successfully created.') }
+        format.xml  { render :xml => @company, :status => :created, :location => @company }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
   # PUT /companies/1

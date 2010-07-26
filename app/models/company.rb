@@ -3,6 +3,6 @@ class Company
   include Mongoid::Timestamps
   field :name, :type => String
   
-  # references_many :users, :inverse_of => :companies
-  # referenced_in :user, :inverse_of => :companies
+  # kinda stupid, but this is required for the users side... maybe I should submit a feature request
+  references_many :users, :stored_as => :array, :inverse_of => :companies
 end

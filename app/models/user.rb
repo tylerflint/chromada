@@ -6,7 +6,6 @@ class User
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
-  # references_many :companies, :stored_as => :array, :inverse_of => :users
-  # references_many :companies, :stored_as => :array
+  
+  references_many :companies, :stored_as => :array, :inverse_of => :users
 end
