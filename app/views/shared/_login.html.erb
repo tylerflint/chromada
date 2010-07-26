@@ -1,0 +1,121 @@
+<!-- LOGIN -->
+<div id='account-modal-login-wrapper' class='modal'>
+	
+	<div id='account-modal-login-top' class='modal-image'></div>
+	<div id='account-modal-login-background'>
+		<div id='account-modal-login'>
+			
+			<span class='site-image btn-close' onclick='closeWindow();'></span>
+			
+			<div id='account-modal-login-body' class='account-modal-body'>
+				<div class='account-modal-body'>
+					<%= form_for(:login, :url => "/", :html => { :id => 'account-login-form', :class => 'form', :method => :post, :onsubmit => 'return loginPost()' }) do |form| %>
+				
+						<h1 id='account-modal-login-title' class='title-image'><span class='hide'>Login</span></h1>
+						<p>Welcome back. Login below to view, and manage your account.</p>
+				
+						<div class='account-modal-content-form'>						
+							<div class='form-group'>
+							    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+							</div>
+		
+							<div class='form-group'>
+							    <span class='form-field'><%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+							</div>
+						</div>
+						<div type="submit" id='btn-login' class='site-btn' onclick="loginPost()"></div>
+					<% end %>
+				</div>
+		
+				<div class='site-link float-left'>Forgot Your Password?</div>
+				<div class='float-left'>New? <span class='site-link float-none' onclick='showRegister();'>Sign Up</span></div>
+			</div>
+		</div>
+	</div>
+	<div id='account-modal-login-bottom' class='modal-image'></div>
+</div>
+
+<script type='text/javascript'>
+	//<![CDATA[
+		var curStep = 1;
+		var prevStep = 0;
+		var shiftPos = parseFloat($('.account-modal-content').css('width')) + parseFloat($('.account-modal-content').css('margin-left')) + parseFloat($('.account-modal-content').css('margin-right'));
+		var shifterWidth = $('.account-modal-content').size() * parseFloat($('.account-modal-content').css('width')) + parseFloat($('.account-modal-content').css('margin-left')) + parseFloat($('.account-modal-content').css('margin-right'));
+		$('#account-modal-register-shifter').css({'width' : shifterWidth});
+		
+		var registerNum = $('.account-modal-nav-steps li').size();
+		
+		function nextStep()
+		{
+			if(curStep >= registerNum)
+			{
+				curStep = registerNum;
+			}else{
+				$('#account-modal-register-shifter').animate({
+			        left: -shiftPos*curStep
+			    }, 250 );
+
+				curStep ++;
+			}
+			
+			$('#account-modal-register-nav-step' + (curStep - 1)).removeClass('active');
+			
+			$('#account-modal-register-nav-step' + curStep).removeClass('inactive');
+			$('#account-modal-register-nav-step' + curStep).addClass('active');
+			$('#account-modal-register-nav-step' + curStep).attr('onclick', 'toStep(' + curStep + ')');
+		}
+		
+		function toStep($step)
+		{
+			prevStep = curStep;
+			
+			if(curStep != $step)
+			{
+				$('#account-modal-register-shifter').animate({
+			        left: (0 - (shifterWidth/registerNum)*($step - 1))
+			    }, 250 );
+			
+				$('#account-modal-register-nav-step' + prevStep).removeClass('active');
+				$('#account-modal-register-nav-step' + $step).addClass('active');
+				
+				curStep = $step
+			}
+		}
+		
+		function closeWindow()
+		{
+			$('.modal').fadeOut(250);
+		}
+	
+		function showLogin()
+		{
+			$('#account-modal-login-wrapper').fadeIn(250);
+			$('#account-modal-register-wrapper').fadeOut(250);
+		}
+		
+		function hideLogin()
+		{
+			$('#account-modal-login-wrapper').fadeOut(250);
+		}
+		
+		function showRegister()
+		{
+			$('#account-modal-register-wrapper').fadeIn(250);
+			$('#account-modal-login-wrapper').fadeOut(250);
+		}
+		
+		function hideRegister()
+		{
+			$('#account-modal-register-wrapper').fadeOut(250);
+		}
+		
+		function loginPost() 
+		{
+			// validity token?
+			setCookie('login', $('#login_email').val())
+			setCookie('password', $('#login_password').val())
+			loadScript('/quick_login')
+			return false
+		}
+	//]]>
+</script>
