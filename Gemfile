@@ -9,7 +9,9 @@ gem 'mysql'
 gem 'haml'
 
 # gem "mongoid", ">= 2.0.0.beta9"
-gem "mongoid", :git => 'git://github.com/durran/mongoid.git'
+# gem "mongoid", :git => 'git://github.com/durran/mongoid.git'
+gem "mongoid", ">= 2.0.0.beta.14"
+
 gem "mongo_session_store", "2.0.0.pre"
 
 gem "bson_ext", "1.0.4"

@@ -87,7 +87,7 @@ class Admin::CompaniesController < Admin::AdminController
   protected
   
   def add_company_to_user(company)
-    current_user.companies =  [company]
+    current_user.companies << company
     current_user.save
   end
 
