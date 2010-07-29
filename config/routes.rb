@@ -24,9 +24,10 @@ Chromada::Application.routes.draw do |map|
   namespace :admin do
     root :to                    => "employees#dashboard"
     match "dashboard"           => "employees#dashboard"
-    resources :companies
-    # resources :employees
-    resources :roles
+    resources :companies do
+      resources :employees
+      resources :roles
+    end
   end
   
   # map.namespace :admin do |admin|             

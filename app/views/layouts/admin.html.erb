@@ -41,17 +41,9 @@
 					<!-- PAGE BODY -->
 					<div class="page-body">
 						<div id='admin-primary-nav'>
-							
-							<!-- replace the following with a blockpile -->
-							<ul>
-								<li>
-								</li>
-								<li>
-									<%= link_to "ACL Roles", admin_roles_url  %>
-								</li>
-							</ul>
-							<!-- end replace -->
-							
+							<% current_user.companies.each do |c| %>
+								<%= link_to c.name, admin_company_url(c) %><br />
+							<% end %>
 						</div>
 						
 						<div id="admin-page-body">
