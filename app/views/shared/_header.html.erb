@@ -1,46 +1,46 @@
-<%= link_to '', root_url, :id => 'logo', :class => 'site-image' %>
+<header class='header'>
+	<%= link_to '', root_url, :class => 'site-sprite logo' %>
 
-<%if user_signed_in? %>
-	<%= link_to '', admin_dashboard_url, :id => 'btn-admin-panel', :class => 'site-image' %>
-<% else %>
-	<%= link_to '', new_user_registration_url, :id => 'btn-account-register', :class => 'site-image'%>
-<% end %>
-
-<!-- HEADER -->
-<div id='header'>
+	<%if user_signed_in? %>
+		<%= link_to '', admin_dashboard_url, :id => 'btn-admin-panel', :class => 'site-sprite' %>
+	<% else %>
+		<%= link_to '', new_user_registration_url, :id => 'btn-account-register', :class => 'site-sprite'%>
+	<% end %>
 	
-	<div class='page-divide'></div>
 	
-	<!-- PRIMARY NAV -->
-	<div id='primary-nav' class='nav'>
-		<ul>
-			<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
-			<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
-			<li><%= link_to '', downloads_url, 	:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
-			<li><%= link_to '', support_url, 	:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
-			<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %><span class='nav-link-divide site-image'></span></li>
-			<li><%= link_to '', contact_url,	:id => 'link-contact', 		:class => (@active == 'contact') 	? 'active' : '' %></li>
-		</ul>
-	</div>
+	<nav class='nav'>
+		<div class='page-divide'></div>
 	
-	<div id='header-additional'>
-		<%if user_signed_in? %>
-			<%= link_to '', destroy_user_session_url, :id => 'btn-site-logout', :class => 'site-image' %>
-		<% else %>
-			<%= link_to '', new_user_session_url, :id => 'btn-site-login', :class => 'site-image'%>
-		<% end %>
-		
-		<div class='pipe' style='height:12px;'></div>
-	
-		<!-- SEARCH -->
-		<div id='site-search'>
-			<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
-				<span class='form-field'><%= form.text_field :search, :class => 'required', :value => 'search', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-				<span id='site-search-icon' class='site-image hand-cursor'></span>
-			<% end %>
+		<!-- PRIMARY NAV -->
+		<div id='primary-nav'>
+			<ul>
+				<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
+				<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
+				<li><%= link_to '', downloads_url, 	:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
+				<li><%= link_to '', support_url, 	:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
+				<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
+				<li><%= link_to '', contact_url,	:id => 'link-contact', 		:class => (@active == 'contact') 	? 'active' : '' %></li>
+			</ul>
 		</div>
 	
-	</div>
+		<div id='header-additional'>
+			<%if user_signed_in? %>
+				<%= link_to '', destroy_user_session_url, :id => 'link-logout', :class => 'site-sprite' %>
+			<% else %>
+				<%= link_to '', new_user_session_url, :id => 'link-login', :class => 'site-sprite'%>
+			<% end %>
+		
+			<div class='pipe' style='height:12px;'></div>
 	
-	<div class='page-divide'></div>
-</div>
+			<!-- SEARCH -->
+			<div id='site-search'>
+				<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
+					<span class='form-field'><%= form.text_field :search, :class => 'required', :value => 'search', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+					<span id='site-search-icon' class='site-sprite pointer'></span>
+				<% end %>
+			</div>
+		</div>
+	
+		<div class='page-divide'></div>
+	</nav>
+</header>
