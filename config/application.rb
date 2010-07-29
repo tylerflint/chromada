@@ -4,7 +4,7 @@ require File.expand_path('../boot', __FILE__)
 
 # Instead of requiring all of rails, lets just pick what we need:
 # since we are using mongodb and mongoid, let's disable active_record altogether
-# require "active_record/railtie"
+require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"

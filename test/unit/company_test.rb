@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class CompanyTest < ActiveSupport::TestCase
-  should have_many(:employees)
-  should have_many(:roles)
+  should "be valid" do
+    assert Company.new.valid?
+  end
 end

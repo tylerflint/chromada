@@ -4,30 +4,30 @@ Chromada::Application.routes.draw do |map|
   
   # until devise supports default routes explicitly, I have to do this
   # get 'quick_login',  :to => 'sessions#create',    :as => "user_session", :format => :js
-  post 'login',  :to => 'sessions#create',    :as => "user_session", :format => :html
-  get 'login',  :to => 'sessions#new',       :as => "new_user_session"
-  get 'logout', :to => 'sessions#destroy',   :as => "destroy_user_session"
+  post 'login', :to => 'sessions#create',           :as => "user_session", :format => :html
+  get 'login',  :to => 'sessions#new',              :as => "new_user_session"
+  get 'logout', :to => 'sessions#destroy',          :as => "destroy_user_session"
   get 'signup', :to => 'devise/registrations#new',  :as => "new_user_registration"
   
   root :to => "static#index"
   
-  match "products.html"         => "static#products",         :as => "products"
-  match "services.html"         => "static#services",         :as => "services"      
-  match "downloads.html"        => "static#downloads",        :as => "downloads"
-  match "support.html"          => "static#support",          :as => "support"
-  match "about.html"            => "static#about",            :as => "about"
-  match "contact.html"          => "static#contact",          :as => "contact"                                        
-  match "feedback.html"         => "static#feedback",         :as => "feedback"
-  match "privacy-policy.html"   => "static#privacy_policy",   :as => "privacy_policy"
-  match "terms-of-use.html"     => "static#terms_of_use",     :as => "terms_of_use"
+  match "products"         => "static#products",         :as => "products"
+  match "services"         => "static#services",         :as => "services"      
+  match "downloads"        => "static#downloads",        :as => "downloads"
+  match "support"          => "static#support",          :as => "support"
+  match "about"            => "static#about",            :as => "about"
+  match "contact"          => "static#contact",          :as => "contact"                                        
+  match "feedback"         => "static#feedback",         :as => "feedback"
+  match "privacy-policy"   => "static#privacy_policy",   :as => "privacy_policy"
+  match "terms-of-use"     => "static#terms_of_use",     :as => "terms_of_use"
   
   namespace :admin do
     root :to                    => "employees#dashboard"
     match "dashboard"           => "employees#dashboard"
-    match "logout"              => "employees#logout",    :as => "logout"
-    match "login(.:format)"     => "employees#login",     :as => "login"
-    resources :employees
-    resources :roles
+    resources :companies do
+      resources :employees
+      resources :roles
+    end
   end
   
   # map.namespace :admin do |admin|             
