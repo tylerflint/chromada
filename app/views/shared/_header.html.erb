@@ -23,7 +23,7 @@
 			</ul>
 		</div>
 	
-		<div id='header-additional'>
+		<div class='additional-links'>
 			<%if user_signed_in? %>
 				<%= link_to '', destroy_user_session_url, :id => 'link-logout', :class => 'site-sprite' %>
 			<% else %>

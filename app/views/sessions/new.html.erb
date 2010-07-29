@@ -14,15 +14,17 @@
 				<span class='form-field'><%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
 
 				<% if devise_mapping.rememberable? -%>
-					<span class='checkbox-group'><%= form.check_box :remember_me %><span class='form-label'> <%= form.label :remember_me %></span>
+					<span class='checkbox-group'><%= form.check_box :remember_me %><%= form.label :remember_me %></span>
 				<% end -%>
 			</div>
 	
 			<span id='btn-login' class='site-sprite site-btn'></span>
 			
 		<% end %>
-
-		<%= render :partial => "devise/shared/links" %>
+		
+		<div class='additional-links'>
+			<%= render :partial => "devise/shared/links" %>
+		</div>
 		
 	</div>
 </div>
