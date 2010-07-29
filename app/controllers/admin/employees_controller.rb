@@ -2,71 +2,92 @@ class Admin::EmployeesController < Admin::AdminController
   
   before_filter :load_company
   
-  # Be sure to include AuthenticationSystem in Application Controller instead
-  def dashboard
-    
+  # GET /employees
+  # GET /employees.xml
+  def index
+    # @employees = Employee.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @employees }
+    end
   end
-    
-  # render new.rhtml
+
+  # GET /employees/1
+  # GET /employees/1.xml
+  def show
+    @employee = Employee.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @employee }
+    end
+  end
+
+  # GET /employees/new
+  # GET /employees/new.xml
   def new
     @employee = Employee.new
-    if params[:ajax] == "1"
-      render :layout => false
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @employee }
     end
   end
-  
+
+  # GET /employees/1/edit
   def edit
     @employee = Employee.find(params[:id])
-    if params[:ajax] == "1"
-      render :layout => false
+  end
+
+  # POST /employees
+  # POST /employees.xml
+  def create
+    @employee = Employee.new(params[:employee])
+
+    respond_to do |format|
+      if @employee.save
+        format.html { redirect_to(@employee, :notice => 'Employee was successfully created.') }
+        format.xml  { render :xml => @employee, :status => :created, :location => @employee }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @employee.errors, :status => :unprocessable_entity }
+      end
     end
   end
-  
+
+  # PUT /employees/1
+  # PUT /employees/1.xml
   def update
     @employee = Employee.find(params[:id])
-    @employee.update_attributes(params[:employee])
-    @employee.save
+
     respond_to do |format|
-      format.html do
-        # render :text => @employee.errors.to_s
-        redirect_to admin_employees_path @employee
-      end
-      format.js do
-        render :text => "success"
+      if @employee.update_attributes(params[:employee])
+        format.html { redirect_to(@employee, :notice => 'Employee was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @employee.errors, :status => :unprocessable_entity }
       end
     end
-    
   end
- 
-  def create
-    # logout_keeping_session!
-    @employee = Employee.new(params[:employee])
-    @employee.generate_password #if params[:employee][:generate_password] == 1
-    success = @employee && @employee.save
-    if success && @employee.errors.empty?
-            # Protects against session fixation attacks, causes request forgery
-      # protection if visitor resubmits an earlier form using back
-      # button. Uncomment if you understand the tradeoffs.
-      # reset session
-      # self.current_employee = @employee # !! now logged in
-      # redirect_back_or_default('/')
-      render :action => 'index'
-      flash[:notice] = "Employee was successfully created."
-    else
-      errors = ""
-      @employee.errors.each do |k, v|
-        errors << k + ": " + v + "<br />"
-      end
-      render :text => errors
-      # flash[:error]  = "Unable to create a new employee."
-      # render :action => 'new'
+
+  # DELETE /employees/1
+  # DELETE /employees/1.xml
+  def destroy
+    @employee = Employee.find(params[:id])
+    @employee.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(employees_url) }
+      format.xml  { head :ok }
     end
   end
   
   protected
   
-    def load_company
-      @company = Company.find(params[:company_id])
-    end
+  def load_company
+    @company = Company.find(params[:company_id])
+  end
   
 end

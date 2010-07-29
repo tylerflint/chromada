@@ -1,11 +1,12 @@
-class User
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  
+class User < ActiveRecord::Base
+
+  has_and_belongs_to_many :companies
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  
-  references_many :companies, :stored_as => :array  #:inverse_of => :users
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation
 end
