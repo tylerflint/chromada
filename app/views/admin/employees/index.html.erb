@@ -1,4 +1,4 @@
-<%=  admin_grid :employee, :url_prefix => 'admin', :use_ajax => false do |g| 
+<%=  admin_grid :employee, :url_prefix => 'admin', :use_ajax => false, :parent => @company do |g| 
  	g.add_column :status, :name => 'Status', :type => :status 
 	g.add_column :photo, :name => 'Photo', :type => :image
 	g.add_column :name, :name => 'Employee Name'

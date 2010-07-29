@@ -65,7 +65,11 @@ protected
   end
   
   def get_model
-    @object_class.where
+    if @parent
+      @parent.send @object.to_s.pluralize
+    else
+      @object_class.where
+    end
   end
   
   def reset
