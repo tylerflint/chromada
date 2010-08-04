@@ -1,4 +1,5 @@
 <header class='header'>
+	
 	<%= link_to '', root_url, :class => 'site-sprite logo' %>
 
 	<%if user_signed_in? %>
@@ -7,12 +8,11 @@
 		<%= link_to '', new_user_registration_url, :class => 'site-sprite button account-register'%>
 	<% end %>
 	
-	
-	<nav class='nav'>
-		<div class='page-divide'></div>
-	
+	<div class='nav-wrapper'>
+		
 		<!-- PRIMARY NAV -->
-		<div id='primary-nav'>
+		<div class='page-divide'></div>
+		<nav class='nav'>
 			<ul>
 				<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
 				<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
@@ -21,26 +21,27 @@
 				<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
 				<li><%= link_to '', contact_url,	:id => 'link-contact', 		:class => (@active == 'contact') 	? 'active' : '' %></li>
 			</ul>
-		</div>
-	
+		</nav>
+
 		<div class='additional-links'>
 			<%if user_signed_in? %>
 				<%= link_to '', destroy_user_session_url, :class => 'site-sprite button link-logout' %>
 			<% else %>
 				<%= link_to '', new_user_session_url, :class => 'site-sprite button link-login'%>
 			<% end %>
-		
-			<div class='pipe' style='height:12px;'></div>
 	
+			<div class='pipe' style='height:12px;'></div>
+
 			<!-- SEARCH -->
-			<div id='site-search'>
+			<div class='search'>
 				<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
 					<span class='form-field'><%= form.text_field :search, :class => 'required', :value => 'search', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-					<span id='site-search-icon' class='site-sprite button'></span>
+					<span class='site-sprite button icon'></span>
 				<% end %>
 			</div>
 		</div>
-	
 		<div class='page-divide'></div>
-	</nav>
+	
+	</div>
+	
 </header>

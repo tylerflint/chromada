@@ -12,9 +12,9 @@
 
 			<div class='account-modal-content-form'>
 				<div class='form-group'>
-				    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-				    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-				    <span class='form-field'><%= form.text_field :password_confirmation, :class => 'required', :value => 'confirm password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+				    <%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				    <%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				    <%= form.text_field :password_confirmation, :class => 'required', :value => 'confirm password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				</div>
 			</div>
 			
