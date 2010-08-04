@@ -44,7 +44,6 @@ h6													{font-size:10px;}
 .light-grey-text									{color:#999999;}
 .medium-grey-text									{color:#666666;}
 .dark-grey-text										{color:#333333;}
-
 .bright-blue-text									{color:#00D3D3;}
 
 /* FORM ELEMENTS */
@@ -57,7 +56,6 @@ input												{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1
 textarea 											{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
 .checkbox-group 									{float:left;}
 .checkbox-group label 								{float:left; margin:5px 0px 0px 0px;}
-input.site-btn 										{border:none;}
 
 /* TABLES */
 table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
@@ -82,11 +80,11 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 .copyright											{}
                                     		
 /* DIVIDERS */                        		
-
+.page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
+.pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
                        		
 /* OTHER */                           		
 .hide		 										{display:none;}
-.inactive											{color:#999999;}
 .pointer	 										{cursor:pointer;}
 
 /* ALTERNATE CONTENT */
@@ -97,48 +95,49 @@ table tr:hover 										{outline:1px solid #00D3D3;}
 /***** SPRITES *****/
 .site-sprite				 						{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
 .site-transparent-sprite			 				{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
+
 .vertical-tiles-sprite		 						{background:url('../images/vertical-tiles-sprite.gif') repeat-y 0px 0px;}
 .horizontal-tiles-sprite	 						{background:url('../images/horizontal-tiles-sprite.gif') repeat-x 0px 0px;}
+
 .admin-sprite				 						{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
 .admin-transparent-sprite	 						{width:100px; height:100px; background:url('../images/admin-transparent-sprite.gif') no-repeat 0px 0px;}
+
+.spotlight-sprite			 						{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
 
 /***** STATES *****/
 .active												{}
 .inactive											{}
 
 /***** LINKS *****/
+.link				 								{width:100%; color:#00D3D3; text-decoration:underline; cursor:pointer;}
 .active-link 										{color:#00D3D3;}
-.site-image 										{float:left; width:100px; height:100px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
-.site-link			 								{width:100%; color:#00D3D3; text-decoration:underline; cursor:pointer;}
-.page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
-.pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
-.modal-image 										{float:left; width:100%; height:25px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-.page-title 										{margin:25px 0px;}
 
 /***** BUTTONS *****/
-.site-btn 											{cursor:pointer;}
-#btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
-#btn-save 											{width:73px; margin:0px 2px; background-position:-1009px -38px;}
-#btn-save:hover										{background-position:-1009px -1px;}
-#btn-cancel 										{width:94px; margin:0px 2px; background-position:-1084px -38px;}
-#btn-cancel:hover									{}
-#btn-delete 										{width:94px; margin:0px 2px; background-position:-66px -74px;}
-#btn-delete:hover									{background-position:-226px -74px;}
-#btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
-#btn-next:hover										{background-position:-86px -81px;}
-#btn-login											{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-#btn-login:hover									{background-position:0px -123px;}
-#btn-new 											{width:65px; margin:0px 2px; background-position:0px -74px;}
-.btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
-.btn-close:hover 									{background-position:-668px -4px;}
-#btn-account-register 								{float:right; width:220px; height:30px; background-position:-280px -90px; cursor:pointer;}
-#btn-account-register:hover							{background-position:-280px -126px;}
-#btn-admin-panel	 								{float:right; width:150px; height:30px; background-position:-501px -90px; cursor:pointer;}
-#btn-admin-panel:hover 								{background-position:-501px -126px;}
-#btn-register										{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-#btn-register:hover									{background-position:0px -123px;}
-#link-login 										{width:32px; height:12px; background-position:-255px -35px; cursor:pointer;}
-#link-logout	 									{width:40px; height:12px; background-position:-288px -35px; cursor:pointer;}
+.button 											{cursor:pointer; border:none;}
+
+.button.back 										{width:89px; margin:0px 2px; background-position:-470px -131px;}
+.button.save 										{width:73px; margin:0px 2px; background-position:-1009px -38px;}
+.button.save:hover									{background-position:-1009px -1px;}
+.button.cancel 										{width:94px; margin:0px 2px; background-position:-1084px -38px;}
+.button.cancel:hover								{}
+.button.delete 										{width:94px; margin:0px 2px; background-position:-66px -74px;}
+.button.delete:hover								{background-position:-226px -74px;}
+.button.next										{width:84px; margin:25px 0px; background-position:0px -81px;}
+.button.next:hover									{background-position:-86px -81px;}
+.button.new 										{width:65px; margin:0px 2px; background-position:0px -74px;}
+.button.close 										{float:right; width:12px; height:12px; background-position:-681px -4px;}
+.button.close:hover 								{background-position:-668px -4px;}
+.button.account-register 							{float:right; width:220px; height:30px; background-position:-280px -90px;}
+.button.account-register:hover						{background-position:-280px -126px;}
+.button.admin-panel	 								{float:right; width:150px; height:30px; background-position:-501px -90px;}
+.button.admin-panel:hover 							{background-position:-501px -126px;}
+
+.button.login										{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
+.button.login:hover									{background-position:0px -123px;}
+.button.link-login 									{width:32px; height:12px; background-position:-255px -35px;}
+.button.link-logout	 								{width:40px; height:12px; background-position:-288px -35px;}
+.button.register									{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
+.button.register:hover								{background-position:0px -123px;}
 
 /***** header ******/
 .page-header 										{position:relative; float:left; width:100%; margin:20px 0px;}
@@ -260,44 +259,36 @@ a#link-terms-of-use									{height:6px; width:59px; background-position:-539px 
 
 /************************************************** PAGES **************************************************/
 
-/* INDEX (HOME) */
-#index-page-body									{float:left;}
-#spotlight											{float:left; position:relative;}
-.spotlight-content 									{float:left; margin:0px 25px; overflow:hidden;}
+/***** INDEX (HOME) *****/
+.spotlight											{float:left; position:relative;}
 
 /* spotlight */
-.window												{position:relative; overflow:hidden; height:392px;}
-.image-reel 										{position:absolute; top:0; left:0;}
-.content-reel 										{position:absolute; top:0; left:0;}
+.spotlight .content									{float:left; margin:0px 25px; overflow:hidden;}
 
-#btn-try-demo 										{width:164px; height:36px; margin:25px 0px; background-position:-732px -316px;}
-#btn-get-started									{width:158px; height:36px; margin:25px 0px; background-position:-504px -316px;}
+.spotlight .window									{position:relative; overflow:hidden; height:392px;}
+.spotlight .image-reel 								{position:absolute; top:0; left:0;}
+.spotlight .content-reel 							{position:absolute; top:0; left:0;}
 
-#btn-try-demo:hover									{background-position:-732px -353px;}
-#btn-get-started:hover								{background-position:-504px -353px;}
-
-#spotlight-left										{position:relative; float:left; width:433px; height:392px;}
-#spotlight-controls 								{position:absolute; top:10px; right:50px; z-index:1;}
-.spotlight-control-image 							{float:left; width:12px; height:4px; margin:0px 2px; border:4px solid #E3E3E3; cursor:pointer;}
-.spotlight-control-image.active						{float:left; background:#E3E3E3;}
-#spotlight-control-pause 							{float:right; width:3px; height:8px; margin:1px 5px; border-left:4px solid #E3E3E3; border-right:4px solid #E3E3E3; cursor:pointer;}
-
-.spotlight-image 									{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-#spotlight-image-bg									{width:433px; height:392px;}
-.spotlight-image-logo								{margin:50px 95px; width:215px; height:275px;}
+.spotlight #spotlight-left							{position:relative; float:left; width:433px; height:392px;}
+.spotlight #spotlight-left .controls				{position:absolute; top:10px; right:50px; z-index:1;}
+.spotlight #spotlight-left .page					{float:left; width:12px; height:4px; margin:0px 2px; border:4px solid #E3E3E3; background:none; cursor:pointer;}
+.spotlight #spotlight-left .page.active				{float:left; background:#E3E3E3;}
+.spotlight #spotlight-left .logo					{margin:50px 95px; width:215px; height:275px;}
+.spotlight #spotlight-left .chromada.logo 			{background-position:-478px 0px;}
+.spotlight #spotlight-left .ticker.logo				{background-position:-705px 0px;}
 
 #spotlight-cover 									{position:absolute; top:0px; left:425px; width:40px; height:392px; background-position:-429px 0px;}
 
-#spotlight-image-chromada 							{background-position:-478px 0px;}
-#spotlight-image-ticker								{background-position:-705px 0px;}
+.spotlight #spotlight-right							{float:left; width:375px;}
+.spotlight #spotlight-right .content-body			{float:left; width:375px; margin:75px 50px 0px 0px;}
+.spotlight #spotlight-right .content-body p			{line-height:18px;}
+.spotlight #spotlight-right .content-body h2		{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
+.spotlight #spotlight-right .content-body h3		{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; font-weight:normal; text-transform:capitalize;}
 
-#spotlight-right									{float:left; width:375px;}
-.spotlight-body-wrapper 							{float:left; width:405px;}
-.spotlight-body										{float:left; width:375px; margin:75px 50px 0px 0px;}
-#spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
-#spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
-#take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}
-#take-a-tour:hover									{text-decoration:underline;}
+.spotlight #spotlight-right .chromada .button		{width:158px; height:36px; margin:25px 0px; background-position:-504px -316px;}
+.spotlight #spotlight-right .chromada .button:hover	{background-position:-504px -353px;}
+.spotlight #spotlight-right .ticker .button 		{width:164px; height:36px; margin:25px 0px; background-position:-732px -316px;}
+.spotlight #spotlight-right .ticker .button:hover	{background-position:-732px -353px;}
 
 /* LOGIN */
 #account-login 										{margin:100px auto; width:500px; overflow:hidden;}

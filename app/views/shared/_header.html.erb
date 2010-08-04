@@ -2,9 +2,9 @@
 	<%= link_to '', root_url, :class => 'site-sprite logo' %>
 
 	<%if user_signed_in? %>
-		<%= link_to '', admin_dashboard_url, :id => 'btn-admin-panel', :class => 'site-sprite' %>
+		<%= link_to '', admin_dashboard_url, :class => 'site-sprite button admin-panel' %>
 	<% else %>
-		<%= link_to '', new_user_registration_url, :id => 'btn-account-register', :class => 'site-sprite'%>
+		<%= link_to '', new_user_registration_url, :class => 'site-sprite button account-register'%>
 	<% end %>
 	
 	
@@ -25,9 +25,9 @@
 	
 		<div class='additional-links'>
 			<%if user_signed_in? %>
-				<%= link_to '', destroy_user_session_url, :id => 'link-logout', :class => 'site-sprite' %>
+				<%= link_to '', destroy_user_session_url, :class => 'site-sprite button link-logout' %>
 			<% else %>
-				<%= link_to '', new_user_session_url, :id => 'link-login', :class => 'site-sprite'%>
+				<%= link_to '', new_user_session_url, :class => 'site-sprite button link-login'%>
 			<% end %>
 		
 			<div class='pipe' style='height:12px;'></div>
@@ -36,7 +36,7 @@
 			<div id='site-search'>
 				<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
 					<span class='form-field'><%= form.text_field :search, :class => 'required', :value => 'search', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-					<span id='site-search-icon' class='site-sprite pointer'></span>
+					<span id='site-search-icon' class='site-sprite button'></span>
 				<% end %>
 			</div>
 		</div>
