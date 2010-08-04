@@ -31,8 +31,6 @@ GEM
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
     bcrypt-ruby (2.1.2)
-    bson (1.0.4)
-    bson_ext (1.0.4)
     builder (2.1.2)
     cucumber (0.8.5)
       builder (~> 2.1.2)
@@ -59,16 +57,6 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
-    mongo (1.0.6)
-      bson (>= 1.0.4)
-    mongo_session_store (2.0.0.pre)
-      actionpack (~> 3.0)
-    mongoid (2.0.0.beta.14)
-      activemodel (= 3.0.0.rc)
-      bson (= 1.0.4)
-      mongo (= 1.0.6)
-      tzinfo (= 0.3.22)
-      will_paginate (~> 3.0.pre)
     mysql (2.8.1)
     nokogiri (1.4.3.1)
     polyglot (0.3.1)
@@ -105,20 +93,16 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson_ext (= 1.0.4)
   cucumber
   cucumber-rails
   devise (= 1.1.rc2)
   factory_girl
   haml
-  mongo_session_store (= 2.0.0.pre)
-  mongoid (= 2.0.0.beta.14)
   mysql
   rails (= 3.0.0.rc)
   rails3-generators
