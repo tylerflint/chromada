@@ -1,10 +1,10 @@
-<div id='account-login'>
+<div class='account login'>
 	
 	<div class='site-sprite icon'><span class='hide'>chromada</span></div>
 	
-	<div id='account-login-body'>
-		<div id='account-login-header'>
-			<h1 id='account-login-title' class='site-sprite'><span class='hide'>Login</span></h1>
+	<div class='body'>
+		<div class='header'>
+			<h1 class='site-sprite title'><span class='hide'>Login</span></h1>
 		</div>
 
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
@@ -18,7 +18,7 @@
 				<% end -%>
 			</div>
 			
-			<%= form.submit 'Submit', :id => 'btn-login', :class => 'site-sprite site-btn', :value => '' %>
+			<%= form.submit 'Submit', :class => 'site-sprite button login', :value => '' %>
 			
 		<% end %>
 		
