@@ -17,8 +17,9 @@
 				    <span class='form-field'><%= form.text_field :password_confirmation, :class => 'required', :value => 'confirm password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
 				</div>
 			</div>
-		
-			<span id='btn-register' class='site-sprite site-btn'></span>
+			
+			<%= form.submit 'Submit', :id => 'btn-register', :class => 'site-sprite site-btn', :value => '' %>
+			
 		<% end %>
 
 		<div class='additional-links'>

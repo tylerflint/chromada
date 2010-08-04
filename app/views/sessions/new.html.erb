@@ -17,8 +17,8 @@
 					<span class='checkbox-group'><%= form.check_box :remember_me %><%= form.label :remember_me %></span>
 				<% end -%>
 			</div>
-	
-			<span id='btn-login' class='site-sprite site-btn'></span>
+			
+			<%= form.submit 'Submit', :id => 'btn-login', :class => 'site-sprite site-btn', :value => '' %>
 			
 		<% end %>
 		

@@ -57,6 +57,7 @@ input												{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1
 textarea 											{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
 .checkbox-group 									{float:left;}
 .checkbox-group label 								{float:left; margin:5px 0px 0px 0px;}
+input.site-btn 										{border:none;}
 
 /* TABLES */
 table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
