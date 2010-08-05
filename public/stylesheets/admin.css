@@ -1,20 +1,9 @@
-/********************************************
-			Global		 			 	    *
-*********************************************/
-/***************************
-		Base		       * 
-****************************/
-* 													{margin:0; padding:0; outline: none;}
-body, html											{height: 100%;}
-.clear												{min-height: 1px;}
-.clear:after										{content:""; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
-/* *html .clear	{height: 1px;} */
-img													{border: none;}
-
-
-/* forms */
-
 /************************************************** MAIN ELEMENT STYLES **************************************************/
+
+/***** SPRITES *****/
+.admin-sprite				 							{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
+.admin-transparent-sprite	 							{width:100px; height:100px; background:url('../images/admin-transparent-sprite.gif') no-repeat 0px 0px;}
+
 .admin-image 										{float:left; width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
 .admin-btn	 										{float:left; width:100px; height:36px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 
@@ -24,18 +13,19 @@ img													{border: none;}
 #admin-grid-body 									{margin:0 auto; width:748px;}
 #admin-grid-entity-wrapper							{float:left; width: 750px;}
 
-/***** header ******/
-#header												{}
+#admin .page-body .page-heading 						{float:left; width:100%; margin:0px 0px 25px 0px; color:#979797; font-size:18px;}
 
-/***** body-left *****/
-#admin-primary-nav 									{float:left; width:150px; margin:50px 0px;}
-#admin-primary-nav ul 								{float:left; width:100%;}
-#admin-primary-nav ul li 							{float:left; width:100%;}
+/***** LEFT COLUMN *****/
+#admin .left-column 									{float:left; width:160px;}
+#admin .left-column ul 									{float:left; width:100%;}
+#admin .left-column ul li 								{float:left; width:100%;}
 
-/***** body-main *****/
-#admin-page-body									{float:left; width:750px; overflow:hidden;}
+/***** RIGHT COLUMN *****/
+#admin .right-column 									{float:left; width:760px;}
+#admin .right-column ul 								{float:left; width:100%;}
+#admin .right-column ul li 								{float:left; width:100%;}
 
-/***** toolbar *****/
+/***** TOOLBAR *****/
 .toolbar 											{float:left; width:100%; margin:5px 0px;}
 .toolbar ul li										{float:left; margin:0px 10px;}
 .toolbar ul li a 									{cursor:pointer; text-decoration:underline;}

@@ -1,17 +1,16 @@
 /************************************************** GLOBAL STYLES **************************************************/
 
 /* reset */
-body, div, html, p, ol, ul, li							{margin:0; padding:0;}
-h1, h2, h3, h4, h5, h6									{float:left; margin:0; padding:0;}
-img														{float:left; border:none;}
+html, body, div, span, p, ol, ul, li, img,
+h1, h2, h3, h4, h5, h6									{margin:0; padding:0;}
+img														{border:none;}
                                                     	
 /* MAIN PAGE ELEMENTS */                            	
 body 													{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
-body p 													{color:#666666;}
                                		                	
 /* WRAPPERS */                       		        	
 .shifter 												{position:relative;}
-.wrapper				 								{margin:0 auto; overflow:hidden;}
+.wrapper				 								{}
                                                     	
 /* LISTS */                                         	
 ul														{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
@@ -44,6 +43,7 @@ h6														{font-size:10px;}
 .light-grey-text										{color:#999999;}
 .medium-grey-text										{color:#666666;}
 .dark-grey-text											{color:#333333;}
+
 .bright-blue-text										{color:#00D3D3;}
                                                     	
 /* FORM ELEMENTS */                                 	
@@ -62,7 +62,7 @@ table th 												{padding:0px 2px; text-align:left;}
 table tr	 											{height:70px; cursor:pointer;}
 table tr.even 											{background:#FFFFFF;}
 table tr.odd 											{background:#F7F6F6;}
-table tr:hover 											{outline:1px solid #00D3D3;}
+table tr:hover 											{outline:1px solid #00D3D3;}                                       	
                                                     	
 /* VALIDATION */                                    	
                                                     	
@@ -75,7 +75,6 @@ table tr:hover 											{outline:1px solid #00D3D3;}
 .error	 												{color:#DA3C3C; border-color:#DA3C3C; background-color:#FFB7B7;}
                                     		        	
 /* SYMBOLS */                         		        	
-.copyright												{}
                                     		        	
 /* DIVIDERS */                        		        	
 .page-divide											{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
@@ -93,13 +92,10 @@ table tr:hover 											{outline:1px solid #00D3D3;}
 /***** SPRITES *****/                               	
 .site-sprite				 							{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
 .site-transparent-sprite			 					{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
-                                                    	
+
 .vertical-tiles-sprite		 							{background:url('../images/vertical-tiles-sprite.gif') repeat-y 0px 0px;}
 .horizontal-tiles-sprite	 							{background:url('../images/horizontal-tiles-sprite.gif') repeat-x 0px 0px;}
-                                                    	
-.admin-sprite				 							{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
-.admin-transparent-sprite	 							{width:100px; height:100px; background:url('../images/admin-transparent-sprite.gif') no-repeat 0px 0px;}
-                                                    	
+
 .spotlight-sprite			 							{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
                                                     	
 /***** STATES *****/                                	
@@ -136,13 +132,14 @@ table tr:hover 											{outline:1px solid #00D3D3;}
 .button.register										{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
 .button.register:hover									{background-position:0px -123px;}
 
-/***** LAYOUT *****/                             	
-.page-wrapper 			 								{margin:0 auto; width:960px;}
-.page													{float:left; width:100%; background:#FFFFFF;}
-.page-body-wrapper 										{margin:0 auto; width:920px;}
-.page-body												{float:left; width:100%;}
-.page-content-wrapper 									{float:left;}
-.page-footer 											{float:left; width:100%; margin:15px 0px;}
+/***** LAYOUT *****/
+#one-column .page-wrapper 			 					{margin:0 auto; width:960px; background:#FFFFFF; overflow:hidden;}
+#one-column .page										{margin:0 auto; width:920px; padding:20px 0px; overflow:hidden;}
+#one-column .page .body									{float:left; margin:20px 0px;}
+
+#admin .page-wrapper	 			 					{margin:0 auto; width:960px; background:#FFFFFF; overflow:hidden;}
+#amdin .page											{margin:0 auto; width:920px; padding:20px 0px; overflow:hidden;}
+#admin .page .body										{float:left; margin:20px 0px;}
 
 /***** NAVIGATION *****/
 .nav 													{float:left;}
@@ -150,11 +147,10 @@ table tr:hover 											{outline:1px solid #00D3D3;}
 .nav-link-divide 										{width:5px; height:8px; margin:1px 0px; background-position:-567px -21px;}
                                                     	
 /***** HEADER ******/                               	
-.page-header 											{position:relative; float:left; width:100%; margin:20px 0px;}
 .header													{position:relative; float:left; width:100%;}
 .header ul li 											{margin:0px 3px;}
 .header .logo											{width:254px; height:80px;}
-.header .nav-wrapper 									{float:left; width:100%; margin:20px 0px;}
+.header .nav-wrapper 									{float:left; width:100%; margin:20px 0px 0px 0px;}
 .header .additional-links								{float:right;}                                        	
 .header .search											{float:left; width:150px;}
 .header .search .icon									{float:right; width:12px; height:12px; background-position:-573px -20px;}
