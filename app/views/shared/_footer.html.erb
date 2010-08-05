@@ -1,10 +1,9 @@
 <footer class='footer'>
-	<nav class='nav'>
-		
-		<div class='page-divide'></div>
-		
+	
+	<div class='nav-wrapper'>
 		<!-- SECONDARY NAV -->
-		<div id='secondary-nav'>
+		<div class='page-divide'></div>
+		<nav class='nav'>
 			<ul>
 				<li><%= link_to '', 		root_url, 				:id => 'link-index',		 	:class => (@active == 'send-feedback') 	? 'active' : '' %></li>
 				<li><%= link_to '', 		feedback_url,	 		:id => 'link-send-feedback', 	:class => (@active == 'send-feedback') 	? 'active' : '' %></li>
@@ -12,6 +11,6 @@
 				<li><%= link_to '', 		privacy_policy_url, 	:id => 'link-privacy-policy', 	:class => (@active == 'privacy-policy') ? 'active' : '' %></li>
 				<li><%= link_to '', 		terms_of_use_url, 		:id => 'link-terms-of-use', 	:class => (@active == 'terms-of-use') 	? 'active' : '' %></li>
 			</ul>
-		</div>
-	</nav>
+		</nav>
+	</div>
 </footer>

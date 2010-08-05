@@ -1,10 +1,10 @@
-<div id='account-register'>
+<div class='account register'>
 	
 	<div class='site-sprite icon'><span class='hide'>chromada</span></div>
 	
-	<div id='account-register-body'>
-		<div id='account-register-header'>
-			<h1 id='account-register-title' class='site-sprite'><span class='hide'>Welcome To Chromada</span></h1>
+	<div class='body'>
+		<div class='header'>
+			<h1 class='site-sprite title'><span class='hide'>Welcome To Chromada</span></h1>
 		</div>
 
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
@@ -12,13 +12,13 @@
 
 			<div class='account-modal-content-form'>
 				<div class='form-group'>
-				    <span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-				    <span class='form-field'><%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-				    <span class='form-field'><%= form.text_field :password_confirmation, :class => 'required', :value => 'confirm password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+				    <%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				    <%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				    <%= form.text_field :password_confirmation, :class => 'required', :value => 'confirm password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				</div>
 			</div>
 			
-			<%= form.submit 'Submit', :id => 'btn-register', :class => 'site-sprite site-btn', :value => '' %>
+			<%= form.submit 'Submit', :class => 'site-sprite button register', :value => '' %>
 			
 		<% end %>
 

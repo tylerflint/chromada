@@ -1,40 +1,38 @@
-<div id='index-page-body' class='page-body'>
-	<div id='spotlight'>
-		<div id='spotlight-left' class='spotlight-content'>
-			<div id='spotlight-controls'>
+<div class='page-body'>
+	<div class='spotlight'>
+		<div id='spotlight-left' class='spotlight-sprite content'>
+			<div class='controls'>
 				<div class="paging">
-			        <a href="#" rel="1" class='spotlight-control-image'></a>
-			        <a href="#" rel="2" class='spotlight-control-image'></a>
+			        <a href="#link" rel="1" class='page'></a>
+			        <a href="#link" rel="2" class='page'></a>
 			    </div>
 			</div>
 			
-			<div id='spotlight-image-bg' class='spotlight-image'>
-				<div id='image-reel-window' class="window">
-			        <div class="image-reel">
-			            <a href="#" id='spotlight-image-chromada' class='spotlight-image spotlight-image-logo'></a>
-			            <a href="#" id='spotlight-image-ticker' class='spotlight-image spotlight-image-logo'></a>
-			        </div>
-			    </div>
-			</div>
+			<div class="window">
+		        <div class="image-reel">
+		            <a href="#link" class='spotlight-sprite logo chromada'></a>
+		            <a href="#link" class='spotlight-sprite logo ticker'></a>
+		        </div>
+		    </div>
 		</div>
 		
-		<div id='spotlight-cover' class='spotlight-image'></div>
+		<div id='spotlight-cover' class='spotlight-sprite'></div>
 		
-		<div id='spotlight-right' class='spotlight-content'>
-			<div id='content-reel-window' class="window">
+		<div id='spotlight-right' class='content'>
+			<div class="window">
 				<div class="content-reel">
-					<div class='spotlight-body'>
-						<span id='spotlight-header'>welcome to chromada</span>
-						<span id='spotlight-sub-header'>web-base tools, superior orginazation, efficient business.</span>
+					<div class='content-body chromada'>
+						<h2>welcome to chromada</h2>
+						<h3>web-base tools, superior orginazation, efficient business.</h3>
 						<p>Simple tasks are often the most time consuming, unorganized and unmeasured details of a business. Chromada offers intuitive web-based tools to give you an unprecedented level of control and analytics of your business.</p>
-						<div id='btn-get-started' class='spotlight-image hand-cursor' onclick='showLogin();'><span class='hide'>get started</span></div>
+						<a href='#link' class='spotlight-sprite button'><span class='hide'>get started</span></a>
 					</div>
 					
-					<div class='spotlight-body'>
-						<span id='spotlight-header'>introducing ticker.</span>
-						<span id='spotlight-sub-header'>the best way to keep track of your business.</span>
+					<div class='content-body ticker'>
+						<h2>introducing ticker.</h2>
+						<h3>the best way to keep track of your business.</h3>
 						<p>There's a new breed of time tracking software in town. Using a simple web based interface, Ticker allows any computer or mobile device to become a quick and easy way for employees to clock in and out of work, and for the employer to watch.</p>
-						<div id='btn-try-demo' class='spotlight-image hand-cursor'><span class='hide'>try the demo</span></div>
+						<a href='#link' class='spotlight-sprite button'><span class='hide'>try the demo</span></a>
 					</div>
 				</div>
 			</div>
@@ -57,8 +55,8 @@
 			var imageSum 			= $(".image-reel a").size();
 			var imageReelWidth 		= imageSum * imageWidth;
 			
-			var contentWidth 		= parseFloat($(".spotlight-body").css('width')) + parseFloat($(".spotlight-body").css('margin-left')) + parseFloat($(".spotlight-body").css('margin-right'));
-			var contentSum	 		= $(".content-reel .spotlight-body").size();
+			var contentWidth 		= parseFloat($(".content-body").css('width')) + parseFloat($(".content-body").css('margin-left')) + parseFloat($(".content-body").css('margin-right'));
+			var contentSum	 		= $(".content-reel .content-body").size();
 			var contentReelWidth 	= contentSum * contentWidth;
 
 			//Adjust the image reel to its new size

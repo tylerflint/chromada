@@ -1,24 +1,24 @@
-<div id='account-login'>
+<div class='account login'>
 	
 	<div class='site-sprite icon'><span class='hide'>chromada</span></div>
 	
-	<div id='account-login-body'>
-		<div id='account-login-header'>
-			<h1 id='account-login-title' class='site-sprite'><span class='hide'>Login</span></h1>
+	<div class='body'>
+		<div class='header'>
+			<h1 class='site-sprite title'><span class='hide'>Login</span></h1>
 		</div>
 
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
 			
 			<div class='form-group'>
-				<span class='form-field'><%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
-				<span class='form-field'><%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+				<%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				<%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 
 				<% if devise_mapping.rememberable? -%>
 					<span class='checkbox-group'><%= form.check_box :remember_me %><%= form.label :remember_me %></span>
 				<% end -%>
 			</div>
 			
-			<%= form.submit 'Submit', :id => 'btn-login', :class => 'site-sprite site-btn', :value => '' %>
+			<%= form.submit 'Submit', :class => 'site-sprite button login', :value => '' %>
 			
 		<% end %>
 		

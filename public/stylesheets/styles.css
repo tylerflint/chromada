@@ -1,325 +1,249 @@
 /************************************************** GLOBAL STYLES **************************************************/
 
 /* reset */
-body, div, html, p, ol, ul, li						{margin:0; padding:0;}
-h1, h2, h3, h4, h5, h6								{float:left; margin:0; padding:0;}
-img													{float:left; border:none;}
-
-/* MAIN PAGE ELEMENTS */
-body 												{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
-body p 												{color:#666666;}
-                               		
-/* WRAPPERS */                       		
-.shifter 											{position:relative;}
-.wrapper				 							{margin:0 auto; overflow:hidden;}
-
-/* LISTS */
-ul													{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
-ul li												{float:left;}
-                                    		
-/* LINKS */                           		
-a													{text-decoration:none; color:#616161;}
-a:hover												{text-decoration:none; color:#00D3D3;}
-                                    		
-/* HEADERS */    
-h1													{font-size:21px; color:#00D3D3;}                     		
-h2													{font-size:18px; color:#00D3D3;}
-h3													{font-size:13px;}
-h4													{font-size:12px; color:#616161;}
-h5													{font-size:11px;}
-h6													{font-size:10px;}
-                                    		
-/* PADDERS */                         		
-                                    		
-/* TEXT FORMATS */                    		
-.uppercase			 			    				{text-transform:uppercase;}
-.capitalize			 			    				{text-transform:capitalize;}
-.lowercase			 			    				{text-transform:lowercase;}
-                     			    		
-.italic				 			    				{font-style:italic;}
-.bold				 			    				{font-weight:bold;}
-.underline			 			    				{text-decoration:underline;}
-
-/* colors */
-.light-grey-text									{color:#999999;}
-.medium-grey-text									{color:#666666;}
-.dark-grey-text										{color:#333333;}
-
-.bright-blue-text									{color:#00D3D3;}
-
-/* FORM ELEMENTS */
-form 												{float:left; width:100%;}
-.form-group 										{float:left; width:100%;}
-.form-label 										{float:left;}
-.form-field 										{float:left;}
-label 												{float:left;}
-input												{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
-textarea 											{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
-.checkbox-group 									{float:left;}
-.checkbox-group label 								{float:left; margin:5px 0px 0px 0px;}
-input.site-btn 										{border:none;}
-
-/* TABLES */
-table 												{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
-table th 											{padding:0px 2px; text-align:left;}
-.table-header 										{height:25px; outline:none !important; background:#999999; cursor:auto;}
-table tr	 										{height:70px; cursor:pointer;}
-table tr.even 										{background:#FFFFFF;}
-table tr.odd 										{background:#F7F6F6;}
-table tr:hover 										{outline:1px solid #00D3D3;}
-
-/* VALIDATION */
-
-/* MESSAGING */
-.message 											{float:left; width:100%; margin:10px 0px 10px 0px; padding:5px; border: 1px solid;}
-
-.success											{}
-.notice 											{color:#516C6B; border-color:#516C6B; background-color:#92BFB3;}
-.warning 											{color:#DA7f3C; border-color:#DA7f3C; background-color:#FFD5B7;}
-.error	 											{color:#DA3C3C; border-color:#DA3C3C; background-color:#FFB7B7;}
-                                    		
-/* SYMBOLS */                         		
-.copyright											{}
-                                    		
-/* DIVIDERS */                        		
-
-                       		
-/* OTHER */                           		
-.hide		 										{display:none;}
-.inactive											{color:#999999;}
-.pointer	 										{cursor:pointer;}
-
-/* ALTERNATE CONTENT */
-.alt-content										{}
-
+body, div, html, p, ol, ul, li							{margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6									{float:left; margin:0; padding:0;}
+img														{float:left; border:none;}
+                                                    	
+/* MAIN PAGE ELEMENTS */                            	
+body 													{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
+body p 													{color:#666666;}
+                               		                	
+/* WRAPPERS */                       		        	
+.shifter 												{position:relative;}
+.wrapper				 								{margin:0 auto; overflow:hidden;}
+                                                    	
+/* LISTS */                                         	
+ul														{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
+ul li													{float:left;}
+                                    		        	
+/* LINKS */                           		        	
+a														{text-decoration:none; color:#616161;}
+a:hover													{text-decoration:none; color:#00D3D3;}
+                                    		        	
+/* HEADERS */                                       	
+h1														{font-size:21px; color:#00D3D3;}                     		
+h2														{font-size:18px; color:#00D3D3;}
+h3														{font-size:13px;}
+h4														{font-size:12px; color:#616161;}
+h5														{font-size:11px;}
+h6														{font-size:10px;}
+                                    		        	
+/* PADDERS */                         		        	
+                                    		        	
+/* TEXT FORMATS */                    		        	
+.uppercase			 			    					{text-transform:uppercase;}
+.capitalize			 			    					{text-transform:capitalize;}
+.lowercase			 			    					{text-transform:lowercase;}
+                     			    		        	
+.italic				 			    					{font-style:italic;}
+.bold				 			    					{font-weight:bold;}
+.underline			 			    					{text-decoration:underline;}
+                                                    	
+/* colors */                                        	
+.light-grey-text										{color:#999999;}
+.medium-grey-text										{color:#666666;}
+.dark-grey-text											{color:#333333;}
+.bright-blue-text										{color:#00D3D3;}
+                                                    	
+/* FORM ELEMENTS */                                 	
+form 													{float:left;}
+.form-group 											{float:left;}
+label 													{float:left;}
+input													{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
+textarea 												{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
+.checkbox-group 										{float:left;}
+.checkbox-group label 									{float:left; margin:2px;}
+                                                    	
+/* TABLES */                                        	
+table 													{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
+table th 												{padding:0px 2px; text-align:left;}
+.table-header 											{height:25px; outline:none !important; background:#999999; cursor:auto;}
+table tr	 											{height:70px; cursor:pointer;}
+table tr.even 											{background:#FFFFFF;}
+table tr.odd 											{background:#F7F6F6;}
+table tr:hover 											{outline:1px solid #00D3D3;}
+                                                    	
+/* VALIDATION */                                    	
+                                                    	
+/* MESSAGING */                                     	
+.message 												{float:left; width:100%; margin:10px 0px 10px 0px; padding:5px; border: 1px solid;}
+                                                    	
+.success												{}
+.notice 												{color:#516C6B; border-color:#516C6B; background-color:#92BFB3;}
+.warning 												{color:#DA7f3C; border-color:#DA7f3C; background-color:#FFD5B7;}
+.error	 												{color:#DA3C3C; border-color:#DA3C3C; background-color:#FFB7B7;}
+                                    		        	
+/* SYMBOLS */                         		        	
+.copyright												{}
+                                    		        	
+/* DIVIDERS */                        		        	
+.page-divide											{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
+.pipe 													{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
+                       		                        	
+/* OTHER */                           		        	
+.hide		 											{display:none;}
+.pointer	 											{cursor:pointer;}
+                                                    	
+/* ALTERNATE CONTENT */                             	
+.alt-content											{}
+                                                    	
 /************************************************** MAIN ELEMENT STYLES **************************************************/
+                                                    	
+/***** SPRITES *****/                               	
+.site-sprite				 							{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+.site-transparent-sprite			 					{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
+                                                    	
+.vertical-tiles-sprite		 							{background:url('../images/vertical-tiles-sprite.gif') repeat-y 0px 0px;}
+.horizontal-tiles-sprite	 							{background:url('../images/horizontal-tiles-sprite.gif') repeat-x 0px 0px;}
+                                                    	
+.admin-sprite				 							{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
+.admin-transparent-sprite	 							{width:100px; height:100px; background:url('../images/admin-transparent-sprite.gif') no-repeat 0px 0px;}
+                                                    	
+.spotlight-sprite			 							{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
+                                                    	
+/***** STATES *****/                                	
+.active													{}
+.inactive												{}
+                                                    	
+/***** LINKS *****/                                 	
+.link				 									{width:100%; color:#00D3D3; text-decoration:underline; cursor:pointer;}
+.active-link 											{color:#00D3D3;}
+                                                    	
+/***** BUTTONS *****/                               	
+.button 												{cursor:pointer; border:none;}
+                                                    	
+.button.back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
+.button.save 											{width:73px; margin:0px 2px; background-position:-1009px -38px;}
+.button.save:hover										{background-position:-1009px -1px;}
+.button.cancel 											{width:94px; margin:0px 2px; background-position:-1084px -38px;}
+.button.cancel:hover									{}
+.button.delete 											{width:94px; margin:0px 2px; background-position:-66px -74px;}
+.button.delete:hover									{background-position:-226px -74px;}
+.button.next											{width:84px; margin:25px 0px; background-position:0px -81px;}
+.button.next:hover										{background-position:-86px -81px;}
+.button.new 											{width:65px; margin:0px 2px; background-position:0px -74px;}
+.button.close 											{float:right; width:12px; height:12px; background-position:-681px -4px;}
+.button.close:hover 									{background-position:-668px -4px;}
+.button.account-register 								{float:right; width:220px; height:30px; background-position:-280px -90px;}
+.button.account-register:hover							{background-position:-280px -126px;}
+.button.admin-panel	 									{float:right; width:150px; height:30px; background-position:-501px -90px;}
+.button.admin-panel:hover 								{background-position:-501px -126px;}                                            	
+.button.login											{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
+.button.login:hover										{background-position:0px -123px;}
+.button.link-login 										{width:32px; height:12px; background-position:-255px -35px;}
+.button.link-logout	 									{width:40px; height:12px; background-position:-288px -35px;}
+.button.register										{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
+.button.register:hover									{background-position:0px -123px;}
 
-/***** SPRITES *****/
-.site-sprite				 						{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.site-transparent-sprite			 				{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
-.vertical-tiles-sprite		 						{background:url('../images/vertical-tiles-sprite.gif') repeat-y 0px 0px;}
-.horizontal-tiles-sprite	 						{background:url('../images/horizontal-tiles-sprite.gif') repeat-x 0px 0px;}
-.admin-sprite				 						{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
-.admin-transparent-sprite	 						{width:100px; height:100px; background:url('../images/admin-transparent-sprite.gif') no-repeat 0px 0px;}
-
-/***** STATES *****/
-.active												{}
-.inactive											{}
-
-/***** LINKS *****/
-.active-link 										{color:#00D3D3;}
-.site-image 										{float:left; width:100px; height:100px; background:url('../images/chromada-sprite.gif') no-repeat 0px 0px;}
-.site-link			 								{width:100%; color:#00D3D3; text-decoration:underline; cursor:pointer;}
-.page-divide										{float:left; width:100%; height:1px; margin:5px 0px; background:#D5D5D5;}
-.pipe 												{float:left; width:1px; background:#D5D5D5; margin:0px 5px;}
-.modal-image 										{float:left; width:100%; height:25px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-.page-title 										{margin:25px 0px;}
-
-/***** BUTTONS *****/
-.site-btn 											{cursor:pointer;}
-#btn-back 											{width:89px; margin:0px 2px; background-position:-470px -131px;}
-#btn-save 											{width:73px; margin:0px 2px; background-position:-1009px -38px;}
-#btn-save:hover										{background-position:-1009px -1px;}
-#btn-cancel 										{width:94px; margin:0px 2px; background-position:-1084px -38px;}
-#btn-cancel:hover									{}
-#btn-delete 										{width:94px; margin:0px 2px; background-position:-66px -74px;}
-#btn-delete:hover									{background-position:-226px -74px;}
-#btn-next											{width:84px; margin:25px 0px; background-position:0px -81px;}
-#btn-next:hover										{background-position:-86px -81px;}
-#btn-login											{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-#btn-login:hover									{background-position:0px -123px;}
-#btn-new 											{width:65px; margin:0px 2px; background-position:0px -74px;}
-.btn-close 											{float:right; width:12px; height:12px; background-position:-681px -4px; cursor:pointer;}
-.btn-close:hover 									{background-position:-668px -4px;}
-#btn-account-register 								{float:right; width:220px; height:30px; background-position:-280px -90px; cursor:pointer;}
-#btn-account-register:hover							{background-position:-280px -126px;}
-#btn-admin-panel	 								{float:right; width:150px; height:30px; background-position:-501px -90px; cursor:pointer;}
-#btn-admin-panel:hover 								{background-position:-501px -126px;}
-#btn-register										{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-#btn-register:hover									{background-position:0px -123px;}
-#link-login 										{width:32px; height:12px; background-position:-255px -35px; cursor:pointer;}
-#link-logout	 									{width:40px; height:12px; background-position:-288px -35px; cursor:pointer;}
-
-/***** header ******/
-.page-header 										{position:relative; float:left; width:100%; margin:20px 0px;}
-.header												{position:relative; float:left; width:100%;}
-.header ul li 										{margin:0px 3px;}
-.header .logo										{width:254px; height:80px;}
-.header .additional-links							{float:right;}
-
-.nav 												{float:left; width:100%; margin:20px 0px;}
+/***** LAYOUT *****/                             	
+.page-wrapper 			 								{margin:0 auto; width:960px;}
+.page													{float:left; width:100%; background:#FFFFFF;}
+.page-body-wrapper 										{margin:0 auto; width:920px;}
+.page-body												{float:left; width:100%;}
+.page-content-wrapper 									{float:left;}
+.page-footer 											{float:left; width:100%; margin:15px 0px;}
 
 /***** NAVIGATION *****/
-.nav a 												{float:left; margin:0px 5px 0px 0px; width:50px; height:12px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.nav-link-divide 									{width:5px; height:8px; margin:1px 0px; background-position:-567px -21px;}
+.nav 													{float:left;}
+.nav a 													{float:left; margin:0px 5px 0px 0px; width:50px; height:12px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+.nav-link-divide 										{width:5px; height:8px; margin:1px 0px; background-position:-567px -21px;}
+                                                    	
+/***** HEADER ******/                               	
+.page-header 											{position:relative; float:left; width:100%; margin:20px 0px;}
+.header													{position:relative; float:left; width:100%;}
+.header ul li 											{margin:0px 3px;}
+.header .logo											{width:254px; height:80px;}
+.header .nav-wrapper 									{float:left; width:100%; margin:20px 0px;}
+.header .additional-links								{float:right;}                                        	
+.header .search											{float:left; width:150px;}
+.header .search .icon									{float:right; width:12px; height:12px; background-position:-573px -20px;}
+.header .search input 									{float:left; width:125px; height:12px; padding:0px 2px; border:none; text-transform:uppercase;}
+                                                    	
+/* header nav */                                   	
+a#link-products 										{width:55px; background-position:-255px -24px;}
+a#link-services 										{width:50px; background-position:-310px -24px;}
+a#link-downloads										{width:64px; background-position:-360px -24px;}
+a#link-support 											{width:46px; background-position:-426px -24px;}
+a#link-about 											{width:35px; background-position:-474px -24px;}
+a#link-contact 											{width:50px; background-position:-510px -24px;}
+                                                    	
+a#link-products:hover 									{background-position:-255px -12px;}
+a#link-services:hover 									{background-position:-310px -12px;}
+a#link-downloads:hover									{background-position:-360px -12px;}
+a#link-support:hover 									{background-position:-426px -12px;}
+a#link-about:hover 										{background-position:-474px -12px;}
+a#link-contact:hover 									{background-position:-510px -12px;}
+                                                    	
+a#link-products.active 									{background-position:-255px 0px;}
+a#link-services.active 									{background-position:-310px 0px;}
+a#link-downloads.active									{background-position:-360px 0px;}
+a#link-support.active									{background-position:-426px 0px;}
+a#link-about.active 									{background-position:-474px 0px;}
+a#link-contact.active 									{background-position:-510px 0px;}
+                                                    	
+/***** FOOTER *****/                                	
+.footer													{float:left; width:100%; margin:0px 0px 25px 0px;}
+.footer .nav-wrapper 									{float:left; width:100%;}
+.footer ul li 											{margin:0px 5px;}
 
-/* primary nav */
-a#link-products 									{width:55px; background-position:-255px -24px;}
-a#link-services 									{width:50px; background-position:-310px -24px;}
-a#link-downloads									{width:64px; background-position:-360px -24px;}
-a#link-support 										{width:46px; background-position:-426px -24px;}
-a#link-about 										{width:35px; background-position:-474px -24px;}
-a#link-contact 										{width:50px; background-position:-510px -24px;}
-
-a#link-products:hover 								{background-position:-255px -12px;}
-a#link-services:hover 								{background-position:-310px -12px;}
-a#link-downloads:hover								{background-position:-360px -12px;}
-a#link-support:hover 								{background-position:-426px -12px;}
-a#link-about:hover 									{background-position:-474px -12px;}
-a#link-contact:hover 								{background-position:-510px -12px;}
-
-a#link-products.active 								{background-position:-255px 0px;}
-a#link-services.active 								{background-position:-310px 0px;}
-a#link-downloads.active								{background-position:-360px 0px;}
-a#link-support.active								{background-position:-426px 0px;}
-a#link-about.active 								{background-position:-474px 0px;}
-a#link-contact.active 								{background-position:-510px 0px;}
-
-/* secondary nav */
-a#link-index										{height:6px; width:56px; background-position:-255px -49px;}
-a#link-send-feedback								{height:6px; width:64px; background-position:-318px -49px;}
-a#link-contact-us 									{height:6px; width:48px; background-position:-389px -49px;}
-a#link-privacy-policy								{height:8px; width:88px; background-position:-444px -49px;}
-a#link-terms-of-use									{height:6px; width:59px; background-position:-539px -49px;}
-
-/***** MAIN PAGE *****/
-.page-wrapper 			 							{margin:0 auto; width:960px;}
-.page												{float:left; width:100%; background:#FFFFFF;}
-.page-body-wrapper 									{margin:0 auto; width:920px;}
-.page-body											{float:left; width:100%;}
-
-.page-content-wrapper 								{float:left;}
-.page-footer 										{float:left; width:100%; margin:15px 0px;}
-
-/* account modal */
-.account-modal-body 								{margin:0 auto; width:236px; padding:36px 0px; overflow:hidden;}
-.account-modal-body .page-title						{float:left; width:100%; margin:10px 0px;}
-.account-modal-body p 								{float:left; width:100%; margin:10px 0px;}
-.account-modal-body .form-group 					{margin:-1px 0px;}
-.account-modal-content 								{float:left; width:236px; margin:25px 0px;}
-.account-modal-nav 									{float:left; width:100%;}
-.account-modal-form 								{float:left; width:100%;}
-.account-modal-body-form		 					{float:left; width:100%; margin:10px 0px;}
-
-/*- account modal nav -*/
-#account-modal-register-nav-title 					{float:left; width:49px; height:17px; background-position:-174px -88px;}
-
-.account-modal-nav-step 							{float:left; width:6px; height:12px; margin:0px 8px; cursor:pointer;}
-#account-modal-register-nav-step1 					{background-position:-532px -117px;}
-#account-modal-register-nav-step2 					{width:9px; background-position:-539px -117px;}
-#account-modal-register-nav-step3 					{width:9px; background-position:-549px -117px;}
-
-#account-modal-register-nav-step1:hover				{background-position:-507px -117px;}
-#account-modal-register-nav-step2:hover				{background-position:-513px -117px;}
-#account-modal-register-nav-step3:hover				{background-position:-522px -117px;}
-
-#account-modal-register-nav-step1.active			{background-position:-480px -117px;}
-#account-modal-register-nav-step2.active			{width:8px; background-position:-488px -117px;}
-#account-modal-register-nav-step3.active			{width:9px; background-position:-498px -117px;}
-
-#account-modal-register-nav-step2.inactive			{width:8px; background-position:-539px -117px; cursor:default;}
-#account-modal-register-nav-step3.inactive			{width:9px; background-position:-548px -117px; cursor:default;}
-
-/*- register modal -*/
-#account-modal-register-wrapper		 				{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
-#account-modal-register-top		 					{height:10px; background-position:-401px -290px;}
-#account-modal-register-background 		 			{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
-#account-modal-register-bottom		 				{height:15px; background-position:-401px -301px;}
-
-#account-modal-register								{margin:5px auto; width:300px;}
-#account-modal-register-body	 					{}
-#account-modal-register-title 						{width:235px; height:21px; background-position:-241px -112px;}
-
-#account-modal-register-shifter 					{float:left;}
-
-/*- login modal -*/
-#account-modal-login-wrapper						{display:none; position:absolute; top:50px; right:0px; z-index:1; width:260px; padding:10px;}
-#account-modal-login								{}
-
-#account-modal-login-wrapper		 				{display:none; position:absolute; top:50px; right:0px; z-index:1; width:345px;}
-#account-modal-login-top	 						{height:10px; background-position:-401px -290px;}
-#account-modal-login-background 		 			{float:left; width:100%; background:url('../images/vertical-tiles-sprite.png') repeat-y -233px 0px;}
-#account-modal-login-bottom		 					{height:15px; background-position:-401px -301px;}
-
-#account-modal-login								{margin:5px auto; width:300px;}
-#account-modal-login-body	 						{}
-#account-modal-login-title	 						{width:52px; height:21px; background-position:-647px -59px;}
-
-/* search */
-#site-search										{float:left; width:150px;}
-#site-search-icon									{float:right; width:12px; height:12px; background-position:-573px -20px;}
-#site-search input 									{float:left; width:125px; height:12px; padding:0px 2px; border:none; text-transform:uppercase;}
-
-/***** footer *****/
-.footer												{float:left; width:100%; margin:0px 0px 25px 0px;}
-.footer ul li 										{margin:0px 5px;}
-
-/***** MODAL *****/
-.modal-top 											{}
-.modal-bottom 										{}
-
+/* footer nav */                                 	
+a#link-index											{height:6px; width:56px; background-position:-255px -49px;}
+a#link-send-feedback									{height:6px; width:64px; background-position:-318px -49px;}
+a#link-contact-us 										{height:6px; width:48px; background-position:-389px -49px;}
+a#link-privacy-policy									{height:8px; width:88px; background-position:-444px -49px;}
+a#link-terms-of-use										{height:6px; width:59px; background-position:-539px -49px;}
+                                                    	
 /************************************************** PAGES **************************************************/
-
-/* INDEX (HOME) */
-#index-page-body									{float:left;}
-#spotlight											{float:left; position:relative;}
-.spotlight-content 									{float:left; margin:0px 25px; overflow:hidden;}
-
-/* spotlight */
-.window												{position:relative; overflow:hidden; height:392px;}
-.image-reel 										{position:absolute; top:0; left:0;}
-.content-reel 										{position:absolute; top:0; left:0;}
-
-#btn-try-demo 										{width:164px; height:36px; margin:25px 0px; background-position:-732px -316px;}
-#btn-get-started									{width:158px; height:36px; margin:25px 0px; background-position:-504px -316px;}
-
-#btn-try-demo:hover									{background-position:-732px -353px;}
-#btn-get-started:hover								{background-position:-504px -353px;}
-
-#spotlight-left										{position:relative; float:left; width:433px; height:392px;}
-#spotlight-controls 								{position:absolute; top:10px; right:50px; z-index:1;}
-.spotlight-control-image 							{float:left; width:12px; height:4px; margin:0px 2px; border:4px solid #E3E3E3; cursor:pointer;}
-.spotlight-control-image.active						{float:left; background:#E3E3E3;}
-#spotlight-control-pause 							{float:right; width:3px; height:8px; margin:1px 5px; border-left:4px solid #E3E3E3; border-right:4px solid #E3E3E3; cursor:pointer;}
-
-.spotlight-image 									{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-#spotlight-image-bg									{width:433px; height:392px;}
-.spotlight-image-logo								{margin:50px 95px; width:215px; height:275px;}
-
-#spotlight-cover 									{position:absolute; top:0px; left:425px; width:40px; height:392px; background-position:-429px 0px;}
-
-#spotlight-image-chromada 							{background-position:-478px 0px;}
-#spotlight-image-ticker								{background-position:-705px 0px;}
-
-#spotlight-right									{float:left; width:375px;}
-.spotlight-body-wrapper 							{float:left; width:405px;}
-.spotlight-body										{float:left; width:375px; margin:75px 50px 0px 0px;}
-#spotlight-header									{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
-#spotlight-sub-header								{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; text-transform:capitalize;}
-#take-a-tour										{float:left; width:100%; margin:15px 0px; color:#00D3D3; font-size:16px; font-weight:bold; text-transform:capitalize;}
-#take-a-tour:hover									{text-decoration:underline;}
-
-/* LOGIN */
-#account-login 										{margin:100px auto; width:500px; overflow:hidden;}
-#account-login .icon		 						{float:left; width:181px; height:195px; background-position:-711px 0px;}
-#account-login input 								{}
-#account-login .form-field 							{margin:0px 0px -1px 0px;}
-#account-login .checkbox-group						{margin:2px 0px;}
-#account-login-header 								{float:left; width:100%; margin:0px 0px 10px 0px;}
-#account-login-title		 						{width:52px; height:21px; background-position:-647px -59px;}
-#account-login-body 								{float:right; width:250px;}
-#account-login .additional-links 					{float:left;}
-#account-login .additional-link 					{float:left; width:100%; margin:3px 0px;}
-
-
-/* REGISTER */
-#account-register									{margin:100px auto; width:500px; overflow:hidden;}
-#account-register .icon 							{float:left; width:181px; height:195px; background-position:-711px 0px;}
-#account-register input 							{}
-#account-register .form-field 						{margin:0px 0px -1px 0px;}
-#account-register .checkbox-group					{margin:2px 0px;}
-#account-register-header							{float:left; margin:0px 0px 10px 0px;}
-#account-register-title 							{width:235px; height:21px; background-position:-254px -59px;}
-#account-register-body 								{float:right; width:250px;}
-#account-register .additional-links 				{float:left;}
-#account-register .additional-link	 				{float:left; width:100%; margin:3px 0px;}
+                                                    	
+/***** INDEX (HOME) *****/                          	
+.spotlight												{float:left; position:relative;}
+                                                    	
+/* spotlight */                                     	
+.spotlight .content										{margin:0px 25px; overflow:hidden;}
+.spotlight .window										{position:relative; overflow:hidden; height:392px;}
+                                                    	
+.spotlight #spotlight-left								{position:relative; float:left; width:433px; height:392px;}
+.spotlight #spotlight-left .controls					{position:absolute; top:10px; right:50px; z-index:1;}
+.spotlight #spotlight-left .page						{float:left; width:12px; height:4px; margin:0px 2px; border:4px solid #E3E3E3; background:none; cursor:pointer;}
+.spotlight #spotlight-left .page.active					{float:left; background:#E3E3E3;}
+.spotlight #spotlight-left .image-reel 					{position:absolute; top:0; left:0;}
+.spotlight #spotlight-left .logo						{margin:50px 95px; width:215px; height:275px;}
+.spotlight #spotlight-left .logo.chromada 				{background-position:-478px 0px;}
+.spotlight #spotlight-left .logo.ticker					{background-position:-705px 0px;}
+                                                    	
+#spotlight-cover 										{position:absolute; top:0px; left:425px; width:40px; height:392px; background-position:-429px 0px;}
+                                                    	
+.spotlight #spotlight-right								{float:left; width:375px;}
+.spotlight #spotlight-right .content-reel 				{position:absolute; top:0; left:0;}
+.spotlight #spotlight-right .content-body				{float:left; width:375px; margin:75px 50px 0px 0px;}
+.spotlight #spotlight-right .content-body p				{line-height:20px;}
+.spotlight #spotlight-right .content-body h2			{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
+.spotlight #spotlight-right .content-body h3			{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; font-weight:normal; text-transform:capitalize;}
+                                                    	
+.spotlight #spotlight-right .chromada .button			{width:158px; height:36px; margin:25px 0px; background-position:-504px -316px;}
+.spotlight #spotlight-right .chromada .button:hover		{background-position:-504px -353px;}
+.spotlight #spotlight-right .ticker .button 			{width:164px; height:36px; margin:25px 0px; background-position:-732px -316px;}
+.spotlight #spotlight-right .ticker .button:hover		{background-position:-732px -353px;}
+                                                    	
+/***** ACCOUNT *****/                               	
+.account .icon		 									{float:left; width:181px; height:195px; background-position:-711px 0px;}
+.account .additional-links 								{float:left;}
+.account .additional-link 								{float:left; width:100%; margin:3px 0px;}
+.account .additional-link a 							{color:#00D3D3; text-decoration:underline;}
+.account .additional-link a:hover						{text-decoration:none;}
+                                                    	
+/* LOGIN */                                         	
+.account.login 											{margin:100px auto; width:500px; overflow:hidden;}
+.account.login .header 									{float:left; width:100%; margin:0px 0px 10px 0px;}
+.account.login .title		 							{width:52px; height:21px; background-position:-647px -59px;}
+.account.login .body 									{float:right; width:250px;}
+.account.login .form-group input						{margin:0px 0px -1px 0px;}
+.account.login .checkbox-group							{margin:8px 0px 0px 0px;}
+                                                    	
+/* REGISTER */                                      	
+.account.register										{margin:100px auto; width:500px; overflow:hidden;}
+.account.register .header								{float:left; margin:0px 0px 10px 0px;}
+.account.register .title 								{width:235px; height:21px; background-position:-254px -59px;}
+.account.register .body 								{float:right; width:250px;}
+.account.register .form-group input						{margin:0px 0px -1px 0px;}
