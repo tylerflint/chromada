@@ -1,7 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-<html lang="en">
 	<head>		
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="author" content="Chromada (http://www.chromada.com)"/>
@@ -15,47 +14,36 @@
 		<%= stylesheet_link_tag 'styles' %>
 		<%= stylesheet_link_tag "admin" %>
 		
-		<%= stylesheet_link_tag 'base-1.0.1' %>
-		<!-- <style type='text/css'>@import "";</style> -->
-		
 		<!-- LOAD JAVASCRIPT -->
-		<!-- <%= javascript_include_tag 'base-1.0.1' %> -->
-		
 		<%= javascript_include_tag 'jquery.js' %>
-		<!-- <script type="text/javascript" src=""></script> -->
 		
 		<title><%= @title %></title>
 		
 		<%= yield :head %>
 	</head>
 
-	<body id='admin-body'>		
-		<div class='page-wrapper wrapper'>
+	<body id='admin'>
+		<div class='page-wrapper'>
 			<div class='page'>
-				<div class='page-body-wrapper'>
-					<!-- HEADER -->
-					<div class='page-header'>
-						<%= render :partial => 'shared/header' %>
-					</div>
+				<header class='header'>
+					<%= render :partial => 'shared/header' %>
+				</header>
 				
-					<!-- PAGE BODY -->
-					<div class="page-body">
-						<div id='admin-primary-nav'>
-							<% current_user.companies.each do |c| %>
-								<%= link_to c.name, admin_company_url(c) %><br />
-							<% end %>
-						</div>
-						
-						<div id="admin-page-body">
-							<%= yield %>
-						</div>
+				<div class='body'>
+					<h1 class='page-heading'>Page Heading</h1>
+					
+					<div class='left-column'>
+						<%= render :partial => 'admin/shared/leftColumn' %>
 					</div>
-				
-					<!-- FOOTER -->
-					<div class='page-footer'>
-						<%= render :partial => 'shared/footer' %>
+					
+					<div class="right-column">
+						<%= yield %>
 					</div>
 				</div>
+				
+				<footer class='footer'>
+					<%= render :partial => 'shared/footer' %>
+				</footer>
 			</div>			
 		</div>
 		

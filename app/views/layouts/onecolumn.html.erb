@@ -11,39 +11,31 @@
 		<meta name="robots" content="index, follow"/>
 		
 		<!-- LOAD CSS --> 
-		<%= stylesheet_link_tag 'base-1.0.1' %>
 		<%= stylesheet_link_tag 'styles' %>
-		<!-- <style type='text/css'>@import "";</style> -->
 		
 		<!-- LOAD JAVASCRIPT -->
 		<%= javascript_include_tag 'jquery' %>
 		<%= javascript_include_tag 'application' %>
-		<!-- <script type="text/javascript" src=""></script> -->
 		
 		<title><%= @title %></title>
 		
 		<%= yield :head %>
 	</head>
 	
-	<body id='1-column-body'>		
-		<div class='page-wrapper wrapper'>
+	<body id='one-column'>		
+		<div class='page-wrapper'>
 			<div class='page'>
-				<div class='page-body-wrapper'>
-					<!-- HEADER -->
-					<div class='page-header'>
-						<%= render :partial => 'shared/header' %>
-					</div>
+				<header class='header'>
+					<%= render :partial => 'shared/header' %>
+				</header>
 				
-					<!-- PAGE BODY -->
-					<div class="page-body">
-						<%= yield %>
-					</div>
-				
-					<!-- FOOTER -->
-					<div class='page-footer'>
-						<%= render :partial => 'shared/footer' %>
-					</div>
+				<div class='body'>
+					<%= yield %>
 				</div>
+				
+				<footer class='footer'>
+					<%= render :partial => 'shared/footer' %>
+				</footer>
 			</div>			
 		</div>
 		

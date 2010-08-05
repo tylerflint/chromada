@@ -1,0 +1,7 @@
+<div class='wrapper'>
+	<h3>Your Companies</h3>
+
+	<% current_user.companies.each do |c| %>
+		<%= link_to c.name, admin_company_url(c) %><br />
+	<% end %>
+</div>
