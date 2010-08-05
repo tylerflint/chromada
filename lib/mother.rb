@@ -2,12 +2,16 @@ module Mother
   
   class << self
   
-    def get_resources
-      YAML.load_file( Rails.root.to_s + '/config/acl.yml' )
+    def load_config(yaml=nil, file=nil)
+      file ||= 'mother.yml'
+      config = YAML.load(yaml) if yaml
+      config ||= YAML.load_file( Rails.root.to_s + '/config/' + file )
+      raise "Unable to load configuration for Mother" unless config != ""
+      config
     end
     
-    def get_flat_resources
-      self.unwrap(self.get_resources)
+    def get_flat_actions(yaml=nil)
+      self.unwrap self.load_config(yaml)
     end
     
     def unwrap(list, prefix='')
@@ -53,7 +57,7 @@ module Mother
     
     # delete after prototyping
     def print_flat
-      self.get_flat_resources.each do |item|
+      self.get_flat_actions.each do |item|
         puts "#{item} \n"
       end
     end
