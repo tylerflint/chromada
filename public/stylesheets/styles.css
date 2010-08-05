@@ -1,13 +1,12 @@
 /************************************************** GLOBAL STYLES **************************************************/
 
 /* reset */
-body, div, html, p, ol, ul, li							{margin:0; padding:0;}
-h1, h2, h3, h4, h5, h6									{float:left; margin:0; padding:0;}
-img														{float:left; border:none;}
+html, body, div, span, p, ol, ul, li, img,
+h1, h2, h3, h4, h5, h6									{margin:0; padding:0;}
+img														{border:none;}
                                                     	
 /* MAIN PAGE ELEMENTS */                            	
 body 													{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
-body p 													{color:#666666;}
                                		                	
 /* WRAPPERS */                       		        	
 .shifter 												{position:relative;}
@@ -44,6 +43,7 @@ h6														{font-size:10px;}
 .light-grey-text										{color:#999999;}
 .medium-grey-text										{color:#666666;}
 .dark-grey-text											{color:#333333;}
+
 .bright-blue-text										{color:#00D3D3;}
                                                     	
 /* FORM ELEMENTS */                                 	
