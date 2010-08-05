@@ -4,7 +4,39 @@
 		<h1><%= @title %></h1>
 
 		<%= render :partial => 'admin/shared/superFilter'%>
-		<%= render :partial => 'admin/shared/toolbar'%>
+		
+		<div class='toolbar'>
+
+			<div class="toolbar-btn">
+				<%= link_to "+ Create Employee", new_admin_company_employee_path(@company, @employee), :class => 'toolbar-btn-text' %>
+			</div>
+			
+			<div class='pages-wrapper'>		
+				<ul class='pages'>
+					<li class='active'>1</li>
+					<li><a>2</a></li>
+					<li><a>3</a></li>
+					<li><a>4</a></li>
+					<li><a>5</a></li>
+					<li><a>6</a></li>
+					<li><a>7</a></li>
+					<li><a>8</a></li>
+					<li><a>9</a></li>
+					<li><a>10</a></li>
+				</ul>
+
+				<span class='total-pages'>244 pages</span>
+			</div>
+
+			<div class='page-views'>
+				<ul>
+					<li>per page:</li>
+					<li class='active'>25</li>
+					<li><a>50</a></li>
+					<li><a>100</a></li>
+				</ul>
+			</div>
+		</div>
 		
 		<div id='admin-grid-body'>
 			<table id='admin-table'>
@@ -30,7 +62,40 @@
 				<% end %>
 			</table>
 		</div>
-		<%= render :partial => 'admin/shared/toolbar' %>
+
+		<div class='toolbar'>
+
+			<div class="toolbar-btn">
+				<%= link_to "+ Create Employee", new_admin_company_employee_path(@company, @employee), :class => 'toolbar-btn-text' %>
+			</div>
+			
+			<div class='pages-wrapper'>		
+				<ul class='pages'>
+					<li class='active'>1</li>
+					<li><a>2</a></li>
+					<li><a>3</a></li>
+					<li><a>4</a></li>
+					<li><a>5</a></li>
+					<li><a>6</a></li>
+					<li><a>7</a></li>
+					<li><a>8</a></li>
+					<li><a>9</a></li>
+					<li><a>10</a></li>
+				</ul>
+
+				<span class='total-pages'>244 pages</span>
+			</div>
+
+			<div class='page-views'>
+				<ul>
+					<li>per page:</li>
+					<li class='active'>25</li>
+					<li><a>50</a></li>
+					<li><a>100</a></li>
+				</ul>
+			</div>
+		</div>
+
 	</div>
 	
 	<div id="admin-grid-entity-wrapper">

@@ -16,7 +16,7 @@ class Admin::EmployeesController < Admin::AdminController
   # GET /employees/1
   # GET /employees/1.xml
   def show
-    @employee = Employee.find(params[:id])
+    @employee = @company.employee.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,7 +27,7 @@ class Admin::EmployeesController < Admin::AdminController
   # GET /employees/new
   # GET /employees/new.xml
   def new
-    @employee = Employee.new
+    @employee = @company.employees.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,13 +37,13 @@ class Admin::EmployeesController < Admin::AdminController
 
   # GET /employees/1/edit
   def edit
-    @employee = Employee.find(params[:id])
+    @employee = @company.employee.find(params[:id])
   end
 
   # POST /employees
   # POST /employees.xml
   def create
-    @employee = Employee.new(params[:employee])
+    @employee = @company.employees.build(params[:employee])
 
     respond_to do |format|
       if @employee.save
@@ -59,7 +59,7 @@ class Admin::EmployeesController < Admin::AdminController
   # PUT /employees/1
   # PUT /employees/1.xml
   def update
-    @employee = Employee.find(params[:id])
+    @employee = @company.employee.find(params[:id])
 
     respond_to do |format|
       if @employee.update_attributes(params[:employee])
@@ -75,7 +75,7 @@ class Admin::EmployeesController < Admin::AdminController
   # DELETE /employees/1
   # DELETE /employees/1.xml
   def destroy
-    @employee = Employee.find(params[:id])
+    @employee = @company.employee.find(params[:id])
     @employee.destroy
 
     respond_to do |format|

@@ -9,7 +9,7 @@
 	<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
 	<span id='edit-employee-name'><%= employee.lastname %>, <%= employee.firstname %></span>
 
-	<%= form_for employee, :url => (employee.new_record? ? admin_employees_path : admin_employee_path), :html => {:id => 'edit-employee-form'} do |f| -%>
+	<%= form_for employee, :url => (employee.new_record? ? admin_company_employees_path(company) : admin_company_employee_path(company)), :html => {:id => 'edit-employee-form'} do |f| -%>
 	  	<div class='form-group'>
 			<div id='edit-employee-name-group'>
 				<input id='edit-employee-firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>' onfocus='if(this.value=="First Name")value=""' onblur='if(this.value=="")this.value="First Name"'/>
@@ -17,10 +17,6 @@
 			</div>
 		</div>
 		
-		<div class='form-group'>
-			<input id='edit-employee-email' type="text" name="employee[email]" value='<%= employee.email ||= 'Email' %>' onfocus='if(this.value=="Employee Email")value=""' onblur='if(this.value=="")this.value="Employee Email"'/>
-		</div>
-
 		<div id='edit-employee-authentication-group'>
 			<div class='form-group'>
 				<div class='authentication-group-hybrid'>
@@ -29,17 +25,6 @@
 				<div class='authentication-group-pure'>
 					<span class='uppercase'>or</span>
 					<input type="checkbox" class='checkbox' name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
-					<span class='checkbox-text'>Auto Generate</span>
-				</div>
-			</div>
-			
-			<div class='form-group'>
-				<div class='authentication-group-hybrid'>
-					<input id='edit-employee-custom-password' type="text" name="" value='Password' onfocus='if(this.value=="Password")value=""' onblur='if(this.value=="")this.value="Password"'/>
-				</div>
-				<div class='authentication-group-pure'>
-					<span class='uppercase'>or</span>
-					<input type="checkbox" class='checkbox' name="generate-password" onchange="autoGeneratePassword(this)"/>
 					<span class='checkbox-text'>Auto Generate</span>
 				</div>
 			</div>
@@ -57,37 +42,6 @@
 			$("#edit-employee-custom-id").val("").attr('disabled', true)
 		} else {
 			$("#edit-employee-custom-id").removeAttr('disabled')
-		}
-	}
-	function autoGeneratePassword (checkbox) {
-		if (checkbox.checked) {
-			$("#edit-employee-custom-password").val('').attr('disabled', true)
-		} else {
-			$("#edit-employee-custom-password").removeAttr('disabled')
-		}
-	}
-	function save () {
-		if (false) {
-			$.post('<%= admin_employee_path employee.id, :format => :js %>'
-				,$("#edit-employee-form").serialize()
-				,function(){alert('done')}
-			)
-		} else {
-			$('#edit-employee-form').submit();
-		}
-	}
-	function cancel () {
-		if (gridUseAjax) {
-			backToGrid();
-		} else {
-			
-		}
-	}
-	function destroy () {
-		if (gridUseAjax) {
-			backToGrid();
-		} else {
-			
 		}
 	}
 </script>

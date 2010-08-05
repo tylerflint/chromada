@@ -27,11 +27,14 @@ class AdminGrid < Blockpile
   end
   
   def get_edit_url(id)
-    # edit_admin_employee
-    if @url_prefix
-      eval "edit_#{@url_prefix}_#{@object.to_s}_url(#{id})"
+    if @edit_url
+      eval "#{@edit_url.to_s}_url #{@parent.id}, #{id}"
     else
-      eval "edit_#{@object.to_s}_url(#{id})"
+      if @url_prefix
+        eval "edit_#{@url_prefix}_#{@object.to_s}_url(#{id})"
+      else
+        eval "edit_#{@object.to_s}_url(#{id})"
+      end
     end
   end
   
