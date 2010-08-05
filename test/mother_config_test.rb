@@ -17,37 +17,43 @@ class MotherConfigTest < ActiveSupport::TestCase
     end
   end
   
-  # should "throw an error if improper yaml format is present" do
-  #   assert_raise RuntimeError do
-  #     Mother.load_config( get_invalid_config )
-  #   end
-  # end
-  
   should "return a flattened array of yaml tree" do
     assert_kind_of Array, Mother.get_flat_actions
   end
   
   should "separate tree levels with a /" do
-    assert false
+    flattened = Mother.get_flat_actions(get_valid_config)
+    assert_equal "employee/create", flattened[0]
   end
   
   should "not have a leading / on any actions" do
-    assert false
+    flattened = Mother.get_flat_actions(get_valid_config)
+    count = 0
+    flattened.each do |flat|
+      count += 1 if flat.match /^\//
+    end
+    assert_equal 0, count
   end
   
   should "not have a trailing / on any of the actions" do
-    assert false
+    flattened = Mother.get_flat_actions(get_valid_config)
+    count = 0
+    flattened.each do |flat|
+      count += 1 if flat.match /\/$/
+    end
+    assert_equal 0, count
   end
   
   should "maintain an accurate count of flattened actions relative to tree" do
-    assert false
+    flattened = Mother.get_flat_actions(get_valid_config)
+    assert_equal 9, flattened.length
   end
   
   private
   
   def get_valid_config
     %{
-      - employees:
+      - employee:
           - create
           - delete
           - view:
@@ -57,7 +63,7 @@ class MotherConfigTest < ActiveSupport::TestCase
               - firstname
               - lastname
 
-      - roles:
+      - role:
           - create
           - delete
           - edit

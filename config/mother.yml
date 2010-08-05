@@ -1,0 +1,14 @@
+- employees:
+    - create
+    - delete
+    - view:
+        - firstname
+        - lastname
+    - edit:
+        - firstname
+        - lastname
+        
+- roles:
+    - create
+    - delete
+    - edit
