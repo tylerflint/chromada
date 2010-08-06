@@ -55,6 +55,14 @@ module Mother
       items
     end
     
+    def seed_actions(yaml=nil)
+      actions = self.get_flat_actions(yaml)
+      Action.destroy_all(["path NOT IN (?)", actions])
+      actions.each do |action|
+        Action.find_or_create_by_path(action)
+      end
+    end
+    
     # delete after prototyping
     def print_flat
       self.get_flat_actions.each do |item|
