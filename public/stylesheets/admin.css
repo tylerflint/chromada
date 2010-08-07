@@ -24,7 +24,7 @@
 .left-column .nav .sub li 								{float:left; width:162px; padding:18px 0px; border-bottom:#999999 solid 1px; background:#D8D8D8; text-align:center;}
 
 /***** RIGHT COLUMN *****/
-#admin .right-column 									{float:left; width:760px;}
+#admin .right-column 									{float:left; width:760px; margin:28px 0px 0px 0px;}
 
 /***** TOOLBAR *****/
 .toolbar 											{float:left; width:100%; margin:5px 0px;}
@@ -40,6 +40,25 @@
 .page-views 										{float:left; margin:1px 0px; padding:3px 0px; text-transform:uppercase;}
 .page-views ul li									{float:left;}
 .page-views ul li.active							{margin:-5px 0px 0px 0px; padding:4px 4px 2px 4px; border:1px solid #616161;}
+
+/***** BUTTONS *****/
+.button.back 												{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.button.back:hover											{background-position:-145px -116px;}
+                                                        	
+.button.save 												{width:73px; height:36px; margin:0px 2px; background-position:-5px -79px;}
+.button.save:hover											{background-position:-5px -116px;}
+                                                        	
+.button.cancel 												{width:94px; height:36px; margin:0px 2px; background-position:-239px -79px;}
+.button.cancel:hover										{background-position:-239px -116px;}
+                                                        	
+.button.delete 												{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.button.delete:hover										{background-position:-145px -116px;}
+                                                        	
+.button.next												{width:93px; height:36px; margin:25px 0px; background-position:-145px -79px;}
+.button.next:hover											{background-position:-145px -116px;}
+                                                        	
+.button.new 												{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.button.new:hover											{background-position:-145px -116px;}
 
 /************************************************** PAGES **************************************************/
 
@@ -69,7 +88,7 @@
 
 #edit-employee-controls 							{float:left; width:100%; margin:28px 0px;}
 #edit-employee-information 							{float:left; width:450px; margin:0px 25px 0px 0px;}
-#edit-employee-roles 								{float:left; width:270px;}
+#edit-employee-roles 								{float:left; width:315px; padding:34px; border:10px solid #F5F5F5;}
 
 #edit-employee-name 								{float:left; width:315px; margin:0px 0px 0px 15px; color:#C8C8C8; font-size:24px; font-weight:bold;}
 
@@ -98,11 +117,11 @@
 
 #edit-employee-roles form 							{float:left; width:100%;}
 #edit-employee-roles form h3 						{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
-#edit-employee-roles form ul						{float:left; width:200px; margin:0px 25px 0px 0px;}
-#edit-employee-roles form ul li						{float:left; width:100%; margin:2px 15px; color:#AFAFAF;}
+#edit-employee-roles form ul						{float:left;}
+#edit-employee-roles form ul li						{float:left; width:100%; margin:2px; color:#AFAFAF;}
 #edit-employee-roles form input						{float:left; width:auto;}
 
-.edit-employee-roles-group 							{float:left; width:225px; margin:5px 0px; padding:12px; border:10px solid #F5F5F5;}
+.edit-employee-roles-group 							{float:left;}
 
 /* acl */
 #acl-controls 										{float:left; width:100%; margin:28px 0px;}

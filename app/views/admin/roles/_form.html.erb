@@ -1,3 +1,29 @@
+
+<div id='edit-employee-roles'>
+	<h2>Employee Role #</h2>
+	<form id='edit-employee-roles-form'>
+		
+		<div class='button-bar'>
+			<div id='edit-employee-controls'>
+				<div class='admin-sprite button save' onclick="save()"></div>
+				<div class='admin-sprite button cancel' onclick="cancel()"></div>
+				<div class='admin-sprite button delete' onclick="destroy()"></div>
+			</div>
+		</div>
+		
+		<div class='edit-employee-roles-group'>
+			<ul>
+				<li class='odd'><input type="checkbox" name="" /><label>Role 1</label></li>
+				<li class='even'><input type="checkbox" name="" /><label>Role 1</label></li>
+				<li class='odd'><input type="checkbox" name="" /><label>Role 1</label></li>
+				<li class='even'><input type="checkbox" name="" /><label>Role 1</label></li>
+				<li class='odd'><input type="checkbox" name="" /><label>Role 1</label></li>
+				<li class='even'><input type="checkbox" name="" /><label>Role 1</label></li>
+			</ul>
+		</div>
+	</form>
+</div>
+
 <%= form_for(@role) do |f| %>
   <% if @role.errors.any? %>
     <div id="error_explanation">

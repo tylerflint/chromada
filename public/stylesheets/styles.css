@@ -17,6 +17,9 @@ img															{border:none;}
 /* LISTS */                                         		
 ul															{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
 ul li														{float:left;}
+
+li.odd 														{background-color:#F6F6F6;}
+li.even 													{background-color:#FFFFFF;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
@@ -109,25 +112,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .active-link 												{color:#00D3D3;}
                                                     		
 /***** BUTTONS *****/                               		
-.button 													{cursor:pointer; border:none;}
-                                                    		
-.button.back 												{width:89px; margin:0px 2px; background-position:-470px -131px;}
-.button.back:hover											{}
-                                                        	
-.button.save 												{width:73px; margin:0px 2px; background-position:-1009px -38px;}
-.button.save:hover											{background-position:-1009px -1px;}
-                                                        	
-.button.cancel 												{width:94px; margin:0px 2px; background-position:-1084px -38px;}
-.button.cancel:hover										{}
-                                                        	
-.button.delete 												{width:94px; margin:0px 2px; background-position:-66px -74px;}
-.button.delete:hover										{background-position:-226px -74px;}
-                                                        	
-.button.next												{width:84px; margin:25px 0px; background-position:0px -81px;}
-.button.next:hover											{background-position:-86px -81px;}
-                                                        	
-.button.new 												{width:65px; margin:0px 2px; background-position:0px -74px;}
-.button.new:hover											{}
+.button 													{float:left; cursor:pointer; border:none;}
                                                         	
 .button.close 												{float:right; width:12px; height:12px; background-position:-681px -4px;}
 .button.close:hover 										{background-position:-668px -4px;}
