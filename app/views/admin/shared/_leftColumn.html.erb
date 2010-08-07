@@ -1,5 +1,22 @@
 <div class='wrapper'>
-	<h3>Your Companies</h3>
+	<h3 class='column-heading'>Your Companies</h3>
+	
+	<nav class='nav'>
+		<ul>
+			<li>
+				<span style='float:left; width:162px; height:43px; background:#222222;'></span>
+				<ul class='sub'>
+					<li>Employees</li>
+					<li>Rolls</li>
+					<li>Account Settings</li>
+				</ul>
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li style='background:#00FF00;'></li>
+		</ul>
+	</nav>
 
 	<% current_user.companies.each do |c| %>
 		<%= link_to c.name, admin_company_url(c) %><br />

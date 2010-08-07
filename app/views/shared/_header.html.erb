@@ -4,20 +4,20 @@
 <%if user_signed_in? %>
 	<%= link_to '', admin_dashboard_url, :class => 'site-sprite button admin-panel' %>
 <% else %>
-	<%= link_to '', new_user_registration_url, :class => 'site-sprite button account-register'%>
+	<%= link_to '', new_user_registration_url, :class => 'site-sprite button sign-up'%>
 <% end %>
 
-<div class='nav-wrapper'>
+<div class='wrapper'>
 	
 	<!-- PRIMARY NAV -->
 	<div class='page-divide'></div>
 	<nav class='nav'>
 		<ul>
-			<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
-			<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
-			<li><%= link_to '', downloads_url, 	:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
-			<li><%= link_to '', support_url, 	:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
-			<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %><span class='nav-link-divide site-sprite'></span></li>
+			<li><%= link_to '', products_url, 	:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li>
+			<li><%= link_to '', services_url, 	:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li>
+			<li><%= link_to '', downloads_url, 	:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li>
+			<li><%= link_to '', support_url, 	:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li>
+			<li><%= link_to '', about_url, 		:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %><span class='site-sprite link-divide'></span></li>
 			<li><%= link_to '', contact_url,	:id => 'link-contact', 		:class => (@active == 'contact') 	? 'active' : '' %></li>
 		</ul>
 	</nav>

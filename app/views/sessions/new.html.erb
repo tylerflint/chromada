@@ -2,7 +2,7 @@
 	
 	<div class='site-sprite icon'><span class='hide'>chromada</span></div>
 	
-	<div class='body'>
+	<div class='account-body'>
 		<div class='header'>
 			<h1 class='site-sprite title'><span class='hide'>Login</span></h1>
 		</div>
@@ -13,9 +13,12 @@
 				<%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 
+				<!--
 				<% if devise_mapping.rememberable? -%>
 					<span class='checkbox-group'><%= form.check_box :remember_me %><%= form.label :remember_me %></span>
 				<% end -%>
+				-->
+				
 			</div>
 			
 			<%= form.submit 'Submit', :class => 'site-sprite button login', :value => '' %>
