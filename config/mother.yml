@@ -12,3 +12,7 @@
     - create
     - delete
     - edit
+    
+- users:
+    - create
+    - delete
