@@ -1,8 +1,11 @@
 class Admin::RolesController < Admin::AdminController
+  before_filter :load_company
+
   # GET /roles
   # GET /roles.xml
   def index
-    @roles = Role.all
+    # @roles = Role.all
+    @roles = @company.roles
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +16,8 @@ class Admin::RolesController < Admin::AdminController
   # GET /roles/1
   # GET /roles/1.xml
   def show
-    @role = Role.find(params[:id])
+    # @role = Role.find(params[:id])
+    @role = @company.role.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +28,8 @@ class Admin::RolesController < Admin::AdminController
   # GET /roles/new
   # GET /roles/new.xml
   def new
-    @role = Role.new
+    # @role = Role.new
+    @role = @company.roles.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +39,15 @@ class Admin::RolesController < Admin::AdminController
 
   # GET /roles/1/edit
   def edit
-    @role = Role.find(params[:id])
+    # @role = Role.find(params[:id])
+    @role = @company.roles.find(params[:id])
   end
 
   # POST /roles
   # POST /roles.xml
   def create
-    @role = Role.new(params[:role])
+    # @role = Role.new(params[:role])
+    @role = @company.roles.build(params[:role])
 
     respond_to do |format|
       if @role.save
@@ -56,7 +63,8 @@ class Admin::RolesController < Admin::AdminController
   # PUT /roles/1
   # PUT /roles/1.xml
   def update
-    @role = Role.find(params[:id])
+    # @role = Role.find(params[:id])
+    @role = @company.role.find(params[:id])
 
     respond_to do |format|
       if @role.update_attributes(params[:role])
@@ -72,7 +80,8 @@ class Admin::RolesController < Admin::AdminController
   # DELETE /roles/1
   # DELETE /roles/1.xml
   def destroy
-    @role = Role.find(params[:id])
+    # @role = Role.find(params[:id])
+    @role = @company.role.find(params[:id])
     @role.destroy
 
     respond_to do |format|
@@ -80,4 +89,11 @@ class Admin::RolesController < Admin::AdminController
       format.xml  { head :ok }
     end
   end
+  
+  protected
+  
+  def load_company
+    @company = Company.find(params[:company_id])
+  end
+  
 end

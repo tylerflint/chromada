@@ -1,33 +1,25 @@
-<div id='acl-controls'>
-	<div id='btn-save' class='admin-btn' onclick="save()"></div>
-	<div id='btn-delete' class='admin-btn' onclick="destroy()"></div>
-</div>
+<h1>Listing roles</h1>
 
-<div id='acl-rolls-list'>
-	<div id='acl-rolls'>
-		<ul>
-			<li><span class='checkbox-text'>Employee Role 1</span></li>
-			<li><span class='checkbox-text'>Employee Role 2</span></li>
-			<li><span class='checkbox-text'>Employee Role 3</span></li>
-			<li><span class='checkbox-text'>Employee Role 4</span></li>
-			<li><span class='checkbox-text'>Employee Role 5</span></li>
-			<li><span class='checkbox-text'>Employee Role 6</span></li>
-		</ul>
-	</div>
-</div>
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<div id='acl-assignment'>
-	<h2>Assign Actions to Role 1</h2>
-	<form id='acl-assignment-form'>
-		<div class='acl-assignment-group'>
-			<ul>
-				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 1</span></li>
-				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 2</span></li>
-				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 3</span></li>
-				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 4</span></li>
-				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 5</span></li>
-				<li><input type="checkbox" name="" /><span class='checkbox-text'>Role 6</span></li>
-			</ul>
-		</div>
-	</form>
-</div>
+<% @roles.each do |role| %>
+  <tr>
+    <td><%= role.company_id %></td>
+    <td><%= role.name %></td>
+    <td><%= link_to 'Show', role %></td>
+    <td><%= link_to 'Edit', edit_role_path(role) %></td>
+    <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Role', new_role_path %>
