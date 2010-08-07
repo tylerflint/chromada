@@ -20,8 +20,9 @@
 #admin .left-column ul 									{float:left; width:100%;}
 #admin .left-column ul li 								{float:left; width:100%;}
 .left-column .column-heading 							{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
-.left-column .nav li	 								{float:left; width:162px; height:43px; margin:5px 0px; background:#222222;}
-.left-column .nav .sub li 								{float:left; width:162px; padding:18px 0px; border-bottom:#999999 solid 1px; background:#D8D8D8; text-align:center;}
+.left-column .nav li a	 								{float:left; width:145px; margin:5px 0px; padding:18px 10px; background:#222222;}
+.left-column .nav a.parent								{margin:0px;}
+.left-column .nav .sub li a								{float:left; width:145px; margin:0px; border:#999999 solid 1px; border-top:none; background:#FFFFFF;}
 
 /***** RIGHT COLUMN *****/
 #admin .right-column 									{float:left; width:760px; margin:28px 0px 0px 0px;}
