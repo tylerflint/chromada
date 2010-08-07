@@ -1,5 +1,4 @@
 class Admin::EmployeesController < Admin::AdminController
-  
   before_filter :load_company
   
   # GET /employees
