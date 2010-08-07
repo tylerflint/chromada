@@ -13,17 +13,18 @@
 #admin-grid-body 									{margin:0 auto; width:748px;}
 #admin-grid-entity-wrapper							{float:left; width: 750px;}
 
-#admin .page-body .page-heading 						{float:left; width:100%; margin:0px 0px 25px 0px; color:#979797; font-size:18px;}
+#admin .page-heading		 							{float:left; width:100%; margin:15px 0px 0px 0px; color:#979797; font-size:18px;}
 
 /***** LEFT COLUMN *****/
-#admin .left-column 									{float:left; width:160px;}
+#admin .left-column 									{float:left; width:160px; margin:0px 20px 0px 0px;}
 #admin .left-column ul 									{float:left; width:100%;}
 #admin .left-column ul li 								{float:left; width:100%;}
+.left-column .column-heading 							{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
+.left-column .nav li	 								{float:left; width:162px; height:43px; margin:5px 0px; background:#222222;}
+.left-column .nav .sub li 								{float:left; width:162px; padding:18px 0px; border-bottom:#999999 solid 1px; background:#D8D8D8; text-align:center;}
 
 /***** RIGHT COLUMN *****/
 #admin .right-column 									{float:left; width:760px;}
-#admin .right-column ul 								{float:left; width:100%;}
-#admin .right-column ul li 								{float:left; width:100%;}
 
 /***** TOOLBAR *****/
 .toolbar 											{float:left; width:100%; margin:5px 0px;}
