@@ -146,3 +146,8 @@
 #acl-assignment form input							{float:left; width:auto;}
 
 .acl-assignment-group	 							{float:left; width:225px; margin:5px 0px; padding:12px; border:10px solid #F5F5F5;}
+
+/* companies */
+#edit-company-roles									{margin:25px 0px 0px 0px;}
+#edit-company-roles ul li							{float:left; width:100%;}
+#edit-company-roles ul li a							{float:left; width:100%; margin:5px 0px; padding:10px 0px 10px 5px; border:#000000 solid 1px;}
