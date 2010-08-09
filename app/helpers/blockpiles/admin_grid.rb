@@ -1,4 +1,4 @@
-class AdminGrid < Blockpile
+class AdminGrid < Blockpile::Base
   
   # def initialize(helper, object, session, params, options={})
   def build(object, options={})

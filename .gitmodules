@@ -1,9 +1,0 @@
-[submodule "vendor/plugins/restful_authentication"]
-	path = vendor/plugins/restful_authentication
-	url = git://github.com/technoweenie/restful-authentication.git
-[submodule "/Users/tylerflint/Sites/chromada/vendor/plugins/mother"]
-	path = /Users/tylerflint/Sites/chromada/vendor/plugins/mother
-	url = git@github.com:tylerflint/mother.git
-[submodule "vendor/plugins/blockpile"]
-	path = vendor/plugins/blockpile
-	url = git@github.com:tylerflint/blockpile.git
