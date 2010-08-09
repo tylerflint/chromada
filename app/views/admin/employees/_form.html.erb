@@ -1,40 +1,56 @@
-<div id='edit-employee-controls'>
-	<div id='btn-save' class='admin-btn' onclick="save()"></div>
-	<div id='btn-cancel' class='admin-btn' onclick="cancel()"></div>
-	<div id='btn-delete' class='admin-btn' onclick="destroy()"></div>
-</div>
 
-<div id='edit-employee-information'>
+<h1>Create/Edit Employee</h1>
+
+<%= form_for employee, :url => (employee.new_record? ? admin_company_employees_path(company) : admin_company_employee_path(company)), :html => {:id => ''} do |f| -%>
 	
-	<%= link_to image_tag('temp/edit-employee-photo.jpg', :alt => 'Steven R Davis', :title => 'Steven R Davis'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
-	<span id='edit-employee-name'><%= employee.lastname %>, <%= employee.firstname %></span>
+	<div class='button-bar'>
+		<div class='controls'>
+			<div class='admin-sprite button save' onclick="save()"></div>
+			<div class='admin-sprite button cancel' onclick="cancel()"></div>
+			<div class='admin-sprite button delete' onclick="destroy()"></div>
+		</div>
+	</div>
 
-	<%= form_for employee, :url => (employee.new_record? ? admin_company_employees_path(company) : admin_company_employee_path(company)), :html => {:id => 'edit-employee-form'} do |f| -%>
-	  	<div class='form-group'>
-			<div id='edit-employee-name-group'>
-				<input id='edit-employee-firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>' onfocus='if(this.value=="First Name")value=""' onblur='if(this.value=="")this.value="First Name"'/>
-				<input id='edit-employee-lastname' type="text" name="employee[lastname]" value='<%= employee.lastname ||= 'Last Name' %>' onfocus='if(this.value=="Last Name")value=""' onblur='if(this.value=="")this.value="Last Name"'/>
-			</div>
-		</div>
+	<div class='employee-info'>
+		<%= link_to image_tag('edit-employee-photo.gif', :alt => 'First Middle Last', :title => 'First Middle Last'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
 		
-		<div id='edit-employee-authentication-group'>
-			<div class='form-group'>
-				<div class='authentication-group-hybrid'>
-					<input id='edit-employee-custom-id' type="text" name="" value='Employee ID' onfocus='if(this.value=="Employee ID")value=""' onblur='if(this.value=="")this.value="Employee ID"'/>
-				</div>
-				<div class='authentication-group-pure'>
-					<span class='uppercase'>or</span>
-					<input type="checkbox" class='checkbox' name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
-					<span class='checkbox-text'>Auto Generate</span>
-				</div>
-			</div>
+		<input class='firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>' onfocus='if(this.value=="First Name")value=""' onblur='if(this.value=="")this.value="First Name"'/>
+		<input class='lastname' type="text" name="employee[lastname]" value='<%= employee.lastname ||= 'Last Name' %>' onfocus='if(this.value=="Last Name")value=""' onblur='if(this.value=="")this.value="Last Name"'/>
+	</div>
+
+	<div class='employee-password'>
+		<input class='password' type="text" name="" value='Type Password' onfocus='if(this.value=="Type Password")value=""' onblur='if(this.value=="")this.value="Type Password"'/>
+		<span class='uppercase'>or</span>
+		<div class='checkbox-group'>
+			<input type="checkbox" name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
+			<label>Auto Generate</label>
 		</div>
-		
-		<div class='form-group'>
-			<textarea id='edit-employee-notes' form='edit-employee-form' name="employee[notes]" value='<%= employee.notes ||= 'Notes' %>' onfocus='if(this.value=="Notes")value=""' onblur='if(this.value=="")this.value="Notes"'></textarea>
+	</div>
+	
+	<div class='employee-id'>
+		<input id='id' type="text" name="" value='Employee ID' onfocus='if(this.value=="Employee ID")value=""' onblur='if(this.value=="")this.value="Employee ID"'/>
+		<span class='uppercase'>or</span>
+		<div class='checkbox-group'>
+			<input type="checkbox" name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
+			<label>Auto Generate</label>
 		</div>
-	<% end -%>
-</div>
+	</div>
+	
+	<input class='email' type="text" name="employee[email]" value='<%= employee.firstname ||= 'Email' %>' onfocus='if(this.value=="Email")value=""' onblur='if(this.value=="")this.value="Email"'/>
+	
+	<div class='roles'>
+		<h3>Assign Employee Roles</h3>
+		<ul>
+			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
+			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
+			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
+			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
+			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
+			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
+			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
+		</ul>
+	</div>
+<% end -%>
 
 <script type="text/javascript" charset="utf-8">
 	function autoGenerateEmployeeId (checkbox) {
