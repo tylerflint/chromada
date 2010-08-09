@@ -5,6 +5,8 @@ gem 'mysql'
 gem 'haml'
 gem "devise", "1.1.rc2"
 
+gem 'blockpile'#, :git => 'git@github.com:tylerflint/blockpile.git' #:path => '~/Sites/gems/blockpile'
+
 group :test do
   gem 'shoulda'
   gem 'factory_girl'
