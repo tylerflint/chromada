@@ -3,16 +3,15 @@
 	
 	<nav class='nav'>
 		<ul>
-			<li>
-				<a href='#link' class='parent'>Company 1</a>
-				<ul class='sub'>
-					<li><a href='#link'>Employees</a></li>
-					<li><a href='#link'>Rolls</a></li>
-					<li><a href='#link'>Account Settings</a></li>
-				</ul>
-			</li>
 			<% current_user.companies.each do |c| %>
 				<li><%= link_to c.name, admin_company_url(c) %></li>
+				<% if (@company == c) %>
+					<ul class='sub'>
+						<li><%= link_to "Employees", admin_company_employees_url(c) %></li>
+						<li><%= link_to "Roles", admin_company_roles_url(c) %></li>
+						<li><a href='#link'>Account Settings</a></li>
+					</ul>
+				<% end %>
 			<% end %>
 			<li><%= link_to "+ add new company", new_admin_company_url, {:style => 'background:#00FF00;'} %></li>
 		</ul>
