@@ -11,13 +11,10 @@
 					<li><a href='#link'>Account Settings</a></li>
 				</ul>
 			</li>
-			<li><a href='#link'>Company 2</a></li>
-			<li><a href='#link'>Company 3</a></li>
-			<li><a href='#link' style='background:#00FF00;'>+ Add New Company</a></li>
+			<% current_user.companies.each do |c| %>
+				<li><%= link_to c.name, admin_company_url(c) %></li>
+			<% end %>
+			<li><%= link_to "+ add new company", new_admin_company_url, {:style => 'background:#00FF00;'} %></li>
 		</ul>
 	</nav>
-
-	<% current_user.companies.each do |c| %>
-		<%= link_to c.name, admin_company_url(c) %><br />
-	<% end %>
 </div>
