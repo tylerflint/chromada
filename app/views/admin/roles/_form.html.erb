@@ -13,18 +13,40 @@
 		
 		<div class='edit-employee-roles-group'>
 			<ul>
-				<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 1</label>
+				<li class='checkbox-group parent active even'><input type="checkbox" name="" /><label><span class='arrow'></span>Level 1</label>
 					<ul class='sub'>
-						<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 2</label>
+						<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 2</label></li>
+						<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 2</label></li>
+						<li class='checkbox-group parent active odd'><input type="checkbox" name="" /><span class='arrow'></span><label>Level 2</label>
 							<ul class='sub'>
+								<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 3</label></li>
 								<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 3</label></li>
+								<li class='checkbox-group parent active even'><input type="checkbox" name="" /><label>Level 3</label>
+									<ul class='sub'>
+										<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 4</label></li>
+										<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 4</label></li>
+										<li class='checkbox-group parent active odd'><input type="checkbox" name="" /><label>Level 4</label>
+											<ul class='sub'>
+												<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 5</label></li>
+												<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 5</label></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 3</label></li>
 							</ul>
 						</li>
+						<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 2</label></span></li>
+						<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 2</label></span></li>
+						<li class='checkbox-group parent inactive odd'><input type="checkbox" name="" /><label>Level 2</label></li>
+						<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 2</label></span></li>
 					</ul>
 				</li>
+				<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 1</label></li>
+				<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 1</label></li>
+				<li class='checkbox-group parent inactive odd'><input type="checkbox"/><label>Level 1</label></li>
 				<li class='checkbox-group even'><input type="checkbox"/><label>Level 1</label></li>
 				<li class='checkbox-group odd'><input type="checkbox"/><label>Level 1</label></li>
-				<li class='checkbox-group even'><input type="checkbox"/><label>Level 1</label></li>
 			</ul>
 		</div>
 	</form>

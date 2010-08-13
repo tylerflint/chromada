@@ -119,10 +119,19 @@
 
 #edit-employee-roles form 							{float:left; width:100%;}
 #edit-employee-roles form h3 						{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
-#edit-employee-roles form ul						{float:left;}
-#edit-employee-roles form ul li						{float:left; width:100%; margin:2px; color:#AFAFAF;}
-#edit-employee-roles form ul.sub					{float:left; width:100%; margin:0px 0px 0px 10px;}
+#edit-employee-roles form ul						{float:left; width:100%;}
+#edit-employee-roles form .sub						{float:left; width:100%; margin:0px;}
+#edit-employee-roles form .sub label						{margin:0px 0px 0px 15px;}
+#edit-employee-roles form .sub .sub label					{margin:0px 0px 0px 30px;}
+#edit-employee-roles form .sub .sub .sub label				{margin:0px 0px 0px 45px;}
+#edit-employee-roles form .sub .sub .sub .sub label			{margin:0px 0px 0px 60px;}
+#edit-employee-roles form .sub .sub .sub .sub .sub label	{margin:0px 0px 0px 75px;}
+#edit-employee-roles form ul li.parent .arrow				{float:left; width:10px; height:10px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
+#edit-employee-roles form ul li.parent.active .arrow		{background-position: -255px -36px;}
+#edit-employee-roles form ul li.parent.inactive .arrow		{background-position: -255px -44px;}
+#edit-employee-roles form ul li						{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
 #edit-employee-roles form input						{float:left; margin:3px 0px;}
+#edit-employee-roles form label						{float:left; margin:5px 0px 0px 25px;}
 
 .edit-employee-roles-group 							{float:left;}
 

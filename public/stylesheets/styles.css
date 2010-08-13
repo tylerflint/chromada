@@ -17,9 +17,6 @@ img															{border:none;}
 /* LISTS */                                         		
 ul															{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
 ul li														{float:left;}
-
-li.odd 														{background-color:#F6F6F6;}
-li.even 													{background-color:#FFFFFF;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
@@ -57,16 +54,14 @@ form 														{float:left;}
 label 														{float:left;}
 input														{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
 textarea 													{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
-.checkbox-group 											{float:left; margin:0px;}
-.checkbox-group label 										{float:left; margin:2px;}
+.checkbox-group 											{float:left;}
+.checkbox-group label 										{float:left;}
                                                     		
 /* TABLES */                                        		
 table 														{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
 table th 													{padding:0px 2px; text-align:left;}
 .table-header 												{height:25px; outline:none !important; background:#999999; cursor:auto;}
 table tr	 												{height:70px; cursor:pointer;}
-table tr.even 												{background:#FFFFFF;}
-table tr.odd 												{background:#F7F6F6;}
 table tr:hover 												{outline:1px solid #00D3D3;}                                       	
                                                     		
 /* VALIDATION */                                    		
@@ -88,6 +83,9 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 /* OTHER */                           		        		
 .hide		 												{display:none;}
 .pointer	 												{cursor:pointer;}
+
+.odd 														{float:left; width:100%; background-color:#F6F6F6;}
+.even 														{float:left; width:100%; background-color:#FFFFFF;}
                                                     		
 /* ALTERNATE CONTENT */                             		
 .alt-content												{}
