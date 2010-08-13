@@ -1,6 +1,17 @@
-<%=  admin_grid :employee, :use_ajax => false, :parent => @company, :create_url => :new_admin_company_employee, :edit_url => :edit_admin_company_employee do |g| 
- 	g.add_column :status, :name => 'Status', :type => :status 
-	g.add_column :photo, :name => 'Photo', :type => :image
-	g.add_column :name, :name => 'Employee Name'
-	g.add_column :email, :name => 'Email', :type => :email
-end %>
+
+<div id='edit-employee-roles'>
+	<h2>[Company Name] Employee's</h2>
+	<div id='edit-company-roles'>
+		<ul>
+			<li>
+				<%= link_to "+ Add New Role", new_admin_company_url, {:style => 'background:#00FF00;'} %>
+				<%= link_to "Search", new_admin_company_url, {:style => 'background:#999999;'} %>
+			</li>
+			<li><a href='#link'><span class='admin-sprite status away'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-sprite status away'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-sprite status out'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-sprite status out'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-sprite status in'></span>Employee Name</a></li>
+		</ul>
+	</div>
+</div>

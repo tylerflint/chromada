@@ -1,4 +1,17 @@
-<h1>New company</h1>
+<div id='edit-employee-roles'>
+	<h2>Create New Company</h2>
+	<div class='button-bar'>
+		<div id='edit-employee-controls'>
+			<div class='admin-sprite button save' onclick="save()"></div>
+			<div class='admin-sprite button cancel' onclick="cancel()"></div>
+		</div>
+	</div>
+	
+	<input class='rolename' type="text" name="" value='' onfocus='if(this.value=="Name This Company")value=""' onblur='if(this.value=="")this.value="Name This Company"'/>
+	
+	<p class='note'>Get started now by selecting which products you would like for this company.</p>
+	<div class='quick-add-sprite quick-add button ticker active'></div>
+</div>
 
 <%= render 'form' %>
 

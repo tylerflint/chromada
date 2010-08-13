@@ -1,6 +1,6 @@
 
 <div id='edit-employee-roles'>
-	<h2>Employee Role #</h2>
+	<h2 class='role-name'>Name This Role</h2>
 	<form id='edit-employee-roles-form'>
 		
 		<div class='button-bar'>
@@ -10,6 +10,9 @@
 				<div class='admin-sprite button delete' onclick="destroy()"></div>
 			</div>
 		</div>
+		
+		<input class='rolename' type="text" name="" value='' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
+		<span class='todo'>TODO: validate that they actually added a new name</span>
 		
 		<div class='edit-employee-roles-group'>
 			<ul>
@@ -79,3 +82,10 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type='text/javascript'>
+	$('.rolename').keyup(function () {
+		var value = $(this).val();
+		$('.role-name').text(value);
+	}).keyup();
+</script>

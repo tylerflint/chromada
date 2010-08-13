@@ -3,9 +3,12 @@
 	<h2>Edit [Company Name] Roles</h2>
 	<div id='edit-company-roles'>
 		<ul>
+			<li>
+				<%= link_to "+ Add New Role", new_admin_company_url, {:style => 'background:#00FF00;'} %>
+				<%= link_to "Search", new_admin_company_url, {:style => 'background:#999999;'} %>
+			</li>
 			<li><a href='#link'>Employee Role 1</a></li>
 			<li><a href='#link'>Employee Role 2</a></li>
-			<li><a href='#link'>+ Add New Role</a></li>
 		</ul>
 	</div>
 </div>

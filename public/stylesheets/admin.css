@@ -79,10 +79,10 @@
 
 .employee-email a 									{text-decoration:underline;}
 
-.employee-status 									{float:left; width:15px; height:15px; margin:12px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
-.employee-status.in 								{background-position:-919px -45px;}
-.employee-status.away								{background-position:-936px -45px;}
-.employee-status.out								{background-position:-900px -45px;}
+.status 											{float:left; width:15px; height:15px; margin:0px 5px 0px 0px;}
+.status.in 											{background-position:-674px -21px;}
+.status.away										{background-position:-655px -21px;}
+.status.out											{background-position:-691px -21px;}
 
 /* employee edit */
 #edit-employee-page 								{}
@@ -164,3 +164,4 @@
 #edit-company-roles									{margin:25px 0px 0px 0px;}
 #edit-company-roles ul li							{float:left; width:100%;}
 #edit-company-roles ul li a							{float:left; width:100%; margin:5px 0px; padding:10px 0px 10px 5px; border:#000000 solid 1px;}
+#edit-employee-roles .note 							{float:left; margin:10px 0px;}
