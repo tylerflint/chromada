@@ -14,6 +14,15 @@
 		<input class='rolename' type="text" name="" value='' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
 		<span class='todo'>TODO: validate that they actually added a new name</span>
 		
+		<div class="edit-employee-roles-group">
+			<ul>
+				<% action_tree.each do |key, node| %>
+					<%= build_action_list_item(key, node) %>
+				<% end %>
+			</ul>
+		</div>
+		
+		<!--
 		<div class='edit-employee-roles-group'>
 			<ul>
 				<li class='checkbox-group even'><input type="checkbox" name=""/><label class='parent active'><span class='arrow'></span>Level 1</label>
@@ -54,6 +63,7 @@
 				<li class='checkbox-group odd'><input type="checkbox"/><label>Level 1</label></li>
 			</ul>
 		</div>
+		-->
 	</form>
 </div>
 
@@ -84,8 +94,24 @@
 <% end %>
 
 <script type='text/javascript'>
-	$('.rolename').keyup(function () {
-		var value = $(this).val();
-		$('.role-name').text(value);
-	}).keyup();
+	$(document).ready(function () {
+		initActionTree()
+	})
+
+	function initActionTree () {
+		count = 0
+		$(".checkbox-group").each(function () {
+			if (count % 2 != 0){
+				$(this).addClass('odd')
+			} else {
+				$(this).addClass('even')
+			}
+			count++
+		})
+	}
+
+	// $('.rolename').keyup(function () {
+	// 	var value = $(this).val();
+	// 	$('.role-name').text(value);
+	// }).keyup();
 </script>
