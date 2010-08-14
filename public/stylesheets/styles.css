@@ -116,7 +116,8 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 /***** BUTTONS *****/                               		
 .button-bar 												{float:left;}
 .button 													{float:left; cursor:pointer; border:none;}
-                                                        	
+.round 														{-moz-outline-radius:5px; outline-radius:5px;}
+
 .button.close 												{float:right; width:12px; height:12px; background-position:-681px -4px;}
 .button.close:hover 										{background-position:-668px -4px;}
                                                         	
@@ -142,7 +143,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
                                                         	
 /***** LAYOUT *****/                                    	
 .page-wrapper 			 									{margin:0 auto; width:980px; background:#FFFFFF; overflow:hidden;}
-.page														{margin:0 auto; width:940px; padding:20px 0px; overflow:hidden;}
+.page														{margin:0 auto; width:940px; padding:20px 0px;}
 .page .body													{float:left; width:100%; margin:20px 0px 18px 0px;}
                                                         	
 /***** NAVIGATION *****/                                	
