@@ -4,7 +4,7 @@
 		<ul>
 			<li>
 				<%= link_to "+ Add New Role", new_admin_company_role_url, {:style => 'background:#00FF00;'} %>
-				<%= link_to "Search", new_admin_company_url, {:style => 'background:#999999;'} %>
+				<%= link_to "Search", {:style => 'background:#999999;'} %>
 			</li>
 			<% @roles.each do |role| %>
 				<li><%= link_to role.name, edit_admin_company_role_url(@company, @role) %></li>

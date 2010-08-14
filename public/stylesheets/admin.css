@@ -2,7 +2,7 @@
 
 /***** SPRITES *****/
 .admin-sprite				 							{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
-.admin-transparent-sprite	 							{width:100px; height:100px; background:url('../images/admin-transparent-sprite.gif') no-repeat 0px 0px;}
+.admin-transparent-sprite	 							{width:100px; height:100px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
 
 .admin-image 										{float:left; width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
 .admin-btn	 										{float:left; width:100px; height:36px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
@@ -79,10 +79,10 @@
 
 .employee-email a 									{text-decoration:underline;}
 
-.status 											{float:left; width:15px; height:15px; margin:0px 5px 0px 0px;}
-.status.in 											{background-position:-674px -21px;}
-.status.away										{background-position:-655px -21px;}
-.status.out											{background-position:-691px -21px;}
+.status 											{float:left; width:15px; height:15px; margin:0px 10px;}
+.status.in 											{background-position:0px -27px;}
+.status.away										{background-position:-18px -27px;}
+.status.out											{background-position:-33px -27px;}
 
 /* employee edit */
 #edit-employee-page 								{}
@@ -163,5 +163,9 @@
 /* companies */
 #edit-company-roles									{margin:25px 0px 0px 0px;}
 #edit-company-roles ul li							{float:left; width:100%;}
-#edit-company-roles ul li a							{float:left; width:100%; margin:5px 0px; padding:10px 0px 10px 5px; border:#000000 solid 1px;}
+#edit-company-roles ul li a							{float:left; width:100%; margin:5px 0px; padding:10px 0px 10px 0px; color:#7B7B7B; outline:#DEDEDE solid 1px; -moz-outline-radius:5px; outline-radius:5px;}
+#edit-company-roles ul li a:hover 					{background-color:#E3FFFF;}
 #edit-employee-roles .note 							{float:left; margin:10px 0px;}
+
+#edit-company-roles ul li a.add-new					{background-color:#E7FFF0; outline:2px solid #BBFFD5; color:#01D770;}
+#edit-company-roles ul li a.add-new:hover			{}

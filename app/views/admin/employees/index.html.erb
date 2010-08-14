@@ -4,14 +4,14 @@
 	<div id='edit-company-roles'>
 		<ul>
 			<li>
-				<%= link_to "+ Add New Role", new_admin_company_url, {:style => 'background:#00FF00;'} %>
-				<%= link_to "Search", new_admin_company_url, {:style => 'background:#999999;'} %>
+				<%= link_to "+ New Employee", new_admin_company_employee_url(@company), {:class => 'add-new'} %>
+				<%= link_to "Search", {:class => 'search'} %>
 			</li>
-			<li><a href='#link'><span class='admin-sprite status away'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-sprite status away'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-sprite status out'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-sprite status out'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-sprite status in'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-transparent-sprite status away'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-transparent-sprite status away'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-transparent-sprite status out'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-transparent-sprite status out'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='admin-transparent-sprite status in'></span>Employee Name</a></li>
 		</ul>
 	</div>
 </div>
