@@ -22,7 +22,10 @@ module Admin::RolesHelper
           if current_count == paths.length
             current_node[path] = action.id
           else
-            current_node = create_or_fetch_node(current_node, path)
+            if !current_node.has_key?(path)
+              current_node[path] = {}
+            end
+            current_node = current_node[path]
           end
           current_count += 1
         end
@@ -34,12 +37,17 @@ module Admin::RolesHelper
     tree
   end
   
-  def create_or_fetch_node(tree, path)
-    if tree.has_key?(path)
-      tree[path]
+  def build_action_list_item(key, node)
+    if node.class.to_s == 'Hash'
+      sub = ''
+      node.each do |k, n|
+        sub << build_action_list_item(k, n)
+      end
+      li = %{<li class="checkbox-group"><input type="checkbox" name=""/><label class='parent active'><span class='arrow'></span>#{key}</label><ul class="sub">#{sub}</ul></li>}
     else
-      tree[path] = {}
+      li = %{<li class='checkbox-group'><input type="checkbox" name="" /><label>#{key}</label></li>}
     end
+    raw li
   end
   
 end
