@@ -14,7 +14,7 @@
 						</ul>
 					</li>
 				<% else %>
-					<li><%= link_to c.name, admin_company_url(c) %></li>
+					<li><%= link_to c.name, admin_company_url(c), {:class => 'round'} %></li>
 				<% end %>
 			<% end %>
 			<li><%= link_to "+ Add Company", new_admin_company_url, {:class => 'round add-new'} %></li>
