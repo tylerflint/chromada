@@ -99,9 +99,6 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .site-sprite				 								{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
 .site-transparent-sprite			 						{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
                                                         	
-.vertical-tiles-sprite		 								{background:url('../images/vertical-tiles-sprite.gif') repeat-y 0px 0px;}
-.horizontal-tiles-sprite	 								{background:url('../images/horizontal-tiles-sprite.gif') repeat-x 0px 0px;}
-                                                        	
 .spotlight-sprite			 								{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
 .quick-add-sprite			 								{float:left; width:100px; height:100px; background:url('../images/quick-add-sprite.png') no-repeat 0px 0px;}
                                                     		

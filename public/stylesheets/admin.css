@@ -4,130 +4,125 @@
 .admin-sprite				 							{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
 .admin-transparent-sprite	 							{width:100px; height:100px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
 
-.admin-image 										{float:left; width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
-.admin-btn	 										{float:left; width:100px; height:36px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
-
-/* admin grid */
-#admin-grid-wrapper									{width: 2000px;}
-#admin-grid											{float:left; width: 750px;}
-#admin-grid-body 									{margin:0 auto; width:748px;}
-#admin-grid-entity-wrapper							{float:left; width: 750px;}
-
-#admin .page-heading		 							{float:left; width:100%; margin:15px 0px 0px 0px; color:#979797; font-size:18px;}
+.admin-image 											{float:left; width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
+.admin-btn	 											{float:left; width:100px; height:36px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
 
 /***** LEFT COLUMN *****/
 #admin .left-column 									{float:left; width:160px; margin:0px 20px 0px 0px;}
 #admin .left-column ul 									{float:left; width:100%;}
 #admin .left-column ul li 								{float:left; width:100%;}
-.left-column .column-heading 							{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
-.left-column .nav a	 									{float:left; width:145px; margin:0px 0px 10px 0px; padding:15px 10px; font-size:15px; color:#FFFFFF; background:#939393; background: -webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background: -moz-linear-gradient(top,  #939393,  #6D6D6D); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px;}
-.left-column .nav a:hover 								{background:#737373; background: -webkit-gradient(linear, left top, left bottom, from(#737373), to(#4E4E4E)); background: -moz-linear-gradient(top,  #737373,  #4E4E4E); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#4E4E4E');}
-.left-column .nav a.active								{color:#00FFFF; background:#737373; background: -webkit-gradient(linear, left top, left bottom, from(#737373), to(#4E4E4E)); background: -moz-linear-gradient(top,  #737373,  #4E4E4E); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#4E4E4E'); radius:5px 5px 0px 0px; -moz-border-radius: 5px 5px 0px 0px; -khtml-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px;}
-.left-column .nav .sub									{margin:-10px 0px 10px 0px;}
-.left-column .nav ul.sub 								{radius:0px 0px 5px 5px; -moz-border-radius:0px 0px 5px 5px; -khtml-border-radius:0px 0px 5px 5px; -webkit-border-radius:0px 0px 5px 5px; box-shadow:inset 0 0 10px #DADADA; -moz-box-shadow:inset 0 0 10px #DADADA; -webkit-box-shadow:inset 0 0 10px #DADADA;}
-.left-column .nav .sub a								{float:left; width:145px; margin:0px 0px 1px 0px; color:#9D9D9D; border-bottom:#DADADA solid 1px; outline-top:none; background:none; radius:0px; -moz-border-radius:0px; -khtml-border-radius:0px; -webkit-border-radius:0px;}
-.left-column .nav .sub a:hover 							{color:#43E3E3;}
-.left-column .nav .sub a.active							{color:#43E3E3;}
-.left-column .nav .sub li.last a						{border-bottom:none;}
-.left-column .nav a.add-new								{padding:8px; background:#E7FFF0; border:2px solid #BBFFD5; color:#01D770;}
+
+#admin .left-column .column-heading 					{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
+
+#admin .left-column .nav ul li a	 					{float:left; width:145px; margin:0px 0px 10px 0px; padding:15px 10px; font-size:15px; color:#FFFFFF; background:#939393; background: -webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background: -moz-linear-gradient(top,  #939393,  #6D6D6D); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px;}
+#admin .left-column .nav ul li a:hover 					{background:#737373; background: -webkit-gradient(linear, left top, left bottom, from(#737373), to(#4E4E4E)); background: -moz-linear-gradient(top,  #737373,  #4E4E4E); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#4E4E4E');}
+#admin .left-column .nav ul li a.active					{color:#00FFFF; background:#737373; background: -webkit-gradient(linear, left top, left bottom, from(#737373), to(#4E4E4E)); background: -moz-linear-gradient(top,  #737373,  #4E4E4E); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#4E4E4E'); radius:5px 5px 0px 0px; -moz-border-radius: 5px 5px 0px 0px; -khtml-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px;}
+#admin .left-column .nav ul li a.new					{padding:8px; background:#E7FFF0; border:2px solid #BBFFD5; color:#01D770;}
+
+#admin .left-column .nav ul.sub							{margin:-10px 0px 10px 0px; radius:0px 0px 5px 5px; -moz-border-radius:0px 0px 5px 5px; -khtml-border-radius:0px 0px 5px 5px; -webkit-border-radius:0px 0px 5px 5px; box-shadow:inset 0 0 10px #DADADA; -moz-box-shadow:inset 0 0 10px #DADADA; -webkit-box-shadow:inset 0 0 10px #DADADA;}
+#admin .left-column .nav ul.sub li a					{float:left; width:145px; margin:0px 0px 1px 0px; color:#9D9D9D; border-bottom:#DADADA solid 1px; outline-top:none; background:none; radius:0px; -moz-border-radius:0px; -khtml-border-radius:0px; -webkit-border-radius:0px;}
+#admin .left-column .nav ul.sub li a:hover 				{color:#43E3E3;}
+#admin .left-column .nav ul.sub li a.active				{color:#43E3E3;}
+#admin .left-column .nav ul.sub li.last a				{border-bottom:none;}
 
 /***** RIGHT COLUMN *****/
 #admin .right-column 									{float:left; width:760px; margin:24px 0px 0px 0px;}
 
 /***** TOOLBAR *****/
-.toolbar 											{float:left; width:100%; margin:5px 0px;}
-.toolbar ul li										{float:left; margin:0px 10px;}
-.toolbar ul li a 									{cursor:pointer; text-decoration:underline;}
-.toolbar.pages ul li 								{text-decoration:underline;}
-.toolbar-btn 										{float:left; width:138px; height:17px; padding:4px 0px 0px 8px; background:#FF0000; cursor:pointer;}
-.toolbar-btn-text									{float:left; color:#FFFFFF;}
-.pages-wrapper 										{float:left; margin:1px 10px; padding:3px 0px; border-left:1px solid #616161; border-right:1px solid #616161;}
-.pages li.active a									{float:left; text-decoration:none;}
-.pages li.active									{color:#616161;}
-.total-pages 										{float:left; margin:0px 12px; text-transform:uppercase;}
-.page-views 										{float:left; margin:1px 0px; padding:3px 0px; text-transform:uppercase;}
-.page-views ul li									{float:left;}
-.page-views ul li.active							{margin:-5px 0px 0px 0px; padding:4px 4px 2px 4px; border:1px solid #616161;}
+.toolbar 												{float:left; width:100%; margin:5px 0px;}
+.toolbar ul li											{float:left; margin:0px 10px;}
+.toolbar ul li a 										{cursor:pointer; text-decoration:underline;}
+.toolbar.pages ul li 									{text-decoration:underline;}
+.toolbar-btn 											{float:left; width:138px; height:17px; padding:4px 0px 0px 8px; background:#FF0000; cursor:pointer;}
+.toolbar-btn-text										{float:left; color:#FFFFFF;}
+.pages-wrapper 											{float:left; margin:1px 10px; padding:3px 0px; border-left:1px solid #616161; border-right:1px solid #616161;}
+.pages li.active a										{float:left; text-decoration:none;}
+.pages li.active										{color:#616161;}
+.total-pages 											{float:left; margin:0px 12px; text-transform:uppercase;}
+.page-views 											{float:left; margin:1px 0px; padding:3px 0px; text-transform:uppercase;}
+.page-views ul li										{float:left;}
+.page-views ul li.active								{margin:-5px 0px 0px 0px; padding:4px 4px 2px 4px; border:1px solid #616161;}
 
 /***** BUTTONS *****/
-.button.back 												{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
-.button.back:hover											{background-position:-145px -116px;}
+.button.back 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.button.back:hover										{background-position:-145px -116px;}
                                                         	
-.button.save 												{width:73px; height:36px; margin:0px 2px; background-position:-5px -79px;}
-.button.save:hover											{background-position:-5px -116px;}
+.button.save 											{width:73px; height:36px; margin:0px 2px; background-position:-5px -79px;}
+.button.save:hover										{background-position:-5px -116px;}
                                                         	
-.button.cancel 												{width:94px; height:36px; margin:0px 2px; background-position:-239px -79px;}
-.button.cancel:hover										{background-position:-239px -116px;}
+.button.cancel 											{width:94px; height:36px; margin:0px 2px; background-position:-239px -79px;}
+.button.cancel:hover									{background-position:-239px -116px;}
                                                         	
-.button.delete 												{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
-.button.delete:hover										{background-position:-145px -116px;}
+.button.delete 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.button.delete:hover									{background-position:-145px -116px;}
                                                         	
-.button.next												{width:93px; height:36px; margin:25px 0px; background-position:-145px -79px;}
-.button.next:hover											{background-position:-145px -116px;}
+.button.next											{width:93px; height:36px; margin:25px 0px; background-position:-145px -79px;}
+.button.next:hover										{background-position:-145px -116px;}
                                                         	
-.button.new 												{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
-.button.new:hover											{background-position:-145px -116px;}
+.button.new 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.button.new:hover										{background-position:-145px -116px;}
 
 /************************************************** PAGES **************************************************/
 
-#employee-shifter 									{float:left; width:2000px;}
+#admin .page-heading		 							{float:left; width:100%; margin:15px 0px 0px 0px; color:#979797; font-size:18px;}
+#employee-shifter 										{float:left; width:2000px;}
 
 /* employee grid */
-#employee-grid-page 								{}
-#employee-grid-wrapper	 							{margin:0 auto; width:745px;}
+#employee-grid-page 									{}
+#employee-grid-wrapper	 								{margin:0 auto; width:745px;}
 
-#super-filter-wrapper 								{float:left; width:100%; margin:10px 0px;}
-.super-filter 										{float:left; width:100%; margin:5px 0px;}
-.super-filter select 								{height:38px; border:none;}
-.super-field 										{float:left; width:244px; height:28px; margin:0px 1px; font-size:18px; color:#FFFFFF; background:#000000; border:none;}
-#super-search 										{background:#000000;}
-#super-category 									{background:#000000;}
-#super-operand 										{background:#000000;}
+#super-filter-wrapper 									{float:left; width:100%; margin:10px 0px;}
+.super-filter 											{float:left; width:100%; margin:5px 0px;}
+.super-filter select 									{height:38px; border:none;}
+.super-field 											{float:left; width:244px; height:28px; margin:0px 1px; font-size:18px; color:#FFFFFF; background:#000000; border:none;}
+#super-search 											{background:#000000;}
+#super-category 										{background:#000000;}
+#super-operand 											{background:#000000;}
 
-.employee-email a 									{text-decoration:underline;}
+.employee-email a 										{text-decoration:underline;}
 
-.status 											{float:left; width:15px; height:15px; margin:0px 10px;}
-.status.in 											{background-position:0px -27px;}
-.status.away										{background-position:-18px -27px;}
-.status.out											{background-position:-33px -27px;}
+.status 												{float:left; width:15px; height:15px; margin:0px 10px;}
+.status.in 												{background-position:0px -27px;}
+.status.away											{background-position:-18px -27px;}
+.status.out												{background-position:-33px -27px;}
 
 /* employee edit */
-#edit-employee-page 								{}
+#edit-employee-page 									{}
 
-#edit-employee-controls 							{float:left; width:100%; margin:28px 0px;}
-#edit-employee-information 							{float:left; width:450px; margin:0px 25px 0px 0px;}
-#edit-employee-roles 								{float:left; width:315px; padding:34px; border:10px solid #F5F5F5; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;}
+#edit-employee-controls 								{float:left; width:100%; margin:28px 0px;}
+#edit-employee-information 								{float:left; width:450px; margin:0px 25px 0px 0px;}
+#edit-employee-roles 									{float:left; width:315px; padding:34px; border:10px solid #F5F5F5; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;}
 
-#edit-employee-name 								{float:left; width:315px; margin:0px 0px 0px 15px; color:#C8C8C8; font-size:24px; font-weight:bold;}
+#edit-employee-name 									{float:left; width:315px; margin:0px 0px 0px 15px; color:#C8C8C8; font-size:24px; font-weight:bold;}
 
-#edit-employee-form 								{float:left; width:100%;}
-#edit-employee-form input							{height:24px; font-size:16px;}
-#edit-employee-form select 							{height:36px; font-size:16px; background:none; border:1px solid #C8C8C8;}
-#edit-employee-form .form-group						{position:relative; width:100%;}
+#edit-employee-form 									{float:left; width:100%;}
+#edit-employee-form input								{height:24px; font-size:16px;}
+#edit-employee-form select 								{height:36px; font-size:16px; background:none; border:1px solid #C8C8C8;}
+#edit-employee-form .form-group							{position:relative; width:100%;}
 
-#edit-employee-name-group 							{float:left;}
-#edit-employee-name-group .form-group				{float:left; width:200px;}
-#edit-employee-name-group input						{margin:0px -1px 0px 0px;}
-#edit-employee-firstname 							{}
-#edit-employee-lastname 							{}
+#edit-employee-name-group 								{float:left;}
+#edit-employee-name-group .form-group					{float:left; width:200px;}
+#edit-employee-name-group input							{margin:0px -1px 0px 0px;}
+#edit-employee-firstname 								{}
+#edit-employee-lastname 								{}
 
-#edit-employee-authentication-group 				{float:left;}
-#edit-employee-authentication-group span			{float:left; font-size:16px; color:#C8C8C8;}
-#edit-employee-authentication-group .checkbox		{float:left; width:auto;}
-#edit-employee-authentication-group .checkbox-text	{float:left;}
-.authentication-group-pure 							{float:left;}
-.authentication-group-hybrid						{float:left; width:150px;}
+#edit-employee-authentication-group 					{float:left;}
+#edit-employee-authentication-group span				{float:left; font-size:16px; color:#C8C8C8;}
+#edit-employee-authentication-group .checkbox			{float:left; width:auto;}
+#edit-employee-authentication-group .checkbox-text		{float:left;}
+.authentication-group-pure 								{float:left;}
+.authentication-group-hybrid							{float:left; width:150px;}
 
-#edit-employee-custom-id 							{float:left; width:195px;}
-#edit-employee-custom-password	 					{float:left; width:195px;}
-#edit-employee-custom-id-checkbox 					{position:absolute; top:6px; right:204px;}
-#edit-employee-custom-password-checkbox				{position:absolute; top:6px; right:204px;}
-#edit-employee-notes 								{width:440px; height:165px;}
-
-#edit-employee-roles form 							{float:left; width:100%;}
-#edit-employee-roles form h3 						{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
-#edit-employee-roles form ul						{float:left; width:100%;}
-#edit-employee-roles form .sub						{float:left; width:100%; margin:0px;}
+#edit-employee-custom-id 								{float:left; width:195px;}
+#edit-employee-custom-password	 						{float:left; width:195px;}
+#edit-employee-custom-id-checkbox 						{position:absolute; top:6px; right:204px;}
+#edit-employee-custom-password-checkbox					{position:absolute; top:6px; right:204px;}
+#edit-employee-notes 									{width:440px; height:165px;}
+                                                    	
+#edit-employee-roles form 								{float:left; width:100%;}
+#edit-employee-roles form h3 							{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
+#edit-employee-roles form ul							{float:left; width:100%;}
+#edit-employee-roles form .sub							{float:left; width:100%; margin:0px;}
 #edit-employee-roles form .sub label								{margin-left:45px;}
 #edit-employee-roles form .sub label.parent							{margin-left:30px;}
 #edit-employee-roles form .sub .sub label							{margin-left:60px;}
@@ -139,40 +134,40 @@
 #edit-employee-roles form .sub .sub .sub .sub .sub label			{margin-left:105px;}
 #edit-employee-roles form .sub .sub .sub .sub .sub label.parent		{margin-left:90px;}
 #edit-employee-roles form .parent.arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
-#edit-employee-roles form .parent.active.arrow				{background-position: -255px -36px;}
-#edit-employee-roles form .parent.inactive.arrow			{background-position: -255px -44px;}
-#edit-employee-roles form ul li								{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
-#edit-employee-roles form input								{float:left; margin:1px 0px;}
-#edit-employee-roles form label								{float:left; margin:4px 0px 0px 25px;}
-#edit-employee-roles form label.parent						{margin-left:10px;}
-#edit-employee-roles form .parent .arrow					{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
-#edit-employee-roles form .parent.active .arrow				{background-position: -255px -36px;}
-#edit-employee-roles form .parent.inactive .arrow			{background-position: -255px -44px;}
+#edit-employee-roles form .parent.active.arrow			{background-position: -255px -36px;}
+#edit-employee-roles form .parent.inactive.arrow		{background-position: -255px -44px;}
+#edit-employee-roles form ul li							{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
+#edit-employee-roles form input							{float:left; margin:1px 0px;}
+#edit-employee-roles form label							{float:left; margin:4px 0px 0px 25px;}
+#edit-employee-roles form label.parent					{margin-left:10px;}
+#edit-employee-roles form .parent .arrow				{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
+#edit-employee-roles form .parent.active .arrow			{background-position: -255px -36px;}
+#edit-employee-roles form .parent.inactive .arrow		{background-position: -255px -44px;}
 
-.edit-employee-roles-group 							{float:left;}
+.edit-employee-roles-group 								{float:left;}
 
 /* employee edit */
-.employees.assign-credentials 					{float:left; width:315px; padding:34px; border:10px solid #F5F5F5;}
-.employees.assign-credentials input				{float:left; margin:0px 0px 8px 0px;}
+.employees.assign-credentials 							{float:left; width:315px; padding:34px; border:10px solid #F5F5F5;}
+.employees.assign-credentials input						{float:left; margin:0px 0px 8px 0px;}
 
-.employees.assign-credentials .controls			{float:left; width:100%; margin:28px 0px;}
+.employees.assign-credentials .controls					{float:left; width:100%; margin:28px 0px;}
 
-.employees.assign-credentials .employee-info					{float:left; width:100%;}
-.employees.assign-credentials .employee-photo					{float:left; margin:0px 5px 5px 0px;}
-.employees.assign-credentials .employee-info .spacer			{float:left; width:1px; height:8px;}
-.employees.assign-credentials .employee-info input				{float:left; width:217px; height:24px; font-size:15px;}
-.employees.assign-credentials .employee-password  				{float:left;}
-.employees.assign-credentials .employee-id		  				{float:left;}
-.employees.assign-credentials .roles  							{float:left; width:100%; margin:50px 0px 0px 0px;}
-.employees.assign-credentials .roles h3							{float:left; width:100%; margin:0px 0px 10px 0px;}
-.employees.assign-credentials .roles ul li						{float:left; width:100%; margin:2px 0px; color:#AFAFAF;}
+.employees.assign-credentials .employee-info			{float:left; width:100%;}
+.employees.assign-credentials .employee-photo			{float:left; margin:0px 5px 5px 0px;}
+.employees.assign-credentials .employee-info .spacer	{float:left; width:1px; height:8px;}
+.employees.assign-credentials .employee-info input		{float:left; width:217px; height:24px; font-size:15px;}
+.employees.assign-credentials .employee-password  		{float:left;}
+.employees.assign-credentials .employee-id		  		{float:left;}
+.employees.assign-credentials .roles  					{float:left; width:100%; margin:50px 0px 0px 0px;}
+.employees.assign-credentials .roles h3					{float:left; width:100%; margin:0px 0px 10px 0px;}
+.employees.assign-credentials .roles ul li				{float:left; width:100%; margin:2px 0px; color:#AFAFAF;}
 
 /* companies */
-#edit-company-roles									{margin:25px 0px 0px 0px;}
-#edit-company-roles ul li							{float:left; width:100%;}
-#edit-company-roles ul li a							{float:left; width:100%; margin:5px 0px; padding:10px 0px 10px 0px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;}
-#edit-company-roles ul li a:hover 					{background-color:#E3FFFF;}
-#edit-employee-roles .note 							{float:left; margin:10px 0px;}
+#edit-company-roles										{margin:25px 0px 0px 0px;}
+#edit-company-roles ul li								{float:left; width:100%;}
+#edit-company-roles ul li a								{float:left; width:100%; margin:5px 0px; padding:10px 0px 10px 0px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; -khtml-border-radius:5px;}
+#edit-company-roles ul li a:hover 						{background-color:#E3FFFF;}
+#edit-employee-roles .note 								{float:left; margin:10px 0px;}
 
-#edit-company-roles ul li a.add-new					{background-color:#E7FFF0; border:2px solid #BBFFD5; color:#01D770;}
-#edit-company-roles ul li a.add-new:hover			{}
+#edit-company-roles ul li a.new							{background-color:#E7FFF0; border:2px solid #BBFFD5; color:#01D770;}
+#edit-company-roles ul li a.new:hover					{}
