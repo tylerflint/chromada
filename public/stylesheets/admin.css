@@ -14,6 +14,7 @@
 
 #admin .left-column .column-heading 					{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
 
+/* navigation */
 #admin .left-column .nav ul li a	 					{float:left; width:145px; margin:0px 0px 10px 0px; padding:15px 10px; font-size:15px; color:#FFFFFF; background:#939393; background: -webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background: -moz-linear-gradient(top,  #939393,  #6D6D6D); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px;}
 #admin .left-column .nav ul li a:hover 					{background:#737373; background: -webkit-gradient(linear, left top, left bottom, from(#737373), to(#4E4E4E)); background: -moz-linear-gradient(top,  #737373,  #4E4E4E); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#4E4E4E');}
 #admin .left-column .nav ul li a.active					{color:#00FFFF; background:#737373; background: -webkit-gradient(linear, left top, left bottom, from(#737373), to(#4E4E4E)); background: -moz-linear-gradient(top,  #737373,  #4E4E4E); filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#737373', endColorstr='#4E4E4E'); radius:5px 5px 0px 0px; -moz-border-radius: 5px 5px 0px 0px; -khtml-border-radius: 5px 5px 0px 0px; -webkit-border-radius: 5px 5px 0px 0px;}
@@ -29,19 +30,6 @@
 #admin .right-column 									{float:left; width:760px; margin:24px 0px 0px 0px;}
 
 /***** TOOLBAR *****/
-.toolbar 												{float:left; width:100%; margin:5px 0px;}
-.toolbar ul li											{float:left; margin:0px 10px;}
-.toolbar ul li a 										{cursor:pointer; text-decoration:underline;}
-.toolbar.pages ul li 									{text-decoration:underline;}
-.toolbar-btn 											{float:left; width:138px; height:17px; padding:4px 0px 0px 8px; background:#FF0000; cursor:pointer;}
-.toolbar-btn-text										{float:left; color:#FFFFFF;}
-.pages-wrapper 											{float:left; margin:1px 10px; padding:3px 0px; border-left:1px solid #616161; border-right:1px solid #616161;}
-.pages li.active a										{float:left; text-decoration:none;}
-.pages li.active										{color:#616161;}
-.total-pages 											{float:left; margin:0px 12px; text-transform:uppercase;}
-.page-views 											{float:left; margin:1px 0px; padding:3px 0px; text-transform:uppercase;}
-.page-views ul li										{float:left;}
-.page-views ul li.active								{margin:-5px 0px 0px 0px; padding:4px 4px 2px 4px; border:1px solid #616161;}
 
 /***** BUTTONS *****/
 .button.back 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
@@ -70,16 +58,6 @@
 /* employee grid */
 #employee-grid-page 									{}
 #employee-grid-wrapper	 								{margin:0 auto; width:745px;}
-
-#super-filter-wrapper 									{float:left; width:100%; margin:10px 0px;}
-.super-filter 											{float:left; width:100%; margin:5px 0px;}
-.super-filter select 									{height:38px; border:none;}
-.super-field 											{float:left; width:244px; height:28px; margin:0px 1px; font-size:18px; color:#FFFFFF; background:#000000; border:none;}
-#super-search 											{background:#000000;}
-#super-category 										{background:#000000;}
-#super-operand 											{background:#000000;}
-
-.employee-email a 										{text-decoration:underline;}
 
 .status 												{float:left; width:15px; height:15px; margin:0px 10px;}
 .status.in 												{background-position:0px -27px;}
