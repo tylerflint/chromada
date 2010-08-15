@@ -16,6 +16,10 @@ img															{border:none;}
 /* LISTS */                                         		
 ul															{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
 ul li														{float:left;}
+
+.list-image 												{float:right;}
+.list-image.open											{width:8px !important; height:10px !important; background-position:-5px -22px !important;}
+.list-image.delete											{width:8px !important; height:8px !important; background-position:-26px -23px !important;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}

@@ -1,11 +1,10 @@
 /************************************************** MAIN ELEMENT STYLES **************************************************/
 
 /***** SPRITES *****/
-.admin-sprite				 							{width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
-.admin-transparent-sprite	 							{width:100px; height:100px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
-
-.admin-image 											{float:left; width:100px; height:100px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px;}
-.admin-btn	 											{float:left; width:100px; height:36px; background:url('../images/admin-sprite.gif') no-repeat 0px 0px; cursor:pointer;}
+.admin-sprite				 							{width:50px; height:50px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.admin-btn	 											{float:left; width:50px; height:36px; background:url('../images/admin-sprite.png') no-repeat 0px 0px; cursor:pointer;}
+#admin .list-image 										{width:50px; height:50px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+#admin .status 											{float:left; width:15px; height:15px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 
 /***** LEFT COLUMN *****/
 #admin .left-column 									{float:left; width:160px; margin:0px 20px 0px 0px;}
@@ -34,14 +33,14 @@
 .button.back 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .button.back:hover										{background-position:-145px -116px;}
                                                         	
-.button.save 											{width:73px; height:36px; margin:0px 2px; background-position:-5px -79px;}
-.button.save:hover										{background-position:-5px -116px;}
+.button.save 											{width:73px; height:36px; margin:0px 2px; background-position:0px -66px;}
+.button.save:hover										{background-position:0px -103px;}
                                                         	
-.button.cancel 											{width:94px; height:36px; margin:0px 2px; background-position:-239px -79px;}
-.button.cancel:hover									{background-position:-239px -116px;}
+.button.cancel 											{width:94px; height:36px; margin:0px 2px; background-position:-234px -66px;}
+.button.cancel:hover									{background-position:-234px -103px;}
                                                         	
-.button.delete 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
-.button.delete:hover									{background-position:-145px -116px;}
+.button.delete 											{width:93px; height:36px; margin:0px 2px; background-position:-140px -66px;}
+.button.delete:hover									{background-position:-140px -103px;}
                                                         	
 .button.next											{width:93px; height:36px; margin:25px 0px; background-position:-145px -79px;}
 .button.next:hover										{background-position:-145px -116px;}
@@ -49,22 +48,12 @@
 .button.new 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .button.new:hover										{background-position:-145px -116px;}
 
-.new 													{padding:8px !important; color:#01D770 !important; background:#E7FFF0 !important; border:2px solid #BBFFD5 !important; radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.new 													{padding:8px !important; color:#01D770 !important; font-size:15px !important; background:#E7FFF0 !important; border:2px solid #BBFFD5 !important; radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .new:hover 												{radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 
 /************************************************** PAGES (Admin Layer) **************************************************/
 
 #admin .page-heading		 							{float:left; width:100%; margin:15px 0px 0px 0px; color:#979797; font-size:18px;}
-#employee-shifter 										{float:left; width:2000px;}
-
-/* employee grid */
-#employee-grid-page 									{}
-#employee-grid-wrapper	 								{margin:0 auto; width:745px;}
-
-.status 												{float:left; width:15px; height:15px; margin:0px 10px;}
-.status.in 												{background-position:0px -27px;}
-.status.away											{background-position:-18px -27px;}
-.status.out												{background-position:-33px -27px;}
 
 /* employee edit */
 #edit-employee-page 									{}
@@ -141,8 +130,20 @@
 .employees.assign-credentials .roles h3					{float:left; width:100%; margin:0px 0px 10px 0px;}
 .employees.assign-credentials .roles ul li				{float:left; width:100%; margin:2px 0px; color:#AFAFAF;}
 
-/* companies */
-.company .employee-list									{margin:25px 0px 0px 0px;}
+/**** COMPANY *****/
+
+/* employee list */
+.company .employee-list									{float:left; width:295px; margin:25px 0px 0px 0px;}
 .company .employee-list ul li							{float:left; width:100%;}
-.company .employee-list ul li a							{float:left; width:100%; margin:5px 0px; padding:10px 0px 10px 0px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.company .employee-list ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee-list ul li a:hover 					{background-color:#E3FFFF;}
+.company .employee-list .status 						{margin:0px 10px 0px 0px;}
+#admin .company .employee-list .status.in 				{background-position:-3px -3px;}
+#admin .company .employee-list .status.away				{background-position:-19px -3px;}
+#admin .company .employee-list .status.out				{background-position:-35px -3px;}
+
+/* edit roles */
+.company .edit-roles									{float:left; width:295px; margin:25px 0px 0px 0px;}
+.company .edit-roles ul li								{float:left; width:100%;}
+.company .edit-roles ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.company .edit-roles ul li a:hover 						{background-color:#E3FFFF;}

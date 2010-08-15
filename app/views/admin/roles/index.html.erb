@@ -1,11 +1,22 @@
-<div class='content'>
+<div class='company content'>
 	<h2>Edit <%= @company.name %> Roles</h2>
-	<div id='edit-company-roles'>
+	<div class='edit-roles'>
+		
+		<div class='toolbar'>
+			<%= link_to "+ New Role", new_admin_company_role_url(@company), :class => 'new' %>
+			<span class='search'>search</span>
+		</div>
+		
+		<span class='todo'>remove this test list once real one works.</span>
 		<ul>
-			<li>
-				<%= link_to "+ Add New Role", new_admin_company_role_url, {:style => 'background:#00FF00;'} %>
-				<%= link_to "Search", {:style => 'background:#999999;'} %>
-			</li>
+			<li><a href='#link'>Role 1<span class='list-image delete'></a></li>
+			<li><a href='#link'>Role 2<span class='list-image delete'></a></li>
+			<li><a href='#link'>Role 3<span class='list-image delete'></a></li>
+			<li><a href='#link'>Role 4<span class='list-image delete'></a></li>
+			<li><a href='#link'>Role 5<span class='list-image delete'></a></li>
+		</ul>
+		
+		<ul>
 			<% @roles.each do |role| %>
 				<li><%= link_to role.name, edit_admin_company_role_url(@company, @role) %></li>
 			<% end %>
