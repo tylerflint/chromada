@@ -12,11 +12,14 @@ img															{border:none;}
                                		                		
 /* WRAPPERS */                       		        		
 .shifter 													{position:relative;}
-.wrapper				 									{}
                                                     		
 /* LISTS */                                         		
 ul															{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
 ul li														{float:left;}
+
+.list-image 												{float:right;}
+.list-image.open											{width:8px !important; height:10px !important; background-position:-5px -22px !important;}
+.list-image.delete											{width:8px !important; height:8px !important; background-position:-26px -23px !important;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
@@ -25,10 +28,8 @@ a:hover														{text-decoration:none; color:#00D3D3;}
 /* HEADERS */                                       		
 h1															{font-size:21px; color:#00D3D3;}                     		
 h2															{font-size:18px; color:#00D3D3;}
-h3															{font-size:13px;}
-h4															{font-size:12px; color:#616161;}
-h5															{font-size:11px;}
-h6															{font-size:10px;}
+h3															{font-size:12px; color:#616161;}
+h4, h5, h6													{font-size:10px;}
                                     		        		
 /* PADDERS */                         		        		
                                     		        		
@@ -99,9 +100,6 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .site-sprite				 								{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
 .site-transparent-sprite			 						{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
                                                         	
-.vertical-tiles-sprite		 								{background:url('../images/vertical-tiles-sprite.gif') repeat-y 0px 0px;}
-.horizontal-tiles-sprite	 								{background:url('../images/horizontal-tiles-sprite.gif') repeat-x 0px 0px;}
-                                                        	
 .spotlight-sprite			 								{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
 .quick-add-sprite			 								{float:left; width:100px; height:100px; background:url('../images/quick-add-sprite.png') no-repeat 0px 0px;}
                                                     		
@@ -116,7 +114,6 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 /***** BUTTONS *****/                               		
 .button-bar 												{float:left;}
 .button 													{float:left; cursor:pointer; border:none;}
-.round 														{-moz-outline-radius:5px; outline-radius:5px;}
 
 .button.close 												{float:right; width:12px; height:12px; background-position:-681px -4px;}
 .button.close:hover 										{background-position:-668px -4px;}

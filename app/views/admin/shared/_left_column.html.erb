@@ -3,21 +3,21 @@
 	
 	<nav class='nav'>
 		<ul>
+			<span class='todo'>TODO: let tyler know how you changed his IF() here.</span>
 			<% current_user.companies.each do |c| %>
 				<% if (@company == c) %>
 					<li><%= link_to c.name, admin_company_url(c), {:class => 'active'} %>
-					
 						<ul class='sub'>
 							<li><%= link_to "Employees", admin_company_employees_url(c) %></li>
 							<li><%= link_to "Roles", admin_company_roles_url(c) %></li>
-							<li><a href='#link'>Account Settings</a></li>
+							<li class='last'><a href='#link'>Account Settings</a></li>
 						</ul>
 					</li>
 				<% else %>
-					<li><%= link_to c.name, admin_company_url(c), {:class => 'round'} %></li>
+					<li><%= link_to c.name, admin_company_url(c) %></li>
 				<% end %>
 			<% end %>
-			<li><%= link_to "+ Add Company", new_admin_company_url, {:class => 'round add-new'} %></li>
+			<li><%= link_to "+ Add Company", new_admin_company_url, {:class => 'new'} %></li>
 		</ul>
 	</nav>
 </div>

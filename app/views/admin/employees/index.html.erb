@@ -1,17 +1,19 @@
 
-<div id='edit-employee-roles'>
+<div class='company content'>
 	<h2>[Company Name] Employee's</h2>
-	<div id='edit-company-roles'>
+	<div class='employee-list'>
+		
+		<div class='toolbar'>
+			<%= link_to "+ New Employee", new_admin_company_employee_url(@company), :class => 'new' %>
+			<span class='search'>search</span>
+		</div>
+			
 		<ul>
-			<li>
-				<%= link_to "+ New Employee", new_admin_company_employee_url(@company), {:class => 'add-new'} %>
-				<%= link_to "Search", {:class => 'search'} %>
-			</li>
-			<li><a href='#link'><span class='admin-transparent-sprite status away'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-transparent-sprite status away'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-transparent-sprite status out'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-transparent-sprite status out'></span>Employee Name</a></li>
-			<li><a href='#link'><span class='admin-transparent-sprite status in'></span>Employee Name</a></li>
+			<li><a href='#link'><span class='status away'></span>Employee Name<span class='list-image open'></a></li>
+			<li><a href='#link'><span class='status away'></span>Employee Name<span class='list-image open'></a></li>
+			<li><a href='#link'><span class='status out'></span>Employee Name<span class='list-image open'></a></li>
+			<li><a href='#link'><span class='status out'></span>Employee Name<span class='list-image open'></a></li>
+			<li><a href='#link'><span class='status in'></span>Employee Name<span class='list-image open'></a></li>
 		</ul>
 	</div>
 </div>
