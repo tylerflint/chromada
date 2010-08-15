@@ -1,18 +1,17 @@
+# CRUD (modified for human)
+# Create: create, new
+# Delete: destroy
+# View: index, show
+# Edit: edit, update
+
 - employees:
     - create
     - delete
-    - view:
-        - firstname
-        - lastname
-    - edit:
-        - firstname
-        - lastname
+    - view
+    - edit
         
 - roles:
     - create
     - delete
+    - view
     - edit
-    
-- users:
-    - create
-    - delete
