@@ -89,6 +89,10 @@
 	}
 	
 	function initActionState () {
+		ids = $('#role_action_ids').val().split(',')
+		$.each(ids, function(key, value) {
+			$('#action_' + value).attr('checked', true)
+		})
 		
 	}
 	

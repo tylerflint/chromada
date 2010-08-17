@@ -43,9 +43,9 @@ module Admin::RolesHelper
       node.each do |k, n|
         sub << build_action_list_item(k, n)
       end
-      li = %{<li class="checkbox-group"><input type="checkbox" name=""/><label class='parent active'><span class='arrow'></span>#{key.capitalize}</label><ul class="sub">#{sub}</ul></li>}
+      li = %{<li class="checkbox-group"><input type="checkbox" id="action_#{key}" name="action_#{key}" /><label class='parent active'><span class='arrow'></span>#{key.capitalize}</label><ul class="sub">#{sub}</ul></li>}
     else
-      li = %{<li class='checkbox-group'><input type="checkbox" name="action_#{node}" /><label>#{key.capitalize}</label></li>}
+      li = %{<li class='checkbox-group'><input type="checkbox" id="action_#{node}" name="action_#{node}" /><label>#{key.capitalize}</label></li>}
     end
     raw li
   end

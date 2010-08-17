@@ -44,8 +44,10 @@ module Mother
             end
           else
             if prefix != ''
+              items << prefix + delim + key
               items = items | self.unwrap( value, prefix + delim + key )
             else
+              items << key
               items = items | self.unwrap( value, key )
             end
           end
