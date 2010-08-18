@@ -1,12 +1,6 @@
 <form class='add-role'>
 	
-	<div class='button-bar'>
-		<div id='controls'>
-			<div class='admin-button save' onclick="save()"></div>
-			<div class='admin-button cancel' onclick="cancel()"></div>
-			<div class='admin-button delete' onclick="destroy()"></div>
-		</div>
-	</div>
+	<%= render 'admin/shared/edit_toolbar' %>
 	
 	<%= text_field '', :class => '', :name => 'role[name]', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 	<input type="hidden" name="role[action_ids]" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
