@@ -1,21 +1,15 @@
 <%= form_for(@company, :url => (@company.new_record?)? admin_companies_url : edit_admin_company_url) do |f| %>
-  <% if @company.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
 
-      <ul>
-      <% @company.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<div class='button-bar'>
+		<div id='controls'>
+			<%= f.submit '', :class => 'admin-button save'%>
+			<%= link_to '', admin_companies_path, :class => 'admin-button cancel', :onclick => 'cancel()' %>
+		</div>
+	</div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<%= f.text_field '', :class => 'rolename', :name => '', :value => 'Name This Company', :onfocus => 'if(this.value=="Name This Company")value=""', :onblur => 'if(this.value=="")this.value="Name This Company"' %>
+
+	<p class='note'>Get started now by selecting which products you would like for this company.</p>
+	<div class='quick-add-sprite quick-add ticker'></div>
+
 <% end %>

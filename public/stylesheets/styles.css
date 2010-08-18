@@ -111,8 +111,6 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .active-link 												{color:#00D3D3;}
                                                     		
 /***** BUTTONS *****/                               		
-.button-bar 												{float:left;}
-
 .button.close 												{float:right; width:12px; height:12px; background-position:-681px -4px;}
 .button.close:hover 										{background-position:-668px -4px;}
                                                         	
@@ -132,7 +130,8 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .button.register:hover										{background-position:0px -123px;}
 
 /* quick add */
-.quick-add.ticker 											{float:left; width:319px; height:111px; margin:10px 0px;}
+.quick-add 													{cursor:pointer;}
+.quick-add.ticker 											{float:left; width:319px; height:111px;}
 .quick-add.ticker:hover 									{background-position:0px -112px;}
 .quick-add.ticker.active									{background-position:0px -224px;}
                                                         	

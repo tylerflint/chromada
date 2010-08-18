@@ -5,7 +5,7 @@ gem 'mysql'
 gem 'haml'
 gem "devise", "1.1.rc2"
 
-gem 'blockpile', :path => '~/Sites/gems/blockpile'#, :git => 'git@github.com:tylerflint/blockpile.git' #:path => '~/Sites/gems/blockpile'
+gem 'blockpile'#, :path => '~/Sites/gems/blockpile'#, :git => 'git@github.com:tylerflint/blockpile.git' #:path => '~/Sites/gems/blockpile'
 
 gem 'unicorn'
 
