@@ -1,13 +1,12 @@
 <div class='company content'>
 	<h2>Edit <%= @company.name %> Roles</h2>
+	
+	<div class='toolbar'>
+		<%= link_to "+ New Role", new_admin_company_role_url(@company), :class => 'new' %>
+		<span class='search'><%= text_field '', :class => '', :name => '', :value => 'search' %></span>
+	</div>
+	
 	<div class='edit-roles'>
-		
-		<div class='toolbar'>
-			<%= link_to "+ New Role", new_admin_company_role_url(@company), :class => 'new' %>
-			<span class='search'><%= text_field '', :class => '', :name => '', :value => 'search' %></span>
-		</div>
-		
-		<span class='todo'>remove this test list once real one works.</span>
 		<ul>
 			<li><a href='#link'>Role 1<span class='list-image delete'></a></li>
 			<li><a href='#link'>Role 2<span class='list-image delete'></a></li>

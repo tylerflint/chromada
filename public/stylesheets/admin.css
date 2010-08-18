@@ -129,7 +129,7 @@
 #admin .company .employee-list .status.out				{background-position:-35px -3px;}
 
 /* edit roles */
-.company .edit-roles									{float:left; width:295px; margin:25px 0px 0px 0px;}
+.company .edit-roles									{float:left; width:295px;}
 .company .edit-roles ul li								{float:left; width:100%;}
 .company .edit-roles ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .edit-roles ul li a:hover 						{background-color:#E3FFFF;}
