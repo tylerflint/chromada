@@ -35,7 +35,7 @@
 .admin-button.back 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .admin-button.back:hover								{background-position:-145px -116px;}
                                                         	
-.admin-button.save 										{width:73px; height:36px; margin:0px 2px; background-position:0px -66px;}
+.admin-button.save 										{width:73px !important; height:36px; margin:0px 2px; background-position:0px -66px;}
 .admin-button.save:hover								{background-position:0px -103px;}
                                                         	
 .admin-button.cancel 									{width:94px; height:36px; margin:0px 2px; background-position:-234px -66px;}
@@ -139,13 +139,14 @@
 /**** COMPANY *****/
 
 /* add new */
-.company .create 										{float:left; width:298px; margin:25px 0px 0px 0px;}
+.company .create 										{float:left; margin:25px 0px 0px 0px;}
+.company .create input 									{float:left; width:310px;}
 .company .create .note 									{float:left; margin:10px 0px; color:#959595;}
 
 /* employee list */
 .company .employee-list									{float:left; width:295px; margin:25px 0px 0px 0px;}
-.company .employee-list ul li							{float:left; width:100%;}
-.company .employee-list ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.company .employee-list ul li							{float:left; width:100%; margin:0px 0px 10px 0px;}
+.company .employee-list ul li a							{float:left; width:100%; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee-list ul li a:hover 					{background-color:#E3FFFF;}
 .company .employee-list .status 						{margin:0px 10px 0px 0px;}
 #admin .company .employee-list .status.in 				{background-position:-3px -3px;}
