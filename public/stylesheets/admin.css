@@ -27,6 +27,7 @@
 .toolbar 												{width:100%;}
 .toolbar .new 											{float:left; width:134px;}
 .toolbar .search 										{float:right; width:134px; padding:8px; background:#999999;}
+.toolbar .search input									{float:right; width:130px; padding:2px;}
 
 /***** BUTTONS *****/
 #admin .button-bar 										{float:left; margin:0px 0px 25px 0px;}
@@ -110,6 +111,7 @@
 .employees.assign-credentials .roles ul li				{float:left; width:100%; margin:2px 0px; color:#AFAFAF;}
 
 /**** COMPANY *****/
+.company.content .toolbar 								{float:left; margin:25px 0px;}
 
 /* add new */
 .company .create 										{float:left; margin:25px 0px 0px 0px;}
