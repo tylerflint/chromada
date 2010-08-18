@@ -2,7 +2,7 @@
 <div class='wrapper'>
 	<h3 class='column-heading'>Your Companies</h3>
 	
-	<nav class='nav'>
+	<div class='nav'>
 		<ul>
 			<% current_user.companies.each do |c| %>
 				<% if (@company == c) %>
@@ -19,5 +19,5 @@
 			<% end %>
 			<li><%= link_to "+ Add Company", new_admin_company_url, {:class => 'new'} %></li>
 		</ul>
-	</nav>
+	</div>
 </div>
