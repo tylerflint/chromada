@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	
-	<input class='rolename' type='text' name='' value='Name This Role' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
+	<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 	<input type="text" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
 	
 	<div class="role-actions">

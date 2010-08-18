@@ -4,7 +4,6 @@
 	
 	<nav class='nav'>
 		<ul>
-			<span class='todo'>TODO: let tyler know how you changed his IF() here.</span>
 			<% current_user.companies.each do |c| %>
 				<% if (@company == c) %>
 					<li><%= link_to c.name, admin_company_url(c), {:class => 'active'} %>
