@@ -169,14 +169,14 @@ a#link-products:hover 										{background-position:-255px -12px;}
 a#link-services:hover 										{background-position:-310px -12px;}
 a#link-downloads:hover										{background-position:-360px -12px;}
 a#link-support:hover 										{background-position:-426px -12px;}
-a#link-about:hover 											{background-position:-474px -12px;}
+a#link-about:hover 											{background-position:-472px -12px;}
 a#link-contact:hover 										{background-position:-510px -12px;}
                                                     		
 a#link-products.active 										{background-position:-255px 0px;}
 a#link-services.active 										{background-position:-310px 0px;}
 a#link-downloads.active										{background-position:-360px 0px;}
 a#link-support.active										{background-position:-426px 0px;}
-a#link-about.active 										{background-position:-474px 0px;}
+a#link-about.active 										{background-position:-472px 0px;}
 a#link-contact.active 										{background-position:-510px 0px;}
                                                     		
 /***** FOOTER *****/                                		
