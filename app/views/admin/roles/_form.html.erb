@@ -1,4 +1,3 @@
-
 <form class='add-role'>
 	
 	<div class='button-bar'>
@@ -9,9 +8,9 @@
 		</div>
 	</div>
 	
-	<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-	<input type="text" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
-	
+	<%= text_field '', :class => '', :name => 'role[name]', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
+	<input type="hidden" name="role[action_ids]" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
+		
 	<div class="role-actions">
 		<ul>
 			<% action_tree.each do |key, node| %>
@@ -43,22 +42,34 @@
 	}
 	
 	function initActionState () {
+		ids = $('#role_action_ids').val().split(',')
+		$.each(ids, function(key, value) {
+			$('#action_' + value).attr('checked', true)
+		})
 		
 	}
 	
 	function addActionClickEvent () {
-		$(".edit-employee-roles-group input:checkbox").each(function (){
+		$(".role-actions input:checkbox").each(function (){
 			$(this).change(updateCheckedActions)
 		})
 	}
 	
 	function addParentActionClickEvent () {
-		
+		$(".role-actions input:checkbox.parent").each(function (){
+			$(this).change(function () {
+				var checked = $(this).attr('checked')
+				$(this).parent().find('ul li input:checkbox').each(function () {
+					$(this).attr('checked', checked)
+				})
+				updateCheckedActions()
+			})
+		})
 	}
 	
 	function updateCheckedActions () {
 		ids = new Array()
-		$(".edit-employee-roles-group input:checkbox:checked").each(function () {
+		$(".role-actions input:checkbox:checked").each(function () {
 			if (this.name != '') {
 				ids.push(this.name.replace(/action_/, ''))
 			}

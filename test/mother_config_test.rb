@@ -23,7 +23,7 @@ class MotherConfigTest < ActiveSupport::TestCase
   
   should "separate tree levels with a /" do
     flattened = Mother.get_flat_actions(get_valid_config)
-    assert_equal "employee/create", flattened[0]
+    assert_equal "employee/create", flattened[1]
   end
   
   should "not have a leading / on any actions" do
@@ -46,13 +46,13 @@ class MotherConfigTest < ActiveSupport::TestCase
   
   should "maintain an accurate count of flattened actions relative to tree" do
     flattened = Mother.get_flat_actions(get_valid_config)
-    assert_equal 9, flattened.length
+    assert_equal 13, flattened.length
   end
   
   should "seed actions table from flattened tree" do
     Action.delete_all
     Mother.seed_actions( get_valid_config )
-    assert_equal 9, Action.all.length
+    assert_equal 13, Action.all.length
   end
   
   should "not remove actions when same" do
