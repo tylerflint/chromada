@@ -27,7 +27,7 @@
 .toolbar 												{width:100%;}
 .toolbar .new 											{float:left; width:134px;}
 .toolbar .search 										{float:right; width:134px; padding:7px; background:-moz-linear-gradient(top, #F9F8F8, #EBEBEB); background:-webkit-gradient(linear, left top, left bottom, from(#F9F8F8), to(#EBEBEB)); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9F8F8', endColorstr='#EBEBEB'); border:1px solid #DEDEDE; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.toolbar .search input									{float:right; width:130px; padding:2px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.toolbar .search input									{float:right; width:130px; padding:2px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
 
 /***** BUTTONS *****/
 #admin .button-bar 										{float:left; margin:0px 0px 25px 0px;}
