@@ -49,18 +49,20 @@
 	}
 	
 	function addActionClickEvent () {
-		$("#edit-employee-roles input:checkbox").each(function (){
+		$(".role-actions input:checkbox").each(function (){
 			$(this).change(updateCheckedActions)
 		})
 	}
 	
 	function addParentActionClickEvent () {
-		
+		$(".role-actions input:checkbox.parent").each(function (){
+			$(this).change()
+		})
 	}
 	
 	function updateCheckedActions () {
 		ids = new Array()
-		$(".edit-employee-roles-group input:checkbox:checked").each(function () {
+		$(".role-actions input:checkbox:checked").each(function () {
 			if (this.name != '') {
 				ids.push(this.name.replace(/action_/, ''))
 			}
