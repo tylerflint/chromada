@@ -35,7 +35,7 @@
 .admin-button.back 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .admin-button.back:hover								{background-position:-145px -116px;}
                                                         	
-.admin-button.save 										{width:73px; height:36px; margin:0px 2px; background-position:0px -66px;}
+.admin-button.save 										{width:73px !important; height:36px; margin:0px 2px; background-position:0px -66px;}
 .admin-button.save:hover								{background-position:0px -103px;}
                                                         	
 .admin-button.cancel 									{width:94px; height:36px; margin:0px 2px; background-position:-234px -66px;}
@@ -93,30 +93,30 @@
 #edit-employee-custom-password-checkbox					{position:absolute; top:6px; right:204px;}
 #edit-employee-notes 									{width:440px; height:165px;}
                                                     	
-#edit-employee-roles form 								{float:left; width:100%;}
-#edit-employee-roles form h3 							{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
-#edit-employee-roles form ul							{float:left; width:100%;}
-#edit-employee-roles form .sub							{float:left; width:100%; margin:0px;}
-#edit-employee-roles form .sub label								{margin-left:45px;}
-#edit-employee-roles form .sub label.parent							{margin-left:30px;}
-#edit-employee-roles form .sub .sub label							{margin-left:60px;}
-#edit-employee-roles form .sub .sub label.parent					{margin-left:45px;}
-#edit-employee-roles form .sub .sub .sub label						{margin-left:75px;}
-#edit-employee-roles form .sub .sub .sub label.parent				{margin-left:60px;}
-#edit-employee-roles form .sub .sub .sub .sub label					{margin-left:90px;}
-#edit-employee-roles form .sub .sub .sub .sub label.parent			{margin-left:75px;}
-#edit-employee-roles form .sub .sub .sub .sub .sub label			{margin-left:105px;}
-#edit-employee-roles form .sub .sub .sub .sub .sub label.parent		{margin-left:90px;}
-#edit-employee-roles form .parent.arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
-#edit-employee-roles form .parent.active.arrow			{background-position: -255px -36px;}
-#edit-employee-roles form .parent.inactive.arrow		{background-position: -255px -44px;}
-#edit-employee-roles form ul li							{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
-#edit-employee-roles form input							{float:left; margin:1px 0px;}
-#edit-employee-roles form label							{float:left; margin:4px 0px 0px 25px;}
-#edit-employee-roles form label.parent					{margin-left:10px;}
-#edit-employee-roles form .parent .arrow				{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
-#edit-employee-roles form .parent.active .arrow			{background-position: -255px -36px;}
-#edit-employee-roles form .parent.inactive .arrow		{background-position: -255px -44px;}
+#edit-employee-roles   							{float:left; width:100%;}
+#edit-employee-roles h3 							{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
+#edit-employee-roles ul							{float:left; width:100%;}
+#edit-employee-roles .sub							{float:left; width:100%; margin:0px;}
+#edit-employee-roles .sub label								{margin-left:45px;}
+#edit-employee-roles .sub label.parent							{margin-left:30px;}
+#edit-employee-roles .sub .sub label							{margin-left:60px;}
+#edit-employee-roles .sub .sub label.parent					{margin-left:45px;}
+#edit-employee-roles .sub .sub .sub label						{margin-left:75px;}
+#edit-employee-roles .sub .sub .sub label.parent				{margin-left:60px;}
+#edit-employee-roles .sub .sub .sub .sub label					{margin-left:90px;}
+#edit-employee-roles .sub .sub .sub .sub label.parent			{margin-left:75px;}
+#edit-employee-roles .sub .sub .sub .sub .sub label			{margin-left:105px;}
+#edit-employee-roles .sub .sub .sub .sub .sub label.parent		{margin-left:90px;}
+#edit-employee-roles .parent.arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
+#edit-employee-roles .parent.active.arrow			{background-position: -255px -36px;}
+#edit-employee-roles .parent.inactive.arrow		{background-position: -255px -44px;}
+#edit-employee-roles ul li							{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
+#edit-employee-roles input							{float:left; margin:1px 0px;}
+#edit-employee-roles label							{float:left; margin:4px 0px 0px 25px;}
+#edit-employee-roles label.parent					{margin-left:10px;}
+#edit-employee-roles .parent .arrow				{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-transparent-sprite.png') no-repeat 0px 0px;}
+#edit-employee-roles .parent.active .arrow			{background-position: -255px -36px;}
+#edit-employee-roles .parent.inactive .arrow		{background-position: -255px -44px;}
 
 .edit-employee-roles-group 								{float:left;}
 
@@ -139,13 +139,14 @@
 /**** COMPANY *****/
 
 /* add new */
-.company .create 										{float:left; width:298px; margin:25px 0px 0px 0px;}
+.company .create 										{float:left; margin:25px 0px 0px 0px;}
+.company .create input 									{float:left; width:305px;}
 .company .create .note 									{float:left; margin:10px 0px; color:#959595;}
 
 /* employee list */
 .company .employee-list									{float:left; width:295px; margin:25px 0px 0px 0px;}
-.company .employee-list ul li							{float:left; width:100%;}
-.company .employee-list ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.company .employee-list ul li							{float:left; width:100%; margin:0px 0px 10px 0px;}
+.company .employee-list ul li a							{float:left; width:100%; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee-list ul li a:hover 					{background-color:#E3FFFF;}
 .company .employee-list .status 						{margin:0px 10px 0px 0px;}
 #admin .company .employee-list .status.in 				{background-position:-3px -3px;}
@@ -157,3 +158,6 @@
 .company .edit-roles ul li								{float:left; width:100%;}
 .company .edit-roles ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .edit-roles ul li a:hover 						{background-color:#E3FFFF;}
+
+/* add role */
+.company .add-role 										{float:left; margin:25px 0px 0px 0px;}
