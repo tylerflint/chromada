@@ -14,6 +14,8 @@
 	<div class='employee-info'>
 		<%= link_to image_tag('edit-employee-photo.gif', :alt => 'First Middle Last', :title => 'First Middle Last'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
 		
+		<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
+		<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 		<input class='firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>' onfocus='if(this.value=="First Name")value=""' onblur='if(this.value=="")this.value="First Name"'/>
 		<input class='lastname' type="text" name="employee[lastname]" value='<%= employee.lastname ||= 'Last Name' %>' onfocus='if(this.value=="Last Name")value=""' onblur='if(this.value=="")this.value="Last Name"'/>
 	</div>
@@ -22,20 +24,24 @@
 		<input class='password' type="text" name="" value='Type Password' onfocus='if(this.value=="Type Password")value=""' onblur='if(this.value=="")this.value="Type Password"'/>
 		<span class='uppercase'>or</span>
 		<div class='checkbox-group'>
+			<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 			<input type="checkbox" name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
 			<label>Auto Generate</label>
 		</div>
 	</div>
 	
 	<div class='employee-id'>
+		<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 		<input id='id' type="text" name="" value='Employee ID' onfocus='if(this.value=="Employee ID")value=""' onblur='if(this.value=="")this.value="Employee ID"'/>
 		<span class='uppercase'>or</span>
 		<div class='checkbox-group'>
+			<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 			<input type="checkbox" name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
 			<label>Auto Generate</label>
 		</div>
 	</div>
 	
+	<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 	<input class='email' type="text" name="employee[email]" value='<%= employee.firstname ||= 'Email' %>' onfocus='if(this.value=="Email")value=""' onblur='if(this.value=="")this.value="Email"'/>
 	
 	<div class='roles'>

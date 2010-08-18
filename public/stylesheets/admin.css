@@ -26,7 +26,7 @@
 /***** TOOLBARS *****/
 .toolbar 												{width:100%;}
 .toolbar .new 											{float:left; width:134px;}
-.toolbar .search 										{float:right; width:168px;}
+.toolbar .search 										{float:right; width:134px; padding:8px; background:#999999;}
 
 /***** BUTTONS *****/
 #admin .button-bar 										{float:left; margin:0px 0px 25px 0px;}
@@ -117,7 +117,7 @@
 .company .create .note 									{float:left; margin:10px 0px; color:#959595;}
 
 /* employee list */
-.company .employee-list									{float:left; width:295px; margin:25px 0px 0px 0px;}
+.company .employee-list									{float:left; width:295px;}
 .company .employee-list ul li							{float:left; width:100%; margin:0px 0px 10px 0px;}
 .company .employee-list ul li a							{float:left; width:100%; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee-list ul li a:hover 					{background-color:#E3FFFF;}
@@ -134,6 +134,7 @@
 
 /* add role */
 .company .add-role 										{float:left; margin:25px 0px 0px 0px;}
+.company .add-role input								{float:left; width:305px;}
 
 .company .add-role .role-actions   											{float:left; width:100%;}
 .company .add-role .role-actions h3 										{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
@@ -153,7 +154,7 @@
 .company .add-role .role-actions .parent.active.arrow						{background-position: -255px -36px;}
 .company .add-role .role-actions .parent.inactive.arrow						{background-position: -255px -44px;}
 .company .add-role .role-actions ul li										{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
-.company .add-role .role-actions input										{float:left; margin:1px 0px;}
+.company .add-role .role-actions input										{float:left; width:auto; margin:1px 0px;}
 .company .add-role .role-actions label										{float:left; margin:4px 0px 0px 25px;}
 .company .add-role .role-actions label.parent								{margin-left:10px;}
 .company .add-role .role-actions .parent .arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}

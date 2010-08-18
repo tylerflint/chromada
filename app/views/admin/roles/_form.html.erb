@@ -8,10 +8,9 @@
 		</div>
 	</div>
 	
-	<input class='rolename' type='text' name='role[name]' value='Name This Role' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
-	
+	<%= text_field '', :class => '', :name => 'role[name]', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 	<input type="hidden" name="role[action_ids]" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
-	
+		
 	<div class="role-actions">
 		<ul>
 			<% action_tree.each do |key, node| %>
