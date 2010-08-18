@@ -9,10 +9,10 @@
 		</div>
 	</div>
 	
-	<input class='rolename' type="text" name="" value='' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
+	<input class='rolename' type='text' name='' value='Name This Role' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
 	<input type="text" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
 	
-	<div id="edit-employee-roles">
+	<div class="role-actions">
 		<ul>
 			<% action_tree.each do |key, node| %>
 				<%= build_action_list_item(key, node) %>
