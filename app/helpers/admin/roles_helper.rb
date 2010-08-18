@@ -1,37 +1,60 @@
 module Admin::RolesHelper
   
-  def action_tree
-    # {
-    #   :employee => {
-    #     :edit => 12
-    #   },
-    #   :company => {
-    #     :create => 1,
-    #     :edit   => 3,
-    #     :delete => 4
-    #   }
-    # }
+  # def action_tree
+  #   # {
+  #   #   :employee => {
+  #   #     :edit => 12
+  #   #   },
+  #   #   :company => {
+  #   #     :create => 1,
+  #   #     :edit   => 3,
+  #   #     :delete => 4
+  #   #   }
+  #   # }
+  #   tree = {}
+  #   Action.order(:path).all.each do |action|
+  #     paths = action.path.split "/"
+  #     if paths.length > 1
+  #       # loop through path popping on
+  #       current_node = tree
+  #       current_count = 1
+  #       paths.each do |path|
+  #         if current_count == paths.length
+  #           current_node[path] = action.id
+  #         else
+  #           if !current_node.has_key?(path)
+  #             current_node[path] = {}
+  #           end
+  #           current_node = current_node[path]
+  #         end
+  #         current_count += 1
+  #       end
+  #     else
+  #       # pop directly onto tree
+  #       tree[paths[0]] = action.id
+  #     end
+  #   end
+  #   tree
+  # end
+  
+  def self.action_tree
     tree = {}
     Action.order(:path).all.each do |action|
       paths = action.path.split "/"
-      if paths.length > 1
-        # loop through path popping on
-        current_node = tree
-        current_count = 1
-        paths.each do |path|
-          if current_count == paths.length
-            current_node[path] = action.id
-          else
-            if !current_node.has_key?(path)
-              current_node[path] = {}
-            end
-            current_node = current_node[path]
+      path_count = 1
+      current_node = tree
+      paths.each do |path|
+        first = path_count == 1
+        last  = path_count == paths.length
+        if (first && last) || last
+          current_node[path] = {:id => action.id}
+        else
+          unless current_node[path].has_key?(:children)
+            current_node[path][:children] = {}
           end
-          current_count += 1
+          current_node = current_node[path][:children]
         end
-      else
-        # pop directly onto tree
-        tree[paths[0]] = action.id
+        path_count += 1
       end
     end
     tree

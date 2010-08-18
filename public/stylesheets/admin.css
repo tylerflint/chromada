@@ -2,7 +2,6 @@
 
 /***** SPRITES *****/
 .admin-sprite				 							{width:50px; height:50px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.admin-btn	 											{float:left; width:50px; height:36px; background:url('../images/admin-sprite.png') no-repeat 0px 0px; cursor:pointer;}
 #admin .list-image 										{width:50px; height:50px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 #admin .status 											{float:left; width:15px; height:15px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 
@@ -30,26 +29,33 @@
 .toolbar .search 										{float:right; width:168px;}
 
 /***** BUTTONS *****/
-.button.back 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
-.button.back:hover										{background-position:-145px -116px;}
+#admin .button-bar 										{float:left; margin:0px 0px 25px 0px;}
+.admin-button 											{float:left; width:50px; height:50px; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none; cursor:pointer;}
+
+.admin-button.back 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.admin-button.back:hover								{background-position:-145px -116px;}
                                                         	
-.button.save 											{width:73px; height:36px; margin:0px 2px; background-position:0px -66px;}
-.button.save:hover										{background-position:0px -103px;}
+.admin-button.save 										{width:73px; height:36px; margin:0px 2px; background-position:0px -66px;}
+.admin-button.save:hover								{background-position:0px -103px;}
                                                         	
-.button.cancel 											{width:94px; height:36px; margin:0px 2px; background-position:-234px -66px;}
-.button.cancel:hover									{background-position:-234px -103px;}
+.admin-button.cancel 									{width:94px; height:36px; margin:0px 2px; background-position:-234px -66px;}
+.admin-button.cancel:hover								{background-position:-234px -103px;}
                                                         	
-.button.delete 											{width:93px; height:36px; margin:0px 2px; background-position:-140px -66px;}
-.button.delete:hover									{background-position:-140px -103px;}
+.admin-button.delete 									{width:93px; height:36px; margin:0px 2px; background-position:-140px -66px;}
+.admin-button.delete:hover								{background-position:-140px -103px;}
                                                         	
-.button.next											{width:93px; height:36px; margin:25px 0px; background-position:-145px -79px;}
-.button.next:hover										{background-position:-145px -116px;}
+.admin-button.next										{width:93px; height:36px; margin:25px 0px; background-position:-145px -79px;}
+.admin-button.next:hover								{background-position:-145px -116px;}
                                                         	
-.button.new 											{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
-.button.new:hover										{background-position:-145px -116px;}
+.admin-button.new 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
+.admin-button.new:hover									{background-position:-145px -116px;}
 
 .new 													{padding:8px !important; color:#01D770 !important; font-size:15px !important; background:#E7FFF0 !important; border:2px solid #BBFFD5 !important; radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .new:hover 												{radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+
+/***** LISTS *****/
+#admin .list-image.open									{width:8px; height:10px; background-position:-5px -22px;}
+#admin .list-image.delete								{width:8px; height:8px; background-position:-26px -23px;}
 
 /************************************************** PAGES (Admin Layer) **************************************************/
 
@@ -131,6 +137,10 @@
 .employees.assign-credentials .roles ul li				{float:left; width:100%; margin:2px 0px; color:#AFAFAF;}
 
 /**** COMPANY *****/
+
+/* add new */
+.company .create 										{float:left; width:298px; margin:25px 0px 0px 0px;}
+.company .create .note 									{float:left; margin:10px 0px; color:#959595;}
 
 /* employee list */
 .company .employee-list									{float:left; width:295px; margin:25px 0px 0px 0px;}

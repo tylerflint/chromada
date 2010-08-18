@@ -18,8 +18,6 @@ ul															{float:left; list-style-image:none; list-style-type:none; list-
 ul li														{float:left;}
 
 .list-image 												{float:right;}
-.list-image.open											{width:8px !important; height:10px !important; background-position:-5px -22px !important;}
-.list-image.delete											{width:8px !important; height:8px !important; background-position:-26px -23px !important;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
@@ -99,6 +97,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 /***** SPRITES *****/                               	
 .site-sprite				 								{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
 .site-transparent-sprite			 						{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
+.button 													{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px; border:none; cursor:pointer; }
                                                         	
 .spotlight-sprite			 								{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
 .quick-add-sprite			 								{float:left; width:100px; height:100px; background:url('../images/quick-add-sprite.png') no-repeat 0px 0px;}
@@ -112,9 +111,6 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .active-link 												{color:#00D3D3;}
                                                     		
 /***** BUTTONS *****/                               		
-.button-bar 												{float:left;}
-.button 													{float:left; cursor:pointer; border:none;}
-
 .button.close 												{float:right; width:12px; height:12px; background-position:-681px -4px;}
 .button.close:hover 										{background-position:-668px -4px;}
                                                         	
@@ -134,7 +130,8 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .button.register:hover										{background-position:0px -123px;}
 
 /* quick add */
-.quick-add.ticker 											{float:left; width:319px; height:111px; margin:10px 0px;}
+.quick-add 													{cursor:pointer;}
+.quick-add.ticker 											{float:left; width:319px; height:111px;}
 .quick-add.ticker:hover 									{background-position:0px -112px;}
 .quick-add.ticker.active									{background-position:0px -224px;}
                                                         	
