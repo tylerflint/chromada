@@ -1,72 +1,25 @@
 
-<div class='content'>
-	<h2 class='role-name'>Name This Role</h2>
-	<form id='edit-employee-roles-form'>
-		
-		<div class='button-bar'>
-			<div id='controls'>
-				<div class='admin-button save' onclick="save()"></div>
-				<div class='admin-button cancel' onclick="cancel()"></div>
-				<div class='admin-button delete' onclick="destroy()"></div>
-			</div>
+<form class='add-role'>
+	
+	<div class='button-bar'>
+		<div id='controls'>
+			<div class='admin-button save' onclick="save()"></div>
+			<div class='admin-button cancel' onclick="cancel()"></div>
+			<div class='admin-button delete' onclick="destroy()"></div>
 		</div>
-		
-		<input class='rolename' type="text" name="" value='' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
-		<br />
-		<input type="text" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
-		
-		<div class="edit-employee-roles-group">
-			<ul>
-				<% action_tree.each do |key, node| %>
-					<%= build_action_list_item(key, node) %>
-				<% end %>
-			</ul>
-		</div>
-		
-		<!--
-		<div class='edit-employee-roles-group'>
-			<ul>
-				<li class='checkbox-group even'><input type="checkbox" name=""/><label class='parent active'><span class='arrow'></span>Level 1</label>
-					<ul class='sub'>
-						<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 2</label></li>
-						<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 2</label></li>
-						<li class='checkbox-group odd'><input type="checkbox" name="" /><label class='parent active'><span class='arrow'></span>Level 2</label>
-							<ul class='sub'>
-								<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 3</label></li>
-								<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 3</label></li>
-								<li class='checkbox-group even'><input type="checkbox" name="" /><label class='parent active'><span class='arrow'></span>Level 3</label>
-									<ul class='sub'>
-										<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 4</label></li>
-										<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 4</label></li>
-										<li class='checkbox-group odd'><input type="checkbox" name="" /><label class='parent active'><span class='arrow'></span>Level 4</label>
-											<ul class='sub'>
-												<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 5</label></li>
-												<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 5</label></li>
-											</ul>
-										</li>
-										<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 4</label></li>
-										<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 4</label></li>
-									</ul>
-								</li>
-								<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 3</label></li>
-							</ul>
-						</li>
-						<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 2</label></span></li>
-						<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 2</label></span></li>
-						<li class='checkbox-group odd'><input type="checkbox" name="" /><label class='parent inactive'><span class='arrow'></span>Level 2</label></li>
-						<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 2</label></span></li>
-					</ul>
-				</li>
-				<li class='checkbox-group odd'><input type="checkbox" name="" /><label>Level 1</label></li>
-				<li class='checkbox-group even'><input type="checkbox" name="" /><label>Level 1</label></li>
-				<li class='checkbox-group odd'><input type="checkbox"/><label class='parent inactive'><span class='arrow'></span>Level 1</label></li>
-				<li class='checkbox-group even'><input type="checkbox"/><label>Level 1</label></li>
-				<li class='checkbox-group odd'><input type="checkbox"/><label>Level 1</label></li>
-			</ul>
-		</div>
-		-->
-	</form>
-</div>
+	</div>
+	
+	<input class='rolename' type="text" name="" value='' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
+	<input type="text" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
+	
+	<div id="edit-employee-roles">
+		<ul>
+			<% action_tree.each do |key, node| %>
+				<%= build_action_list_item(key, node) %>
+			<% end %>
+		</ul>
+	</div>
+</form>
 
 <script type='text/javascript'>
 	$(document).ready(function () {
