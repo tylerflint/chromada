@@ -8,8 +8,9 @@
 		</div>
 	</div>
 	
-	<input class='rolename' type='text' name='' value='Name This Role' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
-	<input type="text" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
+	<input class='rolename' type='text' name='role[name]' value='Name This Role' onfocus='if(this.value=="Name This Role")value=""' onblur='if(this.value=="")this.value="Name This Role"'/>
+	
+	<input type="hidden" name="role[action_ids]" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
 	
 	<div class="role-actions">
 		<ul>
@@ -57,7 +58,13 @@
 	
 	function addParentActionClickEvent () {
 		$(".role-actions input:checkbox.parent").each(function (){
-			$(this).change()
+			$(this).change(function () {
+				var checked = $(this).attr('checked')
+				$(this).parent().find('ul li input:checkbox').each(function () {
+					$(this).attr('checked', checked)
+				})
+				updateCheckedActions()
+			})
 		})
 	}
 	
