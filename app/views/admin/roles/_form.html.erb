@@ -1,6 +1,6 @@
-<%= form_for role, :url => (role.new_record?)? admin_company_roles_url(@company) : edit_admin_company_role_url(@company), :html => {:class => 'add-role'} do |f| -%>
+<%= form_for [:admin, @company, @role], :html => {:class => 'add-role'} do |f| -%>
 	
-	<%= render :partial => 'admin/shared/edit_toolbar', :locals => {:form => f} %>
+	<%= render :partial => 'admin/shared/edit_toolbar', :locals => {:form => f, :record => @role} %>
 
 	<%= f.text_field :name, :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 	<input type="hidden" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">

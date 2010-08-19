@@ -17,7 +17,7 @@ class Admin::RolesController < Admin::AdminController
   # GET /roles/1.xml
   def show
     # @role = Role.find(params[:id])
-    @role = @company.role.find(params[:id])
+    @role = @company.roles.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -51,8 +51,8 @@ class Admin::RolesController < Admin::AdminController
     
     respond_to do |format|
       if @role.save
-        format.html { redirect_to(@role, :notice => 'Role was successfully created.') }
-        format.xml  { render :xml => @role, :status => :created, :location => @role }
+        format.html { redirect_to(:action => :index, :notice => 'Role was successfully created.') }
+        format.xml  { render :xml => @role, :status => :created, :location => [:admin, @company, @role] }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @role.errors, :status => :unprocessable_entity }
@@ -64,11 +64,11 @@ class Admin::RolesController < Admin::AdminController
   # PUT /roles/1.xml
   def update
     # @role = Role.find(params[:id])
-    @role = @company.role.find(params[:id])
+    @role = @company.roles.find(params[:id])
 
     respond_to do |format|
       if @role.update_attributes(params[:role])
-        format.html { redirect_to(@role, :notice => 'Role was successfully updated.') }
+        format.html { redirect_to(:action => :index, :notice => 'Role was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -81,11 +81,11 @@ class Admin::RolesController < Admin::AdminController
   # DELETE /roles/1.xml
   def destroy
     # @role = Role.find(params[:id])
-    @role = @company.role.find(params[:id])
+    @role = @company.roles.find(params[:id])
     @role.destroy
 
     respond_to do |format|
-      format.html { redirect_to(roles_url) }
+      format.html { redirect_to(:action => :index) }
       format.xml  { head :ok }
     end
   end
