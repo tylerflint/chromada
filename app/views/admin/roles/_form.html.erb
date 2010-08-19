@@ -1,6 +1,6 @@
 <form class='add-role'>
 	
-	<%= render 'admin/shared/edit_toolbar' %>
+	<%%= render 'admin/shared/edit_toolbar' %>
 	
 	<%= text_field '', :class => '', :name => 'role[name]', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
 	<input type="hidden" name="role[action_ids]" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
