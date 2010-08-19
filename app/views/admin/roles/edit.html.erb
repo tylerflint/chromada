@@ -1,6 +1,4 @@
-<h1>Editing role</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @role %> |
-<%= link_to 'Back', roles_path %>
+<div class='company content'>
+	<h2 class='role-name'><%= @role.name %> <%= url_for ['admin', 'company', @role] %></h2>
+	<%= render :partial => 'form', :locals => {:role => @role} %>
+</div>
