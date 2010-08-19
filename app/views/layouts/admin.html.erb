@@ -16,6 +16,7 @@
 		
 		<!-- LOAD JAVASCRIPT -->
 		<%= javascript_include_tag 'jquery.js' %>
+		<%= javascript_include_tag 'jquery.custom_radio_checkbox.js' %>
 		
 		<title><%= @title %></title>
 		
@@ -23,6 +24,14 @@
 	</head>
 
 	<body id='admin'>
+		
+		<script type='text/javascript'>
+			$(document).ready(function(){
+				$(".radio").dgStyle();
+				$(".checkbox").dgStyle();
+			});
+		</script>
+		
 		<div class='page-wrapper'>
 			<div class='page'>
 				<div class='header'>
