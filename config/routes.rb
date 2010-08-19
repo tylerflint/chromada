@@ -1,7 +1,5 @@
 Chromada::Application.routes.draw do |map|
   
-  resources :roles
-
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }, :controllers => { :sessions => 'sessions'}
   # until devise supports default routes explicitly, I have to do this
   # get 'quick_login',  :to => 'sessions#create',    :as => "user_session", :format => :js

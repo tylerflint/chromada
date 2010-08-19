@@ -46,9 +46,9 @@ class Admin::RolesController < Admin::AdminController
   # POST /roles
   # POST /roles.xml
   def create
-    # @role = Role.new(params[:role])
+    # render :text => params[:role].to_s
     @role = @company.roles.build(params[:role])
-
+    
     respond_to do |format|
       if @role.save
         format.html { redirect_to(@role, :notice => 'Role was successfully created.') }
