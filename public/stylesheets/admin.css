@@ -167,28 +167,22 @@
 .company .add-role .role-actions .parent.inactive .arrow					{background-position: -21px -45px;}
 
 .radio {
-	height: 25px;
-	width: 19px;
-	clear:left;
+	height:16px;
+	width:16px;
 	float:left;
-	margin: 0 0 3px;
-	padding: 0 0 0 26px;
-	background: url("radio.png");
+	background: url('../images/checkbox.png');
 	background-repeat:no-repeat;
 	cursor: default;
 }
 .checkbox {
-	height: 25px;
-	width: 19px;
-	clear:left;
+	height: 16px;
+	width: 16px;
 	float:left;
-	margin: 0 0 3px;
-	padding: 0 0 0 26px;
-	background: url("checkbox.gif") no-repeat;
+	background: url('../images/checkbox.png') no-repeat;
 	cursor: default;
 	text-align:left;
 }
-.checkbox input,.radio input {
+.checkbox input, .radio input {
 	display: none;
 }
 .checkbox input.show,.radio input.show {
