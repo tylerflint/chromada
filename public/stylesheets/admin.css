@@ -31,8 +31,8 @@
 .toolbar .search .icon									{position:absolute; top:11px; right:12px; width:12px; height:12px; background-position:-573px -20px;}
 
 /***** BUTTONS *****/
-#admin .button-bar 										{float:left; margin:0px 0px 25px 0px;}
-.admin-button 											{float:left; width:50px; height:50px; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none; cursor:pointer;}
+#admin .button-bar 										{float:left; width:100%; margin:0px 0px 25px 0px;}
+.admin-button 											{float:left; width:50px; height:50px; margin:0px; padding:0px !important; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none; cursor:pointer;}
 
 .admin-button.back 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .admin-button.back:hover								{background-position:-145px -116px;}
@@ -43,7 +43,7 @@
 .admin-button.cancel 									{width:94px; height:36px; margin:0px 2px; background-position:-234px -66px;}
 .admin-button.cancel:hover								{background-position:-234px -103px;}
                                                         	
-.admin-button.delete 									{width:93px; height:36px; margin:0px 2px; background-position:-140px -66px;}
+.admin-button.delete 									{width:93px !important; height:36px; margin:0px 2px; background-position:-140px -66px;}
 .admin-button.delete:hover								{background-position:-140px -103px;}
                                                         	
 .admin-button.next										{width:93px; height:36px; margin:25px 0px; background-position:-145px -79px;}
