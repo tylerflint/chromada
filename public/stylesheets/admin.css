@@ -31,7 +31,7 @@
 .toolbar .search .icon									{position:absolute; top:11px; right:12px; width:12px; height:12px; background-position:-573px -20px;}
 
 /***** BUTTONS *****/
-#admin .button-bar 										{float:left; width:100%; margin:0px 0px 25px 0px;}
+#admin .buttonbar 										{float:left; width:100%;}
 .admin-button 											{float:left; width:50px; height:50px; margin:0px; padding:0px !important; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none; cursor:pointer;}
 
 .admin-button.back 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
@@ -113,6 +113,7 @@
 
 /**** COMPANY *****/
 .company.content .toolbar 								{float:left; margin:25px 0px;}
+.company.content .buttonbar								{float:left; margin:25px 0px;}
 
 /* add new */
 .company .create 										{float:left; margin:25px 0px 0px 0px;}
@@ -130,16 +131,16 @@
 #admin .company .employee-list .status.out				{background-position:-35px -3px;}
 
 /* edit roles */
-.company .edit-roles									{float:left; width:295px;}
-.company .edit-roles ul, .company .edit-roles ul li		{float:left; width:100%;}
-.company .edit-roles ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.company .edit-roles ul li a:hover 						{background-color:#E3FFFF;}
+.company .roles-list									{float:left; width:295px;}
+.company .roles-list ul, .company .roles-list ul li		{float:left; width:100%;}
+.company .roles-list ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.company .roles-list ul li a:hover 						{background-color:#E3FFFF;}
 
 /* add role */
-.company .add-role 										{float:left; margin:25px 0px 0px 0px;}
+.company .add-role 										{float:left;}
 .company .add-role input								{float:left; width:305px;}
 
-.company .add-role .role-actions   											{float:left; width:100%;}
+.company .add-role .role-actions   											{float:left; width:100%; margin:10px 0px 0px 0px;}
 .company .add-role .role-actions h3 										{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
 .company .add-role .role-actions ul											{float:left; width:100%;}
 

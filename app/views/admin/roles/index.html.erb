@@ -6,7 +6,7 @@
 		<span class='search'><%= text_field 'search roles', :class => '', :name => '' %><span class='button icon'></span></span>
 	</div>
 	
-	<div class='edit-roles'>
+	<div class='roles-list'>
 		<ul>
 			<% @roles.each do |role| %>
 				<li><a href="<%= edit_admin_company_role_url(@company, role) %>"><%= role.name %> <span class='list-image delete'></span></a></li>
