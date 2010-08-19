@@ -142,25 +142,13 @@
 .company .add-role .role-actions   											{float:left; width:100%;}
 .company .add-role .role-actions h3 										{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
 .company .add-role .role-actions ul											{float:left; width:100%;}
-/*
-.company .add-role .role-actions .sub										{float:left; width:100%; margin:0px;}
-.company .add-role .role-actions .sub label									{margin-left:45px;}
-.company .add-role .role-actions .sub label.parent							{margin-left:30px;}
-.company .add-role .role-actions .sub .sub label							{margin-left:60px;}
-.company .add-role .role-actions .sub .sub label.parent						{margin-left:45px;}
-.company .add-role .role-actions .sub .sub .sub label						{margin-left:75px;}
-.company .add-role .role-actions .sub .sub .sub label.parent				{margin-left:60px;}
-.company .add-role .role-actions .sub .sub .sub .sub label					{margin-left:90px;}
-.company .add-role .role-actions .sub .sub .sub .sub label.parent			{margin-left:75px;}
-.company .add-role .role-actions .sub .sub .sub .sub .sub label				{margin-left:105px;}
-.company .add-role .role-actions .sub .sub .sub .sub .sub label.parent		{margin-left:90px;}
-*/
+
 .company .add-role .role-actions .parent.arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .company .add-role .role-actions .parent.active.arrow						{background-position: -255px -36px;}
 .company .add-role .role-actions .parent.inactive.arrow						{background-position: -255px -44px;}
 .company .add-role .role-actions ul li										{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
 .company .add-role .role-actions input										{float:left; width:auto; margin:1px 0px;}
-.company .add-role .role-actions label										{float:left; margin:2px 0px 0px 25px;}
+.company .add-role .role-actions label										{float:left; margin:2px 0px 0px 2px; padding:0px;}
 .company .add-role .role-actions label.parent								{margin-left:10px;}
 .company .add-role .role-actions .parent .arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .company .add-role .role-actions .parent.active .arrow						{background-position: -21px -37px;}
