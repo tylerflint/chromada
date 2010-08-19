@@ -1,7 +1,7 @@
 <div class='button-bar'>
 	<div id='controls'>
-		<div class='admin-button save' onclick="save()"></div>
-		<div class='admin-button cancel' onclick="cancel()"></div>
-		<div class='admin-button delete' onclick="destroy()"></div>
+		<%= f.submit '', :class => 'admin-button save'%>
+		<%= link_to '', admin_companies_path, :class => 'admin-button cancel', :onclick => 'cancel()' %>
+		<%= link_to '', admin_companies_path, :class => 'admin-button delete', :onclick => 'destroy()' %>
 	</div>
 </div>
