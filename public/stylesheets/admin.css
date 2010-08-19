@@ -149,7 +149,7 @@
 .company .add-role .role-actions .parent.inactive.arrow						{background-position: -255px -44px;}
 .company .add-role .role-actions ul li										{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
 .company .add-role .role-actions input										{float:left; width:auto; margin:1px 0px;}
-.company .add-role .role-actions label										{float:left; margin:2px 0px 0px 2px; padding:0px;}
+.company .add-role .role-actions label										{float:left; margin:5px 0px 0px 2px; padding:0px;}
 .company .add-role .role-actions label.parent								{margin-left:10px;}
 .company .add-role .role-actions .parent .arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .company .add-role .role-actions .parent.active .arrow						{background-position: -21px -37px;}
@@ -158,6 +158,7 @@
 .radio {
 	height:16px;
 	width:16px;
+	margin:3px;
 	float:left;
 	background: url('../images/checkbox.png');
 	background-repeat:no-repeat;
@@ -166,6 +167,7 @@
 .checkbox {
 	height: 16px;
 	width: 16px;
+	margin:3px;
 	float:left;
 	background: url('../images/checkbox.png') no-repeat;
 	cursor: default;
