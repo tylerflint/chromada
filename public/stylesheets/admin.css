@@ -63,60 +63,12 @@
 
 #admin .page-heading		 							{float:left; width:100%; margin:15px 0px 0px 0px; color:#979797; font-size:18px;}
 
-/* employee edit */
-#edit-employee-page 									{}
-
-#edit-employee-controls 								{float:left; width:100%; margin:28px 0px;}
-#edit-employee-information 								{float:left; width:450px; margin:0px 25px 0px 0px;}
-
-#edit-employee-name 									{float:left; width:315px; margin:0px 0px 0px 15px; color:#C8C8C8; font-size:24px; font-weight:bold;}
-
-#edit-employee-form 									{float:left; width:100%;}
-#edit-employee-form input								{height:24px; font-size:16px;}
-#edit-employee-form select 								{height:36px; font-size:16px; background:none; border:1px solid #C8C8C8;}
-#edit-employee-form .form-group							{position:relative; width:100%;}
-
-#edit-employee-name-group 								{float:left;}
-#edit-employee-name-group .form-group					{float:left; width:200px;}
-#edit-employee-name-group input							{margin:0px -1px 0px 0px;}
-#edit-employee-firstname 								{}
-#edit-employee-lastname 								{}
-
-#edit-employee-authentication-group 					{float:left;}
-#edit-employee-authentication-group span				{float:left; font-size:16px; color:#C8C8C8;}
-#edit-employee-authentication-group .checkbox			{float:left; width:auto;}
-#edit-employee-authentication-group .checkbox-text		{float:left;}
-.authentication-group-pure 								{float:left;}
-.authentication-group-hybrid							{float:left; width:150px;}
-
-#edit-employee-custom-id 								{float:left; width:195px;}
-#edit-employee-custom-password	 						{float:left; width:195px;}
-#edit-employee-custom-id-checkbox 						{position:absolute; top:6px; right:204px;}
-#edit-employee-custom-password-checkbox					{position:absolute; top:6px; right:204px;}
-#edit-employee-notes 									{width:440px; height:165px;}
-
-/* employee edit */
-.employees.assign-credentials 							{float:left; width:315px; padding:34px; border:10px solid #F5F5F5;}
-.employees.assign-credentials input						{float:left; margin:0px 0px 8px 0px;}
-
-.employees.assign-credentials .controls					{float:left; width:100%; margin:28px 0px;}
-
-.employees.assign-credentials .employee-info			{float:left; width:100%;}
-.employees.assign-credentials .employee-photo			{float:left; margin:0px 5px 5px 0px;}
-.employees.assign-credentials .employee-info .spacer	{float:left; width:1px; height:8px;}
-.employees.assign-credentials .employee-info input		{float:left; width:217px; height:24px; font-size:15px;}
-.employees.assign-credentials .employee-password  		{float:left;}
-.employees.assign-credentials .employee-id		  		{float:left;}
-.employees.assign-credentials .roles  					{float:left; width:100%; margin:50px 0px 0px 0px;}
-.employees.assign-credentials .roles h3					{float:left; width:100%; margin:0px 0px 10px 0px;}
-.employees.assign-credentials .roles ul li				{float:left; width:100%; margin:2px 0px; color:#AFAFAF;}
-
 /**** COMPANY *****/
 .company.content .toolbar 								{float:left; margin:25px 0px;}
 .company.content .buttonbar								{float:left; margin:25px 0px;}
 
 /* add new */
-.company .create 										{float:left; margin:25px 0px 0px 0px;}
+.company .create 										{float:left;}
 .company .create input 									{float:left; width:305px;}
 .company .create .note 									{float:left; margin:10px 0px; color:#959595;}
 
@@ -130,6 +82,19 @@
 #admin .company .employee-list .status.away				{background-position:-19px -3px;}
 #admin .company .employee-list .status.out				{background-position:-35px -3px;}
 
+/* create/edit employee */
+.company .employee 										{float:left;}
+.company .employee input 								{float:left; width:305px;}
+.company .employee .authentication						{float:left; width:100%;}
+.company .employee .authentication input				{float:left; width:150px;}
+.company .employee .authentication label				{float:left; margin:5px 0px 0px 2px; padding:0px;}
+.company .employee .authentication .checkbox-group		{float:right;}
+.company .employee .roles		 						{float:left; width:100%; margin:25px 0px 0px 0px;}
+.company .employee .roles .header 						{float:left; width:100%; margin:0px 0px 5px 0px;}
+.company .employee ul, .company .employee ul li			{float:left; width:100%;}
+.company .employee .roles input 						{float:left;}
+.company .employee .roles label							{float:left; margin:5px 0px 0px 2px; padding:0px;}
+
 /* edit roles */
 .company .roles-list									{float:left; width:295px;}
 .company .roles-list ul, .company .roles-list ul li		{float:left; width:100%;}
@@ -141,7 +106,6 @@
 .company .add-role input								{float:left; width:305px;}
 
 .company .add-role .role-actions   											{float:left; width:100%; margin:10px 0px 0px 0px;}
-.company .add-role .role-actions h3 										{margin:0px 0px 5px 0px; color:#8B8B8B; font-weight:normal;}
 .company .add-role .role-actions ul											{float:left; width:100%;}
 
 .company .add-role .role-actions .parent.arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
@@ -154,41 +118,3 @@
 .company .add-role .role-actions .parent .arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .company .add-role .role-actions .parent.active .arrow						{background-position: -21px -37px;}
 .company .add-role .role-actions .parent.inactive .arrow					{background-position: -21px -45px;}
-
-.radio {
-	height:16px;
-	width:16px;
-	margin:3px;
-	float:left;
-	background: url('../images/checkbox.png');
-	background-repeat:no-repeat;
-	cursor: default;
-}
-.checkbox {
-	height: 16px;
-	width: 16px;
-	margin:3px;
-	float:left;
-	background: url('../images/checkbox.png') no-repeat;
-	cursor: default;
-	text-align:left;
-}
-.checkbox input, .radio input {
-	display: none;
-}
-.checkbox input.show,.radio input.show {
-	display: inline;
-}
-.selected {
-	background-position: 0 -52px;
-}
-.block {
-	width: 50%;
-	float: left;
-}
-label {
-	padding-left:10px;
-	float:left;
-	text-align:left;
-}
-

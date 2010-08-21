@@ -52,9 +52,8 @@ form 														{float:left;}
 .form-group 												{float:left;}
 label 														{float:left;}
 input														{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
+input.checkbox 												{float:left; width:15px !important; height:15px !important;}
 textarea 													{float:left; padding:5px; color:#C8C8C8; border:#C8C8C8 solid 1px;}
-.checkbox-group 											{float:left;}
-.checkbox-group label 										{float:left;}
                                                     		
 /* TABLES */                                        		
 table 														{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}

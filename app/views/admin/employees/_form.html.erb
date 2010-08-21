@@ -3,58 +3,46 @@
 
 <%= form_for employee, :url => (employee.new_record? ? admin_company_employees_path(company) : admin_company_employee_path(company)), :html => {:id => ''} do |f| -%>
 	
-	<div class='button-bar'>
-		<div class='controls'>
-			<div class='admin-button save' onclick="save()"></div>
-			<div class='admin-button cancel' onclick="cancel()"></div>
-			<div class='admin-button delete' onclick="destroy()"></div>
-		</div>
-	</div>
-
-	<div class='employee-info'>
-		<%= link_to image_tag('edit-employee-photo.gif', :alt => 'First Middle Last', :title => 'First Middle Last'), root_url, :id => 'edit-employee-photo-######', :class=> 'employee-photo' %>
+	<%= render :partial => 'admin/shared/edit_toolbar', :locals => {:form => f, :record => @employee} %>
+	
+	<div class = 'employee'>	
+		<%= text_field '', :class => '', :name => 'employee[firstname]', :value => 'First Name', :onfocus => 'if(this.value=="First Name")value=""', :onblur => 'if(this.value=="")this.value="First Name"' %>
+		<%= text_field '', :class => '', :name => 'employee[lastname]', :value => 'Last Name', :onfocus => 'if(this.value=="Last Name")value=""', :onblur => 'if(this.value=="")this.value="Last Name"' %>
 		
-		<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-		<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-		<input class='firstname' type="text" name="employee[firstname]" value='<%= employee.firstname ||= 'First Name' %>' onfocus='if(this.value=="First Name")value=""' onblur='if(this.value=="")this.value="First Name"'/>
-		<input class='lastname' type="text" name="employee[lastname]" value='<%= employee.lastname ||= 'Last Name' %>' onfocus='if(this.value=="Last Name")value=""' onblur='if(this.value=="")this.value="Last Name"'/>
-	</div>
-
-	<div class='employee-password'>
-		<input class='password' type="text" name="" value='Type Password' onfocus='if(this.value=="Type Password")value=""' onblur='if(this.value=="")this.value="Type Password"'/>
-		<span class='uppercase'>or</span>
-		<div class='checkbox-group'>
-			<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-			<input type="checkbox" name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
-			<label>Auto Generate</label>
+		<div class='authentication'>
+			<div class='password'>
+				<%= text_field '', :class => '', :name => '', :value => 'Type Password', :onfocus => 'if(this.value=="Type Password")value=""', :onblur => 'if(this.value=="")this.value="Type Password"' %>
+				
+				<div class='checkbox-group'>
+					<span class='uppercase'>or</span>
+					<input type="checkbox" class='checkbox' name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
+					<label>Auto Generate</label>
+				</div>
+			</div>
+	
+			<div class='id'>
+				<%= text_field '', :class => '', :name => '', :value => 'Employee ID', :onfocus => 'if(this.value=="Employee ID")value=""', :onblur => 'if(this.value=="")this.value="Employee ID"' %>
+				
+				<div class='checkbox-group'>
+					<span class='uppercase'>or</span>
+					<input type="checkbox" class='checkbox' name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
+					<label>Auto Generate</label>
+				</div>
+			</div>
 		</div>
-	</div>
 	
-	<div class='employee-id'>
-		<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-		<input id='id' type="text" name="" value='Employee ID' onfocus='if(this.value=="Employee ID")value=""' onblur='if(this.value=="")this.value="Employee ID"'/>
-		<span class='uppercase'>or</span>
-		<div class='checkbox-group'>
-			<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-			<input type="checkbox" name="generate-employee-id" onchange="autoGenerateEmployeeId(this)"/>
-			<label>Auto Generate</label>
+		<%= text_field '', :class => '', :name => 'employee[email]', :value => 'Email', :onfocus => 'if(this.value=="Email")value=""', :onblur => 'if(this.value=="")this.value="Email"' %>
+	
+		<div class='roles'>
+			<h3 class='header'>Assign Employee Roles</h3>
+			<ul>
+				<li><input type="checkbox" class='checkbox'/><label>Role 1</label></li>
+				<li><input type="checkbox" class='checkbox'/><label>Role 2</label></li>
+				<li><input type="checkbox" class='checkbox'/><label>Role 3</label></li>
+				<li><input type="checkbox" class='checkbox'/><label>Role 4</label></li>
+				<li><input type="checkbox" class='checkbox'/><label>Role 5</label></li>
+			</ul>
 		</div>
-	</div>
-	
-	<%= text_field '', :class => '', :name => '', :value => 'Name This Role', :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-	<input class='email' type="text" name="employee[email]" value='<%= employee.firstname ||= 'Email' %>' onfocus='if(this.value=="Email")value=""' onblur='if(this.value=="")this.value="Email"'/>
-	
-	<div class='roles'>
-		<h3>Assign Employee Roles</h3>
-		<ul>
-			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
-			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
-			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
-			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
-			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
-			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
-			<li class='checkbox-group'><input type="checkbox"/><label>Level 1</label></li>
-		</ul>
 	</div>
 <% end -%>
 

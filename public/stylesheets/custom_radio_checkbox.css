@@ -1,0 +1,9 @@
+.radio 					{height:16px; width:16px; margin:3px; float:left; background: url('../images/checkbox.png'); background-repeat:no-repeat; cursor: default;}
+.checkbox 				{height: 16px; width: 16px; margin:3px; float:left; background: url('../images/checkbox.png') no-repeat; cursor: default; text-align:left;}
+.checkbox input
+,.radio input 			{display: none;}
+.checkbox input.show
+,.radio input.show 		{display: inline;}
+.selected 				{background-position: 0 -52px;}
+.block 					{width: 50%; float: left;}
+label 					{padding-left:10px; float:left; text-align:left;}
