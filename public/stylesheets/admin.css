@@ -79,6 +79,7 @@
 .company .employee-list ul li							{float:left; width:100%; margin:0px 0px 10px 0px;}
 .company .employee-list ul li a							{float:left; width:100%; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee-list ul li a:hover 					{background-color:#E3FFFF;}
+.company .employee-list ul li a.more					{font-weight:bold; background:-moz-linear-gradient(top, #F9F8F8, #EBEBEB); background:-webkit-gradient(linear, left top, left bottom, from(#F9F8F8), to(#EBEBEB)); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9F8F8', endColorstr='#EBEBEB'); border:1px solid #DEDEDE; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee-list .status 						{margin:0px 10px 0px 0px;}
 #admin .company .employee-list .status.in 				{background-position:-3px -3px;}
 #admin .company .employee-list .status.away				{background-position:-19px -3px;}
