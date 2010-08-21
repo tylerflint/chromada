@@ -69,7 +69,7 @@
 
 /* add new */
 .company .create 										{float:left;}
-.company .create input 									{float:left; width:305px;}
+.company .create input 									{float:left; width:305px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .create .note 									{float:left; margin:10px 0px; color:#959595;}
 
 /* employee list */
@@ -84,7 +84,7 @@
 
 /* create/edit employee */
 .company .employee 										{float:left;}
-.company .employee input 								{float:left; width:305px;}
+.company .employee input 								{float:left; width:305px; margin:5px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee .authentication						{float:left; width:100%;}
 .company .employee .authentication input				{float:left; width:150px;}
 .company .employee .authentication label				{float:left; margin:5px 0px 0px 2px; padding:0px;}
@@ -103,7 +103,7 @@
 
 /* add role */
 .company .add-role 										{float:left;}
-.company .add-role input								{float:left; width:305px;}
+.company .add-role input								{float:left; width:305px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 
 .company .add-role .role-actions   											{float:left; width:100%; margin:10px 0px 0px 0px;}
 .company .add-role .role-actions ul											{float:left; width:100%;}

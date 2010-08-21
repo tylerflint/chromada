@@ -1,15 +1,17 @@
 <%= form_for(@company, :url => (@company.new_record?)? admin_companies_url : edit_admin_company_url) do |f| %>
 
-	<div class='button-bar'>
+	<div class='buttonbar'>
 		<div id='controls'>
 			<%= f.submit '', :class => 'admin-button save'%>
 			<%= link_to '', admin_companies_path, :class => 'admin-button cancel', :onclick => 'cancel()' %>
 		</div>
 	</div>
 
-	<%= f.text_field '', :class => '', :name => '', :value => 'Name This Company', :onfocus => 'if(this.value=="Name This Company")value=""', :onblur => 'if(this.value=="")this.value="Name This Company"' %>
+	<div class='create'>
+		<%= f.text_field '', :class => '', :name => '', :value => 'Name This Company', :onfocus => 'if(this.value=="Name This Company")value=""', :onblur => 'if(this.value=="")this.value="Name This Company"' %>
 
-	<p class='note'>Get started now by selecting which products you would like for this company.</p>
-	<div class='quick-add-sprite quick-add ticker'></div>
+		<p class='note'>Get started now by selecting which products you would like for this company.</p>
+		<div class='quick-add-sprite quick-add ticker'></div>
+	</div>
 
 <% end %>
