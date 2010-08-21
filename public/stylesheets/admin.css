@@ -83,13 +83,14 @@
 #admin .company .employee-list .status.out				{background-position:-35px -3px;}
 
 /* create/edit employee */
-.company .employee 										{float:left;}
+.company .employee 										{float:left; color:#7B7B7B;}
 .company .employee input 								{float:left; width:305px; margin:5px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee .authentication						{float:left; width:100%;}
 .company .employee .authentication input				{float:left; width:150px;}
 .company .employee .authentication label				{float:left; margin:5px 0px 0px 2px; padding:0px;}
-.company .employee .authentication .checkbox-group		{float:right;}
-.company .employee .roles		 						{float:left; width:100%; margin:25px 0px 0px 0px;}
+.company .employee .authentication .checkbox-group		{float:right; width:150px; margin:12px 0px 0px 0px;}
+.company .employee .authentication .special				{float:left; margin:4px 10px 0px 10px; font-size:15px; text-transform:uppercase;}
+.company .employee .roles		 						{float:left; width:100%; margin:25px 0px 0px 0px; color:#AFAFAF;}
 .company .employee .roles .header 						{float:left; width:100%; margin:0px 0px 5px 0px;}
 .company .employee ul, .company .employee ul li			{float:left; width:100%;}
 .company .employee .roles input 						{float:left;}
