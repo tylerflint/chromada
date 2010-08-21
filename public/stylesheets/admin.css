@@ -94,7 +94,7 @@
 .company .employee .authentication .password			{float:left; width:100%;}
 .company .employee .authentication .id					{float:left; width:100%;}
 .company .employee .authentication .checkbox-group		{float:right; width:175px; margin:15px 0px 0px 0px;}
-.company .employee .authentication .special				{float:left; margin:4px 10px 0px 10px; font-size:15px; text-transform:uppercase;}
+.company .employee .authentication .special				{float:left; margin:4px 10px 0px 10px; text-transform:uppercase;}
 .company .employee .roles		 						{float:left; width:100%; margin:25px 0px 0px 0px; color:#AFAFAF; font-size:14px;}
 .company .employee .roles .header 						{float:left; width:100%; margin:0px 0px 5px 0px;}
 .company .employee ul, .company .employee ul li			{float:left; width:100%;}
