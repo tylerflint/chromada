@@ -27,7 +27,7 @@
 .toolbar 												{width:100%;}
 .toolbar .new 											{float:left; width:134px;}
 .toolbar .search 										{position:relative; float:right; width:134px; padding:7px; background:-moz-linear-gradient(top, #F9F8F8, #EBEBEB); background:-webkit-gradient(linear, left top, left bottom, from(#F9F8F8), to(#EBEBEB)); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9F8F8', endColorstr='#EBEBEB'); border:1px solid #DEDEDE; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.toolbar .search input									{float:right; width:130px; padding:2px; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
+.toolbar .search input									{float:right; width:130px; padding:1px 2px; font-size:12px !important; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
 .toolbar .search .icon									{position:absolute; top:11px; right:12px; width:12px; height:12px; background-position:-573px -20px;}
 
 /***** BUTTONS *****/
@@ -64,13 +64,15 @@
 #admin .page-heading		 							{float:left; width:100%; margin:15px 0px 0px 0px; color:#979797; font-size:18px;}
 
 /**** COMPANY *****/
+.company 												{font-size:15px;}
+.company input 											{font-size:15px;}
 .company.content .toolbar 								{float:left; margin:25px 0px;}
 .company.content .buttonbar								{float:left; margin:25px 0px;}
 
 /* add new */
 .company .create 										{float:left;}
 .company .create input 									{float:left; width:305px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.company .create .note 									{float:left; margin:10px 0px; color:#959595;}
+.company .create .note 									{float:left; margin:10px 0px; color:#959595; font-size:14px;}
 
 /* employee list */
 .company .employee-list									{float:left; width:295px;}
@@ -86,11 +88,13 @@
 .company .employee 										{float:left; color:#7B7B7B;}
 .company .employee input 								{float:left; width:305px; margin:5px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .employee .authentication						{float:left; width:100%;}
-.company .employee .authentication input				{float:left; width:150px;}
+.company .employee .authentication input				{float:left; width:125px;}
 .company .employee .authentication label				{float:left; margin:5px 0px 0px 2px; padding:0px;}
-.company .employee .authentication .checkbox-group		{float:right; width:150px; margin:12px 0px 0px 0px;}
+.company .employee .authentication .password			{float:left; width:100%;}
+.company .employee .authentication .id					{float:left; width:100%;}
+.company .employee .authentication .checkbox-group		{float:right; width:175px; margin:15px 0px 0px 0px;}
 .company .employee .authentication .special				{float:left; margin:4px 10px 0px 10px; font-size:15px; text-transform:uppercase;}
-.company .employee .roles		 						{float:left; width:100%; margin:25px 0px 0px 0px; color:#AFAFAF;}
+.company .employee .roles		 						{float:left; width:100%; margin:25px 0px 0px 0px; color:#AFAFAF; font-size:14px;}
 .company .employee .roles .header 						{float:left; width:100%; margin:0px 0px 5px 0px;}
 .company .employee ul, .company .employee ul li			{float:left; width:100%;}
 .company .employee .roles input 						{float:left;}
