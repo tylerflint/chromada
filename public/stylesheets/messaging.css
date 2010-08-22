@@ -2,23 +2,24 @@
 .messaging .message 					{max-width:350px; padding:25px; color:#DEDEDE; font-size:15px; background:#000000; opacity:.85; filter:alpha(opacity=85); filter: “alpha(opacity=85)”; border:#C5C5C5 solid 5px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .messaging .icon 						{float:left; width:100px; height:100px; background:url(../images/messaging-sprite.png) no-repeat 0px 0px;}
 .messaging .message-block 				{float:right; width:250px;}
+.messaging .message-block .header 		{margin:0px 0px 10px 0px; color:#DEDEDE;}
 .messaging .message-block .content 		{color:#DEDEDE; line-height:20px;}
                                 		
 .messaging .success						{}                          	
 .messaging .success .icon 				{float:left; width:69px; height:57px; background-position:0px 0px;}
-.messaging .success .header 			{margin:0px 0px 10px 0px; color:#4DFF5E;}
+.messaging .success .header 			{color:#4DFF5E;}
                                     	
 .messaging .warning						{}                    	
 .messaging .warning .icon 				{float:left; width:61px; height:61px; background-position:-76px 0px;}
-.messaging .warning .header 			{margin:0px 0px 10px 0px; color:#FFFD4C;}
+.messaging .warning .header 			{color:#FFFD4C;}
                                 		
 .messaging .failure						{}                      	
 .messaging .failure .icon 				{float:left; width:61px; height:61px; background-position:-141px 0px;}
-.messaging .failure .header 			{margin:0px 0px 10px 0px; color:#FF4C4C;}
+.messaging .failure .header 			{color:#FF4C4C;}
                                 		
 .messaging .error						{}                       	
 .messaging .error .icon 				{float:left; width:61px; height:61px; background-position:-141px 0px;}
-.messaging .error .header 				{margin:0px 0px 10px 0px; color:#FF4C4C;}
+.messaging .error .header 				{color:#FF4C4C;}
                                     	
 .messaging .notice						{}
 .messaging .notice .message-block		{float:left; width:100%;}
