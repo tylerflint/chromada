@@ -10,7 +10,8 @@
 		<meta name="revisit-after" content="15 Days"/>
 		<meta name="robots" content="index, follow"/>
 		
-		<!-- LOAD CSS --> 
+		<!-- LOAD CSS -->
+		<%= stylesheet_link_tag 'messaging' %>
 		<%= stylesheet_link_tag 'styles' %>
 		
 		<!-- LOAD JAVASCRIPT -->
@@ -22,7 +23,10 @@
 		<%= yield :head %>
 	</head>
 	
-	<body id='one-column'>		
+	<body id='one-column'>
+		
+		<%= render :partial => 'shared/messaging' %>
+		
 		<div class='page-wrapper'>
 			<div class='page'>
 				<div class='header'>
