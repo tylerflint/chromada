@@ -4,7 +4,7 @@
 
 	<div class = 'add-role'>
 		<%= f.text_field :name, :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-		<input type="hidden" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
+		<input type="text" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
 	
 		<div class="role-actions">
 			<ul>
@@ -39,13 +39,16 @@
 	function initActionState () {
 		ids = $('#role_action_ids').val().split(',')
 		$.each(ids, function(key, value) {
-			$('#action_' + value).attr('checked', true)
+			// $('#action_' + value).attr('checked', true)
+			// $('#action_' + value).triggerHandler('click')
+			// alert(this.id)
 		})
 	
 	}
 
 	function addActionClickEvent () {
 		$(".role-actions input:checkbox").each(function (){
+			alert(this.id)
 			$(this).change(updateCheckedActions)
 		})
 	}
@@ -53,9 +56,12 @@
 	function addParentActionClickEvent () {
 		$(".role-actions input:checkbox.parent").each(function (){
 			$(this).change(function () {
+				alert('hey')
 				var checked = $(this).attr('checked')
 				$(this).parent().find('ul li input:checkbox').each(function () {
-					$(this).attr('checked', checked)
+					// $(this).attr('checked', checked)
+					// $(this).triggerHandler('click')
+					alert(this.id)
 				})
 				updateCheckedActions()
 			})
