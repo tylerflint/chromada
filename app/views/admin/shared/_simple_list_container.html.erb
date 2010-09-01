@@ -1,6 +1,6 @@
 <div class='toolbar'>
 	<%= link_to "+ New Employee", [:new, :admin, @company, p.object], :class => 'new' %>
-	<span class='search'><%= text_field 'search employees', :class => '', :name => '' %><span class='button icon'></span></span>
+	<span class='search'><input type="text" id='search-filter' /><span class='button icon'></span></span>
 </div>
 
 <div class='<%= p.object %>-list'>
@@ -8,3 +8,15 @@
 		<%= p.list %>
 	</ul>
 </div>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$('#search-filter').keyup(function(){
+			filter()
+		})
+	})
+	function filter () {
+		$.get('<%= url_for([:admin, @company, p.object.to_s.pluralize]) %>?search=' + $('#search-filter').val(), function(data){
+			$('.<%= p.object %>-list ul').html(data)
+		})
+	}
+</script>

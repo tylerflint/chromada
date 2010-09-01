@@ -1,3 +1,8 @@
+PATH
+  remote: /Users/tylerflint/Sites/gems/blockpile
+  specs:
+    blockpile (0.4.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -31,7 +36,6 @@ GEM
     arel (1.0.1)
       activesupport (~> 3.0.0)
     bcrypt-ruby (2.1.2)
-    blockpile (0.4.1)
     builder (2.1.2)
     cucumber (0.8.5)
       builder (~> 2.1.2)
@@ -101,7 +105,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blockpile
+  blockpile!
   cucumber
   cucumber-rails
   devise (= 1.1.rc2)

@@ -14,7 +14,13 @@ class SimpleListPile < Blockpile::Base
   end
   
   def collection
-    object_class.all
+    # collection = object_class
+    if params[:search]
+      object_class.where("firstname LIKE ? OR lastname LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+    else
+      object_class.all
+    end
+    # collection.limit(10)
   end
   
   def list

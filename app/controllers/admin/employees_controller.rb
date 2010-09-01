@@ -7,7 +7,12 @@ class Admin::EmployeesController < Admin::AdminController
     # @employees = Employee.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html do
+        if params[:search]
+          simple_list_instance(:employee).list
+          # render :text => methods.to_s
+        end
+      end
       format.xml  { render :xml => @employees }
     end
   end
