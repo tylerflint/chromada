@@ -1,14 +1,12 @@
 source :gemcutter
 
-gem 'rails', '3.0.0.rc'
+gem 'rails'#, '3.0.0.rc'
 gem 'mysql'
 gem 'haml'
 gem "devise", "1.1.rc2"
 
 # gem 'blockpile', :path => '~/Sites/gems/blockpile'#, :git => 'git@github.com:tylerflint/blockpile.git' #:path => '~/Sites/gems/blockpile'
-
 gem 'blockpile'
-
 gem 'unicorn'
 
 group :test do
