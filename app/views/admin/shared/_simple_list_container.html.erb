@@ -1,0 +1,10 @@
+<div class='toolbar'>
+	<%= link_to "+ New Employee", [:new, :admin, @company, p.object], :class => 'new' %>
+	<span class='search'><%= text_field 'search employees', :class => '', :name => '' %><span class='button icon'></span></span>
+</div>
+
+<div class='<%= p.object %>-list'>
+	<ul>
+		<%= p.list %>
+	</ul>
+</div>
