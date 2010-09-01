@@ -1,9 +1,9 @@
 <div class='content company'>
 	
 	<% if @employee.new_record? %>
-		<h1>Create New Employee</h1>
+		<h2>Create New Employee</h2>
 	<% else %>
-		<h1>Edit Employee Information</h1>
+		<h2>Edit Employee Information</h2>
 	<% end %>
 
 	<%= form_for [:admin, @company, @employee], :html => {:id => ''} do |f| -%>
