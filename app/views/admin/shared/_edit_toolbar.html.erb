@@ -1,9 +1,9 @@
 <div class='buttonbar'>
 	<div id='controls'>
-		<%= form.submit '', :class => 'admin-button save'%>
-		<%= link_to '', url_for(:back), :class => 'admin-button cancel' %>
+		<%= form.submit 'submit', :class => 'admin-button save'%>
+		<%= link_to 'cancel', url_for(:back), :class => 'admin-button cancel' %>
 		<% if (!record.new_record?) %>
-			<%= button_to '', [:admin, @company, record], :class => 'admin-button delete', :method => :delete %>
+			<%= button_to 'delete', [:admin, @company, record], :class => 'admin-button delete', :method => :delete %>
 		<% end %>
 	</div>
 </div>

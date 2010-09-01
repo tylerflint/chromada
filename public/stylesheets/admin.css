@@ -32,6 +32,8 @@
 
 /***** BUTTONS *****/
 #admin .buttonbar 										{float:left; width:100%;}
+
+/*
 .admin-button 											{float:left; width:50px; height:50px; margin:0px; padding:0px !important; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none; cursor:pointer;}
 
 .admin-button.back 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
@@ -51,6 +53,25 @@
                                                         	
 .admin-button.new 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .admin-button.new:hover									{background-position:-145px -116px;}
+*/
+
+.admin-button.back 										{width:93px; height:36px; margin:0px 2px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#C1C1C1; background:-webkit-gradient(linear, left top, left bottom, from(#C1C1C1), to(#AEAEAE)); background:-moz-linear-gradient(top, #C1C1C1, #AEAEAE); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#C1C1C1', endColorstr='#AEAEAE'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-color:transparent;}
+.admin-button.back:hover								{background:#8A8A8A; background:-webkit-gradient(linear, left top, left bottom, from(#8A8A8A), to(#6C6C6C)); background:-moz-linear-gradient(top, #8A8A8A, #6C6C6C); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8A8A8A', endColorstr='#6C6C6C');}
+                                                        	
+.admin-button.save 										{width:73px !important; height:36px; margin:0px 2px; color:#FFFFFF; font-size:15px; background:#01D870; background:-webkit-gradient(linear, left top, left bottom, from(#01D870), to(#01C265)); background:-moz-linear-gradient(top, #01D870, #01C265); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01D870', endColorstr='#01C265'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-color:transparent;}
+.admin-button.save:hover								{background:#00EE5A; background:-webkit-gradient(linear, left top, left bottom, from(#00EE5A), to(#00D651)); background:-moz-linear-gradient(top, #00EE5A, #00D651); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00EE5A', endColorstr='#00D651');}
+                                                        	
+.admin-button.cancel 									{width:94px; height:36px; margin:0px 2px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#939393; background:-webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background:-moz-linear-gradient(top, #939393, #6D6D6D); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.admin-button.cancel:hover								{margin:0px 0px 10px 0px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#939393; background:-webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background:-moz-linear-gradient(top, #939393, #6D6D6D); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+                                                        	
+.admin-button.delete 									{width:93px !important; height:36px; margin:0px 2px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#F56D53; background:-webkit-gradient(linear, left top, left bottom, from(#F56D53), to(#F54C2B)); background:-moz-linear-gradient(top, #F56D53, #DC624A); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F56D53', endColorstr='#DC624A'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-color:transparent;}
+.admin-button.delete:hover								{background:#F54C2B; background:-webkit-gradient(linear, left top, left bottom, from(#F54C2B), to(#DC4527)); background:-moz-linear-gradient(top, #F54C2B, #DC4527); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F54C2B', endColorstr='#DC4527');}
+                                                        	
+.admin-button.next										{width:93px; height:36px; margin:25px 0px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#939393; background:-webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background:-moz-linear-gradient(top, #939393, #6D6D6D); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.admin-button.next:hover								{margin:0px 0px 10px 0px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#939393; background:-webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background:-moz-linear-gradient(top, #939393, #6D6D6D); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+                                                        	
+.admin-button.new 										{width:93px; height:36px; margin:0px 2px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#939393; background:-webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background:-moz-linear-gradient(top, #939393, #6D6D6D); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.admin-button.new:hover									{margin:0px 0px 10px 0px; padding:15px 10px; color:#FFFFFF; font-size:15px; background:#939393; background:-webkit-gradient(linear, left top, left bottom, from(#939393), to(#6D6D6D)); background:-moz-linear-gradient(top, #939393, #6D6D6D); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#939393', endColorstr='#6D6D6D'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 
 .new 													{padding:8px !important; color:#01D770 !important; font-size:15px !important; background:#E7FFF0 !important; border:2px solid #BBFFD5 !important; radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .new:hover 												{radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
