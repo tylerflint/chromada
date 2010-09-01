@@ -109,7 +109,8 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .link				 										{width:100%; color:#00D3D3; text-decoration:underline; cursor:pointer;}
 .active-link 												{color:#00D3D3;}
                                                     		
-/***** BUTTONS *****/                               		
+/***** BUTTONS *****/
+                              		
 .button.close 												{float:right; width:12px; height:12px; background-position:-681px -4px;}
 .button.close:hover 										{background-position:-668px -4px;}
                                                         	
