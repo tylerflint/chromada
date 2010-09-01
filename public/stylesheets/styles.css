@@ -154,7 +154,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .header .additional-links									{float:right; margin:3px 0px 0px 0px;}                                        	
 .header .search												{float:left; width:174px; margin:1px 0px 0px 0px;}
 .header .search .icon										{float:right; width:12px; height:12px; background-position:-573px -20px;}
-.header .search input 										{float:left; width:160px; height:12px; padding:0px; border:none; text-transform:uppercase;}
+.header .search input 										{float:left; width:160px; height:10px; padding:0px; border:none; text-transform:capitalize;}
                                                     		
 /* header nav */                                   	    	
 a#link-products 											{width:55px; background-position:-255px -24px;}

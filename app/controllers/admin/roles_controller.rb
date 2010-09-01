@@ -32,7 +32,7 @@ class Admin::RolesController < Admin::AdminController
     @role = @company.roles.build
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :template => 'admin/roles/edit' }
       format.xml  { render :xml => @role }
     end
   end
