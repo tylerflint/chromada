@@ -54,7 +54,7 @@
 .admin-button.new 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .admin-button.new:hover									{background-position:-145px -116px;}
 */
-.admin-button 											{float:left; text-align:center; text-transform:uppercase; letter-spacing:1px; border:none; cursor:pointer;}
+.admin-button 											{float:left; text-transform:uppercase; letter-spacing:1px; border:none;}
 
 .admin-button.back 										{width:93px; margin:0px 2px; padding:7px 0px; color:#FFFFFF; font-size:15px; background:#C1C1C1; background:-webkit-gradient(linear, left top, left bottom, from(#C1C1C1), to(#AEAEAE)); background:-moz-linear-gradient(top, #C1C1C1, #AEAEAE); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#C1C1C1', endColorstr='#AEAEAE'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .admin-button.back:hover								{background:#8A8A8A; background:-webkit-gradient(linear, left top, left bottom, from(#8A8A8A), to(#6C6C6C)); background:-moz-linear-gradient(top, #8A8A8A, #6C6C6C); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8A8A8A', endColorstr='#6C6C6C');}
@@ -133,16 +133,16 @@
 .company .add-role 										{float:left;}
 .company .add-role input								{float:left; width:305px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 
-.company .add-role .role-actions   											{float:left; width:100%; margin:10px 0px 0px 0px;}
-.company .add-role .role-actions ul											{float:left; width:100%;}
-
-.company .add-role .role-actions .parent.arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.company .add-role .role-actions .parent.active.arrow						{background-position: -255px -36px;}
-.company .add-role .role-actions .parent.inactive.arrow						{background-position: -255px -44px;}
-.company .add-role .role-actions ul li										{position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
-.company .add-role .role-actions input										{float:left; width:auto; margin:1px 0px;}
-.company .add-role .role-actions label										{float:left; margin:5px 0px 0px 2px; padding:0px;}
-.company .add-role .role-actions label.parent								{margin-left:10px;}
-.company .add-role .role-actions .parent .arrow								{float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.company .add-role .role-actions .parent.active .arrow						{background-position: -21px -37px;}
-.company .add-role .role-actions .parent.inactive .arrow					{background-position: -21px -45px;}
+.company .add-role .role-actions   							   {float:left; width:100%; margin:10px 0px 0px 0px; font-size:14px;}
+.company .add-role .role-actions ul							   {float:left; width:100%;}
+                                                               
+.company .add-role .role-actions .parent.arrow				   {float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.company .add-role .role-actions .parent.active.arrow		   {background-position: -255px -36px;}
+.company .add-role .role-actions .parent.inactive.arrow		   {background-position: -255px -44px;}
+.company .add-role .role-actions ul li						   {position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
+.company .add-role .role-actions input						   {float:left; width:auto; margin:1px 0px;}
+.company .add-role .role-actions label						   {float:left; margin:5px 0px 0px 2px; padding:0px;}
+.company .add-role .role-actions label.parent				   {margin-left:10px;}
+.company .add-role .role-actions .parent .arrow				   {float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.company .add-role .role-actions .parent.active .arrow		   {background-position: -21px -37px;}
+.company .add-role .role-actions .parent.inactive .arrow	   {background-position: -21px -45px;}

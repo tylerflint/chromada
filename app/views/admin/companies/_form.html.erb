@@ -2,8 +2,8 @@
 
 	<div class='buttonbar'>
 		<div id='controls'>
-			<%= f.submit '', :class => 'admin-button save'%>
-			<%= link_to '', admin_companies_path, :class => 'admin-button cancel', :onclick => 'cancel()' %>
+			<%= f.submit 'save', :class => 'admin-button save'%>
+			<%= button_to 'cancel', admin_companies_path, :class => 'admin-button cancel', :onclick => 'cancel()' %>
 		</div>
 	</div>
 
