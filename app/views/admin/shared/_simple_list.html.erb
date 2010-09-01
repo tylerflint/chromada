@@ -1,16 +1,4 @@
-<!-- split this into two partials -->
-<div class='toolbar'>
-	<%= link_to "+ New Employee", new_admin_company_employee_url(@company), :class => 'new' %>
-	<span class='search'><%= text_field 'search employees', :class => '', :name => '' %><span class='button icon'></span></span>
-</div>
-
-<div class='employee-list'>
-	<ul>
-		<li><a href='#link'><span class='status away'></span>Employee Name<span class='list-image open'></span></a></li>
-		<li><a href='#link'><span class='status away'></span>Employee Name<span class='list-image open'></span></a></li>
-		<li><a href='#link'><span class='status out'></span>Employee Name<span class='list-image open'></span></a></li>
-		<li><a href='#link'><span class='status out'></span>Employee Name<span class='list-image open'></span></a></li>
-		<li><a href='#link'><span class='status in'></span>Employee Name<span class='list-image open'></span></a></li>
-		<li><a href='#link' class='more'>Show [Number] More Employees<span class='list-image open'></span></a></li>
-	</ul>
-</div>
+<% collection.each do |item| %>
+	<li><a href='<%= url_for([:edit, :admin, @company, item]) %>'><span class='status away'></span><%= item.name %><span class='list-image open'></span></a></li>
+<% end %>
+<li><a href='#link' class='more'>Show <%= collection.count %> More Employees<span class='list-image open'></span></a></li>
