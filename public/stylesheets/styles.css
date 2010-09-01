@@ -94,9 +94,9 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 /************************************************** MAIN ELEMENT STYLES **************************************************/
                                                     	
 /***** SPRITES *****/                               	
-.site-sprite				 								{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.site-transparent-sprite			 						{width:100px; height:100px; background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
-.button 													{float:left; width:100px; height:100px; background:url('../images/site-sprite.gif') no-repeat 0px 0px; border:none; cursor:pointer; }
+.site-sprite				 								{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+.site-transparent-sprite			 						{background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
+.button 													{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px; border:none; cursor:pointer;}
                                                         	
 .spotlight-sprite			 								{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
 .quick-add-sprite			 								{float:left; width:100px; height:100px; background:url('../images/quick-add-sprite.png') no-repeat 0px 0px;}
@@ -119,15 +119,21 @@ table tr:hover 												{outline:1px solid #00D3D3;}
                                                         	
 .button.admin-panel	 										{float:right; width:150px; height:30px; background-position:-501px -90px;}
 .button.admin-panel:hover 									{background-position:-501px -126px;}                                            	
-                                                        	
+
+/*                                                        	
 .button.login												{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
 .button.login:hover											{background-position:0px -123px;}
-                                                        	
-.button.link-login 											{width:32px; height:12px; margin:0px 1px 0px 0px; background-position:-255px -35px;}
-.button.link-logout	 										{width:40px; height:12px; background-position:-288px -35px;}
-                                                        	
+
 .button.register											{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
 .button.register:hover										{background-position:0px -123px;}
+*/
+.button 													{float:left; text-transform:uppercase; letter-spacing:1px; border:none;}
+
+.button.login 												{width:91px; margin:0px 2px; padding:7px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.button.login:hover											{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
+                                                 		
+.button.register 											{width:110px; margin:0px 2px; padding:7px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.button.register:hover										{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
 
 /* quick add */
 .quick-add 													{cursor:pointer;}
@@ -152,7 +158,9 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .header ul li 												{margin:0px 5px 0px 2px;}
 .header .logo												{width:254px; height:80px; margin:14px 0px 10px 34px;}
 .header .wrapper	 										{float:left; width:100%; margin:25px 0px 0px 0px;}
-.header .additional-links									{float:right; margin:3px 0px 0px 0px;}                                        	
+.header .additional-links									{float:right; margin:3px 0px 0px 0px;}
+.button.link-login 											{width:32px; height:12px; margin:0px 1px 0px 0px; background-position:-255px -35px;}
+.button.link-logout	 										{width:40px; height:12px; background-position:-288px -35px;}                           	
 .header .search												{float:left; width:174px; margin:1px 0px 0px 0px;}
 .header .search .icon										{float:right; width:12px; height:12px; background-position:-573px -20px;}
 .header .search input 										{float:left; width:160px; height:10px; padding:0px; border:none; text-transform:capitalize;}

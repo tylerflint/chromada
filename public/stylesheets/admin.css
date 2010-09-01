@@ -54,7 +54,7 @@
 .admin-button.new 										{width:93px; height:36px; margin:0px 2px; background-position:-145px -79px;}
 .admin-button.new:hover									{background-position:-145px -116px;}
 */
-.admin-button 											{float:left; text-transform:uppercase; letter-spacing:1px; border:none; cursor:pointer;}
+.admin-button 											{float:left; text-transform:uppercase; letter-spacing:1px; border:none;}
 
 .admin-button.back 										{width:93px; margin:0px 2px; padding:7px 0px; color:#FFFFFF; font-size:15px; background:#C1C1C1; background:-webkit-gradient(linear, left top, left bottom, from(#C1C1C1), to(#AEAEAE)); background:-moz-linear-gradient(top, #C1C1C1, #AEAEAE); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#C1C1C1', endColorstr='#AEAEAE'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .admin-button.back:hover								{background:#8A8A8A; background:-webkit-gradient(linear, left top, left bottom, from(#8A8A8A), to(#6C6C6C)); background:-moz-linear-gradient(top, #8A8A8A, #6C6C6C); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8A8A8A', endColorstr='#6C6C6C');}
