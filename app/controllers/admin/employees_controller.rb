@@ -29,7 +29,7 @@ class Admin::EmployeesController < Admin::AdminController
     @employee = @company.employees.build
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :template => 'admin/employees/edit' }
       format.xml  { render :xml => @employee }
     end
   end

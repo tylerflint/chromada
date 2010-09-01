@@ -1,5 +1,61 @@
 <div class='content company'>
-	<h1>Edit Employee Information</h1>
-	<%= render :partial => "form", :locals => {:employee => @employee} %>
-	<%= render :partial => "roles" %>
+	
+	<% if @employee.new_record? %>
+		<h1>Create New Employee</h1>
+	<% else %>
+		<h1>Edit Employee Information</h1>
+	<% end %>
+
+	<%= form_for [:admin, @company, @employee], :html => {:id => ''} do |f| -%>
+	
+		<%= render :partial => 'admin/shared/edit_toolbar', :locals => {:form => f, :record => @employee} %>
+	
+		<div class = 'employee'>	
+			<%= text_field '', :class => '', :name => 'employee[firstname]', :value => 'First Name', :onfocus => 'if(this.value=="First Name")value=""', :onblur => 'if(this.value=="")this.value="First Name"' %>
+			<%= text_field '', :class => '', :name => 'employee[lastname]', :value => 'Last Name', :onfocus => 'if(this.value=="Last Name")value=""', :onblur => 'if(this.value=="")this.value="Last Name"' %>
+		
+			<div class='authentication'>
+				<div class='password'>
+					<%= text_field '', :class => '', :name => '', :value => 'Type Password', :onfocus => 'if(this.value=="Type Password")value=""', :onblur => 'if(this.value=="")this.value="Type Password"' %>
+				
+					<div class='checkbox-group'>
+						<span class='special'>or</span>
+						<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
+					</div>
+				</div>
+	
+				<div class='id'>
+					<%= text_field '', :class => '', :name => '', :value => 'Employee ID', :onfocus => 'if(this.value=="Employee ID")value=""', :onblur => 'if(this.value=="")this.value="Employee ID"' %>
+				
+					<div class='checkbox-group'>
+						<span class='special'>or</span>
+						<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
+					</div>
+				</div>
+			</div>
+	
+			<%= text_field '', :class => '', :name => 'employee[email]', :value => 'Email', :onfocus => 'if(this.value=="Email")value=""', :onblur => 'if(this.value=="")this.value="Email"' %>
+	
+			<div class='roles'>
+				<h3 class='header'>Assign Employee Roles</h3>
+				<ul>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 1</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 2</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 3</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 4</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 5</label></li>
+				</ul>
+			</div>
+		</div>
+	<% end -%>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+	function autoGenerateEmployeeId (checkbox) {
+		if (checkbox.checked) {
+			$("#edit-employee-custom-id").val("").attr('disabled', true)
+		} else {
+			$("#edit-employee-custom-id").removeAttr('disabled')
+		}
+	}
+</script>
