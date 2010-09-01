@@ -53,6 +53,9 @@ dgHandle: function()
 	else
 		$(elm).dgCheck(this);
 	
+	// custom trigger to ensure all event handlers on the checkbox itself gets handled
+	$(elm).trigger('change')
+	
 	if($(this).data('type') == 'radio')
 	{
 		$.each($("input[name='"+$(elm).attr("name")+"']"),function()

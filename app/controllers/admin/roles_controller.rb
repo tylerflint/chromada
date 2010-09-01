@@ -48,6 +48,7 @@ class Admin::RolesController < Admin::AdminController
   def create
     # render :text => params[:role].to_s
     @role = @company.roles.build(params[:role])
+    @role.action_ids = params[:action_ids].split(',')
     
     respond_to do |format|
       if @role.save
@@ -65,6 +66,7 @@ class Admin::RolesController < Admin::AdminController
   def update
     # @role = Role.find(params[:id])
     @role = @company.roles.find(params[:id])
+    @role.action_ids = params[:action_ids].split(',')
 
     respond_to do |format|
       if @role.update_attributes(params[:role])
