@@ -124,10 +124,10 @@
 .company .employee .roles label							{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
 /* edit roles */
-.company .roles-list									{float:left; width:295px;}
-.company .roles-list ul, .company .roles-list ul li		{float:left; width:100%;}
-.company .roles-list ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.company .roles-list ul li a:hover 						{background-color:#E3FFFF;}
+.company .role-list									{float:left; width:295px;}
+.company .role-list ul, .company .role-list ul li		{float:left; width:100%;}
+.company .role-list ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.company .role-list ul li a:hover 						{background-color:#E3FFFF;}
 
 /* add role */
 .company .add-role 										{float:left;}

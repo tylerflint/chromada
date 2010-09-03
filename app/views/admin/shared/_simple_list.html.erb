@@ -1,4 +1,4 @@
 <% collection.each do |item| %>
-	<li><a href='<%= url_for([:edit, :admin, @company, item]) %>'><span class='status away'></span><%= item.name %><span class='list-image open'></span></a></li>
+	<li><a href='<%= url_for([:edit, :admin, @company, item]) %>'><%= item.name %><span class='list-image open'></span></a></li>
 <% end %>
-<li><a href='#link' class='more'>Show <%= collection.count %> More Employees<span class='list-image open'></span></a></li>
+<li><a href='#link' class='more'>Show <%= collection.count %> More <%= name %><span class='list-image open'></span></a></li>
