@@ -4,11 +4,13 @@ class Admin::RolesController < Admin::AdminController
   # GET /roles
   # GET /roles.xml
   def index
-    # @roles = Role.all
-    @roles = @company.roles
-
+    @roles = @company.roles.scoped
     respond_to do |format|
-      format.html # index.html.erb
+      format.html do
+        if params[:search]
+          simple_list_instance(:role, @roles, {:column => "name"}).list
+        end
+      end
       format.xml  { render :xml => @roles }
     end
   end

@@ -4,13 +4,11 @@ class Admin::EmployeesController < Admin::AdminController
   # GET /employees
   # GET /employees.xml
   def index
-    # @employees = Employee.all
-
+    @employees = @company.employees.scoped
     respond_to do |format|
       format.html do
         if params[:search]
-          simple_list_instance(:employee).list
-          # render :text => methods.to_s
+          simple_list_instance(:employee, @employees, {:column => "firstname, lastname"}).list
         end
       end
       format.xml  { render :xml => @employees }
