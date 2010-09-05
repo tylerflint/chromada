@@ -1,13 +1,13 @@
 <div class='content company'>
 	<ul class='list employees'>
-		<li><input class='search' value='Search Employees'/></li>
-		<li><a href='#link'><span class='status in'></span>First Name Last Name<span class='arrow'></span></a></li>
-		<li><a href='#link'><span class='status in'></span>First Name Last Name<span class='arrow'></span></a></li>
-		<li><a href='#link'><span class='status away'></span>First Name Last Name<span class='arrow'></span></a></li>
-		<li><a href='#link'><span class='status away'></span>First Name Last Name<span class='arrow'></span></a></li>
-		<li><a href='#link'><span class='status out'></span>First Name Last Name<span class='arrow'></span></a></li>
-		<li><a href='#link'><span class='status out'></span>First Name Last Name<span class='arrow'></span></a></li>
-		<li><a href='#link'><span class='status out'></span>First Name Last Name<span class='arrow'></span></a></li>
+		<li class='search'><input value='Search Employees'/><%= render :partial => 'admin/shared/actions_bar' %></li>
+		<li><a href='#link'><span class='status in'></span>First Name Last Name<span title='Remove This Employee' class='removable arrow'></span></a></li>
+		<li><a href='#link'><span class='status in'></span>First Name Last Name<span title='Remove This Employee' class='removable arrow'></span></a></li>
+		<li><a href='#link'><span class='status away'></span>First Name Last Name<span title='Remove This Employee' class='removable arrow'></span></a></li>
+		<li><a href='#link'><span class='status away'></span>First Name Last Name<span title='Remove This Employee' class='removable arrow'></span></a></li>
+		<li><a href='#link'><span class='status out'></span>First Name Last Name<span title='Remove This Employee' class='removable arrow'></span></a></li>
+		<li><a href='#link'><span class='status out'></span>First Name Last Name<span title='Remove This Employee' class='removable arrow'></span></a></li>
+		<li><a href='#link'><span class='status out'></span>First Name Last Name<span title='Remove This Employee' class='removable arrow'></span></a></li>
 		<li><a href='#link' class='more'><span class='arrow'></span>Show [Number] More Employees</a></li>
 	</ul>
 </div>

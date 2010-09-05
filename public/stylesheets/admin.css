@@ -32,11 +32,11 @@
 #admin .right-column .content							{float:left; width:100%;}
 
 /***** TOOLBARS *****/
-.toolbar 												{float:left; width:100%;}
-.toolbar .new 											{float:left; width:134px;}
-.toolbar .search 										{position:relative; float:right; width:134px; padding:7px; background:-moz-linear-gradient(top, #F9F8F8, #EBEBEB); background:-webkit-gradient(linear, left top, left bottom, from(#F9F8F8), to(#EBEBEB)); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F9F8F8', endColorstr='#EBEBEB'); border:1px solid #DEDEDE; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.toolbar .search input									{float:right; width:130px; padding:1px 2px; font-size:12px !important; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
-.toolbar .search .icon									{position:absolute; top:11px; right:12px; width:12px; height:12px; background-position:-573px -20px;}
+.actions-bar 											{}
+.actions-bar .add 										{background-position:-94px -102px;}
+.actions-bar .add:hover 								{background-position:-94px -84px;}
+.actions-bar .remove 									{background-position:-112px -102px;}
+.actions-bar .remove:hover								{background-position:-112px -84px;}
 
 /***** BUTTONS *****/
 
@@ -59,15 +59,22 @@
 
 /* employee list */
 .company .list.employees								{float:left; width:100%; border-top:1px solid #989898; border-bottom:1px solid #989898;}
+.company .list.employees .actions-bar 					{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
+.company .list.employees .actions-bar a 				{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
 .company .list.employees li								{float:left; width:100%;}
-.company .list.employees li input.search 				{float:left; width:100%; height:20px; padding:15px 0px 12px 0px; border:none; border-bottom:1px dotted #989898; color:#A6A6A6; font-size:19px; font-style:italic;}
+.company .list.employees li input		 				{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
+.company .list.employees li.search 						{border-bottom:1px dotted #989898;}
+.company .list.employees .removable.remove				{width:17px; height:17px; background-position:-112px -102px;}
+.company .list.employees .removable.remove:hover		{width:17px; height:17px; background-position:-112px -84px;}
 .company .list.employees li a							{float:left; width:565px; padding:15px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
 .company .list.employees li a:hover 					{color:#01DBDB;}
 .company .list.employees li a.more						{border:none; color:#959595;}
+
 .company .list.employees .status 						{float:left; width:6px; height:6px; margin:5px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .company .list.employees .status.in 					{background-position:-152px -89px;}
 .company .list.employees .status.away					{background-position:-159px -89px;}
 .company .list.employees .status.out					{background-position:-166px -89px;}
+
 .company .list.employees .arrow 						{float:right; width:10px; height:15px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
 .company .list.employees li a.more .arrow				{float:left; width:15px; height:10px; background-position:-15px -104px;}
 

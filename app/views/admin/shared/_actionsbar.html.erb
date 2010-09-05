@@ -1,9 +1,0 @@
-
-<div class='actionsbar'>
-	<span class='todo'>combine all actions into here and just check what actions each area has?</span>
-	<%= form.submit 'save', :class => 'admin-button save'%>
-	<%= button_to 'cancel', url_for(:back), :class => 'admin-button cancel' %>
-	<% if (!record.new_record?) %>
-		<%= button_to 'delete', [:admin, @company, record], :class => 'admin-button delete', :method => :delete %>
-	<% end %>
-</div>

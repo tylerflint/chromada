@@ -1,0 +1,16 @@
+
+<div class='actions-bar'>
+	<a href='#link' title='Add New Employee' class='admin-sprite add'></a>
+	<a href='#link' title='Enables Employee Removal' class='admin-sprite remove' onclick='enableRemove()'></a>
+</div>
+
+<script type='text/javascript'>
+	//<![CDATA[
+		function enableRemove()
+		{
+			$('span.removable').each(function(){
+				$(this).toggleClass('remove', 'arrow')
+			});
+		}
+	//]]>
+</script>
