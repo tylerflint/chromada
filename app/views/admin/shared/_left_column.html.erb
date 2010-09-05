@@ -1,21 +1,8 @@
 
-<h6 class='column-heading'>Your Companies</h6>
-
 <div class='nav'>
 	<ul>
 		<% current_user.companies.each do |c| %>
-			<% if (@company == c) %>
-				<li><%= link_to c.name, admin_company_url(c), {:class => 'active'} %>
-					<ul class='sub'>
-						<li><%= link_to "Employees", admin_company_employees_url(c) %></li>
-						<li><%= link_to "Roles", admin_company_roles_url(c) %></li>
-						<li class='last'><a href='#link'>Account Settings</a></li>
-					</ul>
-				</li>
-			<% else %>
-				<li><%= link_to c.name, admin_company_url(c) %></li>
-			<% end %>
+			<li><a>[Company Name]<span class='arrow'></span></a></li>
 		<% end %>
-		<li><%= link_to "+ Add Company", new_admin_company_url, {:class => 'new'} %></li>
 	</ul>
 </div>

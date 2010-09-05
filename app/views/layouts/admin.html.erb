@@ -30,12 +30,14 @@
 		<div class='page-wrapper'>
 			<div class='page'>
 				<div class='header'>
-					<%= render :partial => 'shared/header' %>
+					<%= render :partial => 'admin/shared/header' %>
 				</div>
 				
-				<h1 class='page-heading'>Admin Dashboard</h1>
-				
 				<div class='body'>
+					<div class='dashboard'>
+						<%= render :partial => 'admin/shared/dashboard' %>
+					</div>
+					
 					<div class='left-column'>
 						<%= render :partial => 'admin/shared/left_column' %>
 					</div>
