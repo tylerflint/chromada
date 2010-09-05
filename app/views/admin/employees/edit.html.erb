@@ -1,43 +1,46 @@
 <div class='content company'>
 	
-	<% if @employee.new_record? %>
-		<h2>Create New Employee</h2>
-	<% else %>
-		<h2>Edit Employee Information</h2>
-	<% end %>
-
-	<%= form_for [:admin, @company, @employee], :html => {:id => ''} do |f| -%>
+	<%= render :partial => 'admin/shared/actions_bar' %>
 	
-		<%= render :partial => 'admin/shared/edit_toolbar', :locals => {:form => f, :record => @employee} %>
-	
-		<div class = 'employee'>	
-			<%= text_field '', :class => '', :name => 'employee[firstname]', :value => 'First Name', :onfocus => 'if(this.value=="First Name")value=""', :onblur => 'if(this.value=="")this.value="First Name"' %>
-			<%= text_field '', :class => '', :name => 'employee[lastname]', :value => 'Last Name', :onfocus => 'if(this.value=="Last Name")value=""', :onblur => 'if(this.value=="")this.value="Last Name"' %>
+	<ul class = 'employee'>
+		<li>
+			<h3 class='header'>employee name</h3>
+			<%= text_field %>
+			<%= text_field '', :class => 'name', :name => 'employee[name]', :value => 'Type Employee Name Here', :onfocus => 'if(this.value=="Type Employee Name Here")value=""', :onblur => 'if(this.value=="")this.value="Type Employee Name Here"' %>
+		</li>
 		
-			<div class='authentication'>
-				<div class='password'>
-					<%= text_field '', :class => '', :name => '', :value => 'Type Password', :onfocus => 'if(this.value=="Type Password")value=""', :onblur => 'if(this.value=="")this.value="Type Password"' %>
-				
-					<div class='checkbox-group'>
-						<span class='special'>or</span>
-						<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
-					</div>
-				</div>
-	
-				<div class='id'>
-					<%= text_field '', :class => '', :name => '', :value => 'Employee ID', :onfocus => 'if(this.value=="Employee ID")value=""', :onblur => 'if(this.value=="")this.value="Employee ID"' %>
-				
-					<div class='checkbox-group'>
-						<span class='special'>or</span>
-						<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
-					</div>
+		<li>
+			<h3 class='header'>employee password</h3>
+			<div class='password'>
+				<%= text_field '', :class => 'password', :name => 'employee[password]', :onfocus => 'if(this.value=="Type Password")value=""', :onblur => 'if(this.value=="")this.value="Type Password"' %>
+			
+				<div class='checkbox-group'>
+					<span class='special'>or</span>
+					<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
 				</div>
 			</div>
-	
-			<%= text_field '', :class => '', :name => 'employee[email]', :value => 'Email', :onfocus => 'if(this.value=="Email")value=""', :onblur => 'if(this.value=="")this.value="Email"' %>
-	
+		</li>
+		
+		<li>
+			<h3 class='header'>employee id</h3>
+			<div class='id'>
+				<%= text_field '', :class => 'id', :name => 'employee[id]', :onfocus => 'if(this.value=="Employee ID")value=""', :onblur => 'if(this.value=="")this.value="Employee ID"' %>
+			
+				<div class='checkbox-group'>
+					<span class='special'>or</span>
+					<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
+				</div>
+			</div>
+		</li>
+		
+		<li>
+			<h3 class='header'>employee email</h3>
+			<%= text_field '', :class => 'email', :name => 'employee[email]', :onfocus => 'if(this.value=="Email")value=""', :onblur => 'if(this.value=="")this.value="Email"' %>
+		</li>
+		
+		<li>
+			<h3 class='header'>employee permissions</h3>
 			<div class='roles'>
-				<h3 class='header'>Assign Employee Roles</h3>
 				<ul>
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 1</label></li>
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 2</label></li>
@@ -46,8 +49,8 @@
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 5</label></li>
 				</ul>
 			</div>
-		</div>
-	<% end -%>
+		</li>
+	</ul>
 </div>
 
 <script type="text/javascript" charset="utf-8">

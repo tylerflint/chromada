@@ -49,8 +49,7 @@
 /**** COMPANY *****/
 .company 												{font-size:15px;}
 .company input 											{font-size:15px;}
-.company.content .toolbar 								{float:left; margin:25px 0px;}
-.company.content .buttonbar								{float:left; margin:25px 0px;}
+.company.content 										{border-top:1px solid #989898; border-bottom:1px solid #989898;}
 
 /* add new */
 .company .create 										{float:left;}
@@ -58,14 +57,14 @@
 .company .create .note 									{float:left; margin:10px 0px; color:#959595; font-size:14px;}
 
 /* employee list */
-.company .list.employees								{float:left; width:100%; border-top:1px solid #989898; border-bottom:1px solid #989898;}
+.company .list.employees								{float:left; width:100%;}
 .company .list.employees .actions-bar 					{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
 .company .list.employees .actions-bar a 				{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
 .company .list.employees li								{float:left; width:100%;}
 .company .list.employees li input		 				{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
 .company .list.employees li.search 						{border-bottom:1px dotted #989898;}
-.company .list.employees .removable.remove				{width:17px; height:17px; background-position:-112px -102px;}
-.company .list.employees .removable.remove:hover		{width:17px; height:17px; background-position:-112px -84px;}
+.company .list.employees .removable.remove				{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -102px;}
+.company .list.employees .removable.remove:hover		{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -84px;}
 .company .list.employees li a							{float:left; width:565px; padding:15px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
 .company .list.employees li a:hover 					{color:#01DBDB;}
 .company .list.employees li a.more						{border:none; color:#959595;}
@@ -79,41 +78,42 @@
 .company .list.employees li a.more .arrow				{float:left; width:15px; height:10px; background-position:-15px -104px;}
 
 /* create/edit employee */
-.company .employee 										{float:left; color:#7B7B7B;}
-.company .employee input 								{float:left; width:305px; margin:5px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.company .employee .authentication						{float:left; width:100%;}
-.company .employee .authentication input				{float:left; width:125px;}
-.company .employee .authentication label				{float:left; margin:5px 0px 0px 2px; padding:0px;}
-.company .employee .authentication .password			{float:left; width:100%;}
-.company .employee .authentication .id					{float:left; width:100%;}
-.company .employee .authentication .checkbox-group		{float:right; width:175px; margin:15px 0px 0px 0px;}
-.company .employee .authentication .special				{float:left; margin:4px 10px 0px 10px; text-transform:uppercase;}
+.company .employee 										{float:left; color:#4C4C4C;}
+.company .employee li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
+.company .employee input 								{float:left; width:100%; border:none;}
+.company .employee .header 								{float:left; width:100%; margin:0px 0px 5px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .employee input.name 								{font-size:36px;}
+.company .employee input.password 							{font-size:25px;}
+.company .employee input.id 									{font-size:25px;}
+.company .employee input.email 								{font-size:25px;}
 .company .employee .roles		 						{float:left; width:100%; margin:25px 0px 0px 0px; color:#AFAFAF; font-size:14px;}
-.company .employee .roles .header 						{float:left; width:100%; margin:0px 0px 5px 0px;}
-.company .employee ul, .company .employee ul li			{float:left; width:100%;}
+.company .employee .roles ul li							{float:left; width:100%; border:none;}
 .company .employee .roles input 						{float:left;}
 .company .employee .roles label							{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
 /* edit roles */
-.company .role-list									{float:left; width:295px;}
+.company .role-list										{float:left; width:295px;}
 .company .role-list ul, .company .role-list ul li		{float:left; width:100%;}
-.company .role-list ul li a							{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.company .role-list ul li a								{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .company .role-list ul li a:hover 						{background-color:#E3FFFF;}
 
-/* add role */
-.company .add-role 										{float:left;}
-.company .add-role input								{float:left; width:305px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+/* add permission */
+.company .list.permissions								{float:left; width:100%;}
+.company .list.permissions .actions-bar 				{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
+.company .list.permissions .actions-bar a 				{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
+.company .list.permissions li							{float:left; width:100%;}
+.company .list.permissions li input		 				{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
+.company .list.permissions li.search 					{border-bottom:1px dotted #989898;}
+.company .list.permissions .removable.remove			{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -102px;}
+.company .list.permissions .removable.remove:hover		{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -84px;}
+.company .list.permissions li a							{float:left; width:565px; padding:15px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
+.company .list.permissions li a:hover 					{color:#01DBDB;}
+.company .list.permissions li a.more					{border:none; color:#959595;}
 
-.company .add-role .role-actions   							   {float:left; width:100%; margin:10px 0px 0px 0px; font-size:14px;}
-.company .add-role .role-actions ul							   {float:left; width:100%;}
-                                                               
-.company .add-role .role-actions .parent.arrow				   {float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.company .add-role .role-actions .parent.active.arrow		   {background-position: -255px -36px;}
-.company .add-role .role-actions .parent.inactive.arrow		   {background-position: -255px -44px;}
-.company .add-role .role-actions ul li						   {position:relative; float:left; width:100%; margin:0px; color:#AFAFAF;}
-.company .add-role .role-actions input						   {float:left; width:auto; margin:1px 0px;}
-.company .add-role .role-actions label						   {float:left; margin:5px 0px 0px 2px; padding:0px;}
-.company .add-role .role-actions label.parent				   {margin-left:10px;}
-.company .add-role .role-actions .parent .arrow				   {float:left; width:10px; height:8px; margin:2px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.company .add-role .role-actions .parent.active .arrow		   {background-position: -21px -37px;}
-.company .add-role .role-actions .parent.inactive .arrow	   {background-position: -21px -45px;}
+.company .list.permissions .status 						{float:left; width:6px; height:6px; margin:5px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.company .list.permissions .status.in 					{background-position:-152px -89px;}
+.company .list.permissions .status.away					{background-position:-159px -89px;}
+.company .list.permissions .status.out					{background-position:-166px -89px;}
+
+.company .list.permissions .arrow 						{float:right; width:10px; height:15px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
+.company .list.permissions li a.more .arrow				{float:left; width:15px; height:10px; background-position:-15px -104px;}
