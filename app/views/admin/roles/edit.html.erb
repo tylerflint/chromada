@@ -8,7 +8,7 @@
 	
 		<%= render :partial => 'admin/shared/actions_bar' %>
 
-		<ul class='permission'>
+		<ul class='role'>
 			<li>
 				<h3 class='heading'>permission name</h3>
 				<input type='text' for='' name='permission[name]' class='name' value='Type Permission Name Here' onfocus='if(this.value=="Type Permission Name Here")value=""' onblur='if(this.value=="")this.value="Type Permission Name Here"' />
@@ -16,7 +16,7 @@
 
 			<li>
 				<h3 class='heading'>assign permissions</h3>
-				<ul class='permissions'>
+				<ul class='roles'>
 					<% action_tree.each do |key, node| %>
 						<%= build_action_list_item(key, node) %>
 					<% end %>
