@@ -2,7 +2,7 @@
 	<%= render :partial => 'admin/companies/menu' %>
 <% end %>
 
-<%= simple_list(:role, @roles, {:column => "name"}) %>
+<%= simple_list(:role, @roles, {:column => "name", :label => :permission}) %>
 <!--
 <div class='content company'>
 	<ul class='list permissions'>
