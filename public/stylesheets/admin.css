@@ -118,7 +118,7 @@
 .company .employee input.email 							{font-size:25px;}
 .company .employee .checkbox-group 						{float:left; margin:8px 0px 0px 0px; color:#757575; font-style:italic; text-transform:capitalize;}
 .company .employee .permissions    						{float:left; width:100%; font-size:14px;}
-.company .employee .permissions ul li					{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .employee .permissions li						{float:left; width:100%; margin:0px; padding:0px; border:none;}
 .company .employee .permissions input 					{float:left;}
 .company .employee .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
