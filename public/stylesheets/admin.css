@@ -78,6 +78,7 @@ a.admin-button											{width:17px; height:17px; margin:0px; padding:0px; back
 .company .list li										{float:left; width:100%;}
 .company .list li input		 							{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
 .company .list li.search 								{border-bottom:1px dotted #989898;}
+.company .list li.search .icon							{float:left; width:20px; height:20px; margin:12px 8px 0 12px; background-position:-50px -125px;}
 .company .list .removable.remove						{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -102px;}
 .company .list .removable.remove:hover					{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -84px;}
 .company .list li a										{float:left; width:565px; padding:12px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
