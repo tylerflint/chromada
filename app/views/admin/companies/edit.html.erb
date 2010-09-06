@@ -2,6 +2,23 @@
 	<%= render :partial => 'admin/companies/menu', :locals => {:active => :edit} %>
 <% end %>
 
-<div class='content company'>
-	<%= render 'form' %>
+<div class='content'>
+		
+	<%= form_for(@company, :url => (@company.new_record?)? admin_companies_url : edit_admin_company_url) do |f| %>
+	
+		<%= render :partial => 'admin/shared/actions_bar' %>
+
+		<ul class='company'>
+			<li>
+				<h3 class='heading'>company name</h3>
+				<input type='text' for='' name='company[name]' class='name' value='Type Company Name Here' onfocus='if(this.value=="Type Company Name Here")value=""' onblur='if(this.value=="")this.value="Type Company Name Here"' />
+			</li>
+
+			<li>
+				<p class='note'>Get started now by selecting which products you would like for this company.</p>
+				<div class='quick-add-sprite quick-add ticker'></div>
+			</li>
+		</ul>
+		
+	<% end %>
 </div>
