@@ -40,18 +40,18 @@
 #admin .right-column 									{float:left; width:580px;}
 #admin .right-column .content							{float:left; width:100%;}
 
-/***** TOOLBARS *****/
+/***** BUTTONS *****/
 .actions-bar 											{overflow:hidden; margin:15px 0px; padding:0px 5px;}
-.actions-bar a											{width:17px; height:17px; margin:0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.actions-bar span										{float:left; margin:4px 0px 0px 25px;}
-.actions-bar .back 										{float:left; width:21px; height:21px; color:#87D8D8; background-position:-32px -102px;}
-.actions-bar .back:hover 								{color:#00D3D3; background-position:-32px -81px;}
-.actions-bar .add 										{float:right; background-position:-94px -102px;}
-.actions-bar .add:hover 								{background-position:-94px -84px;}
-.actions-bar .save 										{float:right; background-position:-130px -102px;}
-.actions-bar .save:hover 								{background-position:-130px -84px;}
-.actions-bar .remove 									{float:right; background-position:-112px -102px;}
-.actions-bar .remove:hover								{background-position:-112px -84px;}
+a.admin-button											{width:17px; height:17px; margin:0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.admin-button span										{float:left; margin:4px 0px 0px 25px;}
+.admin-button.back 										{float:left; width:21px; height:21px; color:#87D8D8; background-position:-32px -102px;}
+.admin-button.back:hover 								{color:#00D3D3; background-position:-32px -81px;}
+.admin-button.add 										{float:right; background-position:-94px -102px;}
+.admin-button.add:hover 								{background-position:-94px -84px;}
+.admin-button.save 										{float:right; background-position:-130px -102px;}
+.admin-button.save:hover 								{background-position:-130px -84px;}
+.admin-button.remove 									{float:right; background-position:-112px -102px;}
+.admin-button.remove:hover								{background-position:-112px -84px;}
 
 /***** BUTTONS *****/
 
