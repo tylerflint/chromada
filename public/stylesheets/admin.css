@@ -85,14 +85,6 @@
 .company .company input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
 .company .company .heading								{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 .company .company input.name 							{font-size:36px;}
-.company .company input.password 						{font-size:25px;}
-.company .company input.id 								{font-size:25px;}
-.company .company input.email 							{font-size:25px;}
-.company .company .checkbox-group 						{float:left; margin:8px 0px 0px 0px; color:#757575; font-style:italic; text-transform:capitalize;}
-.company .company .permissions    						{float:left; width:100%; font-size:14px;}
-.company .company .permissions ul li					{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .company .permissions input 					{float:left;}
-.company .company .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
 /* employees list */
 .company .list.employees								{float:left; width:100%;}
