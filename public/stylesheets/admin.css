@@ -99,13 +99,7 @@
 .company .employee .permissions input 					{float:left;}
 .company .employee .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
-/* edit roles */
-.company .role-list										{float:left; width:295px;}
-.company .role-list ul, .company .role-list ul li		{float:left; width:100%;}
-.company .role-list ul li a								{float:left; width:100%; margin:0px 0px 10px 0px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.company .role-list ul li a:hover 						{background-color:#E3FFFF;}
-
-/* add permission */
+/* permission list */
 .company .list.permissions								{float:left; width:100%;}
 .company .list.permissions .actions-bar 				{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
 .company .list.permissions li							{float:left; width:100%;}
@@ -124,3 +118,15 @@
 
 .company .list.permissions .arrow 						{float:right; width:10px; height:15px; margin:2px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
 .company .list.permissions li a.more .arrow				{float:left; width:15px; height:10px; background-position:-15px -104px;}
+
+/* create/edit permissions */
+.company .permission 									{float:left; color:#4C4C4C;}
+.company .permission li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
+.company .permission input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .permission .heading							{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .permission input.name 						{font-size:36px;}
+.company .permission .permissions    					{float:left; width:100%; font-size:14px;}
+.company .permission .permissions li					{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .permission .permissions .sub					{float:left; width:100%;}
+.company .permission .permissions input 				{float:left;}
+.company .permission .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}

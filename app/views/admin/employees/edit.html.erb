@@ -1,53 +1,55 @@
 <div class='content company'>
 	
-	<%= render :partial => 'admin/shared/actions_bar' %>
+	<form>
 	
-	<ul class = 'employee'>
-		<li>
-			<h3 class='heading'>employee name</h3>
-			<input type='text' for='' name='employee[name]' class='name' value='Type Employee Name Here' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
-		</li>
+		<%= render :partial => 'admin/shared/actions_bar' %>
 		
-		<li>
-			<h3 class='heading'>employee password</h3>
-			<div class='password'>
-				<input type='text' for='' name='employee[password]' class='password' value='Type Employee Password Here' onfocus='if(this.value=="Type Employee Password Here")value=""' onblur='if(this.value=="")this.value="Type Employee Password Here"' />
+		<ul class='employee'>
+			<li>
+				<h3 class='heading'>employee name</h3>
+				<input type='text' for='' name='employee[name]' class='name' value='Type Employee Name Here' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
+			</li>
+		
+			<li>
+				<h3 class='heading'>employee password</h3>
+				<div class='password'>
+					<input type='text' for='' name='employee[password]' class='password' value='Type Employee Password Here' onfocus='if(this.value=="Type Employee Password Here")value=""' onblur='if(this.value=="")this.value="Type Employee Password Here"' />
 			
-				<div class='checkbox-group'>
-					<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
+					<div class='checkbox-group'>
+						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
+					</div>
 				</div>
-			</div>
-		</li>
+			</li>
 		
-		<li>
-			<h3 class='heading'>employee id</h3>
-			<div class='id'>
-				<input type='text' for='' name='employee[id]' class='id' value='Type Employee ID Here' onfocus='if(this.value=="Type Employee ID Here")value=""' onblur='if(this.value=="")this.value="Type Employee ID Here"' />
+			<li>
+				<h3 class='heading'>employee id</h3>
+				<div class='id'>
+					<input type='text' for='' name='employee[id]' class='id' value='Type Employee ID Here' onfocus='if(this.value=="Type Employee ID Here")value=""' onblur='if(this.value=="")this.value="Type Employee ID Here"' />
 			
-				<div class='checkbox-group'>
-					<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
+					<div class='checkbox-group'>
+						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
+					</div>
 				</div>
-			</div>
-		</li>
+			</li>
 		
-		<li>
-			<h3 class='heading'>employee email</h3>
-			<input type='text' for='' name='employee[email]' class='email' value='Type Employee Email Here' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
-		</li>
+			<li>
+				<h3 class='heading'>employee email</h3>
+				<input type='text' for='' name='employee[email]' class='email' value='Type Employee Email Here' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
+			</li>
 		
-		<li>
-			<h3 class='heading'>employee permissions</h3>
-			<div class='permissions'>
-				<ul>
+			<li>
+				<h3 class='heading'>employee permissions</h3>
+				<ul class='permissions'>
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 1</label></li>
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 2</label></li>
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 3</label></li>
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 4</label></li>
 					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 5</label></li>
 				</ul>
-			</div>
-		</li>
-	</ul>
+			</li>
+		</ul>
+		
+	</form>
 </div>
 
 <script type="text/javascript" charset="utf-8">

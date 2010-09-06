@@ -1,29 +1,28 @@
 <div class='content company'>
-	
-	<% if @role.new_record? %>
-		<h2 class='role-name'>Name This Role</h2>
-	<% else %>
-		<h2 class='role-name'><%= @role.name %></h2>
-	<% end %>
 		
-	<%= form_for [:admin, @company, @role] do |f| -%>
+	<form>
 	
-		<%= render :partial => 'admin/shared/edit_toolbar', :locals => {:form => f, :record => @role} %>
+		<%= render :partial => 'admin/shared/actions_bar' %>
 
-		<div class = 'add-role'>
-			<%= f.text_field :name, :onfocus => 'if(this.value=="Name This Role")value=""', :onblur => 'if(this.value=="")this.value="Name This Role"' %>
-			<input type="hidden" name="action_ids" id="role_action_ids" value="<%= @role.action_ids.join(",") %>">
-	
-			<div class="role-actions">
-				<ul>
+		<ul class='permission'>
+			<li>
+				<h3 class='heading'>permission name</h3>
+				<input type='text' for='' name='permission[name]' class='name' value='Type Permission Name Here' onfocus='if(this.value=="Type Permission Name Here")value=""' onblur='if(this.value=="")this.value="Type Permission Name Here"' />
+			</li>
+
+			<li>
+				<h3 class='heading'>assigned permissions</h3>
+				<ul class='permissions'>
 					<% action_tree.each do |key, node| %>
 						<%= build_action_list_item(key, node) %>
 					<% end %>
 				</ul>
-			</div>
-		</div>
-	<% end %>
+			</li>
+		</ul>
+		
+	</form>
 </div>
+
 <script type='text/javascript'>
 	$(document).ready(function () {
 		$(".checkbox").dgStyle()
