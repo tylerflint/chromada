@@ -10,10 +10,10 @@
 #admin .header 											{font-size:17px;}
 #admin .header a 										{float:right; color:#87D8D8;}
 #admin .header a:hover 									{color:#00D3D3; text-decoration:underline;}
-#admin .header .wrapper									{width:725px; margin:10px 0px 0px 25px;}
+#admin .header .wrapper									{float:right; width:580px; margin:10px 0px 0px 0px;}
 #admin .header .logo		 							{float:left; width:188px; height:34px; margin:0px; padding:0px; background-position:0px -35px;}
 #admin .header .logo:hover	 							{background-position:0px 0px;}
-#admin .header .message.welcome 						{margin:0 auto; width:605px; border:none; padding:0px; color:#4C4C4C; font-size:17px; font-weight:bold;}
+#admin .header .message.welcome 						{width:475px; margin:0px; padding:0px; color:#4C4C4C; font-size:17px; font-weight:bold; border:none;}
 #admin .header .solid-rule	 							{float:left; width:100%; height:2px; margin:15px 0px 0px 0px; background:#989898;}
 
 /***** DASHBOARD *****/
