@@ -1,28 +1,7 @@
 
 <div class='actions-bar'>
 	<a href='#link' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
-	<a href='#link' title='Add New [Item]' class='admin-button add'></a>
 	<%= form.submit %>
 	<a href='#link' title='Save [Item]' class='admin-button save' onclick=""></a>
 	<a href='#link' title='Enables [Item] Removal' class='admin-button remove' onclick='toggleRemove()'></a>
 </div>
-
-<script type='text/javascript'>
-	//<![CDATA[
-		function toggleRemove()
-		{
-			$('.removable').each(function(){
-				$(this).toggleClass('remove', 'arrow');
-				//$(this).attr('title', 'Remove This Employee');
-				
-				/*
-				$(this).toggle(function(){
-					$(this).attr('title', 'Remove This Employee');
-				}, function(){
-					$(this).attr('title', '');
-				});
-				*/
-			});
-		}
-	//]]>
-</script>
