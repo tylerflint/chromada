@@ -1,0 +1,11 @@
+<div class='nav'>
+	<ul>
+		<% current_user.companies.each do |c| %>
+			<li><a href='#link'>[Company Name]<span class='arrow'></span></a></li>
+		<% end %>
+		
+		<li><a href='#link'>Company Dashboard<span class='arrow'></span></a></li>
+		<li><a href='#link'>General Information<span class='arrow'></span></a></li>
+		<li><a href='#link'>Billing<span class='arrow'></span></a></li>
+	</ul>
+</div>
