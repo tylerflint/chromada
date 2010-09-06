@@ -1,7 +1,7 @@
 <div class='left-column'>
 	<% if (@company) %>
 		<h2 class='heading company'><%= @company.name %></h2>
-		<a href='#link' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
+		<a href='<%= url_for([:admin, :dashboard]) %>' title='Back to Dashboard' class='admin-button back'><span>Back</span></a>
 	<% else %>
 		<h2 class='heading company'>Dashboard</h2>
 	<% end %>

@@ -1,5 +1,5 @@
 <% content_for :left do %>
-	<%= render :partial => 'admin/companies/menu' %>
+	<%= render :partial => 'admin/companies/menu', :locals => {:active => :roles} %>
 <% end %>
 
 <div class='content company'>
@@ -30,22 +30,9 @@
 <script type='text/javascript'>
 	$(document).ready(function () {
 		$(".checkbox").dgStyle()
-		colorActionTree()
 		addActionClickEvent()
 		addParentActionClickEvent()
 	})
-
-	function colorActionTree () {
-		count = 0
-		$(".checkbox-group").each(function () {
-			if (count % 2 != 0){
-				$(this).addClass('odd')
-			} else {
-				$(this).addClass('even')
-			}
-			count++
-		})
-	}
 
 	function addActionClickEvent () {
 		$(".role-actions input:checkbox").each(function (){

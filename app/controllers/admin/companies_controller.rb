@@ -1,9 +1,5 @@
 class Admin::CompaniesController < Admin::AdminController
 
-  def dashboard
-    @company = Company.find(params[:id])
-  end
-
   # GET /companies
   # GET /companies.xml
   def index
@@ -13,6 +9,10 @@ class Admin::CompaniesController < Admin::AdminController
       format.html # index.html.erb
       format.xml  { render :xml => @companies }
     end
+  end
+  
+  def dashboard
+    @company = Company.find(params[:id])
   end
 
   # GET /companies/1
