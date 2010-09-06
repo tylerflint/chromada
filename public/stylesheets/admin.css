@@ -63,7 +63,24 @@
 .company input 											{font-size:15px;}
 .company.content 										{border-top:1px solid #989898; border-bottom:1px solid #989898;}
 
+/* companies list */
 /* employee list */
+.company .list.companies								{float:left; width:100%;}
+.company .list.companies .actions-bar 					{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
+.company .list.companies .actions-bar a 				{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
+.company .list.companies li								{float:left; width:100%;}
+.company .list.companies li input		 				{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
+.company .list.companies li.search 						{border-bottom:1px dotted #989898;}
+.company .list.companies .removable.remove				{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -102px;}
+.company .list.companies .removable.remove:hover		{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -84px;}
+.company .list.companies li a							{float:left; width:565px; padding:15px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
+.company .list.companies li a:hover 					{color:#01DBDB;}
+.company .list.companies li a.more						{border:none; color:#959595;}
+
+.company .list.companies .arrow 						{float:right; width:10px; height:15px; margin:2px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
+.company .list.companies li a.more .arrow				{float:left; width:15px; height:10px; background-position:-15px -104px;}
+
+/* employees list */
 .company .list.employees								{float:left; width:100%;}
 .company .list.employees .actions-bar 					{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
 .company .list.employees .actions-bar a 				{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
@@ -99,7 +116,7 @@
 .company .employee .permissions input 					{float:left;}
 .company .employee .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
-/* permission list */
+/* permissions list */
 .company .list.permissions								{float:left; width:100%;}
 .company .list.permissions .actions-bar 				{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
 .company .list.permissions .actions-bar a 				{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}

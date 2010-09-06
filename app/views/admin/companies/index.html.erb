@@ -1,25 +1,10 @@
+
 <div class='content company'>
-	<h1>Listing companies</h1>
-
-	<table>
-		<tr>
-			<th>Name</th>
-			<th></th>
-			<th></th>
-			<th></th>
-		</tr>
-
+	<ul class='list companies'>
+		<li class='search' title='Search Companies List'><input value='Search Companies'/><%= render :partial => 'admin/shared/actions_bar' %></li>
 		<% @companies.each do |company| %>
-			<tr>
-				<td><%= company.name %></td>
-				<td><%= link_to 'Show', admin_company_url(company) %></td>
-				<td><%= link_to 'Edit', edit_admin_company_url(company) %></td>
-				<td><%= link_to 'Destroy', admin_company_url(company), :confirm => 'Are you sure?', :method => :delete %></td>
-			</tr>
+			<li><a href='#link' title='Edit This Companies'><span class='' title=''></span><%= company.name %><span class='removable arrow'></span></a></li>
 		<% end %>
-	</table>
-
-	<br />
-
-	<%= link_to 'New Company', new_admin_company_url %>
+		<li><a href='#link' class='more' title='Show [Number] Companies'><span class='arrow'></span>Show [Number] More Companies</a></li>
+	</ul>
 </div>
