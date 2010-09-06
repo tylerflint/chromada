@@ -1,17 +1,20 @@
-<%= form_for(@company, :url => (@company.new_record?)? admin_companies_url : edit_admin_company_url) do |f| %>
+<div class='content company'>
+		
+	<%= form_for(@company, :url => (@company.new_record?)? admin_companies_url : edit_admin_company_url) do |f| %>
+	
+		<%= render :partial => 'admin/shared/actions_bar' %>
 
-	<div class='buttonbar'>
-		<div id='controls'>
-			<%= f.submit 'save', :class => 'admin-button save'%>
-			<%= button_to 'cancel', admin_companies_path, :class => 'admin-button cancel', :onclick => 'cancel()' %>
-		</div>
-	</div>
+		<ul class='company'>
+			<li>
+				<h3 class='heading'>company name</h3>
+				<input type='text' for='' name='company[name]' class='name' value='Type Company Name Here' onfocus='if(this.value=="Type Company Name Here")value=""' onblur='if(this.value=="")this.value="Type Company Name Here"' />
+			</li>
 
-	<div class='create'>
-		<%= f.text_field '', :class => '', :name => '', :value => 'Name This Company', :onfocus => 'if(this.value=="Name This Company")value=""', :onblur => 'if(this.value=="")this.value="Name This Company"' %>
-
-		<p class='note'>Get started now by selecting which products you would like for this company.</p>
-		<div class='quick-add-sprite quick-add ticker'></div>
-	</div>
-
-<% end %>
+			<li>
+				<p class='note'>Get started now by selecting which products you would like for this company.</p>
+				<div class='quick-add-sprite quick-add ticker'></div>
+			</li>
+		</ul>
+		
+	<% end %>
+</div>
