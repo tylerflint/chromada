@@ -2,7 +2,7 @@
 <%= link_to '', root_url, :class => 'admin-sprite logo' %>
 
 <div class='wrapper'>
-	<p class='message welcome'>Welcome to your Chromada admin panel, [Customer Name]. <a href='#link'>Logout</a></p>
+	<p class='message welcome'>Welcome to your Chromada admin panel, <%= current_user.email %>. <a href='#link'>Logout</a></p>
 	<a href='#link'>Enable Help</a>
 </div>
 
