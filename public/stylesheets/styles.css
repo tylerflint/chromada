@@ -143,7 +143,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
                                                         	
 /***** LAYOUT *****/                                    	
 .page-wrapper 			 									{margin:0 auto; width:980px; background:#FFFFFF; overflow:hidden;}
-.page														{margin:0 auto; width:940px; padding:20px 0px;}
+.page														{margin:0 auto; width:940px; padding:20px 0px; overflow:hidden;}
 .page .body													{float:left; width:100%; margin:20px 0px 18px 0px;}
                                                         	
 /***** NAVIGATION *****/                                	
