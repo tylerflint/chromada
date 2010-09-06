@@ -1,3 +1,9 @@
+<% content_for :left do %>
+	<%= render :partial => 'admin/companies/menu' %>
+<% end %>
+
+<%= simple_list(:employee, @employees, {:column => "firstname, lastname"}) %>
+<!--
 <div class='content company'>
 	<ul class='list employees'>
 		<li class='search' title='Search Employees List'><input value='Search Employees'/><%= render :partial => 'admin/shared/actions_bar' %></li>
@@ -11,3 +17,4 @@
 		<li><a href='#link' class='more' title='Show [Number] Employees'><span class='arrow'></span>Show [Number] More Employees</a></li>
 	</ul>
 </div>
+-->

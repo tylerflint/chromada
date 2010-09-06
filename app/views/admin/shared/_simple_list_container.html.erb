@@ -1,13 +1,12 @@
-<div class='toolbar'>
-	<%= link_to "+ New #{p.object_label}", [:new, :admin, @company, p.object], :class => 'new' %>
-	<span class='search'><input type="text" id='search-filter' /><span class='button icon'></span></span>
-</div>
-
-<div class='<%= p.object %>-list'>
-	<ul>
-		<%= p.list %>
+<div class='content <%= p.object_label %>'>
+	<ul class='list <%= p.object_label_plural %>'>
+		<li class='search' title='Search <%= p.object_label_plural.capitalize %> List'><input value='Search <%= p.object_label_plural.capitalize %>'/><%= render :partial => 'admin/shared/actions_bar' %></li>
+		<div class="results">
+			<%= p.list %>
+		</div>
 	</ul>
 </div>
+
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
 		$('#search-filter').keyup(function(){

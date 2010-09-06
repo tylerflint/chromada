@@ -1,0 +1,9 @@
+<div class='nav'>
+	<ul>
+		<li><a href='<%= url_for(:edit, :admin, @company) %>'>Company Dashboard<span class='arrow'></span></a></li>
+		<li><a href='<%= url_for([:edit, :admin, @company]) %>'>General Information<span class='arrow'></span></a></li>
+		<li><a href='#link'>Billing<span class='arrow'></span></a></li>
+		<li><a href='<%= url_for([:admin, @company, :employees]) %>'>Manage Employees<span class='arrow'></span></a></li>
+		<li><a href='<%= url_for([:admin, @company, :roles]) %>'>Create &amp; Edit Permissions<span class='arrow'></span></a></li>
+	</ul>
+</div>

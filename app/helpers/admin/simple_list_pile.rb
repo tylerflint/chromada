@@ -17,6 +17,10 @@ class SimpleListPile < Blockpile::Base
     object.to_s.capitalize
   end
   
+  def object_label_plural
+    object_label.pluralize
+  end
+  
   def collection
     if params[:search]
       @collection.where("#{@column} LIKE ?", "%#{params[:search]}%")
