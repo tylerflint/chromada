@@ -2,6 +2,8 @@
 	<%= render :partial => 'admin/companies/menu' %>
 <% end %>
 
+<%= simple_list(:role, @roles, {:column => "name"}) %>
+<!--
 <div class='content company'>
 	<ul class='list permissions'>
 		<li class='search' title='Search Permissions List'><input value='Search Permissions'/><%= render :partial => 'admin/shared/actions_bar' %></li>
@@ -14,3 +16,4 @@
 		<li><a href='#link' class='more' title='Show [Number] Permissions'><span class='arrow'></span>Show [Number] More Permissions</a></li>
 	</ul>
 </div>
+-->
