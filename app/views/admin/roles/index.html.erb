@@ -1,3 +1,7 @@
+<% content_for :left do %>
+	<%= render :partial => 'admin/companies/menu' %>
+<% end %>
+
 <div class='content company'>
 	<ul class='list permissions'>
 		<li class='search' title='Search Permissions List'><input value='Search Permissions'/><%= render :partial => 'admin/shared/actions_bar' %></li>
