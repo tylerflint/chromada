@@ -8,7 +8,7 @@ class Admin::CompaniesController < Admin::AdminController
     respond_to do |format|
       format.html do
         if params[:ajax]
-          simple_list_instance(:company, @companies, {:column => "name"}).list
+          simple_list_instance(:company, @companies).list
         end
       end
       format.xml  { render :xml => @companies }

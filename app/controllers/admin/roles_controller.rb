@@ -8,7 +8,7 @@ class Admin::RolesController < Admin::AdminController
     respond_to do |format|
       format.html do
         if params[:ajax]
-          simple_list_instance(:role, @roles, {:column => "name"}).list
+          simple_list_instance(:role, @roles).list
         end
       end
       format.xml  { render :xml => @roles }

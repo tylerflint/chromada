@@ -4,9 +4,6 @@ class SimpleListPile < Blockpile::Base
     @object     = object
     @collection = collection
     @template   = 'admin/shared/simple_list_container'
-    if options[:column]
-      @column   = (options[:column].match(/,/)) ? "CONCAT(#{options[:column]})" : options[:column]
-    end
   end
   
   def show_all?
@@ -27,7 +24,7 @@ class SimpleListPile < Blockpile::Base
   
   def collection
     if params[:search]
-      @collection.where("#{@column} LIKE ?", "%#{params[:search]}%")
+      @collection.where("name LIKE ?", "%#{params[:search]}%")
     end
     @collection.limit(10) unless show_all?
     @collection.order(@column)

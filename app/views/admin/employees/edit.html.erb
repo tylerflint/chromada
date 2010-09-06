@@ -6,7 +6,7 @@
 	
 	<% form_for [:admin, @company, @employee] do |f| %>
 	  
-		<%= render :partial => 'admin/shared/actions_bar' %>
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f} %>
 		
 		<ul class='employee'>
 			<li>
@@ -14,6 +14,7 @@
 				<input type='text' for='' name='employee[name]' class='name' value='Type Employee Name Here' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
 			</li>
 		
+			<!--
 			<li>
 				<h3 class='heading'>employee password</h3>
 				<div class='password'>
@@ -35,7 +36,8 @@
 					</div>
 				</div>
 			</li>
-		
+			-->
+			
 			<li>
 				<h3 class='heading'>employee email (optional)</h3>
 				<input type='text' for='' name='employee[email]' class='email' value='Type Employee Email Here' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />

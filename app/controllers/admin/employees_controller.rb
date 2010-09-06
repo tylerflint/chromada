@@ -8,7 +8,7 @@ class Admin::EmployeesController < Admin::AdminController
     respond_to do |format|
       format.html do
         if params[:ajax]
-          simple_list_instance(:employee, @employees, {:column => "firstname, lastname"}).list
+          simple_list_instance(:employee, @employees).list
         end
       end
       format.xml  { render :xml => @employees }
@@ -65,7 +65,7 @@ class Admin::EmployeesController < Admin::AdminController
 
     respond_to do |format|
       if @employee.update_attributes(params[:employee])
-        format.html { redirect_to(@employee, :notice => 'Employee was successfully updated.') }
+        format.html { redirect_to(:action => :index, :notice => 'Employee was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
