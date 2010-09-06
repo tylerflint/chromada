@@ -34,13 +34,15 @@
 #admin .right-column .content							{float:left; width:100%;}
 
 /***** TOOLBARS *****/
-.actions-bar 											{float:left; width:100%;}
-.actions-bar a											{float:left; width:17px; height:17px; margin:0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.actions-bar .add 										{background-position:-94px -102px;}
+.actions-bar 											{float:left; width:570px; margin:15px 0px; padding:0px 5px;}
+.actions-bar a											{width:17px; height:17px; margin:0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.actions-bar .back 										{float:left; background-position:-94px -102px;}
+.actions-bar .back:hover 								{background-position:-94px -84px;}
+.actions-bar .add 										{float:right; background-position:-94px -102px;}
 .actions-bar .add:hover 								{background-position:-94px -84px;}
-.actions-bar .save 										{background-position:-130px -102px;}
+.actions-bar .save 										{float:right; background-position:-130px -102px;}
 .actions-bar .save:hover 								{background-position:-130px -84px;}
-.actions-bar .remove 									{background-position:-112px -102px;}
+.actions-bar .remove 									{float:right; background-position:-112px -102px;}
 .actions-bar .remove:hover								{background-position:-112px -84px;}
 
 /***** BUTTONS *****/
@@ -86,11 +88,12 @@
 .company .employee 										{float:left; color:#4C4C4C;}
 .company .employee li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
 .company .employee input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .employee .heading								{float:left; width:100%; margin:0px 0px 5px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .employee .heading								{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 .company .employee input.name 							{font-size:36px;}
 .company .employee input.password 						{font-size:25px;}
 .company .employee input.id 							{font-size:25px;}
 .company .employee input.email 							{font-size:25px;}
+.company .employee .checkbox-group 						{float:left; margin:8px 0px 0px 0px; color:#757575; font-style:italic; text-transform:capitalize;}
 .company .employee .permissions    						{float:left; width:100%; font-size:14px;}
 .company .employee .permissions ul li					{float:left; width:100%; margin:0px; padding:0px; border:none;}
 .company .employee .permissions input 					{float:left;}
