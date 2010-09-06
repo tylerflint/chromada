@@ -32,7 +32,7 @@ class Admin::CompaniesController < Admin::AdminController
     @company = Company.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :template => 'admin/companies/edit' }
       format.xml  { render :xml => @company }
     end
   end

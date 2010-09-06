@@ -2,7 +2,7 @@
 <div class='actions-bar'>
 	<a href='#link' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
 	<a href='#link' title='Add New [Item]' class='admin-button add'></a>
-	<a href='#link' title='Save [Item]' class='admin-button save'></a>
+	<a href='#link' title='Save [Item]' class='admin-button save' onclick="$(this).parent('form').submit(); return false;"></a>
 	<a href='#link' title='Enables [Item] Removal' class='admin-button remove' onclick='toggleRemove()'></a>
 </div>
 
