@@ -1,6 +1,6 @@
 <div class='content company'>
 	<ul class='list <%= p.object_label_plural.downcase %>'>
-		<li class='search' title='Search <%= p.object_label_plural.capitalize %> List'><input id="search-filter" value='Search <%= p.object_label_plural.capitalize %>'/><%= render :partial => 'admin/shared/actions_bar' %></li>
+		<li class='search' title='Search <%= p.object_label_plural.capitalize %> List'><span class='admin-sprite icon'></span><input id="search-filter" value='Search <%= p.object_label_plural.capitalize %>'/><%= render :partial => 'admin/shared/actions_bar' %></li>
 		<div class="results">
 			<%= p.list %>
 		</div>
