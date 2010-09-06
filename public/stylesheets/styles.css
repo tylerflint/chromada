@@ -90,6 +90,9 @@ table tr:hover 												{outline:1px solid #00D3D3;}
                                                     		
 /* ALTERNATE CONTENT */                             		
 .alt-content												{}
+
+/* LAYOUT */
+.float-none 												{float:none !important;}
                                                     	
 /************************************************** MAIN ELEMENT STYLES **************************************************/
                                                     	
