@@ -19,7 +19,7 @@
 /***** DASHBOARD *****/
 #admin .panel 											{float:left; width:100%; height:132px; margin:0px 0px 10px 0px;}
 #admin .panel .left-column	 							{float:left; width:340px; margin:0px 20px 0px 0px;}
-#admin .panel .left-column .heading 					{float:left; width:100%; color:#979797; font-size:30px;}
+#admin .panel .left-column .heading 					{float:left; width:100%; margin:0px 0px 10px 0px; color:#979797; font-size:30px;}
 #admin .panel .right-column	 							{float:left; width:580px; height:132px; background:#333333;}
 
 /***** LEFT COLUMN *****/
