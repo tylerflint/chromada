@@ -9,6 +9,10 @@ class SimpleListPile < Blockpile::Base
     end
   end
   
+  def show_all?
+    params[:show_all] && params[:show_all].eql?('true')
+  end
+  
   def object
     @object
   end
@@ -24,13 +28,13 @@ class SimpleListPile < Blockpile::Base
   def collection
     if params[:search]
       @collection.where("#{@column} LIKE ?", "%#{params[:search]}%")
-    else
-      @collection.limit(10)
     end
+    @collection.limit(10) unless show_all?
+    @collection.order(@column)
   end
   
   def list
-    render( :partial => 'admin/shared/simple_list', :locals => {:collection => collection, :name => object_label} )
+    render( :partial => 'admin/shared/simple_list', :locals => {:collection => collection, :name => object_label, :show_all => show_all?} )
   end
   
 end

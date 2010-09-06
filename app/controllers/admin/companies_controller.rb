@@ -6,7 +6,11 @@ class Admin::CompaniesController < Admin::AdminController
     @companies = current_user.companies.scoped
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html do
+        if params[:ajax]
+          simple_list_instance(:company, @companies, {:column => "name"}).list
+        end
+      end
       format.xml  { render :xml => @companies }
     end
   end

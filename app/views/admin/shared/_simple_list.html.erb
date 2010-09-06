@@ -1,4 +1,6 @@
 <% collection.each do |item| %>
 	<li><a href='<%= url_for([:edit, :admin, @company, item]) %>' title="Edit"><span class='' title=''></span><%= item.name %><span class='removable arrow'></span></a></li>
 <% end %>
-<li><a href='#link' class='more' title="Show #{collection.count} More"><span class='arrow'></span>Show <%= collection.count %> More <%= name %></a></li>
+<% if (collection.count > 10 && !show_all) %>
+	<li><a href='#' class='more' title="Show #{collection.count - 10} More" onclick="showAll(); return false;"><span class='arrow'></span>Show <%= collection.count - 10 %> More <%= name.pluralize %></a></li>	
+<% end %>

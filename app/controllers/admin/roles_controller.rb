@@ -7,7 +7,7 @@ class Admin::RolesController < Admin::AdminController
     @roles = @company.roles.scoped
     respond_to do |format|
       format.html do
-        if params[:search]
+        if params[:ajax]
           simple_list_instance(:role, @roles, {:column => "name"}).list
         end
       end

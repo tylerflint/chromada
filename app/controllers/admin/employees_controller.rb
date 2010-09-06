@@ -7,7 +7,7 @@ class Admin::EmployeesController < Admin::AdminController
     @employees = @company.employees.scoped
     respond_to do |format|
       format.html do
-        if params[:search]
+        if params[:ajax]
           simple_list_instance(:employee, @employees, {:column => "firstname, lastname"}).list
         end
       end
