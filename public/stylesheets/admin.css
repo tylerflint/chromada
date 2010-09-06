@@ -72,20 +72,20 @@ a.admin-button											{width:17px; height:17px; margin:0px; padding:0px; back
 #admin .right-column .dashboard.content  .heading		{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 
 /***** LIST *****/
-.company .list									{float:left; width:100%;}
-.company .list .actions-bar 					{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
-.company .list .actions-bar a 					{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
-.company .list li								{float:left; width:100%;}
-.company .list li input		 					{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
-.company .list li.search 						{border-bottom:1px dotted #989898;}
-.company .list .removable.remove				{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -102px;}
-.company .list .removable.remove:hover			{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -84px;}
-.company .list li a								{float:left; width:565px; padding:12px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
-.company .list li a:hover 						{color:#01DBDB;}
-.company .list li a.more						{border:none; color:#959595;}
-              
-.company .list .arrow 							{float:right; width:10px; height:15px; margin:2px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
-.company .list li a.more .arrow					{float:left; width:15px; height:10px; background-position:-15px -104px;}
+.company .list											{float:left; width:100%;}
+.company .list .actions-bar 							{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
+.company .list .actions-bar a 							{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
+.company .list li										{float:left; width:100%;}
+.company .list li input		 							{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
+.company .list li.search 								{border-bottom:1px dotted #989898;}
+.company .list .removable.remove						{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -102px;}
+.company .list .removable.remove:hover					{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -84px;}
+.company .list li a										{float:left; width:565px; padding:12px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
+.company .list li a:hover 								{color:#01DBDB;}
+.company .list li a.more								{border:none; color:#959595;}
+                                                		
+.company .list .arrow 									{float:right; width:10px; height:15px; margin:2px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
+.company .list li a.more .arrow							{float:left; width:15px; height:10px; background-position:-15px -104px;}
 
 /**** COMPANY *****/
 .company 												{font-size:15px;}
@@ -125,15 +125,21 @@ a.admin-button											{width:17px; height:17px; margin:0px; padding:0px; back
 /* roles list */
 
 /* create/edit roles */
-.company .role 								{float:left; color:#4C4C4C;}
-.company .role li							{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
-.company .role input 						{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .role .heading						{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
-.company .role input.name 					{font-size:36px;}
-.company .role .roles    					{float:left; width:100%; font-size:14px;}
-.company .role .roles li					{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .role .roles li .active			{color:#01DBDB;}
-.company .role .roles li .parent			{color:#01DBDB;}
-.company .role .roles .sub					{float:left; width:100%;}
-.company .role .roles input 				{float:left;}
-.company .role .roles label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
+.company .role 											{float:left; color:#4C4C4C;}
+.company .role li										{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
+.company .role input 									{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .role .heading									{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .role input.name 								{font-size:36px;}
+.company .role .roles    								{float:left; width:100%; font-size:14px;}
+.company .role .roles li								{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .role .roles li .active						{color:#01DBDB;}
+.company .role .roles li .parent						{color:#01DBDB;}
+.company .role .roles .sub								{float:left; width:100%;}
+.company .role .roles input 							{float:left;}
+.company .role .roles label								{float:left; margin:5px 0px 0px 2px; padding:0px;}
+
+.company .role .roles .parent .arrow					{float:left; width:10px; height:10px; margin:0px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.company .role .roles .parent.active .arrow				{background-position: -169px -105px;}
+.company .role .roles .parent.inactive .arrow			{background-position: -169px -105px;}
+
+.edit-employee-roles-group 								{float:left;}
