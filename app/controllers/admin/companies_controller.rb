@@ -1,8 +1,13 @@
 class Admin::CompaniesController < Admin::AdminController
+
+  def dashboard
+    @company = Company.find(params[:id])
+  end
+
   # GET /companies
   # GET /companies.xml
   def index
-    @companies = Company.all
+    @companies = current_user.companies.scoped
 
     respond_to do |format|
       format.html # index.html.erb

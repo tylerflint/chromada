@@ -2,14 +2,4 @@
 	<%= render :partial => 'admin/shared/menu' %>
 <% end %>
 
-<div class='content company'>
-	<ul class='list companies'>
-		<li class='search' title='Search Companies List'><input value='Search Companies'/><%= render :partial => 'admin/shared/actions_bar' %></li>
-		<div class="result">
-			<% @companies.each do |company| %>
-				<li><a href='#link' title='Edit This Companies'><span class='' title=''></span><%= company.name %><span class='removable arrow'></span></a></li>
-			<% end %>
-			<li><a href='#link' class='more' title='Show [Number] Companies'><span class='arrow'></span>Show [Number] More Companies</a></li>
-		</div>
-	</ul>
-</div>
+<%= simple_list(:company, @companies, {:column => "name"}) %>
