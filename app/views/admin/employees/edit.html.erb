@@ -4,49 +4,46 @@
 	
 	<ul class = 'employee'>
 		<li>
-			<h3 class='header'>employee name</h3>
-			<%= text_field %>
-			<%= text_field '', :class => 'name', :name => 'employee[name]', :value => 'Type Employee Name Here', :onfocus => 'if(this.value=="Type Employee Name Here")value=""', :onblur => 'if(this.value=="")this.value="Type Employee Name Here"' %>
+			<h3 class='heading'>employee name</h3>
+			<input type='text' for='' name='employee[name]' class='name' value='Type Employee Name Here' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
 		</li>
 		
 		<li>
-			<h3 class='header'>employee password</h3>
+			<h3 class='heading'>employee password</h3>
 			<div class='password'>
-				<%= text_field '', :class => 'password', :name => 'employee[password]', :onfocus => 'if(this.value=="Type Password")value=""', :onblur => 'if(this.value=="")this.value="Type Password"' %>
+				<input type='text' for='' name='employee[password]' class='password' value='Type Employee Password Here' onfocus='if(this.value=="Type Employee Password Here")value=""' onblur='if(this.value=="")this.value="Type Employee Password Here"' />
 			
 				<div class='checkbox-group'>
-					<span class='special'>or</span>
-					<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
+					<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
 				</div>
 			</div>
 		</li>
 		
 		<li>
-			<h3 class='header'>employee id</h3>
+			<h3 class='heading'>employee id</h3>
 			<div class='id'>
-				<%= text_field '', :class => 'id', :name => 'employee[id]', :onfocus => 'if(this.value=="Employee ID")value=""', :onblur => 'if(this.value=="")this.value="Employee ID"' %>
+				<input type='text' for='' name='employee[id]' class='id' value='Type Employee ID Here' onfocus='if(this.value=="Type Employee ID Here")value=""' onblur='if(this.value=="")this.value="Type Employee ID Here"' />
 			
 				<div class='checkbox-group'>
-					<span class='special'>or</span>
-					<span class='checkbox'><input type="checkbox"/></span><label>Auto Generate</label>
+					<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
 				</div>
 			</div>
 		</li>
 		
 		<li>
-			<h3 class='header'>employee email</h3>
-			<%= text_field '', :class => 'email', :name => 'employee[email]', :onfocus => 'if(this.value=="Email")value=""', :onblur => 'if(this.value=="")this.value="Email"' %>
+			<h3 class='heading'>employee email</h3>
+			<input type='text' for='' name='employee[email]' class='email' value='Type Employee Email Here' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
 		</li>
 		
 		<li>
-			<h3 class='header'>employee permissions</h3>
-			<div class='roles'>
+			<h3 class='heading'>employee permissions</h3>
+			<div class='permissions'>
 				<ul>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 1</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 2</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 3</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 4</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Role 5</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 1</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 2</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 3</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 4</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 5</label></li>
 				</ul>
 			</div>
 		</li>
