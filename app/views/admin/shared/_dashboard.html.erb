@@ -1,6 +1,11 @@
 <div class='left-column'>
-	<h2 class='heading company'><%= @company.name if @company %></h2>
-	<a href='#link' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
+	<% if (@company) %>
+		<h2 class='heading company'><%= @company.name %></h2>
+		<a href='#link' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
+	<% else %>
+		<h2 class='heading company'>Dashboard</h2>
+	<% end %>
+
 </div>
 
 <div class="right-column">
