@@ -10,10 +10,10 @@
 #admin .header .solid-rule	 							{float:left; width:100%; height:2px; background:#989898}
 
 /***** DASHBOARD *****/
-#admin .dashboard 										{float:left; width:100%; height:132px; margin:0px 0px 10px 0px;}
-#admin .dashboard .left-column	 						{float:left; width:340px; margin:0px 20px 0px 0px;}
-#admin .dashboard .left-column .heading 				{float:left; width:100%; color:#979797; font-size:30px;}
-#admin .dashboard .right-column	 						{float:left; width:580px; height:132px; background:#333333;}
+#admin .panel 											{float:left; width:100%; height:132px; margin:0px 0px 10px 0px;}
+#admin .panel .left-column	 							{float:left; width:340px; margin:0px 20px 0px 0px;}
+#admin .panel .left-column .heading 					{float:left; width:100%; color:#979797; font-size:30px;}
+#admin .panel .right-column	 							{float:left; width:580px; height:132px; background:#333333;}
 
 /***** LEFT COLUMN *****/
 #admin .left-column 									{float:left; width:340px; margin:0px 20px 0px 0px;}
@@ -53,15 +53,15 @@
 
 /************************************************** PAGES (Admin Layer) **************************************************/
 
+/***** DASHBOARD *****/
+#admin .right-column .dashboard.content 				{float:left; color:#4C4C4C;}
+#admin .right-column .dashboard.content  li				{float:left; width:100%; height:100px; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
+#admin .right-column .dashboard.content  .heading		{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+
 /**** COMPANY *****/
 .company 												{font-size:15px;}
 .company input 											{font-size:15px;}
 .company.content 										{border-top:1px solid #989898; border-bottom:1px solid #989898;}
-
-/* add new */
-.company .create 										{float:left;}
-.company .create input 									{float:left; width:305px; padding:10px; color:#7B7B7B; border:#DEDEDE solid 1px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.company .create .note 									{float:left; margin:10px 0px; color:#959595; font-size:14px;}
 
 /* employee list */
 .company .list.employees								{float:left; width:100%;}
