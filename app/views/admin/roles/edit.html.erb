@@ -4,14 +4,14 @@
 
 <div class='content company'>
 		
-	<form>
-	
-		<%= render :partial => 'admin/shared/actions_bar' %>
+	<%= form_for [:admin, @company, @role] do |f| %>
+		  
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @role, :back_url => url_for([:admin, @company, :roles]) } %>
 
 		<ul class='role'>
 			<li>
 				<h3 class='heading'>permission name</h3>
-				<input type='text' for='' name='permission[name]' class='name' value='Type Permission Name Here' onfocus='if(this.value=="Type Permission Name Here")value=""' onblur='if(this.value=="")this.value="Type Permission Name Here"' />
+				<input type='text' for='' name='permission[name]' class='name' value='<%= @role.name || 'Type Permission Name Here' %>' onfocus='if(this.value=="Type Permission Name Here")value=""' onblur='if(this.value=="")this.value="Type Permission Name Here"' />
 			</li>
 
 			<li>
@@ -23,8 +23,7 @@
 				</ul>
 			</li>
 		</ul>
-		
-	</form>
+	<% end %>
 </div>
 
 <script type='text/javascript'>

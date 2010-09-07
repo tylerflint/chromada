@@ -1,7 +1,5 @@
-
 <div class='actions-bar'>
-	<a href='#link' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
-	<%= form.submit %>
-	<a href='#link' title='Save [Item]' class='admin-button save' onclick=""></a>
-	<a href='#link' title='Enables [Item] Removal' class='admin-button remove' onclick='toggleRemove()'></a>
+	<a href='<%= back_url %>' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
+	<a href='#link' title='Enables [Item] Removal' class='admin-button remove'></a>
+	<button type="submit" title='Save [Item]' name="commit" id="role_submit" class="admin-button save"></button>
 </div>

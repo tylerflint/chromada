@@ -6,12 +6,12 @@
 	
 	<% form_for [:admin, @company, @employee] do |f| %>
 	  
-		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f} %>
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @employee, :back_url => url_for([:admin, @company, :employees]) } %>
 		
 		<ul class='employee'>
 			<li>
 				<h3 class='heading'>employee name</h3>
-				<input type='text' for='' name='employee[name]' class='name' value='Type Employee Name Here' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
+				<input type='text' for='' name='employee[name]' class='name' value='<%= @employee.name || 'Type Employee Name Here' %>' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
 			</li>
 		
 			<!--
@@ -40,7 +40,7 @@
 			
 			<li>
 				<h3 class='heading'>employee email (optional)</h3>
-				<input type='text' for='' name='employee[email]' class='email' value='Type Employee Email Here' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
+				<input type='text' for='' name='employee[email]' class='email' value='<%= @employee.email || 'Type Employee Email Here' %>' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
 			</li>
 		
 			<li>

@@ -44,7 +44,7 @@
 
 /***** BUTTONS *****/
 .actions-bar 											{overflow:hidden; margin:12px 0px; padding:0px 5px;}
-a.admin-button											{width:17px; height:17px; margin:0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.admin-button											{width:17px; height:17px; margin:0px 5px; padding:0px; cursor: pointer; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none;}
 .admin-button span										{float:left; margin:3px 0px 0px 25px;}
 .admin-button.back 										{float:left; width:21px; height:21px; color:#87D8D8; font-size:19px; background-position:-32px -102px;}
 .admin-button.back:hover 								{color:#00D3D3; background-position:-32px -81px;}
