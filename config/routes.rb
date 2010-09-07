@@ -26,7 +26,7 @@ Chromada::Application.routes.draw do |map|
     match "companies/:id/dashboard" => "companies#dashboard", :as => "company_dashboard"
     resources :companies do
       resources :employees
-      resources :roles
+      resources :permissions
     end
   end
   

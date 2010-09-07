@@ -1,5 +1,7 @@
 <div class='actions-bar'>
 	<a href='<%= back_url %>' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
-	<a href='#link' title='Enables [Item] Removal' class='admin-button remove'></a>
 	<button type="submit" title='Save [Item]' name="commit" id="role_submit" class="admin-button save"></button>
+	<% if (!object.new_record?) %>
+		<a href='#link' title='Enables [Item] Removal' class='admin-button remove'></a>
+	<% end %>
 </div>

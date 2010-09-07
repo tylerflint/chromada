@@ -1,22 +1,23 @@
 <% content_for :left do %>
-	<%= render :partial => 'admin/companies/menu', :locals => {:active => :roles} %>
+	<%= render :partial => 'admin/companies/menu', :locals => {:active => :permissions} %>
 <% end %>
 
 <div class='content company'>
 		
-	<%= form_for [:admin, @company, @role] do |f| %>
+	<%= form_for [:admin, @company, @permission] do |f| %>
 		  
-		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @role, :back_url => url_for([:admin, @company, :roles]) } %>
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @permission, :back_url => url_for([:admin, @company, :permissions]) } %>
 
-		<ul class='role'>
+		<ul class='permission'>
+			<input type="hidden" name="action_ids" id="permission_action_ids" value="<%= @permission.action_ids.join(",") %>"/>
 			<li>
 				<h3 class='heading'>permission name</h3>
-				<input type='text' for='' name='permission[name]' class='name' value='<%= @role.name || 'Type Permission Name Here' %>' onfocus='if(this.value=="Type Permission Name Here")value=""' onblur='if(this.value=="")this.value="Type Permission Name Here"' />
+				<input type='text' for='' name='permission[name]' class='name' value='<%= @permission.name || 'Type Permission Name Here' %>' onfocus='if(this.value=="Type Permission Name Here")value=""' onblur='if(this.value=="")this.value="Type Permission Name Here"' />
 			</li>
 
 			<li>
 				<h3 class='heading'>assign permissions</h3>
-				<ul class='roles'>
+				<ul class='permissions'>
 					<% action_tree.each do |key, node| %>
 						<%= build_action_list_item(key, node) %>
 					<% end %>
@@ -34,13 +35,13 @@
 	})
 
 	function addActionClickEvent () {
-		$(".role-actions input:checkbox").each(function (){
+		$(".permissions input:checkbox").each(function (){
 			$(this).change(updateCheckedActions)
 		})
 	}
 
 	function addParentActionClickEvent () {
-		$(".role-actions input:checkbox.parent").each(function (){
+		$(".permissions input:checkbox.parent").each(function (){
 			$(this).change(function () {
 				var checked = $(this).attr('checked')
 				$(this).parent().parent().find('ul li input:checkbox').each(function () {
@@ -54,11 +55,11 @@
 
 	function updateCheckedActions () {
 		ids = new Array()
-		$(".role-actions input:checkbox:checked").each(function () {
+		$(".permissions input:checkbox:checked").each(function () {
 			if (this.name != '') {
 				ids.push(this.name.replace(/action_/, ''))
 			}
 		})
-		$('#role_action_ids').val(ids.toString())
+		$('#permission_action_ids').val(ids.toString())
 	}
 </script>

@@ -1,9 +1,0 @@
-<div class='buttonbar'>
-	<div id='controls'>
-		<%= form.submit 'save', :class => 'admin-button save'%>
-		<%= button_to 'cancel', url_for(:back), :class => 'admin-button cancel' %>
-		<% if (!record.new_record?) %>
-			<%= button_to 'delete', [:admin, @company, record], :class => 'admin-button delete' %>
-		<% end %>
-	</div>
-</div>

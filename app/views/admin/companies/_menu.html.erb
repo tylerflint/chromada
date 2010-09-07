@@ -4,6 +4,6 @@
 		<li><a href='<%= url_for([:edit, :admin, @company]) %>' <% if (active == :edit) %>class="active"<% end %>>General Information<span class='arrow'></span></a></li>
 		<li><a href='#link'>Billing<span class='arrow'></span></a></li>
 		<li><a href='<%= url_for([:admin, @company, :employees]) %>' <% if (active == :employees) %>class="active"<% end %>>Manage Employees<span class='arrow'></span></a></li>
-		<li><a href='<%= url_for([:admin, @company, :roles]) %>' <% if (active == :roles) %>class="active"<% end %>>Create &amp; Edit Permissions<span class='arrow'></span></a></li>
+		<li><a href='<%= url_for([:admin, @company, :permissions]) %>' <% if (active == :permissions) %>class="active"<% end %>>Create &amp; Edit Permissions<span class='arrow'></span></a></li>
 	</ul>
 </div>

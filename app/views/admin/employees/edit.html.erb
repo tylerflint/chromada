@@ -59,6 +59,9 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$(".checkbox").dgStyle()
+	})
 	function autoGenerateEmployeeId (checkbox) {
 		if (checkbox.checked) {
 			$("#edit-employee-custom-id").val("").attr('disabled', true)
