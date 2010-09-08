@@ -93,6 +93,8 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 
 /* LAYOUT */
 .float-none 												{float:none !important;}
+.float-left 												{float:left;}
+.float-right 												{float:right;}
                                                     	
 /************************************************** MAIN ELEMENT STYLES **************************************************/
                                                     	
@@ -147,7 +149,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 /***** LAYOUT *****/                                    	
 .page-wrapper 			 									{margin:0 auto; width:980px; background:#FFFFFF; overflow:hidden;}
 .page														{margin:0 auto; width:940px; padding:20px 0px; overflow:hidden;}
-.page .body													{float:left; width:100%; margin:20px 0px 18px 0px;}
+.page .body													{float:left; width:100%; min-height:500px; margin:20px 0px 18px 0px;}
                                                         	
 /***** NAVIGATION *****/                                	
 .nav 														{float:left;}
@@ -192,7 +194,7 @@ a#link-about.active 										{background-position:-472px 0px;}
 a#link-contact.active 										{background-position:-510px 0px;}
                                                     		
 /***** FOOTER *****/                                		
-.footer														{float:left; width:100%; margin:0px 0px 25px 0px;}
+.footer														{float:left; width:100%; margin:25px 0px;}
 .footer .solid-rule											{float:left; width:100%; height:1px; background:#D5D5D5;}
 .footer .wrapper 											{float:left; width:100%;}
 .footer .nav		 										{margin:6px 0px 0px 2px;}
@@ -270,3 +272,13 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .account.register .body 									{float:right; width:250px;}
 .account.register .form-group input							{width:227px; height:18px; margin:0px 0px -1px 0px;}
 .account.register .button.register							{margin:15px 0px;}
+
+/***** PRODUCTS *****/
+.product 													{width:940px;}
+.product-introduction 										{float:left; width:100%; margin:10px 0px;}
+
+/* TICKER */
+.product-feature 											{margin:25px auto; width:800px; border-bottom:1px solid #D5D5D5; overflow:hidden;}
+.product-feature .heading 									{float:left; width:100%; font-size:22px; color:#3D3936; line-height:29px;}
+.product-feature .feature-description						{width:300px;}
+.product-feature p 											{float:left; font-size:16px; color:#8E8D8C; line-height:24px;}
