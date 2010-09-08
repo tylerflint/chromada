@@ -74,7 +74,6 @@
 /**** COMPANY *****/
 .company 												{float:left; font-size:15px; color:#4C4C4C;}
 .company input 											{float:left; margin:0px; padding:0px; border:none;}
-.company .heading										{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 .company.content 										{border-top:1px solid #989898; border-bottom:1px solid #989898;}
 
 /***** LIST *****/
@@ -101,6 +100,9 @@
 /* companies list */
 
 /* create/edit company */
+.company .companies li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
+.company .companies input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .companies .heading							{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 .company .companies input.name 							{font-size:36px;}
 
 /* employees list */
