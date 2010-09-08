@@ -96,11 +96,11 @@
 /* companies list */
 
 /* create/edit company */
-.company .company 										{float:left; color:#4C4C4C;}
-.company .company li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
-.company .company input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .company .heading								{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
-.company .company input.name 							{font-size:36px;}
+.company 												{float:left; color:#4C4C4C;}
+.company li												{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
+.company input 											{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .heading										{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company input.name 									{font-size:36px;}
 
 /* employees list */
 .company .list.employees .status 						{float:left; width:6px; height:6px; margin:5px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
@@ -118,29 +118,29 @@
 .company .employee input.id 							{font-size:25px;}
 .company .employee input.email 							{font-size:25px;}
 .company .employee .checkbox-group 						{float:left; margin:9px 0px 0px 5px; color:#757575; font-style:italic; text-transform:capitalize;}
-.company .employee .permissions    							{float:left; width:100%; font-size:14px;}
-.company .employee .permissions li							{float:left; width:100%; margin:0px 0px 8px 0px; padding:0px; border:none;}
-.company .employee .permissions input 						{float:left;}
-.company .employee .permissions label							{float:left; margin:5px 0px 0px 2px; padding:0px;}
+.company .employee .permissions    						{float:left; width:100%; font-size:14px;}
+.company .employee .permissions li						{float:left; width:100%; margin:0px 0px 8px 0px; padding:0px; border:none;}
+.company .employee .permissions input 					{float:left;}
+.company .employee .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
 /* permissions list */
 
 /* create/edit permissions */
-.company .permission 											{float:left; color:#4C4C4C;}
+.company .permission 										{float:left; color:#4C4C4C;}
 .company .permission li										{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
 .company .permission input 									{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .permission .heading									{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
-.company .permission input.name 								{font-size:36px;}
-.company .permission .permissions    								{float:left; width:100%; font-size:14px;}
-.company .permission .permissions li								{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .permission .permissions li .active						{color:#01DBDB;}
-.company .permission .permissions li .parent						{color:#01DBDB;}
-.company .permission .permissions .sub								{float:left; width:100%;}
-.company .permission .permissions input 							{float:left;}
-.company .permission .permissions label								{float:left; margin:5px 0px 0px 2px; padding:0px;}
+.company .permission .heading								{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .permission input.name 							{font-size:36px;}
+.company .permission .permissions    						{float:left; width:100%; font-size:14px;}
+.company .permission .permissions li						{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .permission .permissions li .active				{color:#01DBDB;}
+.company .permission .permissions li .parent				{color:#01DBDB;}
+.company .permission .permissions .sub						{float:left; width:100%;}
+.company .permission .permissions input 					{float:left;}
+.company .permission .permissions label						{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
-.company .permission .permissions .parent .arrow					{float:left; width:10px; height:10px; margin:0px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.company .permission .permissions .parent.active .arrow				{background-position: -169px -105px;}
-.company .permission .permissions .parent.inactive .arrow			{background-position: -169px -105px;}
+.company .permission .permissions .parent .arrow			{float:left; width:10px; height:10px; margin:0px 5px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.company .permission .permissions .parent.active .arrow		{background-position: -169px -105px;}
+.company .permission .permissions .parent.inactive .arrow	{background-position: -169px -105px;}
 
-.edit-employee-permissions-group 								{float:left;}
+.edit-employee-permissions-group 							{float:left;}
