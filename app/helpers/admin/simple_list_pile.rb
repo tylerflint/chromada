@@ -24,10 +24,10 @@ class SimpleListPile < Blockpile::Base
   
   def collection
     if params[:search]
-      @collection.where("name LIKE ?", "%#{params[:search]}%")
+      @collection = @collection.where("`name` LIKE ?", "%#{params[:search]}%")
     end
-    @collection.limit(10) unless show_all?
-    @collection.order(@column)
+    @collection = @collection.limit(10) unless show_all?
+    @collection.order(:name)
   end
   
   def list
