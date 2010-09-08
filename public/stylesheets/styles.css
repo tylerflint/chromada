@@ -279,6 +279,6 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 
 /* TICKER */
 .product-feature 											{margin:25px auto; width:800px; border-bottom:1px solid #D5D5D5; overflow:hidden;}
-.product-feature .heading 									{float:left; width:100%; font-size:22px; color:#3D3936;}
+.product-feature .heading 									{float:left; width:100%; font-size:22px; color:#3D3936; line-height:29px;}
 .product-feature .feature-description						{width:300px;}
 .product-feature p 											{float:left; font-size:16px; color:#8E8D8C; line-height:24px;}
