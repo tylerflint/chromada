@@ -100,10 +100,9 @@
 /* companies list */
 
 /* create/edit company */
-.company .companies li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
-.company .companies input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .companies .heading							{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
-.company .companies input.name 							{font-size:36px;}
+.company .company li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
+.company .company .heading								{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .company input.name 							{font-size:36px;}
 
 /* employees list */
 .company .list.employees .status 						{float:left; width:6px; height:6px; margin:5px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
