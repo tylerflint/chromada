@@ -11,14 +11,8 @@
 			
 			<div class='form-group'>
 				<%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
-				<%= form.password_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
-
-				<!--
-				<% if devise_mapping.rememberable? -%>
-					<span class='checkbox-group'><%= form.check_box :remember_me %><%= form.label :remember_me %></span>
-				<% end -%>
-				-->
-				
+				<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
+				<%= form.password_field :password, :class => 'password-password required', :value => '', :autocomplete => 'off' %>
 			</div>
 			
 			<%= form.submit 'login', :class => 'button login' %>
@@ -31,3 +25,22 @@
 		
 	</div>
 </div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$('.password-clear').show();
+		$('.password-password').hide();
+
+		$('.password-clear').focus(function() {
+		    $('.password-clear').hide();
+		    $('.password-password').show();
+		    $('.password-password').focus();
+		});
+		$('.password-password').blur(function() {
+		    if($('.password-password').val() == '') {
+		        $('.password-clear').show();
+		        $('.password-password').hide();
+		    }
+		});
+	//]]>
+</script>
