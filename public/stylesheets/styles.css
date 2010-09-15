@@ -274,6 +274,24 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .account.register .form-group input							{width:227px; height:18px; margin:0px 0px -1px 0px;}
 .account.register .button.register							{margin:15px 0px;}
 
+/***** CONTACT *****/                             	
+.contact .contact-body										{float:left; width:240px; margin:0px 0px 0px 65px;}
+.contact .icon		 										{float:left; width:181px; height:195px; margin:14px 7px; background-position:-711px 0px;}
+.contact .additional-links 									{float:left; margin:8px 0px;}
+.contact .additional-link 									{float:left; width:100%; margin:3px 0px;}
+.contact .additional-link a 								{color:#00D3D3; text-decoration:underline;}
+.contact .additional-link a:hover							{text-decoration:none;}
+                                                    		
+/* LOGIN */                                         		
+.contact 													{margin:113px auto 144px; width:500px; overflow:hidden;}
+.contact .header 											{float:left; width:100%; margin:0px 0px 26px 0px;}
+.contact .title		 										{width:52px; height:21px; background-position:-647px -59px;}
+.contact .body 												{float:right; width:250px;}
+.contact .content 											{margin:10px 0px;}
+.contact .form-group input									{width:227px; height:18px; margin:0px 0px -1px 0px;}
+.contact .form-group textarea 								{width:227px; height:150px; margin:-1px 0px 0px 0px;}
+.contact .button.submit										{margin:15px 0px;}
+
 /***** PRODUCTS *****/
 .product 													{width:940px;}
 .product-introduction 										{width:100%; margin:10px 0px;}
