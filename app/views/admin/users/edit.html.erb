@@ -1,0 +1,72 @@
+<% content_for :left do %>
+	<%= render :partial => 'admin/companies/menu', :locals => {:active => :users} %>
+<% end %>
+
+<div class='content company'>
+	
+	<%= form_for [:admin, @company, @user] do |f| %>
+	  
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @user, :back_url => url_for([:admin, @company, :users]), :delete_url => url_for([:admin, @company, @user]) } %>
+		
+		<ul class='user'>
+			<li>
+				<h3 class='heading'>user name</h3>
+				<input type='text' for='' name='user[name]' class='name' value='<%= @user.name || 'Type Employee Name Here' %>' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
+			</li>
+		
+			<!--
+			<li>
+				<h3 class='heading'>user password</h3>
+				<div class='password'>
+					<input type='text' for='' name='user[password]' class='password' value='Type Employee Password Here' onfocus='if(this.value=="Type Employee Password Here")value=""' onblur='if(this.value=="")this.value="Type Employee Password Here"' />
+			
+					<div class='checkbox-group'>
+						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
+					</div>
+				</div>
+			</li>
+		
+			<li>
+				<h3 class='heading'>user id</h3>
+				<div class='id'>
+					<input type='text' for='' name='user[id]' class='id' value='Type Employee ID Here' onfocus='if(this.value=="Type Employee ID Here")value=""' onblur='if(this.value=="")this.value="Type Employee ID Here"' />
+			
+					<div class='checkbox-group'>
+						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
+					</div>
+				</div>
+			</li>
+			-->
+			
+			<li>
+				<h3 class='heading'>user email (optional)</h3>
+				<input type='text' for='' name='user[email]' class='email' value='<%= @user.email || 'Type Employee Email Here' %>' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
+			</li>
+		
+			<li>
+				<h3 class='heading'>user permissions</h3>
+				<ul class='permissions'>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 1</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 2</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 3</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 4</label></li>
+					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 5</label></li>
+				</ul>
+			</li>
+		</ul>
+		
+	<% end %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$(".checkbox").dgStyle()
+	})
+	function autoGenerateEmployeeId (checkbox) {
+		if (checkbox.checked) {
+			$("#edit-user-custom-id").val("").attr('disabled', true)
+		} else {
+			$("#edit-user-custom-id").removeAttr('disabled')
+		}
+	}
+</script>

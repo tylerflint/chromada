@@ -27,6 +27,7 @@ Chromada::Application.routes.draw do |map|
     resources :companies do
       resources :employees
       resources :permissions
+      resources :users
     end
   end
   

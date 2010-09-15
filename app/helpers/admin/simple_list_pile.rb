@@ -1,10 +1,11 @@
 class SimpleListPile < Blockpile::Base
 
   def build(object, collection, options={})
-    @object     = object
-    @collection = collection
-    @options    = options
-    @template   = 'admin/shared/simple_list_container'
+    @object         = object
+    @collection     = collection
+    @options        = options
+    @display_column = options[:display_column] || :name
+    @template       = 'admin/shared/simple_list_container'
   end
   
   def show_all?
@@ -25,10 +26,10 @@ class SimpleListPile < Blockpile::Base
   
   def collection
     if params[:search]
-      @collection = @collection.where("`name` LIKE ?", "%#{params[:search]}%")
+      @collection = @collection.where("#{@display_column.to_s} LIKE ?", "%#{params[:search]}%")
     end
     @collection = @collection.limit(10) unless show_all?
-    @collection.order(:name)
+    @collection.order(@display_column)
   end
   
   def item_url(company, item)
