@@ -19,6 +19,7 @@ function loadScript($url)
     }
 }
 
+// http://www.themaninblue.com/writing/perspective/2005/08/29/
 function footerPush (bodyElement)
 {
     /* Title:       Footer Push v3.01
