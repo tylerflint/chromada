@@ -104,11 +104,12 @@
 .company .company .heading								{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 .company .company input.name 							{font-size:36px;}
 
-/* employees list */
+/* employees list 
 .company .list.employees .status 						{float:left; width:6px; height:6px; margin:5px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .company .list.employees .status.in 					{background-position:-152px -89px;}
 .company .list.employees .status.away					{background-position:-159px -89px;}
 .company .list.employees .status.out					{background-position:-166px -89px;}
+*/
 
 /* create/edit employee */
 .company .employee 										{float:left; color:#4C4C4C;}
@@ -146,3 +147,20 @@
 .company .permission .permissions .parent.inactive .arrow	{background-position: -169px -105px;}
 
 .edit-employee-permissions-group 							{float:left;}
+
+/* users list */
+
+/* create/edit employee */
+.company .user 										{float:left; color:#4C4C4C;}
+.company .user li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
+.company .user input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .user .heading								{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .user input.name 							{font-size:36px;}
+.company .user input.password 						{font-size:25px;}
+.company .user input.id 							{font-size:25px;}
+.company .user input.email 							{font-size:25px;}
+.company .user .checkbox-group 						{float:left; margin:9px 0px 0px 5px; color:#757575; font-style:italic; text-transform:capitalize;}
+.company .user .permissions    						{float:left; width:100%; font-size:14px;}
+.company .user .permissions li						{float:left; width:100%; margin:0px 0px 8px 0px; padding:0px; border:none;}
+.company .user .permissions input 					{float:left;}
+.company .user .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
