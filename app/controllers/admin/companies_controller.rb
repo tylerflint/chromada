@@ -56,7 +56,7 @@ class Admin::CompaniesController < Admin::AdminController
       if @company.save 
       # if @company
         add_company_to_user(@company)
-        format.html { redirect_to(admin_company_url(@company), :notice => 'Company was successfully created.') }
+        format.html { redirect_to(admin_company_dashboard_url(@company), :notice => 'Company was successfully created.') }
         format.xml  { render :xml => @company, :status => :created, :location => @company }
       else
         format.html { render :action => "new" }
@@ -72,7 +72,7 @@ class Admin::CompaniesController < Admin::AdminController
 
     respond_to do |format|
       if @company.update_attributes(params[:company])
-        format.html { redirect_to(admin_company_url(@company), :notice => 'Company was successfully updated.') }
+        format.html { redirect_to(admin_company_dashboard_url(@company), :notice => 'Company was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
