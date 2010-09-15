@@ -6,7 +6,7 @@
 		
 	<%= form_for [:admin, @company, @permission] do |f| %>
 		  
-		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @permission, :back_url => url_for([:admin, @company, :permissions]) } %>
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @permission, :back_url => url_for([:admin, @company, :permissions]), :delete_url => url_for([:admin, @company, @permission]) } %>
 
 		<ul class='permission'>
 			<input type="hidden" name="action_ids" id="permission_action_ids" value="<%= @permission.action_ids.join(",") %>"/>
