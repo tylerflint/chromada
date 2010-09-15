@@ -13,8 +13,10 @@
 			<div class='account-modal-content-form'>
 				<div class='form-group'>
 				    <%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
-				    <%= form.text_field :password, :class => 'required', :value => 'password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
-				    <%= form.text_field :password_confirmation, :class => 'required', :value => 'confirm password', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+					<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
+					<%= form.password_field :password, :class => 'password-password required', :value => '', :autocomplete => 'off' %>
+					<%= form.text_field :password_confirmation, :class => 'password-confirm-clear', :value => 'confirm password', :autocomplete => 'off' %>
+					<%= form.password_field :password_confirmation, :class => 'password-confirm required', :value => '', :autocomplete => 'off' %>
 				</div>
 			</div>
 			
@@ -27,3 +29,37 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$('.password-clear').show();
+		$('.password-password').hide();
+		$('.password-confirm').hide();
+
+		$('.password-clear').focus(function() {
+		    $('.password-clear').hide();
+		    $('.password-password').show();
+		    $('.password-password').focus();
+		});
+		
+		$('.password-password').blur(function() {
+		    if($('.password-password').val() == '') {
+		        $('.password-clear').show();
+		        $('.password-password').hide();
+		    }
+		});
+		
+		$('.password-confirm-clear').focus(function() {
+		    $('.password-confirm-clear').hide();
+			$('.password-confirm').show();
+			$('.password-confirm').focus();
+		});
+		
+		$('.password-confirm').blur(function() {
+		    if($('.password-confirm').val() == '') {
+		        $('.password-confirm-clear').show();
+		        $('.password-confirm').hide();
+		    }
+		});
+	//]]>
+</script>
