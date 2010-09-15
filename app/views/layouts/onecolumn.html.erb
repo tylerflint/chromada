@@ -34,11 +34,11 @@
 				<div id='bd' class='body'>
 					<%= yield %>
 				</div>
-				
-				<div id='ft' class='footer'>
-					<%= render :partial => 'shared/footer' %>
-				</div>
 			</div>			
+		</div>
+		
+		<div id='ft' class='footer'>
+			<%= render :partial => 'shared/footer' %>
 		</div>
 		
 		<!-- BEGIN GOOGLE ANALYTICS -->
@@ -46,15 +46,17 @@
 		<!-- END GOOGLE ANALYTICS -->
 		
 		<script type='text/javascript'>
-
+			
+			/*
 			// jQuery: When document is loaded and ready to process:
 			$(document).ready(function() {
-			    /* 	Footer Push: Pushes footer to the bottom of the page. 
-			    	Call the function and pass the ID of your main content element	*/    
+			    //Footer Push: Pushes footer to the bottom of the page. Call the function and pass the ID of your main content element   
 			    footerPush("#bd");
 			});
-
-			function footerPush (bodyElement) {
+			*/
+			
+			function footerPush (bodyElement)
+			{
 			    /* Title:       Footer Push v3.01
 			     * Modified:    October 16th, 2008
 			     *
@@ -85,14 +87,15 @@
 			     *Todo:         Hide / minimize the footer 'jump' effect
 			     *              Test on more current IE browsers
 			     */
-
+				
+				/*
 			    if ( $(window).height() > $(document.body).height() ) {
 			        if ( $.browser.msie ) {             //If Microsoft's IE
 			            $(bodyElement).height( $(bodyElement).height() + ( $(window).height() - $(document.body).height()) - 0);
 			        } else if ($.browser.mozilla) {     //If Mozilla's Firefox
 			            $(bodyElement).height( $(bodyElement).height() + ( $(window).height() - $(document.body).height()) - 0);
 			        } else if ($.browser.safari) {      //If Apple's Safari *or* Google's Chrome
-			            $(bodyElement).height( $(bodyElement).height() + ( $(window).height() - $(document.body).height()) - 58);
+			            $(bodyElement).height( $(bodyElement).height() + ( $(window).height() - $(document.body).height()) - 0);
 			        } else {                            //Any other browser, default to 'standard' implementation
 			            $(bodyElement).height( $(bodyElement).height() + ( $(window).height() - $(document.body).height()) - 0);
 			        };
@@ -102,10 +105,11 @@
 			            $(bodyElement).height( $(bodyElement).height() + ( window.innerHeight - $(document.body).height()) - 0 );
 			        };
 			    };
+				*/
 			};
-			
-			window.onresize=footerPush("#bd");;
-			window.onload=footerPush("#bd");;
+
+			//window.onresize = footerPush("#bd");
+			//window.onload = footerPush("#bd");
 			
 		</script>
 		

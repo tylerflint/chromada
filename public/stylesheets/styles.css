@@ -4,9 +4,10 @@
 html, body, div, span, p, ol, ul, li, img,
 h1, h2, h3, h4, h5, h6										{margin:0; padding:0;}
                                                     		
-/* MAIN PAGE ELEMENTS */                            		
-body 														{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
-                                                        	
+/* MAIN PAGE ELEMENTS */      
+html 														{height:100%;}                      		
+body 														{height:100%; background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
+                                                	
 /* IMAGES */                                            	
 img															{border:none;}
                                		                		
@@ -146,8 +147,8 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .quick-add.ticker:hover 									{background-position:0px -112px;}
 .quick-add.ticker.active									{background-position:0px -224px;}
                                                         	
-/***** LAYOUT *****/                                    	
-.page-wrapper 			 									{margin:0 auto; width:980px; background:#FFFFFF; overflow:hidden;}
+/***** LAYOUT *****/
+.page-wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
 .page														{margin:0 auto; width:940px; padding:20px 0px; overflow:hidden;}
 .page .body													{float:left; width:100%; margin:20px 0px 18px 0px;}
                                                         	
@@ -194,7 +195,7 @@ a#link-about.active 										{background-position:-472px 0px;}
 a#link-contact.active 										{background-position:-510px 0px;}
                                                     		
 /***** FOOTER *****/                                		
-.footer														{float:left; width:100%; margin:25px 0px 0px 0px;}
+.footer 													{position:relative; width:940px; margin:-50px auto 0px; padding:15px 0px; overflow:hidden;}
 .footer .solid-rule											{float:left; width:100%; height:1px; background:#D5D5D5;}
 .footer .wrapper 											{float:left; width:100%;}
 .footer .nav		 										{margin:6px 0px 0px 2px;}
