@@ -42,17 +42,6 @@
 				<h3 class='heading'>employee email (optional)</h3>
 				<input type='text' for='' name='employee[email]' class='email' value='<%= @employee.email || 'Type Employee Email Here' %>' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
 			</li>
-		
-			<li>
-				<h3 class='heading'>employee permissions</h3>
-				<ul class='permissions'>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 1</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 2</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 3</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 4</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 5</label></li>
-				</ul>
-			</li>
 		</ul>
 		
 	<% end %>

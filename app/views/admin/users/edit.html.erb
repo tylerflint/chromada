@@ -10,47 +10,17 @@
 		
 		<ul class='user'>
 			<li>
-				<h3 class='heading'>user name</h3>
-				<input type='text' for='' name='user[name]' class='name' value='<%= @user.name || 'Type Employee Name Here' %>' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
-			</li>
-		
-			<!--
-			<li>
-				<h3 class='heading'>user password</h3>
-				<div class='password'>
-					<input type='text' for='' name='user[password]' class='password' value='Type Employee Password Here' onfocus='if(this.value=="Type Employee Password Here")value=""' onblur='if(this.value=="")this.value="Type Employee Password Here"' />
-			
-					<div class='checkbox-group'>
-						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
-					</div>
-				</div>
+				<h3 class='heading'>username</h3>
+				<input type='text' for='' name='user[username]' class='name' value='<%= @user.name || 'Type Username Here' %>' onfocus='if(this.value=="Type Username Here")value=""' onblur='if(this.value=="")this.value="Type Username Here"' />
+				<input type="hidden" name="permission_ids" id="permission_ids" value="<%= @user.permission_ids.join(",") %>" />
 			</li>
 		
 			<li>
-				<h3 class='heading'>user id</h3>
-				<div class='id'>
-					<input type='text' for='' name='user[id]' class='id' value='Type Employee ID Here' onfocus='if(this.value=="Type Employee ID Here")value=""' onblur='if(this.value=="")this.value="Type Employee ID Here"' />
-			
-					<div class='checkbox-group'>
-						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
-					</div>
-				</div>
-			</li>
-			-->
-			
-			<li>
-				<h3 class='heading'>user email (optional)</h3>
-				<input type='text' for='' name='user[email]' class='email' value='<%= @user.email || 'Type Employee Email Here' %>' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
-			</li>
-		
-			<li>
-				<h3 class='heading'>user permissions</h3>
+				<h3 class='heading'>permissions</h3>
 				<ul class='permissions'>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 1</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 2</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 3</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 4</label></li>
-					<li><span class='checkbox'><input type="checkbox"/></span><label>Permissions 5</label></li>
+					<% @company.permissions.each do |permission| %>
+						<li><span class='checkbox'><input type="checkbox" id="permission_<%= permission.id %>" <% if(@user.permission_ids.include?(permission.id)) %>checked="checked"<% end %> /></span><label><%= permission.name %></label></li>
+					<% end %>
 				</ul>
 			</li>
 		</ul>
@@ -61,7 +31,19 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
 		$(".checkbox").dgStyle()
+		$('.permissions li').change(function (){
+			updateCheckedPermissions()
+		})
 	})
+	
+	function updateCheckedPermissions () {
+		ids = new Array()
+		$(".permissions input:checkbox:checked").each(function () {
+			ids.push(this.id.replace(/permission_/, ''))
+		})
+		$('#permission_ids').val(ids.toString())
+	}
+	
 	function autoGenerateEmployeeId (checkbox) {
 		if (checkbox.checked) {
 			$("#edit-user-custom-id").val("").attr('disabled', true)

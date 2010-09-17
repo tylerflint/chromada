@@ -1,0 +1,14 @@
+tyler:
+    id: 1
+    username: tylerflint
+    email: tylerflint@gmail.com
+    
+domino:
+    id: 2
+    username: sdomino
+    email: sdomino@gmail.com
+
+steve:
+    id: 3
+    username: sdars
+    email: sdars@gmail.com

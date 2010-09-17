@@ -46,6 +46,7 @@ class Admin::UsersController < Admin::AdminController
   # POST /users.xml
   def create
     @user = @company.users.build(params[:user])
+    @user.set_permissions( @company, params[:permission_ids].split(',') )
 
     respond_to do |format|
       if @user.save
@@ -62,6 +63,7 @@ class Admin::UsersController < Admin::AdminController
   # PUT /users/1.xml
   def update
     @user = @company.users.find(params[:id])
+    @user.set_permissions( @company, params[:permission_ids].split(',') )
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
