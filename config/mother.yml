@@ -4,13 +4,23 @@
 # View: index, show
 # Edit: edit, update
 
+# assuming a starting point of company entity
+- edit
+- billing
+
 - employees:
     - create
     - delete
     - view
     - edit
         
-- roles:
+- permissions:
+    - create
+    - delete
+    - view
+    - edit
+    
+- users:
     - create
     - delete
     - view

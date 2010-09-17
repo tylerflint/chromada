@@ -15,4 +15,9 @@ class User < ActiveRecord::Base
     self.username
   end
   
+  def set_permissions(company, permissions)
+    self.permission_ids = self.permission_ids - company.permission_ids
+    self.permission_ids = self.permission_ids | permissions
+  end
+  
 end
