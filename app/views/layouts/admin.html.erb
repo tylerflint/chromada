@@ -31,11 +31,11 @@
 		
 		<div class='page-wrapper'>
 			<div class='page'>
-				<div class='header'>
+				<div id='hd' class='header'>
 					<%= render :partial => 'admin/shared/header' %>
 				</div>
 				
-				<div class='body'>
+				<div id='bd' class='body'>
 					<div class='panel'>
 						<%= render :partial => 'admin/shared/dashboard' %>
 					</div>
@@ -48,11 +48,11 @@
 						<%= yield %>
 					</div>
 				</div>
-				
-				<div class='footer'>
-					<%= render :partial => 'shared/footer' %>
-				</div>
 			</div>			
+		</div>
+		
+		<div id='ft' class='footer'>
+			<%= render :partial => 'shared/footer' %>
 		</div>
 		
 		<!-- BEGIN GOOGLE ANALYTICS -->

@@ -1,8 +1,8 @@
-<div class='account register'>
+<div class='divise register'>
 	
 	<div class='site-sprite icon'><span class='hide'>chromada</span></div>
 	
-	<div class='account-body'>
+	<div class='body'>
 		<div class='header'>
 			<h1 class='site-sprite title'><span class='hide'>Welcome To Chromada</span></h1>
 		</div>
@@ -10,14 +10,13 @@
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
 			<%= devise_error_messages! %>
 
-			<div class='account-modal-content-form'>
-				<div class='form-group'>
-				    <%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
-					<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
-					<%= form.password_field :password, :class => 'password-password required', :value => '', :autocomplete => 'off' %>
-					<%= form.text_field :password_confirmation, :class => 'password-confirm-clear', :value => 'confirm password', :autocomplete => 'off' %>
-					<%= form.password_field :password_confirmation, :class => 'password-confirm required', :value => '', :autocomplete => 'off' %>
-				</div>
+			<div class='form-group'>
+			    <%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				<%= form.text_field :user_name, :class => 'required', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
+				<%= form.password_field :password, :class => 'password-password required', :value => '', :autocomplete => 'off' %>
+				<%= form.text_field :password_confirmation, :class => 'password-confirm-clear', :value => 'confirm password', :autocomplete => 'off' %>
+				<%= form.password_field :password_confirmation, :class => 'password-confirm required', :value => '', :autocomplete => 'off' %>
 			</div>
 			
 			<%= form.submit 'register', :class => 'button register' %>
