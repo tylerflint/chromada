@@ -21,3 +21,13 @@ five:
 six:
     permission_id: 7
     user_id: 1
+  
+# steve is a manager
+seven:
+    permission_id: 2
+    user_id: 3 
+        
+# erl is an accountant
+eight:
+    permission_id: 1
+    user_id: 4

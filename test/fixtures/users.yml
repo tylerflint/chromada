@@ -12,3 +12,8 @@ steve:
     id: 3
     username: sdars
     email: sdars@gmail.com
+    
+erl:
+    id: 4
+    username: mynameisearl
+    email: earl@gmail.com
