@@ -261,7 +261,7 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .divise .header 											{float:left; width:100%; margin:0px 0px 26px 0px;}
 .divise .title		 										{width:52px; height:21px; background-position:-647px -59px;}
 .divise .content 											{margin:10px 0px;}
-.divise .form-group input									{width:227px; height:18px; margin:0px 0px -1px 0px;}
+.divise .form-group input									{width:227px; height:18px; margin:0px 0px -1px 0px; text-transform:lowercase;}
 .divise .form-group textarea 								{width:227px; height:150px; margin:-1px 0px 0px 0px;}
 .divise .button												{margin:15px 0px;}
 .divise .additional-links 									{float:left; margin:8px 0px;}

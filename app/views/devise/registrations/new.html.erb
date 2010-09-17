@@ -11,7 +11,7 @@
 			<%= devise_error_messages! %>
 
 			<div class='form-group'>
-			    <%= form.text_field :email, :class => 'required', :value => 'email address (used for login)', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+			    <%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<%= form.text_field :user_name, :class => 'required', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
 				<%= form.password_field :password, :class => 'password-password required', :value => '', :autocomplete => 'off' %>
