@@ -52,9 +52,9 @@ h4, h5, h6													{font-size:10px;}
 form 														{float:left;}
 .form-group 												{float:left;}
 label 														{float:left;}
-input														{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px;}
+input														{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; text-transform:capitalize; font-family:'Helvetica', Arial, sans-serif;}
 input.checkbox 												{float:left; width:15px !important; height:15px !important;}
-textarea 													{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px;}
+textarea 													{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; text-transform:capitalize; font-family:'Helvetica', Arial, sans-serif;}
 .checkbox-group label 										{margin:4px 0px 0px 8px; padding:0px;}
                                                     		
 /* TABLES */                                        		
@@ -135,11 +135,14 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 */
 .button 													{float:left; text-transform:uppercase; letter-spacing:1px; border:none;}
 
-.button.login 												{width:91px; margin:0px 2px; padding:7px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.button.login 												{width:91px; margin:0px 2px; padding:8px 0px 4px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .button.login:hover											{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
                                                  		
-.button.register 											{width:110px; margin:0px 2px; padding:7px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.button.register 											{width:110px; margin:0px 2px; padding:8px 0px 4px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .button.register:hover										{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
+
+.button.submit 												{width:91px; margin:0px 2px; padding:8px 0px 4px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.button.submit:hover										{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
 
 /* quick add */
 .quick-add 													{cursor:pointer;}
@@ -170,7 +173,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 .button.link-logout	 										{width:40px; height:12px; background-position:-288px -35px;}                           	
 .header .search												{float:left; width:174px; margin:1px 0px 0px 0px;}
 .header .search .icon										{float:right; width:12px; height:12px; background-position:-573px -20px;}
-.header .search input 										{float:left; width:160px; height:10px; padding:0px; border:none; text-transform:capitalize;}
+.header .search input 										{float:left; width:160px; height:10px; padding:2px 0px 0px 0px; border:none; font-size:11px; text-transform:capitalize;}
                                                     		
 /* header nav */                                   	    	
 a#link-products 											{width:55px; background-position:-255px -24px;}
@@ -285,7 +288,7 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 /* LOGIN */                                         		
 .contact 													{margin:113px auto 144px; width:500px; overflow:hidden;}
 .contact .header 											{float:left; width:100%; margin:0px 0px 26px 0px;}
-.contact .title		 										{width:52px; height:21px; background-position:-647px -59px;}
+.contact .title		 										{width:88px; height:21px; background-position:-603px -8px;}
 .contact .body 												{float:right; width:250px;}
 .contact .content 											{margin:10px 0px;}
 .contact .form-group input									{width:227px; height:18px; margin:0px 0px -1px 0px;}
