@@ -1,0 +1,23 @@
+one:
+    id: 1
+    path: employees
+    
+two:
+    id: 2
+    path: employees/view
+    
+three:
+    id: 3
+    path: employees/edit
+    
+four:
+    id: 4
+    path: employees/delete
+    
+five:
+    id: 5
+    path: employees/create
+    
+six:
+    id: 6
+    path: billing

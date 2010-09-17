@@ -1,0 +1,23 @@
+one:
+    action_id: 6
+    permission_id: 1
+    
+two:
+    action_id: 1
+    permission_id: 2
+    
+three:
+    action_id: 2
+    permission_id: 2
+    
+four:
+    action_id: 3
+    permission_id: 2
+    
+five:
+    action_id: 4
+    permission_id: 2
+
+six:
+    action_id: 5
+    permission_id: 2
