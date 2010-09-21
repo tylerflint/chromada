@@ -1,7 +1,33 @@
 module Mother
   
+  @company = nil
+  @child   = nil
+  @actions = []
+  
   class << self
   
+    def may_i?(action)
+      raise "no child present" if !@child
+      raise "no company present" if !@company
+      @actions.include?(action)
+    end
+    
+    def set_company(company)
+      @company = company
+    end
+    
+    def set_child(child)
+      @child = child
+      prepare_actions
+    end
+    
+    def prepare_actions
+      @actions = []
+      Action.select(:path).joins(:permissions => [ :users ]).where(:permissions => {:company_id => @company.id}, :users => {:id => @child.id}).each do |action|
+        @actions << action[:path]
+      end
+    end
+    
     def load_config(yaml=nil, file=nil)
       file ||= 'mother.yml'
       config = YAML.load(yaml) if yaml
