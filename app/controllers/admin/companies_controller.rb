@@ -1,5 +1,7 @@
 class Admin::CompaniesController < Admin::AdminController
 
+  before_filter :load_company, :init_permissions, :except => [:index, :new, :create]
+
   # GET /companies
   # GET /companies.xml
   def index
@@ -16,14 +18,12 @@ class Admin::CompaniesController < Admin::AdminController
   end
   
   def dashboard
-    @company = Company.find(params[:id])
+    
   end
 
   # GET /companies/1
   # GET /companies/1.xml
   def show
-    @company = Company.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @company }
@@ -43,14 +43,13 @@ class Admin::CompaniesController < Admin::AdminController
 
   # GET /companies/1/edit
   def edit
-    @company = Company.find(params[:id])
+    
   end
 
   # POST /companies
   # POST /companies.xml
   def create
     @company = Company.create(params[:company])
-    # @company = current_user.companies.create(params[:company])
     
     respond_to do |format|
       if @company.save 
@@ -68,7 +67,6 @@ class Admin::CompaniesController < Admin::AdminController
   # PUT /companies/1
   # PUT /companies/1.xml
   def update
-    @company = Company.find(params[:id])
 
     respond_to do |format|
       if @company.update_attributes(params[:company])
@@ -84,7 +82,6 @@ class Admin::CompaniesController < Admin::AdminController
   # DELETE /companies/1
   # DELETE /companies/1.xml
   def destroy
-    @company = Company.find(params[:id])
     @company.destroy
 
     respond_to do |format|
@@ -94,6 +91,20 @@ class Admin::CompaniesController < Admin::AdminController
   end
 
   protected
+  
+  def load_company
+    begin
+      @company = current_user.companies.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      flash[:error] = "Invalid company"
+      redirect_to admin_dashboard_url
+    end
+  end
+  
+  def init_permissions
+    Mother.set_company(@company)
+    Mother.set_child(current_user)
+  end
   
   def add_company_to_user(company)
     current_user.companies << company

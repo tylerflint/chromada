@@ -1,5 +1,4 @@
-class Admin::UsersController < Admin::AdminController
-  before_filter :load_company
+class Admin::UsersController < Admin::CompanyController
   
   # GET /users
   # GET /users.xml
@@ -45,9 +44,15 @@ class Admin::UsersController < Admin::AdminController
   # POST /users
   # POST /users.xml
   def create
-    @user = @company.users.build(params[:user])
+    begin
+      @user = User.find_by_username(params[:user][:username])
+    rescue ActiveRecord::RecordNotFound
+      flash[:error] = "unknown user"
+      redirect_to url_for([:admin, @company, :users])
+    end
+    
+    @user.companies << @company
     @user.set_permissions( @company, params[:permission_ids].split(',') )
-
     respond_to do |format|
       if @user.save
         format.html { redirect_to(:action => :index, :notice => 'User was successfully created.') }
@@ -80,18 +85,12 @@ class Admin::UsersController < Admin::AdminController
   # DELETE /users/1.xml
   def destroy
     @user = @company.users.find(params[:id])
-    @user.destroy
-
+    @user.companies.delete(@company)
+    @user.save
     respond_to do |format|
       format.html { redirect_to(:action => :index) }
       format.xml  { head :ok }
     end
-  end
-  
-  protected
-  
-  def load_company
-    @company = Company.find(params[:company_id])
   end
   
 end
