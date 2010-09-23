@@ -1,5 +1,4 @@
-class Admin::PermissionsController < Admin::AdminController
-  before_filter :load_company
+class Admin::PermissionsController < Admin::CompanyController
 
   # GET /roles
   # GET /roles.xml
@@ -92,12 +91,6 @@ class Admin::PermissionsController < Admin::AdminController
       format.html { redirect_to(:action => :index) }
       format.xml  { head :ok }
     end
-  end
-  
-  protected
-  
-  def load_company
-    @company = Company.find(params[:company_id])
   end
   
 end
