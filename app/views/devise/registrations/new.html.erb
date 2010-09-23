@@ -11,12 +11,12 @@
 			<%= devise_error_messages! %>
 
 			<div class='form-group'>
-			    <%= form.text_field :email, :class => 'required', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
-				<%= form.text_field :user_name, :class => 'required', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+			    <%= form.text_field :email, :class => 'required email defaultInvalid', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				<%= form.text_field :name, :class => 'required defaultInvalid', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
-				<%= form.password_field :password, :class => 'password-password required', :value => '', :autocomplete => 'off' %>
+				<%= form.password_field :password, :class => 'password-password required password', :value => '', :autocomplete => 'off' %>
 				<%= form.text_field :password_confirmation, :class => 'password-confirm-clear', :value => 'confirm password', :autocomplete => 'off' %>
-				<%= form.password_field :password_confirmation, :class => 'password-confirm required', :value => '', :autocomplete => 'off' %>
+				<%= form.password_field :password_confirmation, :class => 'password-confirm required password', :value => '', :autocomplete => 'off' %>
 			</div>
 			
 			<%= form.submit 'register', :class => 'button register' %>
@@ -59,6 +59,25 @@
 		        $('.password-confirm-clear').show();
 		        $('.password-confirm').hide();
 		    }
+		});
+		
+		jQuery.validator.addMethod("defaultInvalid", function(value, element) {
+		   return value != element.defaultValue;
+		}, "");
+		
+		$("#user_new").validate();
+		$('#user_new').submit(function(form){
+			
+			if($("#user_new").valid())
+			{
+				form.submit();
+			}else{
+				$('.password-clear').hide();
+				$('.password-password').show();
+				
+				$('.password-confirm-clear').hide();
+				$('.password-confirm').show();
+			}
 		});
 	//]]>
 </script>

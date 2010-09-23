@@ -10,9 +10,9 @@
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
 			
 			<div class='form-group'>
-				<%= form.text_field :email, :class => 'required', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				<%= form.text_field :name, :class => 'required defaultInvalid', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
-				<%= form.password_field :password, :class => 'password-password required', :value => '', :autocomplete => 'off' %>
+				<%= form.password_field :password, :class => 'password-password required password', :value => '', :autocomplete => 'off' %>
 			</div>
 			
 			<%= form.submit 'login', :class => 'button login' %>
@@ -36,11 +36,28 @@
 		    $('.password-password').show();
 		    $('.password-password').focus();
 		});
+		
 		$('.password-password').blur(function() {
 		    if($('.password-password').val() == '') {
 		        $('.password-clear').show();
 		        $('.password-password').hide();
 		    }
+		});
+		
+		jQuery.validator.addMethod("defaultInvalid", function(value, element) {
+		   return value != element.defaultValue;
+		}, "");
+		
+		$("#user_new").validate();
+		$('#user_new').submit(function(form){
+			
+			if($("#user_new").valid())
+			{
+				form.submit();
+			}else{
+				$('.password-clear').hide();
+				$('.password-password').show();
+			}
 		});
 	//]]>
 </script>
