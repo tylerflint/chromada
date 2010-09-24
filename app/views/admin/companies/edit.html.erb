@@ -8,9 +8,9 @@
 
 <div class='content company'>
 		
-	<%= form_for [:admin, @company] do |f| %>
+	<%= form_for [:admin, @company] do |form| %>
 	
-		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @company, :back_url => url_for([:admin, :companies]), :delete_url => url_for([:admin, @company])} %>
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => form, :object => @company, :back_url => url_for([:admin, :companies]), :delete_url => url_for([:admin, @company])} %>
 
 		<ul class='company'>
 			<li>
@@ -36,15 +36,12 @@
 		   return value != element.defaultValue;
 		}, "");
 	
-		$("#user_new").validate();
-		$('#user_new').submit(function(form)
+		$("form.edit_company").validate();
+		$("form.edit_company").submit(function(form)
 		{
-			if($("#user_new").valid())
+			if($("form.edit_company").valid())
 			{
 				form.submit();
-			}else{
-				$('.password-clear').hide();
-				$('.password-password').show();
 			}
 		});
 	//]]>

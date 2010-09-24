@@ -28,22 +28,22 @@
 
 <script type="text/javascript">
 	//<![CDATA[
-		$('.password-clear').show();
-		$('.password-password').hide();
+		$(".password-clear").show();
+		$(".password-password").hide();
 
-		$('.password-clear').focus(function()
+		$(".password-clear").focus(function()
 		{
-		    $('.password-clear').hide();
-		    $('.password-password').show();
-		    $('.password-password').focus();
+		    $(".password-clear").hide();
+		    $(".password-password").show();
+		    $(".password-password").focus();
 		});
 		
-		$('.password-password').blur(function()
+		$(".password-password").blur(function()
 		{
-		    if($('.password-password').val() == '' && $('.password-password').valid())
+		    if($(".password-password").val() == "" && $(".password-password").valid())
 			{
-		        $('.password-clear').show();
-		    	$('.password-password').hide();
+		        $(".password-clear").show();
+		    	$(".password-password").hide();
 			}
 		});
 		
@@ -59,8 +59,8 @@
 			{
 				form.submit();
 			}else{
-				$('.password-clear').hide();
-				$('.password-password').show();
+				$(".password-clear").hide();
+				$(".password-password").show();
 			}
 		});
 	//]]>

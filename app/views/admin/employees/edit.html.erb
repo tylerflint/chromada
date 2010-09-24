@@ -4,9 +4,9 @@
 
 <div class='content company'>
 	
-	<%= form_for [:admin, @company, @employee] do |f| %>
+	<%= form_for [:admin, @company, @employee] do |form| %>
 	  
-		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @employee, :back_url => url_for([:admin, @company, :employees]), :delete_url => url_for([:admin, @company, @employee]) } %>
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => form, :object => @employee, :back_url => url_for([:admin, @company, :employees]), :delete_url => url_for([:admin, @company, @employee]) } %>
 		
 		<ul class='employee'>
 			<li>
@@ -15,7 +15,7 @@
 			</li>
 			<li>
 				<h3 class='heading'>employee email (optional)</h3>
-				<input type='text' for='' name='employee[email]' class='requied email' value='<%= @employee.email || 'Type Employee Email Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
+				<input type='text' for='' name='employee[email]' class='email' value='<%= @employee.email || 'Type Employee Email Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
 			</li>
 		</ul>
 		
@@ -33,9 +33,9 @@
 		{
 			if (checkbox.checked)
 			{
-				$("#edit-employee-custom-id").val("").attr('disabled', true);
+				$("#edit-employee-custom-id").val("").attr("disabled", true);
 			}else{
-				$("#edit-employee-custom-id").removeAttr('disabled');
+				$("#edit-employee-custom-id").removeAttr("disabled");
 			};
 		};
 	
@@ -44,15 +44,12 @@
 		   return value != element.defaultValue;
 		}, "");
 	
-		$("#user_new").validate();
-		$('#user_new').submit(function(form)
+		$("form.new_employee").validate();
+		$("form.new_employee").submit(function(form)
 		{
-			if($("#user_new").valid())
+			if($("form.new_employee").valid())
 			{
 				form.submit();
-			}else{
-				$('.password-clear').hide();
-				$('.password-password').show();
 			}
 		});
 	//]]>

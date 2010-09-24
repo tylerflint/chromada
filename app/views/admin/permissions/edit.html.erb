@@ -70,11 +70,11 @@
 			{
 				if (this.name != '')
 				{
-					ids.push(this.name.replace(/action_/, ''));
+					ids.push(this.name.replace(/action_/, ""));
 				};
 			});
 		
-			$('#permission_action_ids').val(ids.toString());
+			$("#permission_action_ids").val(ids.toString());
 		};
 		
 		jQuery.validator.addMethod("defaultInvalid", function(value, element)
@@ -82,15 +82,15 @@
 		   return value != element.defaultValue;
 		}, "");
 		
-		$("#user_new").validate();
-		$('#user_new').submit(function(form)
+		$("form.new_permission").validate();
+		$("form.new_permission").submit(function(form)
 		{
-			if($("#user_new").valid())
+			if($("form.new_permission").valid())
 			{
 				form.submit();
 			}else{
-				$('.password-clear').hide();
-				$('.password-password').show();
+				$(".password-clear").hide();
+				$(".password-password").show();
 			}
 		});
 	//]]>
