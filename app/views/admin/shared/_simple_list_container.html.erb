@@ -14,31 +14,43 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
-	var filtered = false;
-	$(document).ready(function(){
-		$('#search-filter').keyup(function(){
-			filter()
-		})
-	})
-	function filter () {
-		filtered = true;
-		$.get('<%= url_for([:admin, @company, p.object.to_s.pluralize]) %>?ajax=true&search=' + $('#search-filter').val(), function(data){
-			$('.results').html(data)
-		})
-	}
-	function showAll () {
-		var url = '<%= url_for([:admin, @company, p.object.to_s.pluralize]) %>?ajax=true&show_all=true';
-		if (filtered) {
-			url += "&search=" + $('#search-filter').val()
-		}
-		$.get(url, function(data){
-			$('.results').html(data)
-		})
-	}
-	function toggleRemove()
-	{
-		$('.removable').each(function(){
-			$(this).toggleClass('remove', 'arrow');
+	//<![CDATA[
+		var filtered = false;
+		$(document).ready(function()
+		{
+			$('#search-filter').keyup(function()
+			{
+				filter();
+			});
 		});
-	}
+		
+		function filter()
+		{
+			filtered = true;
+			$.get('<%= url_for([:admin, @company, p.object.to_s.pluralize]) %>?ajax=true&search=' + $('#search-filter').val(), function(data)
+			{
+				$('.results').html(data);
+			})
+		}
+		
+		function showAll()
+		{
+			var url = '<%= url_for([:admin, @company, p.object.to_s.pluralize]) %>?ajax=true&show_all=true';
+			if (filtered) {
+				url += "&search=" + $('#search-filter').val();
+			}
+			$.get(url, function(data)
+			{
+				$('.results').html(data);
+			})
+		}
+		
+		function toggleRemove()
+		{
+			$('.removable').each(function()
+			{
+				$(this).toggleClass('remove', 'arrow');
+			});
+		}
+	//]]>
 </script>

@@ -15,7 +15,7 @@
 		<ul class='company'>
 			<li>
 				<h3 class='heading'>company name</h3>
-				<input type='text' for='' name='company[name]' class='name' value='<%= @company.name || 'Type Company Name Here' %>' onfocus='if(this.value=="Type Company Name Here")value=""' onblur='if(this.value=="")this.value="Type Company Name Here"' />
+				<input type='text' for='' name='company[name]' class='required name defaultInvalid' value='<%= @company.name || 'Type Company Name Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
 			</li>
 			
 			<!--
@@ -28,3 +28,24 @@
 		
 	<% end %>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+		jQuery.validator.addMethod("defaultInvalid", function(value, element)
+		{
+		   return value != element.defaultValue;
+		}, "");
+	
+		$("#user_new").validate();
+		$('#user_new').submit(function(form)
+		{
+			if($("#user_new").valid())
+			{
+				form.submit();
+			}else{
+				$('.password-clear').hide();
+				$('.password-password').show();
+			}
+		});
+	//]]>
+</script>

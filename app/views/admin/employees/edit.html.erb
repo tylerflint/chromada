@@ -11,36 +11,11 @@
 		<ul class='employee'>
 			<li>
 				<h3 class='heading'>employee name</h3>
-				<input type='text' for='' name='employee[name]' class='name' value='<%= @employee.name || 'Type Employee Name Here' %>' onfocus='if(this.value=="Type Employee Name Here")value=""' onblur='if(this.value=="")this.value="Type Employee Name Here"' />
+				<input type='text' for='' name='employee[name]' class='required name defaultInvalid' value='<%= @employee.name || 'Type Employee Name Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
 			</li>
-		
-			<!--
-			<li>
-				<h3 class='heading'>employee password</h3>
-				<div class='password'>
-					<input type='text' for='' name='employee[password]' class='password' value='Type Employee Password Here' onfocus='if(this.value=="Type Employee Password Here")value=""' onblur='if(this.value=="")this.value="Type Employee Password Here"' />
-			
-					<div class='checkbox-group'>
-						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
-					</div>
-				</div>
-			</li>
-		
-			<li>
-				<h3 class='heading'>employee id</h3>
-				<div class='id'>
-					<input type='text' for='' name='employee[id]' class='id' value='Type Employee ID Here' onfocus='if(this.value=="Type Employee ID Here")value=""' onblur='if(this.value=="")this.value="Type Employee ID Here"' />
-			
-					<div class='checkbox-group'>
-						<span class='checkbox'><input type="checkbox"/></span><label>auto generate (optional)</label>
-					</div>
-				</div>
-			</li>
-			-->
-			
 			<li>
 				<h3 class='heading'>employee email (optional)</h3>
-				<input type='text' for='' name='employee[email]' class='email' value='<%= @employee.email || 'Type Employee Email Here' %>' onfocus='if(this.value=="Type Employee Email Here")value=""' onblur='if(this.value=="")this.value="Type Employee Email Here"' />
+				<input type='text' for='' name='employee[email]' class='requied email' value='<%= @employee.email || 'Type Employee Email Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
 			</li>
 		</ul>
 		
@@ -48,14 +23,37 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
-	$(document).ready(function(){
-		$(".checkbox").dgStyle()
-	})
-	function autoGenerateEmployeeId (checkbox) {
-		if (checkbox.checked) {
-			$("#edit-employee-custom-id").val("").attr('disabled', true)
-		} else {
-			$("#edit-employee-custom-id").removeAttr('disabled')
-		}
-	}
+	//<![CDATA[
+		$(document).ready(function()
+		{
+			$(".checkbox").dgStyle();
+		});
+	
+		function autoGenerateEmployeeId(checkbox)
+		{
+			if (checkbox.checked)
+			{
+				$("#edit-employee-custom-id").val("").attr('disabled', true);
+			}else{
+				$("#edit-employee-custom-id").removeAttr('disabled');
+			};
+		};
+	
+		jQuery.validator.addMethod("defaultInvalid", function(value, element)
+		{
+		   return value != element.defaultValue;
+		}, "");
+	
+		$("#user_new").validate();
+		$('#user_new').submit(function(form)
+		{
+			if($("#user_new").valid())
+			{
+				form.submit();
+			}else{
+				$('.password-clear').hide();
+				$('.password-password').show();
+			}
+		});
+	//]]>
 </script>
