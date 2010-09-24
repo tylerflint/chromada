@@ -10,7 +10,7 @@
 		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
 			
 			<div class='form-group'>
-				<%= form.text_field :name, :class => 'required defaultInvalid', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+				<%= form.text_field :username, :class => 'required defaultInvalid', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
 				<%= form.password_field :password, :class => 'password-password required password', :value => '', :autocomplete => 'off' %>
 			</div>
