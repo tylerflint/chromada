@@ -1,12 +1,47 @@
-<h2>Forgot your password?</h2>
+<div class='divise forgot-password'>
+	
+	<div class='site-sprite icon'><span class='hide'>chromada</span></div>
+	
+	<div class='body'>
+		<div class='header'>
+			<h1 class='site-sprite title'><span class='hide'>Forgot Password</span></h1>
+		</div>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+		<%= form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |form| %>
+			<%= devise_error_messages! %>
+			
+			<div class='form-group'>
+				<%= form.text_field :email, :class => 'required email defaultInvalid', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
+			</div>
+			
+			<%= form.submit 'send request', :class => 'button send-request' %>
+			
+		<% end %>
+		
+		<div class='additional-links'>
+			<%= render :partial => "devise/shared/links" %>
+		</div>
+		
+	</div>
+</div>
 
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
-
-  <p><%= f.submit "Send me reset password instructions" %></p>
-<% end %>
-
-<%= render :partial => "devise/shared/links" %>
+<script type="text/javascript">
+	//<![CDATA[
+		jQuery.validator.addMethod("defaultInvalid", function(value, element)
+		{
+		   return value != element.defaultValue;
+		}, "");
+		
+		$("#user_new").validate();
+		$('#user_new').submit(function(form)
+		{
+			if($("#user_new").valid())
+			{
+				form.submit();
+			}else{
+				$('.password-clear').hide();
+				$('.password-password').show();
+			}
+		});
+	//]]>
+</script>
