@@ -31,20 +31,24 @@
 		$('.password-clear').show();
 		$('.password-password').hide();
 
-		$('.password-clear').focus(function() {
+		$('.password-clear').focus(function()
+		{
 		    $('.password-clear').hide();
 		    $('.password-password').show();
 		    $('.password-password').focus();
 		});
 		
-		$('.password-password').blur(function() {
-		    if($('.password-password').val() == '') {
+		$('.password-password').blur(function()
+		{
+		    if($('.password-password').val() == '' && $('.password-password').valid())
+			{
 		        $('.password-clear').show();
-		        $('.password-password').hide();
-		    }
+		    	$('.password-password').hide();
+			}
 		});
 		
-		jQuery.validator.addMethod("defaultInvalid", function(value, element) {
+		jQuery.validator.addMethod("defaultInvalid", function(value, element)
+		{
 		   return value != element.defaultValue;
 		}, "");
 		

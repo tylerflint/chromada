@@ -29,26 +29,34 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
-	$(document).ready(function(){
-		$(".checkbox").dgStyle()
-		$('.permissions li').change(function (){
-			updateCheckedPermissions()
-		})
-	})
+	//<![CDATA[
+		$(document).ready(function()
+		{
+			$(".checkbox").dgStyle();
+			$('.permissions li').change(function ()
+			{
+				updateCheckedPermissions();
+			});
+		});
 	
-	function updateCheckedPermissions () {
-		ids = new Array()
-		$(".permissions input:checkbox:checked").each(function () {
-			ids.push(this.id.replace(/permission_/, ''))
-		})
-		$('#permission_ids').val(ids.toString())
-	}
+		function updateCheckedPermissions()
+		{
+			ids = new Array();
+			$(".permissions input:checkbox:checked").each(function()
+			{
+				ids.push(this.id.replace(/permission_/, ''));
+			})
+			$('#permission_ids').val(ids.toString());
+		};
 	
-	function autoGenerateEmployeeId (checkbox) {
-		if (checkbox.checked) {
-			$("#edit-user-custom-id").val("").attr('disabled', true)
-		} else {
-			$("#edit-user-custom-id").removeAttr('disabled')
-		}
-	}
+		function autoGenerateEmployeeId(checkbox)
+		{
+			if(checkbox.checked)
+			{
+				$("#edit-user-custom-id").val("").attr('disabled', true);
+			}else{
+				$("#edit-user-custom-id").removeAttr('disabled');
+			};
+		};
+	//]]>
 </script>

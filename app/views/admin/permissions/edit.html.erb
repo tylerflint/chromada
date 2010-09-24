@@ -12,7 +12,7 @@
 			<input type="hidden" name="action_ids" id="permission_action_ids" value="<%= @permission.action_ids.join(",") %>"/>
 			<li>
 				<h3 class='heading'>permission name</h3>
-				<input type='text' for='' name='permission[name]' class='name' value='<%= @permission.name || 'Type Permission Name Here' %>' onfocus='if(this.value=="Type Permission Name Here")value=""' onblur='if(this.value=="")this.value="Type Permission Name Here"' />
+				<input type='text' for='' name='permission[name]' class='required name defaultInvalid' value='<%= @permission.name || 'Type Permission Name Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
 			</li>
 
 			<li>
@@ -27,39 +27,71 @@
 	<% end %>
 </div>
 
-<script type='text/javascript'>
-	$(document).ready(function () {
-		$(".checkbox").dgStyle()
-		addActionClickEvent()
-		addParentActionClickEvent()
-	})
+<script type='text/javascript' charset="utf-8">
+	//<![CDATA[
+		$(document).ready(function()
+		{
+			$(".checkbox").dgStyle();
+			addActionClickEvent();
+			addParentActionClickEvent();
+		});
 
-	function addActionClickEvent () {
-		$(".permissions input:checkbox").each(function (){
-			$(this).change(updateCheckedActions)
-		})
-	}
+		function addActionClickEvent()
+		{
+			$(".permissions input:checkbox").each(function ()
+			{
+				$(this).change(updateCheckedActions);
+			});
+		};
 
-	function addParentActionClickEvent () {
-		$(".permissions input:checkbox.parent").each(function (){
-			$(this).change(function () {
-				var checked = $(this).attr('checked')
-				$(this).parent().parent().find('ul li input:checkbox').each(function () {
-					$(this).attr('checked', checked)
-					$(this).parent().dgHandle()
-				})
-				updateCheckedActions()
-			})
-		})
-	}
+		function addParentActionClickEvent()
+		{
+			$(".permissions input:checkbox.parent").each(function()
+			{
+				$(this).change(function()
+				{
+					var checked = $(this).attr('checked')
+					$(this).parent().parent().find('ul li input:checkbox').each(function()
+					{
+						$(this).attr('checked', checked);
+						$(this).parent().dgHandle();
+					});
+				
+					updateCheckedActions();
+				});
+			});
+		};
 
-	function updateCheckedActions () {
-		ids = new Array()
-		$(".permissions input:checkbox:checked").each(function () {
-			if (this.name != '') {
-				ids.push(this.name.replace(/action_/, ''))
+		function updateCheckedActions()
+		{
+			ids = new Array();
+		
+			$(".permissions input:checkbox:checked").each(function()
+			{
+				if (this.name != '')
+				{
+					ids.push(this.name.replace(/action_/, ''));
+				};
+			});
+		
+			$('#permission_action_ids').val(ids.toString());
+		};
+		
+		jQuery.validator.addMethod("defaultInvalid", function(value, element)
+		{
+		   return value != element.defaultValue;
+		}, "");
+		
+		$("#user_new").validate();
+		$('#user_new').submit(function(form)
+		{
+			if($("#user_new").valid())
+			{
+				form.submit();
+			}else{
+				$('.password-clear').hide();
+				$('.password-password').show();
 			}
-		})
-		$('#permission_action_ids').val(ids.toString())
-	}
+		});
+	//]]>
 </script>

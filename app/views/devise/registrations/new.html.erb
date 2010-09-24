@@ -42,7 +42,7 @@
 		});
 		
 		$('.password-password').blur(function() {
-		    if($('.password-password').val() == '') {
+		    if($('.password-password').val() == '' && $('.password-password').valid()) {
 		        $('.password-clear').show();
 		        $('.password-password').hide();
 		    }
@@ -54,8 +54,10 @@
 			$('.password-confirm').focus();
 		});
 		
-		$('.password-confirm').blur(function() {
-		    if($('.password-confirm').val() == '') {
+		$('.password-confirm').blur(function()
+		{
+		    if($('.password-confirm').val() == '' && $('.password-confirm').valid())
+			{
 		        $('.password-confirm-clear').show();
 		        $('.password-confirm').hide();
 		    }
