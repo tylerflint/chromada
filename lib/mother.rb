@@ -1,15 +1,16 @@
 module Mother
   
-  @company = nil
-  @child   = nil
-  @actions = []
+  @company  = nil
+  @child    = nil
+  @actions  = []
+  @is_owner = false
   
   class << self
   
     def may_i?(action)
       raise "no child present" if !@child
       raise "no company present" if !@company
-      @actions.include?(action)
+      @is_owner || @actions.include?(action)
     end
     
     def set_company(company)
@@ -18,7 +19,15 @@ module Mother
     
     def set_child(child)
       @child = child
-      prepare_actions
+      determine_ownership
+      prepare_actions if !@is_owner
+    end
+    
+    def determine_ownership
+      company_user = @child.company_users.find_by_company_id(@company.id)
+      if company_user.is_owner == 1
+        @is_owner = true
+      end
     end
     
     def prepare_actions

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
-  has_and_belongs_to_many :companies
+  has_many :company_users
+  has_many :companies, :through => :company_users
   has_and_belongs_to_many :permissions
 
   # Include default devise modules. Others available are:

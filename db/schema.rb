@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100915023723) do
+ActiveRecord::Schema.define(:version => 20100923033405) do
 
   create_table "actions", :force => true do |t|
     t.string   "path"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(:version => 20100915023723) do
 
   add_index "companies_users", ["company_id"], :name => "index_companies_users_on_company_id"
   add_index "companies_users", ["user_id"], :name => "index_companies_users_on_user_id"
+
+  create_table "company_users", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "user_id"
+    t.integer  "is_owner"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "company_users", ["company_id"], :name => "index_company_users_on_company_id"
+  add_index "company_users", ["user_id"], :name => "index_company_users_on_user_id"
 
   create_table "employees", :force => true do |t|
     t.integer  "company_id"
