@@ -8,7 +8,7 @@
 	  
 		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @user, :back_url => url_for([:admin, @company, :users]), :delete_url => url_for([:admin, @company, @user]) } %>
 		
-		<ul class='user'>
+		<ul class='body user'>
 			<li>
 				<h3 class='heading'>username</h3>
 				<input type='text' for='' name='user[username]' class='name' value='<%= @user.name || 'Type Username Here' %>' onfocus='if(this.value=="Type Username Here")value=""' onblur='if(this.value=="")this.value="Type Username Here"' />

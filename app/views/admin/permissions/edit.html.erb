@@ -8,7 +8,7 @@
 		  
 		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @permission, :back_url => url_for([:admin, @company, :permissions]), :delete_url => url_for([:admin, @company, @permission]) } %>
 
-		<ul class='permission'>
+		<ul class='body permission'>
 			<input type="hidden" name="action_ids" id="permission_action_ids" value="<%= @permission.action_ids.join(",") %>"/>
 			<li>
 				<h3 class='heading'>permission name</h3>

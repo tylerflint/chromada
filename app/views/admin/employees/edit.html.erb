@@ -8,7 +8,7 @@
 	  
 		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => form, :object => @employee, :back_url => url_for([:admin, @company, :employees]), :delete_url => url_for([:admin, @company, @employee]) } %>
 		
-		<ul class='employee'>
+		<ul class='body employee'>
 			<li>
 				<h3 class='heading'>employee name</h3>
 				<input type='text' for='' name='employee[name]' class='required name defaultInvalid' value='<%= @employee.name || 'Type Employee Name Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
