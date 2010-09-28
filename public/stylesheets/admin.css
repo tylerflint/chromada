@@ -73,6 +73,7 @@
 
 /**** COMPANY *****/
 .company 												{float:left; font-size:15px; color:#4C4C4C;}
+.company form 											{width:100%;}
 .company input 											{float:left; margin:0px; padding:0px; border:none;}
 .company.content 										{border-top:1px solid #989898; border-bottom:1px solid #989898;}
 
@@ -101,7 +102,9 @@
 /* companies list */
 
 /* create/edit company */
+.company .company 										{float:left; width:100%; color:#4C4C4C;}
 .company .company li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
+.company .company input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
 .company .company .heading								{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 .company .company input.name 							{font-size:36px;}
 
@@ -113,24 +116,24 @@
 */
 
 /* create/edit employee */
-.company .employee 										{float:left; color:#4C4C4C;}
-.company .employee li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
-.company .employee input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .employee .heading								{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
-.company .employee input.name 							{font-size:36px;}
-.company .employee input.password 						{font-size:25px;}
-.company .employee input.id 							{font-size:25px;}
-.company .employee input.email 							{font-size:25px;}
-.company .employee .checkbox-group 						{float:left; margin:9px 0px 0px 5px; color:#757575; font-style:italic; text-transform:capitalize;}
-.company .employee .permissions    						{float:left; width:100%; font-size:14px;}
-.company .employee .permissions li						{float:left; width:100%; margin:0px 0px 8px 0px; padding:0px; border:none;}
-.company .employee .permissions input 					{float:left;}
-.company .employee .permissions label					{float:left; margin:5px 0px 0px 2px; padding:0px;}
+.company .employee 											{float:left; width:100%; color:#4C4C4C;}
+.company .employee li										{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
+.company .employee input 									{float:left; width:100%; margin:0px; padding:0px; border:none;}
+.company .employee .heading									{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .employee input.name 								{font-size:36px;}
+.company .employee input.password 							{font-size:25px;}
+.company .employee input.id 								{font-size:25px;}
+.company .employee input.email 								{font-size:25px;}
+.company .employee .checkbox-group 							{float:left; margin:9px 0px 0px 5px; color:#757575; font-style:italic; text-transform:capitalize;}
+.company .employee .permissions    							{float:left; width:100%; font-size:14px;}
+.company .employee .permissions li							{float:left; width:100%; margin:0px 0px 8px 0px; padding:0px; border:none;}
+.company .employee .permissions input 						{float:left;}
+.company .employee .permissions label						{float:left; margin:5px 0px 0px 2px; padding:0px;}
 
 /* permissions list */
 
 /* create/edit permissions */
-.company .permission 										{float:left; color:#4C4C4C;}
+.company .permission 										{float:left; width:100%; color:#4C4C4C;}
 .company .permission li										{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
 .company .permission input 									{float:left; width:100%; margin:0px; padding:0px; border:none;}
 .company .permission .heading								{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
@@ -152,7 +155,7 @@
 /* users list */
 
 /* create/edit employee */
-.company .user 										{float:left; color:#4C4C4C;}
+.company .user 										{float:left; width:100%; color:#4C4C4C;}
 .company .user li									{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
 .company .user input 								{float:left; width:100%; margin:0px; padding:0px; border:none;}
 .company .user .heading								{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
