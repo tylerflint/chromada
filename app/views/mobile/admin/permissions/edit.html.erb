@@ -1,0 +1,97 @@
+<% content_for :left do %>
+	<%= render :partial => 'admin/companies/menu', :locals => {:active => :permissions} %>
+<% end %>
+
+<div class='content company'>
+		
+	<%= form_for [:admin, @company, @permission] do |f| %>
+		  
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @permission, :back_url => url_for([:admin, @company, :permissions]), :delete_url => url_for([:admin, @company, @permission]) } %>
+
+		<ul class='permission'>
+			<input type="hidden" name="action_ids" id="permission_action_ids" value="<%= @permission.action_ids.join(",") %>"/>
+			<li>
+				<h3 class='heading'>permission name</h3>
+				<input type='text' for='' name='permission[name]' class='required name defaultInvalid' value='<%= @permission.name || 'Type Permission Name Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
+			</li>
+
+			<li>
+				<h3 class='heading'>assign permissions</h3>
+				<ul class='permissions'>
+					<% action_tree.each do |key, node| %>
+						<%= build_action_list_item(key, node) %>
+					<% end %>
+				</ul>
+			</li>
+		</ul>
+	<% end %>
+</div>
+
+<script type='text/javascript' charset="utf-8">
+	//<![CDATA[
+		$(document).ready(function()
+		{
+			$(".checkbox").dgStyle();
+			addActionClickEvent();
+			addParentActionClickEvent();
+		});
+
+		function addActionClickEvent()
+		{
+			$(".permissions input:checkbox").each(function ()
+			{
+				$(this).change(updateCheckedActions);
+			});
+		};
+
+		function addParentActionClickEvent()
+		{
+			$(".permissions input:checkbox.parent").each(function()
+			{
+				$(this).change(function()
+				{
+					var checked = $(this).attr('checked')
+					$(this).parent().parent().find('ul li input:checkbox').each(function()
+					{
+						$(this).attr('checked', checked);
+						$(this).parent().dgHandle();
+					});
+				
+					updateCheckedActions();
+				});
+			});
+		};
+
+		function updateCheckedActions()
+		{
+			ids = new Array();
+		
+			$(".permissions input:checkbox:checked").each(function()
+			{
+				if (this.name != '')
+				{
+					ids.push(this.name.replace(/action_/, ""));
+				};
+			});
+		
+			$("#permission_action_ids").val(ids.toString());
+		};
+		
+		jQuery.validator.addMethod("defaultInvalid", function(value, element)
+		{
+		   return value != element.defaultValue;
+		}, "");
+		
+		$("form.new_permission").validate();
+		$("form.new_permission").submit(function(form)
+		{
+			if($("form.new_permission").valid())
+			{
+				form.submit();
+			}else{
+				$(".password-clear").hide();
+				$(".password-password").show();
+			}
+		});
+	//]]>
+</script>

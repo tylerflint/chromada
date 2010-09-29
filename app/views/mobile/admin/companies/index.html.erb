@@ -1,0 +1,5 @@
+<% content_for :left do %>
+	<%= render :partial => 'admin/shared/menu', :locals => {:active => :companies} %>
+<% end %>
+
+<%= simple_list(:company, @companies, {:item_url => "admin_company_dashboard_url"}) %>

@@ -1,0 +1,62 @@
+<% content_for :left do %>
+	<%= render :partial => 'admin/companies/menu', :locals => {:active => :users} %>
+<% end %>
+
+<div class='content company'>
+	
+	<%= form_for [:admin, @company, @user] do |f| %>
+	  
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @user, :back_url => url_for([:admin, @company, :users]), :delete_url => url_for([:admin, @company, @user]) } %>
+		
+		<ul class='user'>
+			<li>
+				<h3 class='heading'>username</h3>
+				<input type='text' for='' name='user[username]' class='name' value='<%= @user.name || 'Type Username Here' %>' onfocus='if(this.value=="Type Username Here")value=""' onblur='if(this.value=="")this.value="Type Username Here"' />
+				<input type="hidden" name="permission_ids" id="permission_ids" value="<%= @user.permission_ids.join(",") %>" />
+			</li>
+		
+			<li>
+				<h3 class='heading'>permissions</h3>
+				<ul class='permissions'>
+					<% @company.permissions.each do |permission| %>
+						<li><span class='checkbox'><input type="checkbox" id="permission_<%= permission.id %>" <% if(@user.permission_ids.include?(permission.id)) %>checked="checked"<% end %> /></span><label><%= permission.name %></label></li>
+					<% end %>
+				</ul>
+			</li>
+		</ul>
+		
+	<% end %>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+		$(document).ready(function()
+		{
+			$(".checkbox").dgStyle();
+			$('.permissions li').change(function ()
+			{
+				updateCheckedPermissions();
+			});
+		});
+	
+		function updateCheckedPermissions()
+		{
+			ids = new Array();
+			$(".permissions input:checkbox:checked").each(function()
+			{
+				ids.push(this.id.replace(/permission_/, ''));
+			})
+			$('#permission_ids').val(ids.toString());
+		};
+	
+		function autoGenerateEmployeeId(checkbox)
+		{
+			if(checkbox.checked)
+			{
+				$("#edit-user-custom-id").val("").attr('disabled', true);
+			}else{
+				$("#edit-user-custom-id").removeAttr('disabled');
+			};
+		};
+	//]]>
+</script>

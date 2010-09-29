@@ -1,0 +1,6 @@
+<div class='nav'>
+	<ul>
+		<li><a href='<%= url_for([:admin, :dashboard]) %>' <% if (active == :admin_dashboard) %>class="active"<% end %>>Dashboard<span class='arrow'></span></a></li>
+		<li><a href='<%= url_for([:admin, :companies]) %>' <% if (active == :companies) %>class="active"<% end %>>Manage Companies<span class='arrow'></span></a></li>
+	</ul>
+</div>

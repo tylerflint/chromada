@@ -13,11 +13,15 @@
 		<!-- LOAD CSS -->
 		<%= stylesheet_link_tag 'messaging' %>
 		<%= stylesheet_link_tag 'styles' %>
+		<%= stylesheet_link_tag 'admin' %>
+		<%= stylesheet_link_tag "custom_radio_checkbox" %>
+		<%= stylesheet_link_tag 'mobile' %>
 		
 		<!-- LOAD JAVASCRIPT -->
 		<%= javascript_include_tag 'jquery' %>
+		<%= javascript_include_tag 'jquery.custom_radio_checkbox' %>
 		<%= javascript_include_tag 'jquery.validation' %>
-		<%= javascript_include_tag 'application' %>
+		<%= javascript_include_tag 'admin' %>
 		
 		<title><%= @title %></title>
 		
@@ -35,11 +39,11 @@
 				<div id='bd' class='body'>
 					<%= yield %>
 				</div>
+				
+				<div id='ft' class='footer'>
+					<%= render :partial => 'shared/footer' %>
+				</div>
 			</div>			
-		</div>
-		
-		<div id='ft' class='footer'>
-			<%= render :partial => 'shared/footer' %>
 		</div>
 		
 		<!-- BEGIN GOOGLE ANALYTICS -->
