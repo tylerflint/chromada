@@ -22,6 +22,14 @@
 		<title><%= @title %></title>
 		
 		<%= yield :head %>
+		
+		<!-- BEGIN GOOGLE ANALYTICS -->
+		<%= render :partial => 'shared/ga'%>
+		<!-- END GOOGLE ANALYTICS -->
+		
+		<!-- BEGIN TYPEKIT -->
+		<%= render :partial => 'shared/typekit'%>
+		<!-- END TYPEKIT -->
 	</head>
 	
 	<body id='one-column'>
@@ -42,21 +50,21 @@
 			<%= render :partial => 'shared/footer' %>
 		</div>
 		
-		<!-- BEGIN GOOGLE ANALYTICS -->
-		<%= render :partial => 'shared/ga'%>
-		<!-- END GOOGLE ANALYTICS -->
-		
 		<script type='text/javascript'>
-			
-			/*
-			// jQuery: When document is loaded and ready to process:
-			$(document).ready(function() {
-			    //Footer Push: Pushes footer to the bottom of the page. Call the function and pass the ID of your main content element   
-			    footerPush("#bd");
-			});
-			*/
-			
+			//<![CDATA[
+				/*
+				// jQuery: When document is loaded and ready to process:
+				$(document).ready(function() {
+				    //Footer Push: Pushes footer to the bottom of the page. Call the function and pass the ID of your main content element   
+				    footerPush("#bd");
+				});
+				*/
+			//]]>
 		</script>
+		
+		<!-- BEGIN OLARK -->
+		<%= render :partial => 'shared/olark' %>
+		<!-- END OLARK -->
 		
 	</body>
 </html>
