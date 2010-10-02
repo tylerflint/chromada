@@ -10,7 +10,7 @@ module Mother
     def may_i?(action)
       raise "no child present" if !@child
       raise "no company present" if !@company
-      @is_owner || @actions.include?(action)
+      @actions.include?(action)
     end
     
     def set_company(company)
@@ -19,7 +19,7 @@ module Mother
     
     def set_child(child)
       @child = child
-      determine_ownership
+      determine_ownership if @child
       prepare_actions if !@is_owner
     end
     

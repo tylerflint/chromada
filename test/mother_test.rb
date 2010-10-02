@@ -5,6 +5,12 @@ require 'mother'
 
 class MotherTest < ActiveSupport::TestCase
   
+  should "allow owner to do everything" do
+    Mother.set_company(Company.find(2))
+    Mother.set_child(User.find(1))
+    assert Mother.may_i?('anything_i_want')
+  end
+  
   should "raise exception when child is not set" do
     assert_raise RuntimeError do
       Mother.set_child(nil)
