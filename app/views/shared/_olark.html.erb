@@ -1,0 +1,59 @@
+
+<script type='text/javascript'>
+	(function(d,u,o){window.olark={__k:o};var h=d.location.protocol=='https:'?'https://':'http://'; d.write(unescape("%3Cscript src='"+h+ u+"' type='text/javascript'%3E%3C/script%3E")); })(document,'static.olark.com/javascript/olark.js', '1711-698-10-7416');
+</script>
+	
+<!--OLARK LINK -->
+	<!-- <a href='http://olark.com/about' style='display:none' rel='nofollow'>Powered by Olark</a> -->
+<!-- END OLARK LINK -->
+
+<script type='text/javascript'>
+	//<![CDATA[
+		var $box = null;
+	
+		olark.extend(function(api)
+		{
+			$box = api.box;
+			
+			api.chat.onReady(function()
+			{
+				var olark = $('.habla_window_div_base');
+				
+				$('#habla_both_div').html("<span class='olark-open'></span><span class='olark-close'></span>");
+				
+				$('.olark-open').click(openChat);
+				$('.olark-close').click(closeChat);
+	
+				if(api.chat.operatorsAreAvailable())
+				{
+					
+				}else{
+					
+				}
+	
+				api.box.onExpand(function()
+				{
+					
+				});
+				
+				api.box.onShrink(function()
+				{
+					
+				});
+				
+				function openChat()
+				{
+					olark.animate({"right": "-3px"}, {duration:050});
+				}
+				
+				function closeChat()
+				{
+					olark.animate({"right": "-158px"}, {duration:050});
+				}
+				
+				closeChat();
+		    });
+		});
+	//]]>
+</script>
+	

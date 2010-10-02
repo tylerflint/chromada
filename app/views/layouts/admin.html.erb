@@ -11,10 +11,11 @@
 		<meta name="robots" content="index, follow"/>
 		
 		<!-- LOAD CSS -->
-		<%= stylesheet_link_tag 'messaging' %>
 		<%= stylesheet_link_tag 'styles' %>
 		<%= stylesheet_link_tag "admin" %>
 		<%= stylesheet_link_tag "custom_radio_checkbox.css" %>
+		<%= stylesheet_link_tag 'messaging' %>
+		<%= stylesheet_link_tag 'olark' %>
 		
 		<!-- LOAD JAVASCRIPT -->
 		<%= javascript_include_tag 'jquery.js' %>
@@ -26,6 +27,14 @@
 		<title><%= @title %></title>
 		
 		<%= yield :head %>
+		
+		<!-- BEGIN GOOGLE ANALYTICS -->
+		<%= render :partial => 'shared/ga'%>
+		<!-- END GOOGLE ANALYTICS -->
+		
+		<!-- BEGIN TYPEKIT -->
+		<%= render :partial => 'shared/typekit'%>
+		<!-- END TYPEKIT -->
 	</head>
 
 	<body id='admin'>
@@ -56,9 +65,9 @@
 			<%= render :partial => 'shared/footer' %>
 		</div>
 		
-		<!-- BEGIN GOOGLE ANALYTICS -->
-		<%= render :partial => 'shared/ga'%>
-		<!-- END GOOGLE ANALYTICS -->
+		<!-- BEGIN OLARK -->
+		<%= render :partial => 'shared/olark' %>
+		<!-- END OLARK -->
 		
 	</body>
 </html>
