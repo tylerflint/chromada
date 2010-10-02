@@ -1,12 +1,16 @@
 #habla_window_div	 				{margin:0px !important; background:url('../images/olark.png') no-repeat 0px 0px;}
 #habla_panel_div 					{background:none !important;}
-#habla_conversation_div 			{padding:25px 0px 0px 25px !important; color:#363636; font-size:11px; line-height:12px; border:none;}
+#habla_middle_div 					{margin:25px 0px 0px 0px;}
+#habla_conversation_div 			{width:146px !important; padding:0px 0px 0px 30px !important; color:#363636; font-size:11px; line-height:12px; border:none;}
+p.habla_conversation_p_item 		{text-indent:0px !important;}
+.habla_conversation_person1 		{color:#01DBDB !important;}
+.habla_conversation_text_span 		{color:#363636 !important;}
 #habla_compressed_div 				{}
 
 #habla_both_div 					{}
 #habla_topbar_div 					{padding:0px !important;}
-#habla_wcsend_input 				{width:100% !important; padding:0px !important; color:#363636; font-size:11px !important; line-height:12px !important; border:none !important;}
-#habla_input_div 					{float:left; width:100%; padding:4px 0px 0px 25px !important; background:none !important;}
+#habla_wcsend_input 				{width:100% !important; height:12px !important; padding:0px !important; color:#363636; font-size:11px !important; line-height:12px !important; border:none !important;}
+#habla_input_div 					{float:left; width:100%; padding:8px 0px 0px 25px !important; background:none !important;}
 
-.olark-open 						{position:absolute; top:10px; left:4px; width:18px; height:185px;}
-.olark-close 						{float:right; width:15px; height:15px; margin:5px;}
+.olark-open 						{position:absolute; top:10px; left:4px; width:18px; height:185px; cursor:pointer;}
+.olark-close 						{float:right; width:15px; height:15px; margin:5px; cursor:pointer;}
