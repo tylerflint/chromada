@@ -5,7 +5,7 @@
 p.habla_conversation_p_item 		{text-indent:0px !important;}
 .habla_conversation_person1 		{color:#01DBDB !important;}
 .habla_conversation_text_span 		{color:#363636 !important;}
-#habla_compressed_div 				{}
+#habla_compressed_div 				{display:none;}
 
 #habla_both_div 					{}
 #habla_topbar_div 					{padding:0px !important;}
