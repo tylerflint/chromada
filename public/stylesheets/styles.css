@@ -125,7 +125,10 @@ label.error													{display:none !important;}
 .button.sign-up:hover										{background-position:-280px -126px;}
                                                         	
 .button.admin-panel	 										{float:right; width:150px; height:30px; background-position:-501px -90px;}
-.button.admin-panel:hover 									{background-position:-501px -126px;}                                            	
+.button.admin-panel:hover 									{background-position:-501px -126px;}      
+
+.button.download	 										{display:inline-block; margin:0 auto; float:none; width:113px; height:30px; background-position:-166px -90px;}
+.button.download:hover 										{}                                      	
 
 /*                                                        	
 .button.login												{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
@@ -290,3 +293,4 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .product-feature .feature-description						{width:300px;}
 .product-feature p 											{float:left; font-size:16px; color:#8E8D8C; line-height:24px;}
 .product-feature .overlay									{position:absolute;}
+.product-feature.download 									{text-align:center;}
