@@ -20,13 +20,13 @@
 			{
 				var olark = $('.habla_window_div_base');
 				
-				$('.olark-open').click(openChat);
-				$('.olark-close').click(closeChat);
-				
 				$('#habla_both_div').html("<span class='olark-open'></span><span class='olark-close'></span>");
 				
 				function openChat(){olark.animate({"right": "-3px"}, {duration:050})}	
 				function closeChat(){olark.animate({"right": "-158px"}, {duration:050})}
+				
+				$('.olark-open').click(openChat);
+				$('.olark-close').click(closeChat);
 				
 				closeChat();
 		    });
