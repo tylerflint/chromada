@@ -1,4 +1,4 @@
-#habla_window_div	 				{margin:0px !important; background:url('../images/olark.png') no-repeat 0px 0px;}
+#habla_window_div	 				{position:fixed; bottom:150px !important; right:-158px; margin:0px !important; background:url('../images/olark.png') no-repeat 0px 0px;}
 #habla_panel_div 					{background:none !important;}
 #habla_middle_div 					{margin:25px 0px 0px 0px;}
 #habla_conversation_div 			{width:146px !important; padding:0px 0px 0px 30px !important; color:#363636; font-size:11px; line-height:12px; border:none;}
