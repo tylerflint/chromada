@@ -54,9 +54,9 @@ h4, h5, h6													{font-size:10px;}
 form 														{float:left;}
 .form-group 												{float:left;}
 label 														{float:left;}
-input														{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; text-transform:capitalize; font-family:'Helvetica', Arial, sans-serif;}
+input														{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; font-family:'Helvetica', Arial, sans-serif;}
 input.checkbox 												{float:left; width:15px !important; height:15px !important;}
-textarea 													{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; text-transform:capitalize; font-family:'Helvetica', Arial, sans-serif;}
+textarea 													{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; font-family:'Helvetica', Arial, sans-serif;}
 .checkbox-group label 										{margin:4px 0px 0px 8px; padding:0px;}
                                                     		
 /* TABLES */                                        		
