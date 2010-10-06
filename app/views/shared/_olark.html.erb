@@ -14,43 +14,19 @@
 		olark.extend(function(api)
 		{
 			$box = api.box;
-			$box.expand()
+			$box.expand();	
 			
 			api.chat.onReady(function()
 			{
 				var olark = $('.habla_window_div_base');
 				
-				$('#habla_both_div').html("<span class='olark-open'></span><span class='olark-close'></span>");
-				
 				$('.olark-open').click(openChat);
 				$('.olark-close').click(closeChat);
-	
-				if(api.chat.operatorsAreAvailable())
-				{
-					
-				}else{
-					
-				}
-	
-				api.box.onExpand(function()
-				{
-					
-				});
 				
-				api.box.onShrink(function()
-				{
-					
-				});
+				$('#habla_both_div').html("<span class='olark-open'></span><span class='olark-close'></span>");
 				
-				function openChat()
-				{
-					olark.animate({"right": "-3px"}, {duration:050});
-				}
-				
-				function closeChat()
-				{
-					olark.animate({"right": "-158px"}, {duration:050});
-				}
+				function openChat(){olark.animate({"right": "-3px"}, {duration:050})}	
+				function closeChat(){olark.animate({"right": "-158px"}, {duration:050})}
 				
 				closeChat();
 		    });
