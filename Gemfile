@@ -4,6 +4,8 @@ gem 'rails'#, '3.0.0.rc'
 gem 'mysql'
 gem 'haml'
 gem "devise", "1.1.rc2"
+gem "mongoid", "2.0.0.beta.17"
+gem "bson_ext", "1.0.4"
 
 # gem 'blockpile', :path => '~/Sites/gems/blockpile'#, :git => 'git@github.com:tylerflint/blockpile.git' #:path => '~/Sites/gems/blockpile'
 gem 'blockpile'

@@ -1,8 +1,17 @@
-class User < ActiveRecord::Base
-
-  has_many :company_users
-  has_many :companies, :through => :company_users
-  has_and_belongs_to_many :permissions
+class User
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  
+  references_many \
+    :permissions, 
+    :stored_as => :array, 
+    :inverse_of => :users,
+    :index => true
+  references_many \
+    :companies, 
+    :stored_as => :array, 
+    :inverse_of => :users,
+    :index => true
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable

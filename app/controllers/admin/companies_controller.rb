@@ -5,7 +5,8 @@ class Admin::CompaniesController < Admin::AdminController
   # GET /companies
   # GET /companies.xml
   def index
-    @companies = current_user.companies.scoped
+    # @companies = current_user.companies.scoped
+    @companies = current_user.companies
 
     respond_to do |format|
       format.html do
@@ -107,11 +108,12 @@ class Admin::CompaniesController < Admin::AdminController
   end
   
   def add_company_to_user(company)
-    company_user = CompanyUser.new
-    company_user.company = company
-    company_user.is_owner = 1
-    current_user.company_users << company_user
-    current_user.save
+    # company_user = CompanyUser.new
+    # company_user.company = company
+    # company_user.is_owner = 1
+    # current_user.company_users << company_user
+    # current_user.save
+    current_user.companies << company
   end
 
 end
