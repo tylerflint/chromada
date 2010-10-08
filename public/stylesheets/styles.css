@@ -1,5 +1,7 @@
 /************************************************** GLOBAL STYLES **************************************************/
 
+* 															{margin:0px; padding:0px; outline:none;}
+
 /* BASE */
 html, body, div, span, p, ol, ul, li, img,
 h1, h2, h3, h4, h5, h6										{margin:0; padding:0;}
@@ -52,9 +54,9 @@ h4, h5, h6													{font-size:10px;}
 form 														{float:left;}
 .form-group 												{float:left;}
 label 														{float:left;}
-input														{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; text-transform:capitalize; font-family:'Helvetica', Arial, sans-serif;}
+input														{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; font-family:'Helvetica', Arial, sans-serif;}
 input.checkbox 												{float:left; width:15px !important; height:15px !important;}
-textarea 													{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; text-transform:capitalize; font-family:'Helvetica', Arial, sans-serif;}
+textarea 													{float:left; padding:5px; color:#4C4C4C; border:#4C4C4C solid 1px; font-size:12px; font-family:'Helvetica', Arial, sans-serif;}
 .checkbox-group label 										{margin:4px 0px 0px 8px; padding:0px;}
                                                     		
 /* TABLES */                                        		
@@ -102,11 +104,9 @@ label.error													{display:none !important;}
                                                     	
 /***** SPRITES *****/                               	
 .site-sprite				 								{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.site-transparent-sprite			 						{background:url('../images/transparent-sprite.gif') no-repeat 0px 0px;}
 .button 													{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px; border:none; cursor:pointer;}
                                                         	
 .spotlight-sprite			 								{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-.quick-add-sprite			 								{float:left; width:100px; height:100px; background:url('../images/quick-add-sprite.png') no-repeat 0px 0px;}
                                                     		
 /***** STATES *****/                                		
 .active														{}
@@ -242,22 +242,22 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .index.spotlight #spotlight-right .content-body p			{color:#5D5C5C; line-height:21px;}
 .index.spotlight #spotlight-right .content-body h2			{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
 .index.spotlight #spotlight-right .content-body h3			{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; font-weight:normal; text-transform:capitalize;}
-
-/*                                                    	
+                                                  	
 .index.spotlight #spotlight-right .chromada .button			{width:160px; height:36px; margin:45px 0px 0px 0px; background-position:-504px -316px;}
 .index.spotlight #spotlight-right .chromada .button:hover	{background-position:-504px -353px;}
 
 .index.spotlight #spotlight-right .ticker .button 			{width:164px; height:36px; margin:45px 0px 0px 0px; background-position:-732px -316px;}
 .index.spotlight #spotlight-right .ticker .button:hover		{background-position:-732px -353px;}
-*/
 
+/*
 .index.spotlight #spotlight-right .button 					{text-align:center;}
 .index.spotlight #spotlight-right .chromada .button	 		{width:160px; margin:45px 0px 0px 0px; padding:11px 0px 7px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .index.spotlight #spotlight-right .chromada .button:hover	{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
 
 .index.spotlight #spotlight-right .ticker .button			{width:164px; margin:45px 0px 0px 0px; padding:11px 0px 7px 0px; color:#FFFFFF; font-size:15px; background:#FFE045; background:-webkit-gradient(linear, left top, left bottom, from(#FFE045), to(#F5D23F)); background:-moz-linear-gradient(top, #FFE045, #F5D23F); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE045', endColorstr='#F5D23F'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .index.spotlight #spotlight-right .ticker .button:hover		{background:#FFD400; background:-webkit-gradient(linear, left top, left bottom, from(#FFD400), to(#F5C700)); background:-moz-linear-gradient(top, #FFD400, #F5C700); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD400', endColorstr='#F5C700');}
-                                                    	
+*/
+                                                   	
 /***** DIVISE *****/                               	
 .divise 													{margin:113px auto 144px; width:500px; overflow:hidden;}                            	
 .divise .body												{float:right; width:240px;}
