@@ -2,6 +2,9 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
   
+  field :username
+  index :username
+  
   references_many \
     :permissions, 
     :stored_as => :array, 

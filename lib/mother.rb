@@ -10,8 +10,7 @@ module Mother
     def may_i?(action)
       raise "no child present" if !@child
       raise "no company present" if !@company
-      # @actions.include?(action)
-      true
+      (@is_owner || @actions.include?(action))
     end
     
     def set_company(company)
@@ -20,14 +19,10 @@ module Mother
     
     def set_child(child)
       @child = child
-      # determine_ownership if @child
-      # prepare_actions if !@is_owner
-    end
-    
-    def determine_ownership
-      company_user = @child.company_users.find_by_company_id(@company.id)
-      if company_user.is_owner == 1
+      if @company.is_owner?(child)
         @is_owner = true
+      else
+        prepare_actions
       end
     end
     
@@ -103,9 +98,9 @@ module Mother
     
     def seed_actions(yaml=nil)
       actions = self.get_flat_actions(yaml)
-      Action.destroy_all(["path NOT IN (?)", actions])
+      Action.destroy_all(:conditions => {:path.nin => actions})
       actions.each do |action|
-        Action.find_or_create_by_path(action)
+        Action.find_or_create_by(:path => action)
       end
     end
     

@@ -108,12 +108,9 @@ class Admin::CompaniesController < Admin::AdminController
   end
   
   def add_company_to_user(company)
-    # company_user = CompanyUser.new
-    # company_user.company = company
-    # company_user.is_owner = 1
-    # current_user.company_users << company_user
-    # current_user.save
     current_user.companies << company
+    company.owners = [current_user.id]
+    company.save
   end
 
 end

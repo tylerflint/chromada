@@ -3,6 +3,7 @@ class Company
   include Mongoid::Timestamps
   
   field :name
+  field :owners, :type => Array
   index :name
   
   embeds_many :employees
@@ -13,6 +14,8 @@ class Company
     :inverse_of => :companies,
     :index => true
   
-  
+  def is_owner?(user)
+    owners.include?(user.id)
+  end
   
 end
