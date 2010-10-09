@@ -28,8 +28,10 @@ module Mother
     
     def prepare_actions
       @actions = []
-      Action.select(:path).joins(:permissions => [ :users ]).where(:permissions => {:company_id => @company.id}, :users => {:id => @child.id}).each do |action|
-        @actions << action[:path]
+      @company.permissions.where(:_id.in => @child.permission_ids).each do |permission|
+        permission.actions.each do |action|
+          @actions << action[:path]
+        end
       end
     end
     
