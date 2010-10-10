@@ -14,7 +14,6 @@
 		olark.extend(function(api)
 		{
 			$box = api.box;
-			$box.expand();	
 			
 			api.chat.onReady(function()
 			{
@@ -32,9 +31,9 @@
 				
 				closeChat();
 				
-				api.chat.onNotificationToVisitor(function(event){
+				api.chat.onMessageToVisitor(function(event){
 					if (event.notification.body == 'operator is doing a dance') {
-						// keep track of how many dances the operator is doing
+						openChat();
 					}
 				});
 		    });

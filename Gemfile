@@ -1,7 +1,7 @@
 source :gemcutter
 
 gem 'rails'#, '3.0.0.rc'
-gem 'mysql'
+gem 'mysql2'
 gem 'haml'
 gem "devise", "1.1.rc2"
 
