@@ -34,7 +34,7 @@
 		<!-- SEARCH -->
 		<div class='search'>
 			<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
-				<span class='form-field'><%= form.text_field :search, :class => 'required', :value => 'search', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %></span>
+				<%= form.text_field :search, :class => 'required', :value => 'search', :onfocus => 'this.value = ""', :onblur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<span class='button icon'></span>
 			<% end %>
 		</div>
