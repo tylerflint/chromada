@@ -35,7 +35,7 @@
 		<div class='search'>
 			<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
 				<%= form.text_field :search, :class => 'required', :value => 'search', :onfocus => 'this.value = ""', :onblur => 'if(this.value == "") this.value = this.defaultValue;' %>
-				<span class='button icon'></span>
+				<div class='button icon'></div>
 			<% end %>
 		</div>
 	</div>
