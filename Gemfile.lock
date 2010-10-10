@@ -68,7 +68,9 @@ GEM
       mongo (= 1.0.9)
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
-    mysql (2.8.1)
+    mongoid_session_store (1.1.0)
+      actionpack (~> 3.0.0)
+      mongoid (>= 2.0.0.beta.16)
     nokogiri (1.4.3.1)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -119,8 +121,8 @@ DEPENDENCIES
   factory_girl
   haml
   mongoid (= 2.0.0.beta.19)
-  mysql
-  rails
+  mongoid_session_store
+  rails (= 3.0.0)
   rails3-generators
   shoulda
   unicorn

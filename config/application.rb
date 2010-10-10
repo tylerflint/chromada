@@ -1,14 +1,14 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+# require 'rails/all'
 
 # Instead of requiring all of rails, lets just pick what we need:
 # since we are using mongodb and mongoid, let's disable active_record altogether
 # require "active_record/railtie"
-# require "action_controller/railtie"
-# require "action_mailer/railtie"
-# require "active_resource/railtie"
-# require "rails/test_unit/railtie"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "active_resource/railtie"
+require "rails/test_unit/railtie"
 
 
 # If you have a Gemfile, require the gems listed there, including any gems
