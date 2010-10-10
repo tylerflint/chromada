@@ -3,7 +3,8 @@ class Admin::UsersController < Admin::CompanyController
   # GET /users
   # GET /users.xml
   def index
-    @users = @company.users.scoped
+    # @users = @company.users.scoped
+    @users = @company.users
     respond_to do |format|
       format.html do
         if params[:ajax]
@@ -45,7 +46,8 @@ class Admin::UsersController < Admin::CompanyController
   # POST /users.xml
   def create
     begin
-      @user = User.find_by_username(params[:user][:username])
+      # @user = User.find_by_username(params[:user][:username])
+      @user = User.first(:conditions => {:username => params[:user][:username]})
     rescue ActiveRecord::RecordNotFound
       flash[:error] = "unknown user"
       redirect_to url_for([:admin, @company, :users])

@@ -1,8 +1,20 @@
-class User < ActiveRecord::Base
-
-  has_many :company_users
-  has_many :companies, :through => :company_users
-  has_and_belongs_to_many :permissions
+class User
+  include Mongoid::Document
+  include Mongoid::Timestamps
+  
+  field :username
+  index :username
+  
+  references_many \
+    :permissions, 
+    :stored_as => :array, 
+    :inverse_of => :users,
+    :index => true
+  references_many \
+    :companies, 
+    :stored_as => :array, 
+    :inverse_of => :users,
+    :index => true
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
@@ -16,9 +28,18 @@ class User < ActiveRecord::Base
     self.username
   end
   
-  def set_permissions(company, permissions)
-    self.permission_ids = self.permission_ids - company.permission_ids
-    self.permission_ids = self.permission_ids | permissions
+  def set_permissions(company, permission_ids)
+    loaded_permissions   = self.permissions
+    company_permissions  = company.permissions
+    stripped_permissions = []
+    loaded_permissions.each do |loaded_permission|
+      match = false
+      company.permissions.each do |company_permission|
+        match = true if loaded_permission.id == company_permission.id
+      end
+      stripped_permissions << loaded_permission unless match
+    end
+    self.permission_ids = stripped_permissions | permission_ids
   end
   
 end

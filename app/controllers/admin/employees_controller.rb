@@ -3,7 +3,8 @@ class Admin::EmployeesController < Admin::CompanyController
   # GET /employees
   # GET /employees.xml
   def index
-    @employees = @company.employees.scoped
+    # @employees = @company.employees.scoped
+    @employees = @company.employees
     respond_to do |format|
       format.html do
         if params[:ajax]

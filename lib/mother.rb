@@ -10,7 +10,7 @@ module Mother
     def may_i?(action)
       raise "no child present" if !@child
       raise "no company present" if !@company
-      @is_owner || @actions.include?(action)
+      (@is_owner || @actions.include?(action))
     end
     
     def set_company(company)
@@ -19,21 +19,19 @@ module Mother
     
     def set_child(child)
       @child = child
-      determine_ownership
-      prepare_actions if !@is_owner
-    end
-    
-    def determine_ownership
-      company_user = @child.company_users.find_by_company_id(@company.id)
-      if company_user.is_owner == 1
+      if @company.is_owner?(child)
         @is_owner = true
+      else
+        prepare_actions
       end
     end
     
     def prepare_actions
       @actions = []
-      Action.select(:path).joins(:permissions => [ :users ]).where(:permissions => {:company_id => @company.id}, :users => {:id => @child.id}).each do |action|
-        @actions << action[:path]
+      @company.permissions.where(:_id.in => @child.permission_ids).each do |permission|
+        permission.actions.each do |action|
+          @actions << action[:path]
+        end
       end
     end
     
@@ -92,11 +90,19 @@ module Mother
       items
     end
     
+    # def seed_actions(yaml=nil)
+    #   actions = self.get_flat_actions(yaml)
+    #   Action.destroy_all(["path NOT IN (?)", actions])
+    #   actions.each do |action|
+    #     Action.find_or_create_by_path(action)
+    #   end
+    # end
+    
     def seed_actions(yaml=nil)
       actions = self.get_flat_actions(yaml)
-      Action.destroy_all(["path NOT IN (?)", actions])
+      Action.destroy_all(:conditions => {:path.nin => actions})
       actions.each do |action|
-        Action.find_or_create_by_path(action)
+        Action.find_or_create_by(:path => action)
       end
     end
     

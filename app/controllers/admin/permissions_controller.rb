@@ -3,7 +3,8 @@ class Admin::PermissionsController < Admin::CompanyController
   # GET /roles
   # GET /roles.xml
   def index
-    @permissions = @company.permissions.scoped
+    # @permissions = @company.permissions.scoped
+    @permissions = @company.permissions
     respond_to do |format|
       format.html do
         if params[:ajax]
