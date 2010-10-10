@@ -31,6 +31,12 @@
 				$('.olark-close').click(closeChat);
 				
 				closeChat();
+				
+				api.chat.onNotificationToVisitor(function(event){
+					if (event.notification.body == 'operator is doing a dance') {
+						// keep track of how many dances the operator is doing
+					}
+				});
 		    });
 		});
 	//]]>
