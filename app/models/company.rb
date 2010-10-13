@@ -19,10 +19,10 @@ class Company
   end
   
   def add_owner(customer)
-    if owners.count > 0
-      owners << customer.id
+    if self.owners
+      self.owners << customer.id
     else
-      owners = [customer.id]
+      self.owners = [customer.id]
     end
   end
   
