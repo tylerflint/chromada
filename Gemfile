@@ -11,7 +11,8 @@ gem 'unicorn'
 
 group :test do
   gem 'shoulda'
-  gem 'factory_girl'
+  # gem 'factory_girl_rails'
+  gem 'fabrication'
   gem 'cucumber'
   gem 'cucumber-rails'
   gem 'webrat'

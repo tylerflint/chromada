@@ -18,4 +18,12 @@ class Company
     owners.include?(user.id)
   end
   
+  def add_owner(customer)
+    if self.owners
+      self.owners << customer.id
+    else
+      self.owners = [customer.id]
+    end
+  end
+  
 end

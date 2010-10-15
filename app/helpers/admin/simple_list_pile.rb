@@ -28,7 +28,7 @@ class SimpleListPile < Blockpile::Base
     if params[:search]
       @collection = @collection.where(@display_column  => /^#{params[:search]}.*/i)
     end
-    @collection.limit(10) unless show_all?
+    @collection = @collection.limit(10) unless show_all?
     @collection.asc(@display_column)
   end
   
