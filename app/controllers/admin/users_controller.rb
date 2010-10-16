@@ -3,7 +3,6 @@ class Admin::UsersController < Admin::CompanyController
   # GET /users
   # GET /users.xml
   def index
-    # @users = @company.users.scoped
     @users = @company.users
     respond_to do |format|
       format.html do
@@ -87,8 +86,10 @@ class Admin::UsersController < Admin::CompanyController
   # DELETE /users/1.xml
   def destroy
     @user = @company.users.find(params[:id])
-    @user.companies.delete(@company)
+    @user.drop_company(@company)
+    @company.drop_user(@user)
     @user.save
+    @company.save
     respond_to do |format|
       format.html { redirect_to(:action => :index) }
       format.xml  { head :ok }

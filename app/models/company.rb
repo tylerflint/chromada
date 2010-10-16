@@ -12,7 +12,8 @@ class Company
     :users, 
     :stored_as => :array, 
     :inverse_of => :companies,
-    :index => true
+    :index => true,
+    :dependant => :remove
   
   def is_owner?(user)
     owners.include?(user.id)
@@ -24,6 +25,11 @@ class Company
     else
       self.owners = [customer.id]
     end
+  end
+  
+  def drop_user(user)
+    self.user_ids = self.user_ids - [user.id]
+    self.owners = self.owners - [user.id]
   end
   
 end

@@ -14,7 +14,8 @@ class User
     :companies, 
     :stored_as => :array, 
     :inverse_of => :users,
-    :index => true
+    :index => true,
+    :dependant => :remove
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
@@ -40,6 +41,10 @@ class User
       stripped_permissions << loaded_permission unless match
     end
     self.permission_ids = stripped_permissions | permission_ids
+  end
+  
+  def drop_company(company)
+    self.company_ids = self.company_ids - [company.id]
   end
   
 end

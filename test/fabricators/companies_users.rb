@@ -1,0 +1,3 @@
+Fabricator(:company) do
+  
+end
