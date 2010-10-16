@@ -19,7 +19,9 @@
 			</div>
 						
 			<div class='alert'>
-				<%= flash[:alert] %>
+				<% resource.errors.full_messages.each do |message| %>
+					<%= message %>
+				<% end %>
 			</div>
 			
 			<%= form.submit 'register', :class => 'button register' %>
