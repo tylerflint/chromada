@@ -1,7 +1,6 @@
 class Admin::UsersController < Admin::CompanyController
   
   # GET /users
-  # GET /users.xml
   def index
     @users = @company.users
     respond_to do |format|
@@ -10,29 +9,24 @@ class Admin::UsersController < Admin::CompanyController
           render :text => simple_list_instance(:user, @users, :display_column => :username).list
         end
       end
-      format.xml  { render :xml => @users }
     end
   end
 
   # GET /users/1
-  # GET /users/1.xml
   def show
     @user = @company.users.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @user }
     end
   end
 
   # GET /users/new
-  # GET /users/new.xml
   def new
     @user = @company.users.build
 
     respond_to do |format|
       format.html { render :template => 'admin/users/edit' }
-      format.xml  { render :xml => @user }
     end
   end
 
@@ -42,7 +36,6 @@ class Admin::UsersController < Admin::CompanyController
   end
 
   # POST /users
-  # POST /users.xml
   def create
     begin
       # @user = User.find_by_username(params[:user][:username])
@@ -56,34 +49,34 @@ class Admin::UsersController < Admin::CompanyController
     @user.set_permissions( @company, params[:permission_ids].split(',') )
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(:action => :index, :notice => 'User was successfully created.') }
-        format.xml  { render :xml => @user, :status => :created, :location => @user }
+        format.html do
+          flash[:notice] = 'User was successfully created.'
+          redirect_to :action => :index
+        end
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   # PUT /users/1
-  # PUT /users/1.xml
   def update
     @user = @company.users.find(params[:id])
     @user.set_permissions( @company, params[:permission_ids].split(',') )
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to(:action => :index, :notice => 'User was successfully updated.') }
-        format.xml  { head :ok }
+        format.html do
+          flash[:notice] = 'User was successfully updated.'
+          redirect_to :action => :index
+        end
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   # DELETE /users/1
-  # DELETE /users/1.xml
   def destroy
     @user = @company.users.find(params[:id])
     @user.drop_company(@company)
@@ -92,7 +85,6 @@ class Admin::UsersController < Admin::CompanyController
     @company.save
     respond_to do |format|
       format.html { redirect_to(:action => :index) }
-      format.xml  { head :ok }
     end
   end
   
