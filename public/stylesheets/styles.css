@@ -70,7 +70,7 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 label.error													{display:none !important;}
                                                     		
 /* MESSAGING */                                     		
-.message 													{float:left; width:100%; margin:10px 0px 10px 0px; padding:5px; border: 1px solid;}
+.message 													{float:left; width:100%; margin:0px 0px 10px 0px; padding:5px; border: 1px solid;}
                                                     		
 .success													{}
 .notice 													{color:#516C6B; border-color:#516C6B; background-color:#92BFB3;}
