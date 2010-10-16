@@ -1,0 +1,7 @@
+<% if (@users.count < 1) %>
+	message about missing matches
+<% else %>
+	<% @users.each do |user| %>
+		<li><a href='' onclick=" return setUsername('<%= user.username %>');"><span class='' title=''></span><%= user.username %><span class='removable arrow'></span></a></li>
+	<% end %>
+<% end %>

@@ -2,4 +2,4 @@
 	<%= render :partial => 'admin/companies/menu', :locals => {:active => :users} %>
 <% end %>
 
-<%= simple_list(:user, @users, :display_column => :username) %>
+<%= user_list(:user, @users, :display_column => :username) %>

@@ -1,0 +1,31 @@
+<li>
+	<h3 class='heading'>permissions</h3>
+	<input type="hidden" name="permission_ids" id="permission_ids" value="<%= @user.permission_ids.join(",") %>" />
+	<ul class='permissions'>
+		<% @company.permissions.each do |permission| %>
+			<li><span class='checkbox'><input type="checkbox" id="permission_<%= permission.id %>" <% if(@user.permission_ids.include?(permission.id)) %>checked="checked"<% end %> /></span><label><%= permission.name %></label></li>
+		<% end %>
+	</ul>
+</li>
+<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+		$(document).ready(function()
+		{
+			$(".checkbox").dgStyle();
+			$('.permissions li').change(function ()
+			{
+				updateCheckedPermissions();
+			});
+		});
+	
+		function updateCheckedPermissions()
+		{
+			ids = new Array();
+			$(".permissions input:checkbox:checked").each(function()
+			{
+				ids.push(this.id.replace(/permission_/, ''));
+			})
+			$('#permission_ids').val(ids.toString());
+		};
+	//]]>
+</script>

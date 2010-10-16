@@ -2,7 +2,14 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
   
+  field :firstname
+  field :lastname
   field :username
+  field :email
+  
+  index :firstname
+  index :lastname
+  index :email
   index :username
   
   references_many \

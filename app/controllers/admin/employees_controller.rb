@@ -2,34 +2,21 @@ class Admin::EmployeesController < Admin::CompanyController
   
   # GET /employees
   def index
-    # @employees = @company.employees.scoped
     @employees = @company.employees
-    respond_to do |format|
-      format.html do
-        if params[:ajax]
-          render :text => simple_list_instance(:employee, @employees).list
-        end
-      end
-      format.xml  { render :xml => @employees }
+    if params[:ajax]
+      render :text => simple_list_instance(:employee, @employees).list
     end
   end
 
   # GET /employees/1
   def show
     @employee = @company.employees.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-    end
   end
 
   # GET /employees/new
   def new
     @employee = @company.employees.build
-
-    respond_to do |format|
-      format.html { render :template => 'admin/employees/edit' }
-    end
+    render :template => 'admin/employees/edit'
   end
 
   # GET /employees/1/edit
@@ -40,42 +27,37 @@ class Admin::EmployeesController < Admin::CompanyController
   # POST /employees
   def create
     @employee = @company.employees.build(params[:employee])
-
-    respond_to do |format|
-      if @employee.save
-        format.html do
-          flash[:notice] = "#{@employee.name} was successfully created."
-          redirect_to :action => :index
-        end
-      else
-        format.html { render :action => "new" }
-      end
+    if @employee.save
+      flash[:notice] = "#{@employee.name} was successfully created."
+      redirect_to :action => :index
+    else
+      flash[:error] = "We're sorry, please try that again"
+      render :action => :new
     end
   end
 
   # PUT /employees/1
   def update
     @employee = @company.employees.find(params[:id])
-
-    respond_to do |format|
-      if @employee.update_attributes(params[:employee])
-        format.html do
-          flash[:notice] = "#{@employee.name} was successfully updated."
-          redirect_to :action => :index
-        end
-      else
-        format.html { render :action => "edit" }
-      end
+    if @employee.update_attributes(params[:employee])
+      flash[:notice] = "#{@employee.name} was successfully updated."
+      redirect_to :action => :index
+    else
+      flash[:error] = "We're sorry, please try that again"
+      render :action => :edit
     end
   end
 
   # DELETE /employees/1
   def destroy
     @employee = @company.employees.find(params[:id])
-    @employee.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(:action => :index) }
+    employee_name = @employee.name
+    if @employee.destroy
+      flash[:notice] = "#{employee_name} was successfully removed"
+      redirect_to :action => :index
+    else
+      flash[:error] = "We're sorry, please try that again"
+      redirect_to [:admin, @company, :edit, @employee]
     end
   end
   
