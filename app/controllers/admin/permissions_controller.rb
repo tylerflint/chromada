@@ -44,7 +44,7 @@ class Admin::PermissionsController < Admin::CompanyController
     respond_to do |format|
       if @permission.save
         format.html do
-          flash[:notice] = 'Role was successfully created.'
+          flash[:notice] = "#{@permission.name} was successfully created."
           redirect_to :action => :index
         end
       else
@@ -61,7 +61,7 @@ class Admin::PermissionsController < Admin::CompanyController
     respond_to do |format|
       if @permission.update_attributes(params[:permission])
         format.html do
-          flash[:notice] = 'Role was successfully updated.'
+          flash[:notice] = "#{@permission.name} was successfully updated."
           redirect_to :action => :index
         end
       else

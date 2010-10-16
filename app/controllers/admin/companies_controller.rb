@@ -48,7 +48,7 @@ class Admin::CompaniesController < Admin::AdminController
       if @company.save 
         add_company_to_user(@company)
         format.html do
-          flash[:notice] = 'Company was successfully created.'
+          flash[:notice] = "#{@company.name} was successfully created."
           redirect_to admin_company_dashboard_url(@company)
         end
       else
@@ -62,7 +62,7 @@ class Admin::CompaniesController < Admin::AdminController
     respond_to do |format|
       if @company.update_attributes(params[:company])
         format.html do
-          flash[:notice] = 'Company was successfully updated.'
+          flash[:notice] = "#{@company.name} was successfully updated."
           redirect_to( admin_company_dashboard_url(@company) )
         end
       else
