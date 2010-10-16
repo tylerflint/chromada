@@ -39,7 +39,7 @@
 #admin .left-column .nav ul li a.active .arrow	 			{background-position:0px -95px;}
                                                         	
 /***** RIGHT COLUMN *****/                              	
-#admin .right-column 										{float:left; width:580px;}
+#admin .right-column 										{position:relative; float:left; width:580px;}
 #admin .right-column .content								{float:left; width:100%;}
                                                         	
 /***** BUTTONS *****/                                   	
