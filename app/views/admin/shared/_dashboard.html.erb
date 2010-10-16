@@ -1,11 +1,24 @@
 <div class='full-column'>
-	hi
+	<div class='nav'>
+		<ul>
+			<li class='first'><a href='#link'>Current Company<span class='arrow'></span></a></li>
+			<li><a href='#link'>Other Company<span class='arrow'></span></a></li>
+			<li><a href='#link'>Other Company<span class='arrow'></span></a></li>
+			<li><a href='#link'>Other Company<span class='arrow'></span></a></li>
+			<li class='search' title=''><input id="" value="Add New Company" onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;'/>
+				<div class='actions-bar'>
+					<a href='#link' title='Add New Company' class='admin-button add'></a>
+					<a href='#link' title='Start Over' class='admin-button remove'></a>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <div class='left-column'>
 	<% if (@company) %>
 		<h2 class='heading company'><%= @company.name %></h2>
-		<a href='<%= url_for([:admin, :dashboard]) %>' title='Back to Dashboard' class='admin-button back'><span>Dashboard</span></a>
+		<a href='<%= url_for([:admin, :dashboard]) %>' title='Back to Dashboard' class='admin-button back'><span>Switch Company</span></a>
 	<% else %>
 		<h2 class='heading company'>Dashboard</h2>
 	<% end %>
