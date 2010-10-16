@@ -1,0 +1,67 @@
+<% content_for :left do %>
+	<%= render :partial => 'admin/companies/menu', :locals => {:active => :users} %>
+<% end %>
+
+<div class='content company'>
+	
+	<%= form_for [:admin, @company, @user] do |f| %>
+	  
+		<%= render :partial => 'admin/shared/actions_bar', :locals => {:form => f, :object => @user, :back_url => url_for([:admin, @company, :users]), :delete_url => url_for([:admin, @company, @user]) } %>
+		
+		<div id="user-search">
+			<ul class='list'>
+				<li class='first search' title='Search chromada users'>
+					<span class='admin-sprite icon'></span>
+					<input id="search-filter" value='Search Chromada Users' onfocus='if(this.value=="Search Chromada Users")value=""' onblur='if(this.value=="")this.value="Search Chromada Users"'/>
+				</li>
+				<div class="results">
+				</div>
+			</ul>
+		</div>
+		
+		<div id="user-form" style="display: none">
+			<ul class='body user'>
+				<li>
+					<h3 class='heading'>username</h3>
+					<input type='hidden' name='user[username]' id="username_input" />
+					<div class="username" id="username"></div>
+				</li>
+				<%= render :partial => 'permissions' %>
+			</ul>
+		</div>
+		
+	<% end %>
+</div>
+<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+		$(document).ready(function()
+		{
+			$('#search-filter').keyup(function()
+			{
+				search();
+			});
+		});
+		
+		function search()
+		{
+			$.get('<%= url_for([:admin, :search, @company, :users]) %>?ajax=true&search=' + $('#search-filter').val(), function(data)
+			{
+				$('.results').html(data);
+			})
+		}
+		
+		function setUsername(username)
+		{
+			$('#username_input').val(username);
+			$('#username').html(username);
+			switchFormContext();
+			return false;
+		}
+		
+		function switchFormContext()
+		{
+			$('#user-search').hide();
+			$('#user-form').show();
+		}
+	//]]>
+</script>

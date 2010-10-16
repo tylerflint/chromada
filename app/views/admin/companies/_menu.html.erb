@@ -1,20 +1,20 @@
 <div class='nav'>
 	<ul>
-		<li><a href='<%= url_for([:admin, @company, :dashboard]) %>' <% if (active == :dashboard) %>class="active"<% end %>>Company Dashboard<span class='arrow'></span></a></li>
+		<li><a href='<%= url_for([:admin, @company, :dashboard]) %>' <% if (active == :dashboard) %>class="active"<% end %>>Dashboard<span class='arrow'></span></a></li>
 		<% if ( Mother.may_i?('edit') ) %>
-			<li><a href='<%= url_for([:edit, :admin, @company]) %>' <% if (active == :edit) %>class="active"<% end %>>General Information<span class='arrow'></span></a></li>
+			<li><a href='<%= url_for([:edit, :admin, @company]) %>' <% if (active == :edit) %>class="active"<% end %>>General<span class='arrow'></span></a></li>
 		<% end %>
 		<% if ( Mother.may_i?('billing') ) %>
 			<li><a href='#link'>Billing<span class='arrow'></span></a></li>
 		<% end %>
 		<% if ( Mother.may_i?('users') ) %>
-			<li><a href='<%= url_for([:admin, @company, :users]) %>' <% if (active == :users) %>class="active"<% end %>>Manage Admins<span class='arrow'></span></a></li>
+			<li><a href='<%= url_for([:admin, @company, :users]) %>' <% if (active == :users) %>class="active"<% end %>>Administrators<span class='arrow'></span></a></li>
 		<% end %>
 		<% if ( Mother.may_i?('employees') ) %>
-			<li><a href='<%= url_for([:admin, @company, :employees]) %>' <% if (active == :employees) %>class="active"<% end %>>Manage Employees<span class='arrow'></span></a></li>
+			<li><a href='<%= url_for([:admin, @company, :employees]) %>' <% if (active == :employees) %>class="active"<% end %>>Employees<span class='arrow'></span></a></li>
 		<% end %>
 		<% if ( Mother.may_i?('permissions') ) %>
-			<li><a href='<%= url_for([:admin, @company, :permissions]) %>' <% if (active == :permissions) %>class="active"<% end %>>Create &amp; Edit Permissions<span class='arrow'></span></a></li>
+			<li><a href='<%= url_for([:admin, @company, :permissions]) %>' <% if (active == :permissions) %>class="active"<% end %>>Permissions<span class='arrow'></span></a></li>
 		<% end %>
 	</ul>
 </div>

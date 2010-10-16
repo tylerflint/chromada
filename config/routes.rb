@@ -21,9 +21,10 @@ Chromada::Application.routes.draw do |map|
   match "terms-of-use"     => "static#terms_of_use",     :as => "terms_of_use"
   
   namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
-    root :to                        => "admin#dashboard"
-    match "dashboard"               => "admin#dashboard",     :as => "dashboard"
-    match "companies/:id/dashboard" => "companies#dashboard", :as => "company_dashboard"
+    root :to                                    => "admin#dashboard"
+    match "dashboard"                           => "admin#dashboard",     :as => "dashboard"
+    match "companies/:id/dashboard"             => "companies#dashboard", :as => "company_dashboard"
+    match "companies/:company_id/users/search"  => "users#search",        :as => "search_company_users"
     resources :companies do
       resources :employees
       resources :permissions
