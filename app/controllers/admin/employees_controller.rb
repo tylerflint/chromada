@@ -44,7 +44,7 @@ class Admin::EmployeesController < Admin::CompanyController
     respond_to do |format|
       if @employee.save
         format.html do
-          flash[:notice] = 'Employee was successfully created.'
+          flash[:notice] = "#{@employee.name} was successfully created."
           redirect_to :action => :index
         end
       else
@@ -60,7 +60,7 @@ class Admin::EmployeesController < Admin::CompanyController
     respond_to do |format|
       if @employee.update_attributes(params[:employee])
         format.html do
-          flash[:notice] = 'Employee was successfully updated.'
+          flash[:notice] = "#{@employee.name} was successfully updated."
           redirect_to :action => :index
         end
       else
