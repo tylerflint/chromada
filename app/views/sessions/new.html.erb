@@ -15,7 +15,9 @@
 				<%= form.password_field :password, :class => 'password-password required password', :value => '', :autocomplete => 'off' %>
 			</div>
 			
-			<%= flash[:alert] %>
+			<div class='alert'>
+				<%= flash[:alert] %>
+			</div>
 			
 			<%= form.submit 'login', :class => 'button login' %>
 			
