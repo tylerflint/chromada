@@ -11,8 +11,8 @@
 		
 		<form id='contact'>
 			<div class='form-group'>
-				<input type='text' class='required defaultInvalid' value='name' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;'/>
-				<input type='text' class='required email defaultInvalid' value='email' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;'/>
+				<input type='text' class='required name defaultInvalid' value='name' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;'/>
+				<input type='email' class='required email defaultInvalid' value='email' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;'/>
 				<textarea class='required defaultInvalid' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = "message"'>message</textarea>
 			</div>
 			
@@ -36,6 +36,9 @@
 		jQuery.validator.addMethod("defaultInvalid", function(value, element) {
 		   return value != element.defaultValue;
 		}, "");
+		
+		// Autofocus on the name input field
+		$(".name").focus();
 		
 		$("#contact").validate();
 		$('#contact').submit(function(form)
