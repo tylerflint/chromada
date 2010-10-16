@@ -8,8 +8,7 @@
 		</div>
 
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>
-			<%= devise_error_messages! %>
-
+			
 			<div class='form-group'>
 			    <%= form.text_field :email, :class => 'required email defaultInvalid', :value => 'email address', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<%= form.text_field :username, :class => 'required defaultInvalid', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
@@ -17,6 +16,10 @@
 				<%= form.password_field :password, :class => 'password-password required password', :value => '', :autocomplete => 'off' %>
 				<%= form.text_field :password_confirmation, :class => 'password-confirm-clear', :value => 'confirm password', :autocomplete => 'off' %>
 				<%= form.password_field :password_confirmation, :class => 'password-confirm required password', :value => '', :autocomplete => 'off' %>
+			</div>
+						
+			<div class='alert'>
+				<%= flash[:alert] %>
 			</div>
 			
 			<%= form.submit 'register', :class => 'button register' %>
