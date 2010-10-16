@@ -9,20 +9,41 @@
 		
 		<p class='content'>We would love to hear from you. Just fill out the form below and leave us a message so we can get back to you!</p>
 		
-		<form>
+		<form id='contact'>
 			<div class='form-group'>
-				<input type='text' for='name' class='name required' value='name' />
-				<input type='text' for='email' class='email required' value='email address' />
-				<textarea>message</textarea>
+				<input type='text' class='required defaultInvalid' value='name' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;'/>
+				<input type='text' class='required email defaultInvalid' value='email' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;'/>
+				<textarea class='required defaultInvalid' onFocus='this.value = ""' onBlur='if(this.value == "") this.value = "message"'>message</textarea>
+			</div>
+			
+			<div class='alert'>
+				<%= flash[:alert] %>
 			</div>
 			
 			<input type='submit' class='button submit' value='submit'/>
 		</form>
 		
 		<div class='additional-links'>
-			<span class='additional-link'>New? <%= link_to "Sign up", :class => 'site-link' %></span>
-			<span class='additional-link'>Already Registered? <%= link_to "Login Here" %></span>
+			<span class='additional-link'>New? <%= link_to "Register Here", new_user_registration_url, :class => 'site-link' %></span>
+			<span class='additional-link'>Already Registered? <%= link_to "Login Here", new_user_session_url %></span>
 		</div>
 		
 	</div>
 </div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		jQuery.validator.addMethod("defaultInvalid", function(value, element) {
+		   return value != element.defaultValue;
+		}, "");
+		
+		$("#contact").validate();
+		$('#contact').submit(function(form)
+		{	
+			if($("#contact").valid())
+			{
+				form.submit();
+			};
+		});
+	//]]>
+</script>
