@@ -15,6 +15,8 @@
 		{
 			$box = api.box;
 			
+			var conversation = api.data.getConversationObject({key: 'status', initialValue: false});
+			
 			api.chat.onReady(function()
 			{
 				var olark = $('.habla_window_div_base');
@@ -24,8 +26,8 @@
 				$(".powered-by-olark").attr("onclick", "window.open('http://www.olark.com')");
 				
 				// Create custom open/close functionallity
-				function openChat(){olark.animate({"right": "15px"}, {duration:350, easing:'easeOutExpo'})};
-				function closeChat(){olark.animate({"right": "-158px"}, {duration:350, easing:'easeOutExpo'})};
+				function openChat(){olark.animate({"right": "15px"}, {duration:350, easing:'easeOutExpo'}); conversation.set(true)};
+				function closeChat(){olark.animate({"right": "-158px"}, {duration:350, easing:'easeOutExpo'}); conversation.set(false)};
 				
 				// Create custom open/close links, and assign thier functionallity
 				$('#habla_both_div').html("<span class='olark-open'></span><span class='olark-close'></span>");
@@ -33,8 +35,13 @@
 				$('.olark-close').click(closeChat);
 				
 				// Initiate Olark (set position)
-				olark.css({"right": "-185px"});
-				olark.animate({"right": "-158px"}, {duration:350, easing:'easeOutExpo'});
+				if(conversation.get())
+				{
+					olark.css({"right": "15px"});
+				}else{
+					olark.css({"right": "-185px"});
+					olark.animate({"right": "-158px"}, {duration:350, easing:'easeOutExpo'});
+				}
 				
 				// If an operator initiates chat first, open the chat window
 				api.chat.onMessageToVisitor(function(event){
