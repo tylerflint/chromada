@@ -5,19 +5,21 @@
 #admin .list-image 											{width:50px; height:50px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
                                                         	
 /***** LAYOUT *****/                                    	
-                                                        	
+#admin .page 												{padding:18px 0px 0px 0px;}
+#admin .page .body											{margin:18px 0px 32px 0px;}
+
 /***** HEADER *****/                                    	
 #admin .header 												{font-size:17px;}
 #admin .header a 											{float:right; color:#87D8D8;}
 #admin .header a:hover 										{color:#00D3D3; text-decoration:underline;}
-#admin .header .wrapper										{float:right; width:645px; margin:10px 0px 0px 0px;}
+#admin .header .wrapper										{float:right; width:645px; margin:8px 0px 0px 0px;}
 #admin .header .logo		 								{float:left; width:188px; height:34px; margin:0px; padding:0px; background-position:0px -35px;}
 #admin .header .logo:hover	 								{background-position:0px 0px;}
 #admin .header .message.welcome 							{width:475px; margin:0px; padding:0px; color:#4C4C4C; font-size:17px; font-weight:bold; border:none;}
-#admin .header .solid-rule	 								{float:left; width:100%; height:2px; margin:15px 0px 0px 0px; background:#989898;}
+#admin .header .solid-rule	 								{float:left; width:100%; height:2px; margin:18px 0px 0px 0px; background:#989898;}
                                                         	
 /***** DASHBOARD *****/                                 	
-#admin .panel 												{float:left; width:100%; min-height:120px; margin:0px 0px 25px 0px;}
+#admin .panel 												{float:left; width:100%; min-height:100px; margin:0px 0px 28px 0px;}
 #admin .panel .full-column 									{float:left; width:100%; margin:-15px 0px 32px 0px;}
 #admin .panel .left-column	 								{float:left; width:340px; margin:0px 20px 0px 0px;}
 #admin .panel .left-column .heading 						{float:left; width:100%; margin:0px 0px 15px 0px; color:#4C4C4C; font-size:30px;}
@@ -57,7 +59,7 @@
 #admin .left-column .nav ul li a	 						{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:19px; font-weight:bold;}
 #admin .left-column .nav ul li a:hover 						{color:#01DBDB;}
 #admin .left-column .nav ul li a.active						{color:#87D8D8;}
-#admin .left-column .nav ul li a .arrow	 					{float:right; width:10px; height:15px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -110px;}
+#admin .left-column .nav ul li a .arrow	 					{float:right; width:10px; height:15px; margin:2px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -110px;}
 #admin .left-column .nav ul li a:hover .arrow	 			{background-position:0px -80px;}
 #admin .left-column .nav ul li a.active .arrow	 			{background-position:0px -95px;}
                                                         	
@@ -109,24 +111,24 @@
                                                         	
 /***** LIST *****/                                      	
 .company .list												{float:left; width:100%;}
-.company .list .actions-bar 								{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
-.company .list .actions-bar a 								{border:none; width:17px; height:17px; margin:0px 5px; padding:0px;}
+.company .list .actions-bar 								{float:right; border:none; margin:14px 0px 0px 0px;}
+.company .list .actions-bar a 								{border:none; width:17px; height:17px; margin:0px 5px 0px 3px; padding:0px;}
 .company .list li											{float:left; width:100%; padding:0px;}
 .company .list li.first 									{margin:0px;}
 .company .list li.last 										{margin:0px;}
-.company .list li input		 								{float:left; height:20px; padding:15px 0px 12px 0px; border:none; color:#A6A6A6; font-size:19px; font-style:italic;}
-.company .list li.search 									{border-bottom:1px dotted #989898;}
-.company .list li.search .icon								{float:left; width:20px; height:20px; margin:12px 8px 0 12px; background-position:-50px -125px;}
+.company .list li input		 								{float:left; width:475px; height:20px; padding:14px 0px 12px 0px; border:none; color:#A6A6A6; font-size:18px; font-style:italic;}
+.company .list li.search 									{width:100%; border-bottom:1px dotted #989898;}
+.company .list li.search .icon								{float:left; width:20px; height:20px; margin:13px 8px 0 5px; background-position:-50px -125px;}
 .company .list .removable.remove							{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -102px;}
 .company .list .removable.remove:hover						{float:right; width:17px; height:17px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -112px -84px;}
-.company .list li a											{float:left; width:565px; padding:12px 0px 12px 15px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
+.company .list li a											{float:left; width:100%; padding:13px 0px 13px 0px; border-bottom:1px dotted #989898; color:#4C4C4C; font-size:19px;}
 .company .list li a:hover 									{color:#01DBDB;}
 .company .list li a:hover .arrow	 						{background-position:0px -80px;}
 .company .list li a.more									{border:none; color:#959595;}
 .company .list li a.add										{border:none; color:#0EDF58;}
 .company .list li a.add:hover								{border:none; color:#00CA13;}
                                                 			
-.company .list .arrow 										{float:right; width:10px; height:15px; margin:2px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
+.company .list .arrow 										{float:right; width:10px; height:15px; margin:3px 11px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -125px;}
 .company .list li a.more .arrow								{float:left; width:15px; height:10px; background-position:-15px -104px;}
                                                         	
 /* companies list */    
