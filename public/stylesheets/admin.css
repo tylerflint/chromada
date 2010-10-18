@@ -61,16 +61,17 @@
 #admin .left-column .nav ul li a.active						{color:#87D8D8;}
 #admin .left-column .nav ul li a .arrow	 					{float:right; width:10px; height:15px; margin:2px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -110px;}
 #admin .left-column .nav ul li a:hover .arrow	 			{background-position:0px -80px;}
-#admin .left-column .nav ul li a.active .arrow	 			{background-position:0px -95px;}
+#admin .left-column .nav ul li a.active .arrow	 			{background-position:0px -95px; margin:1px 12px 0px 0px;}
                                                         	
 /***** RIGHT COLUMN *****/                              	
 #admin .right-column 										{position:relative; float:left; width:580px;}
 #admin .right-column .content								{float:left; width:100%;}
+#admin .right-column .content .body							{margin:0px 0px 0px 0px;}
                                                         	
 /***** BUTTONS *****/                                   	
-.actions-bar 												{overflow:hidden; margin:12px 0px; padding:0px 5px;}
-.admin-button												{width:17px; height:17px; margin:0px 5px; padding:0px; cursor: pointer; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none;}
-.admin-button span											{float:left; margin:3px 0px 0px 25px;}
+.actions-bar 												{overflow:hidden; margin:12px 0px 13px 0px; padding:0px 5px;}
+.admin-button												{width:17px; height:17px; margin:0px; padding:0px; cursor: pointer; background:url('../images/admin-sprite.png') no-repeat 0px 0px; border:none;}
+.admin-button span											{float:left; margin:2px 0px 0px 30px;}
 .admin-button.back 											{float:left; width:21px; height:21px; color:#87D8D8; font-size:19px; background-position:-32px -102px;}
 .admin-button.back:hover 									{color:#00D3D3; background-position:-32px -81px;}
 .admin-button.add 											{float:right; background-position:-94px -102px;}
@@ -101,9 +102,9 @@
 
 .company form 												{width:100%;}
 .company .body 												{float:left; width:100%; margin:0px; color:#4C4C4C;}
-.company .body li											{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 40px 0px; padding:8px 0px 0px 0px;}
+.company .body li											{float:left; width:100%; border-top:1px dotted #989898; margin:0px 0px 38px 0px; padding:7px 0px 0px 0px;}
 .company .body input 										{float:left; width:100%; margin:0px; padding:0px; border:none;}
-.company .body .heading										{float:left; width:100%; margin:0px 0px 10px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+.company .body .heading										{float:left; width:100%; margin:0px 0px 18px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 .company .body input.name 									{font-size:36px;}
 .company .body input.password 								{font-size:25px;}
 .company .body input.id 									{font-size:25px;}
