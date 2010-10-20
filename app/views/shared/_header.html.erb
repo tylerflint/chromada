@@ -28,16 +28,19 @@
 		<% else %>
 			<%= link_to '', new_user_session_url, :class => 'button link-login'%>
 		<% end %>
-
+		
+		<!--
 		<div class='pipe' style='height:12px;'></div>
-
-		<!-- SEARCH -->
+		-->
+		
+		<!-- SEARCH 
 		<div class='search'>
 			<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
 				<%= form.text_field :search, :class => 'required', :value => 'search', :onfocus => 'this.value = ""', :onblur => 'if(this.value == "") this.value = this.defaultValue;' %>
 				<div class='button icon'></div>
 			<% end %>
 		</div>
+		-->
 	</div>
 	<div class='solid-rule'></div>
 
