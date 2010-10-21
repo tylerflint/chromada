@@ -8,6 +8,7 @@ gem "bson_ext", "1.0.4"
 gem "mongoid_session_store"
 gem 'blockpile'
 gem 'unicorn'
+gem 'sitemap_generator'
 
 group :test do
   gem 'shoulda'
