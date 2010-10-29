@@ -1,6 +1,6 @@
 source :gemcutter
 
-gem 'rails', '3.0.0'
+gem 'rails'
 gem 'haml'
 gem "devise", "1.1.rc2"
 gem "mongoid", "2.0.0.beta.19"
