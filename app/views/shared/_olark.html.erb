@@ -14,6 +14,7 @@
 		olark.extend(function(api)
 		{
 			$box = api.box;
+			$box.expand();
 			
 			var conversation = api.data.getConversationObject({key: 'status', initialValue: false});
 			
