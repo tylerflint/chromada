@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6										{margin:0; padding:0;}
                                                     		
 /* MAIN PAGE ELEMENTS */      
 html 														{height:100%;}                      		
-body 														{height:100%; background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'Helvetica', Arial, sans-serif; font-size:12px;}
+body 														{height:100%; background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'museo-sans-1', 'museo-sans-2', 'Helvetica', Arial, sans-serif; font-size:12px;}
                                                 	
 /* IMAGES */                                            	
 img															{border:none;}
@@ -100,7 +100,7 @@ label.error													{display:none !important;}
 .float-none 												{float:none !important;}
 .float-left 												{float:left;}
 .float-right 												{float:right;}
-                                                    	
+                                          	
 /************************************************** MAIN ELEMENT STYLES **************************************************/
                                                     	
 /***** SPRITES *****/                               	
