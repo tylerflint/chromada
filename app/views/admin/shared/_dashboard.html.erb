@@ -4,7 +4,7 @@
 			<% if (@company) %>
 				<li class='first'><a href='<%= url_for([:admin, @company, :dashboard]) %>'><%= @company.name %><span class='arrow'></span></a></li>
 			<% end %>
-			<% Company.only(:name).asc(:name).each do |c| %>
+			<% current_user.companies.only(:name).asc(:name).each do |c| %>
 				<% if (c!=@company) %>
 					<li><a href='<%= url_for([:admin, c, :dashboard]) %>'><%= c.name %><span class='arrow'></span></a></li>
 				<% end %>
