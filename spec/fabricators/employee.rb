@@ -1,0 +1,3 @@
+Fabricator :employee do
+  
+end
