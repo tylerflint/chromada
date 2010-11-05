@@ -1,15 +1,8 @@
 Chromada::Application.routes.draw do
   
-  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }, :controllers => { :sessions => 'sessions'}
-  
-  # until devise supports default routes explicitly, I have to do this
-  # get 'quick_login',  :to => 'sessions#create',    :as => "user_session", :format => :js
-  post 'login', :to => 'sessions#create',           :as => "user_session", :format => :html
-  get 'login',  :to => 'sessions#new',              :as => "new_user_session"
-  get 'logout', :to => 'sessions#destroy',          :as => "destroy_user_session"
-  get 'signup', :to => 'devise/registrations#new',  :as => "new_user_registration"
-  
   root :to => "static#index"
+  
+  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, :controllers => { :sessions => 'sessions'}
   
   match "products"         => "static#products",         :as => "products"
   match "services"         => "static#services",         :as => "services"      
@@ -29,7 +22,7 @@ Chromada::Application.routes.draw do
     resources :companies do
       resources :employees
       resources :permissions
-      resources :users
+      # resources :users
     end
   end
   

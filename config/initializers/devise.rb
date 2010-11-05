@@ -110,7 +110,7 @@ Devise.setup do |config|
 
   # Configure the default scope used by Devise. By default it's the first devise
   # role declared in your routes.
-  config.default_scope = :user
+  # config.default_scope = :user
 
   # ==> Navigation configuration
   # Lists the formats that should be treated as navigational. Formats like
