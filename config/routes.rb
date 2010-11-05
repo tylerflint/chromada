@@ -22,7 +22,7 @@ Chromada::Application.routes.draw do
     resources :companies do
       resources :employees
       resources :permissions
-      # resources :users
+      resources :users
     end
   end
   
