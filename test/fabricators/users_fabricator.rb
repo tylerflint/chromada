@@ -1,3 +1,0 @@
-Fabricator(:user) do
-  
-end

@@ -1,3 +1,0 @@
-Fabricator(:company) do
-  
-end

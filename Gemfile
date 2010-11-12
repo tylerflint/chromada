@@ -13,4 +13,5 @@ gem 'unicorn'
 group :test, :development do
   gem "rspec-rails", "~> 2.0.1"
   gem 'rails3-generators'
+  gem 'fabrication'
 end

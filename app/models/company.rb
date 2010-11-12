@@ -4,6 +4,7 @@ class Company
   
   field :name
   field :owners, :type => Array
+  
   index :name
   
   embeds_many :employees
@@ -14,22 +15,28 @@ class Company
     :inverse_of => :companies,
     :index => true,
     :dependant => :remove
-  
+    
   def is_owner?(user)
     owners.include?(user.id)
   end
   
-  def add_owner(customer)
+  def add_owner(owner)
     if self.owners
-      self.owners << customer.id
+      self.owners << owner.id unless self.owners.include?(owner.id)
     else
-      self.owners = [customer.id]
+      self.owners = [owner.id]
     end
+    add_user(owner)
+  end
+  
+  def add_user(user)
+    self.users << user unless self.user_ids.include?(user.id)
   end
   
   def drop_user(user)
     self.user_ids = self.user_ids - [user.id]
-    self.owners = self.owners - [user.id]
+    self.owners   = self.owners - [user.id] if self.owners
   end
+  alias :drop_owner :drop_user
   
 end
