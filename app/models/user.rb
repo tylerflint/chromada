@@ -11,12 +11,13 @@ class User
   index :lastname
   index :email
   index :username
-  
+
   references_many \
     :permissions, 
-    :stored_as => :array, 
+    :stored_as => :array,
     :inverse_of => :users,
     :index => true
+    
   references_many \
     :companies, 
     :stored_as => :array, 
@@ -37,6 +38,10 @@ class User
   end
   
   def set_permissions(company, permission_ids)
+    company_permission_ids = company.permission_ids
+    permission_ids = permission_ids.inject([]) do |valid, permission_id| 
+      valid << permission_id if company_permission_ids.include?(permission_id); valid
+    end
     loaded_permissions   = self.permissions
     company_permissions  = company.permissions
     stripped_permissions = []

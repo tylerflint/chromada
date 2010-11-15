@@ -8,14 +8,16 @@ class Company
   index :name
   
   embeds_many :employees
-  embeds_many :permissions
+  
+  references_many :permissions, :dependant => :destroy
+  
   references_many \
     :users, 
     :stored_as => :array, 
     :inverse_of => :companies,
     :index => true,
     :dependant => :remove
-    
+  
   def is_owner?(user)
     owners.include?(user.id)
   end
@@ -38,5 +40,9 @@ class Company
     self.owners   = self.owners - [user.id] if self.owners
   end
   alias :drop_owner :drop_user
+  
+  def permission_ids
+    self.permissions.inject([]) {|ids, permission| ids << permission.id}
+  end
   
 end

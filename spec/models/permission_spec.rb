@@ -1,0 +1,5 @@
+describe Permission do
+  
+  
+  
+end

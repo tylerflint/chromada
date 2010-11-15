@@ -26,6 +26,13 @@ module Mother
       end
     end
     
+    def reset!
+      @company  = nil
+      @child    = nil
+      @actions  = []
+      @is_owner = false
+    end
+    
     def prepare_actions
       @actions = []
       @company.permissions.where(:_id.in => @child.permission_ids).each do |permission|
@@ -89,14 +96,6 @@ module Mother
       
       items
     end
-    
-    # def seed_actions(yaml=nil)
-    #   actions = self.get_flat_actions(yaml)
-    #   Action.destroy_all(["path NOT IN (?)", actions])
-    #   actions.each do |action|
-    #     Action.find_or_create_by_path(action)
-    #   end
-    # end
     
     def seed_actions(yaml=nil)
       actions = self.get_flat_actions(yaml)

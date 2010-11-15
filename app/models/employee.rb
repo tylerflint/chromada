@@ -6,6 +6,7 @@ class Employee
   field :employee_number
   field :email
   field :notes
+  
   index :name
   index :employee_number
   index :email

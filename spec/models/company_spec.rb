@@ -60,7 +60,7 @@ describe Company do
     company2.user_ids.should == [user.id]
   end
   
-  it "adds an user" do
+  it "adds a user" do
     company = Fabricate(:company)
     user    = Fabricate(:user)
     company.add_user(user)
@@ -69,7 +69,7 @@ describe Company do
     company2.user_ids.should == [user.id]
   end
   
-  it "removes an user" do
+  it "removes a user" do
     company = Fabricate(:company)
     user    = Fabricate(:user)
     company.add_user(user)
@@ -79,6 +79,13 @@ describe Company do
     company2.save
     company3 = Company.where(:name => 'google').first
     company3.user_ids.should == []
+  end
+  
+  it "converts permissions into an array of ids" do
+    company = Fabricate :company
+    manager = company.permissions.create :name => 'manager'
+    admin   = company.permissions.create :name => 'admin'
+    company.permission_ids == [manager.id, admin.id]
   end
   
 end
