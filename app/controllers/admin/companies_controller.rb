@@ -43,7 +43,6 @@ class Admin::CompaniesController < Admin::AdminController
   # POST /companies
   def create
     @company = Company.create(params[:company])
-    
     respond_to do |format|
       if @company.save 
         add_company_to_user(@company)

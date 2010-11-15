@@ -2,6 +2,49 @@ require 'spec_helper'
 
 describe User do
   
+  after(:each) do
+    User.collection.remove
+  end
+  
+  it "requires a username" do
+    user = User.create()
+    user.errors.has_key?(:username).should == true
+    user.errors[:username].include?("can't be blank").should == true
+  end
+  
+  it "requires an email" do
+    user = User.create()
+    user.errors.has_key?(:email).should == true
+    user.errors[:email].include?("can't be blank").should == true
+  end
+  
+  it "requires a password on create" do
+    user = User.create({:username => "johnny", :email => "johnny@gmail.com"})
+    user.errors.has_key?(:password).should == true
+    user.errors[:password].include?("can't be blank").should == true
+  end
+  
+  it "must have a unique username" do
+    user1 = User.create({:username => "johnny", :email => "johnny@gmail.com", :password => "password"})
+    user2 = User.create({:username => "johnny", :email => "johnny@yahoo.com", :password => "password"})
+    user2.errors.has_key?(:username).should == true
+    user2.errors[:username].include?("is already taken").should == true
+  end
+  
+  it "must have a unique email" do
+    user1 = User.create({:username => "johnny", :email => "johnny@gmail.com", :password => "password"})
+    user2 = User.create({:username => "jimmy", :email => "johnny@gmail.com", :password => "password"})
+    user2.errors.has_key?(:email).should == true
+    user2.errors[:email].include?("is already taken").should == true
+  end
+  
+  it "should not be able to set encrypted password" do
+    user = User.create({:username => "johnny", :email => "johnny@gmail.com", :password => "password"})
+    encrypted_pass = user.encrypted_password
+    user.update_attributes(:encrypted_password => "abcdef")
+    user.encrypted_password.should == encrypted_pass
+  end
+  
   describe "permissions" do
     
     after(:each) do
@@ -11,15 +54,15 @@ describe User do
       Permission.collection.remove
     end
     
-    it "only set when they belong to the company that gets passed with the ids array" do
-      user      = Fabricate :user
-      facebook  = Fabricate :company
-      google    = Fabricate :company, :name => 'google'
-      manager   = google.permissions.create(:name => 'manager')
-      read_only = facebook.permissions.create(:name => 'reader')
-      user.set_permissions(google, [manager.id, read_only.id])
-      user.permission_ids.should == [manager.id]
-    end
+    # it "only set when they belong to the company that gets passed with the ids array" do
+    #   user      = Fabricate :user
+    #   facebook  = Fabricate :company
+    #   google    = Fabricate :company, :name => 'google'
+    #   manager   = google.permissions.create(:name => 'manager')
+    #   read_only = facebook.permissions.create(:name => 'reader')
+    #   user.set_permissions(google, [manager.id, read_only.id])
+    #   user.permission_ids.should == [manager.id]
+    # end
     
     it "removes any that may have previously been set, and aren't in the permission array, belonging to the company that is passed" do
       user      = Fabricate :user

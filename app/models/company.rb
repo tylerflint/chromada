@@ -32,7 +32,7 @@ class Company
   end
   
   def add_user(user)
-    self.users << user unless self.user_ids.include?(user.id)
+    self.users << user unless self.user_ids.include?(user.id); self
   end
   
   def drop_user(user)
