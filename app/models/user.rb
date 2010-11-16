@@ -11,12 +11,13 @@ class User
   index :lastname
   index :email
   index :username
-  
+
   references_many \
     :permissions, 
-    :stored_as => :array, 
+    :stored_as => :array,
     :inverse_of => :users,
     :index => true
+    
   references_many \
     :companies, 
     :stored_as => :array, 
@@ -32,11 +33,19 @@ class User
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :username, :password, :password_confirmation
   
+  validates_presence_of :username, :email
+  validates_presence_of :password, :on => :create
+  validates_uniqueness_of :username, :email
+  
   def name
     self.username
   end
   
   def set_permissions(company, permission_ids)
+    # company_permission_ids = company.permission_ids
+    # permission_ids = permission_ids.inject([]) do |valid, permission_id| 
+    #   valid << permission_id if company_permission_ids.include?(permission_id); valid
+    # end
     loaded_permissions   = self.permissions
     company_permissions  = company.permissions
     stripped_permissions = []

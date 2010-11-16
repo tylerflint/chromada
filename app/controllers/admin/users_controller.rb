@@ -31,9 +31,8 @@ class Admin::UsersController < Admin::CompanyController
 
   # POST /users
   def create
-    begin
-      @user = User.first(:conditions => {:username => params[:user][:username]})
-    rescue ActiveRecord::RecordNotFound
+    @user = User.where(:username => params[:user][:username]).first
+    unless @user
       flash[:error] = "unknown user"
       redirect_to url_for([:admin, @company, :users])
     end
