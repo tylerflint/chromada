@@ -1,59 +1,38 @@
-<div class='divise login'>
-	
-	<div class='site-sprite icon'><span class='hide'>chromada</span></div>
-	
-	<div class='body'>
-		<div class='header'>
-			<h1 class='site-sprite title'><span class='hide'>Login</span></h1>
-		</div>
 
-		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>
-			
-			<div class='form-group'>
-				<%= form.text_field :username, :class => 'required username defaultInvalid', :value => 'user name', :onFocus => 'this.value = ""', :onBlur => 'if(this.value == "") this.value = this.defaultValue;' %>
-				<%= form.text_field :password, :class => 'password-clear', :value => 'password', :autocomplete => 'off' %>
-				<%= form.password_field :password, :class => 'password-password required password', :value => '', :autocomplete => 'off' %>
-			</div>
-			
-			<div class='alert'>
-				<%= flash[:alert] %>
-			</div>
-			
-			<%= form.submit 'login', :class => 'button login' %>
-			
-		<% end %>
-		
-		<div class='additional-links'>
-			<%= render :partial => "devise/shared/links" %>
-		</div>
-		
-	</div>
+<div class='divise register'>
+	
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>	
+		<ul class='list'>
+			<li class="first">
+				<h2 class='heading'>Login</h2>
+				<p>Welcome back. Type your username and password to get started!</p>
+			</li>
+			<li>
+				<label>Username</label>
+				<%= form.text_field :username, :class => 'first required username defaultInvalid' %><span class='status pass'></span>
+			</li>
+			<li>
+				<label>Password</label>
+				<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
+			</li>
+			<li>
+				<div class='alert'>
+					<%= flash[:alert] %>
+				</div>
+			</li>
+			<li class="last">
+				<%= form.submit 'login', :class => 'button login' %>
+				<a href='#link' title='Enables [Item] Removal' class='admin-button remove delete'></a>
+			</li>
+		</ul>
+	<% end %>
 </div>
 
 <script type="text/javascript">
 	//<![CDATA[
 		
 		// Autofocus on the username input field
-		$(".username").focus();
-		
-		$(".password-clear").show();
-		$(".password-password").hide();
-
-		$(".password-clear").focus(function()
-		{
-		    $(".password-clear").hide();
-		    $(".password-password").show();
-		    $(".password-password").focus();
-		});
-		
-		$(".password-password").blur(function()
-		{
-		    if($(".password-password").val() == "" && $(".password-password").valid())
-			{
-		        $(".password-clear").show();
-		    	$(".password-password").hide();
-			}
-		});
+		$(".first").focus();
 		
 		jQuery.validator.addMethod("defaultInvalid", function(value, element)
 		{
@@ -66,11 +45,6 @@
 			if($("#user_new").valid())
 			{
 				form.submit();
-			}else{
-				if(!$('.password-password').valid())
-				{
-					$('.password-clear').addClass('error');
-				}
 			}
 		});
 	//]]>
