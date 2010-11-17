@@ -2,7 +2,10 @@ Chromada::Application.routes.draw do
   
   root :to => "static#index"
   
-  devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, :controllers => { :sessions => "sessions" }
+  devise_for :users,
+    :path => "/",
+    :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, 
+    :controllers => { :sessions => "sessions", :registrations => 'registrations' }
   
   match "products"         => "static#products",         :as => "products"
   match "services"         => "static#services",         :as => "services"      
