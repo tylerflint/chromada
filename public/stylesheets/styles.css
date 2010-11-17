@@ -265,9 +265,11 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .divise .title		 										{width:52px; height:21px; background-position:-647px -59px;}
 .divise .content 											{margin:10px 0px;}
 .divise .action-bar 										{float:right; width:600px; margin:10px 0px 0px 0px;}
-.divise .action-bar span 									{float:left; margin:0px 25px 0px 0px; font-size:24px;}
+.divise .action-bar span 									{float:left; margin:0px 25px 0px 0px; font-size:24px; cursor:pointer;}
 .divise .action-bar span.submit 							{color:#0EDF58;}
+.divise .action-bar span.submit:hover						{color:#2BCA12;}
 .divise .action-bar span.cancel 							{color:#FE6022;}
+.divise .action-bar span.cancel:hover						{color:#FD3D00;}
 .divise .button												{width:29px; height:28px; margin:0px 8px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .divise .button.submit										{padding:0px; background-position:-26px -175px;}
 .divise .button.submit:hover								{background-position:-26px -147px;}
