@@ -9,51 +9,45 @@ describe Mother do
       Permission.collection.remove
       Company.collection.remove
       User.collection.remove
-      Mother.reset!
     end
     
     it "allows owner to do anything and everything" do
       company = Fabricate :company
       owner   = Fabricate :user
       company.add_owner(owner)
-      Mother.set_company(company)
-      Mother.set_child(owner)
-      Mother.may_i?('anything_i_want').should == true
+      mother = Mother.new(company, owner)
+      mother.may_i?('anything_i_want').should == true
     end
 
     it "raises exception when child is not set" do
       company = Fabricate :company
       lambda {
-        Mother.set_company(company)
-        Mother.set_child(nil)
-        Mother.may_i?('employees/delete')
+        mother = Mother.new(company)
+        mother.may_i?('employees/delete')
       }.should raise_error
     end
 
     it "raises exception when company is not set" do
       user = Fabricate :user
       lambda {
-        Mother.set_child(user)
-        Mother.set_company(nil)
-        Mother.may_i?('employees/delete')
+        mother = Mother.new(nil, user)
+        mother.may_i?('employees/delete')
       }.should raise_error
     end
 
     it "raises exception when child does not have id" do
       company = Fabricate :company
       lambda {
-        Mother.set_company(company)
-        Mother.set_child(1)
-        Mother.may_i?('employees/delete')
+        mother = Mother.new(company, 1)
+        mother.may_i?('employees/delete')
       }.should raise_error
     end
 
     it "raises exception when company does not have id" do
       user = Fabricate :user
       lambda {
-        Mother.set_company(1)
-        Mother.set_child(user)
-        Mother.may_i?('employees/delete')
+        mother = Mother.new(1, user)
+        mother.may_i?('employees/delete')
       }.should raise_error
     end
 
@@ -75,10 +69,9 @@ describe Mother do
       
       user.set_permissions(company, [manager.id])
       
-      Mother.set_company(company)
-      Mother.set_child(user)
-      Mother.may_i?('read').should == true
-      Mother.may_i?('write').should == true
+      mother = Mother.new(company, user)
+      mother.may_i?('read').should == true
+      mother.may_i?('write').should == true
     end
 
     it "denys when doesn't have permission" do
@@ -99,9 +92,8 @@ describe Mother do
       
       user.set_permissions(company, [peeon.id])
       
-      Mother.set_company(company)
-      Mother.set_child(user)
-      Mother.may_i?('write').should == false
+      mother = Mother.new(company, user)
+      mother.may_i?('write').should == false
     end
     
   end

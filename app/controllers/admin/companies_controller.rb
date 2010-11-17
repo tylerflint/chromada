@@ -1,6 +1,6 @@
 class Admin::CompaniesController < Admin::AdminController
 
-  before_filter :load_company, :init_permissions, :except => [:index, :new, :create]
+  before_filter :load_company, :except => [:index, :new, :create]
 
   # GET /companies
   def index
@@ -87,11 +87,6 @@ class Admin::CompaniesController < Admin::AdminController
       flash[:error] = "Invalid company"
       redirect_to admin_dashboard_url
     end
-  end
-  
-  def init_permissions
-    Mother.set_company(@company)
-    Mother.set_child(current_user)
   end
   
   def add_company_to_user(company)

@@ -1,47 +1,40 @@
-module Mother
+class Mother
   
-  @company  = nil
-  @child    = nil
-  @actions  = []
-  @is_owner = false
+  def initialize(company=nil, user=nil)
+    set_company(company) if company
+    set_child(user) if user
+  end
+
+  def set_company(company)
+    @company = company
+  end
+  
+  def set_child(child)
+    @child = child
+    if @company.is_owner?(child)
+      @is_owner = true
+    else
+      prepare_actions
+    end
+  end
+  
+  def prepare_actions
+    @actions = []
+    @company.permissions.where(:_id.in => @child.permission_ids).each do |permission|
+      permission.actions.each do |action|
+        @actions << action[:path]
+      end
+    end
+  end
+  
+  def may_i?(action)
+    raise "no child present" if !@child
+    raise "no company present" if !@company
+    (@is_owner || @actions.include?(action))
+  end
   
   class << self
   
-    def may_i?(action)
-      raise "no child present" if !@child
-      raise "no company present" if !@company
-      (@is_owner || @actions.include?(action))
-    end
-    
-    def set_company(company)
-      @company = company
-    end
-    
-    def set_child(child)
-      @child = child
-      if @company.is_owner?(child)
-        @is_owner = true
-      else
-        prepare_actions
-      end
-    end
-    
-    def reset!
-      @company  = nil
-      @child    = nil
-      @actions  = []
-      @is_owner = false
-    end
-    
-    def prepare_actions
-      @actions = []
-      @company.permissions.where(:_id.in => @child.permission_ids).each do |permission|
-        permission.actions.each do |action|
-          @actions << action[:path]
-        end
-      end
-    end
-    
     def load_config(yaml=nil, file=nil)
       file ||= 'mother.yml'
       config = YAML.load(yaml) if yaml
