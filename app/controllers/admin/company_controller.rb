@@ -1,6 +1,6 @@
 class Admin::CompanyController < Admin::AdminController
   
-  before_filter :load_company, :init_permissions
+  before_filter :load_company
   
   protected
   
@@ -11,11 +11,6 @@ class Admin::CompanyController < Admin::AdminController
       flash[:error] = "Invalid company"
       redirect_to admin_dashboard_url
     end
-  end
-  
-  def init_permissions
-    Mother.set_company(@company)
-    Mother.set_child(current_user)
   end
   
 end
