@@ -82,9 +82,7 @@
 .admin-button.remove:hover									{background-position:-112px -84px;}
 .admin-button.submit 										{float:left; width:17px; height:17px; color:#87D8D8; font-size:17px; background-position:-72px -102px;}
 .admin-button.submit:hover									{color:#00D3D3; background-position:-72px -84px;}
-.admin-button.submit span									{margin:2px 0px 0px 25px;}
-                                                        	
-/***** BUTTONS *****/                                   	
+.admin-button.submit span									{margin:2px 0px 0px 25px;}                                	
                                                         	
 /***** LISTS *****/                                     	
 #admin .list-image.open										{width:8px; height:10px; background-position:-5px -22px;}
