@@ -129,17 +129,14 @@ label.error													{display:none !important;}
 .button.admin-panel:hover 									{background-position:-501px -126px;}      
 
 .button.download	 										{display:inline-block; margin:0 auto; float:none; width:113px; height:30px; background-position:-166px -90px;}
-.button.download:hover 										{}                                      	
+.button.download:hover 										{}
 
-/*                                                        	
-.button.login												{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-.button.login:hover											{background-position:0px -123px;}
+.admin-button.login											{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
+.admin-button.login:hover									{background-position:0px -123px;}
+.admin-button.register										{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
+.admin-button.register:hover								{background-position:0px -123px;}
 
-.button.register											{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-.button.register:hover										{background-position:0px -123px;}
-*/
-.button 													{float:left; text-transform:uppercase; letter-spacing:1px; border:none;}
-
+/*
 .button.login 												{width:91px; margin:0px 2px; padding:8px 0px 4px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .button.login:hover											{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
                                                  		
@@ -148,6 +145,7 @@ label.error													{display:none !important;}
 
 .button.submit 												{width:91px; margin:0px 2px; padding:8px 0px 4px 0px; color:#FFFFFF; font-size:15px; background:#87D8D8; background:-webkit-gradient(linear, left top, left bottom, from(#87D8D8), to(#79C2C2)); background:-moz-linear-gradient(top, #87D8D8, #79C2C2); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87D8D8', endColorstr='#79C2C2'); radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .button.submit:hover										{background:#01DBDB; background:-webkit-gradient(linear, left top, left bottom, from(#01DBDB), to(#01C5C5)); background:-moz-linear-gradient(top, #01DBDB, #01C5C5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#01DBDB', endColorstr='#01C5C5');}
+*/
 
 /* quick add */
 .quick-add 													{cursor:pointer;}
@@ -266,9 +264,17 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .divise .header 											{float:left; width:100%; margin:0px 0px 26px 0px;}
 .divise .title		 										{width:52px; height:21px; background-position:-647px -59px;}
 .divise .content 											{margin:10px 0px;}
-.divise .form-group input									{width:227px; height:18px; margin:0px 0px -1px 0px; text-transform:lowercase;}
-.divise .form-group textarea 								{width:227px; height:150px; margin:-1px 0px 0px 0px;}
-.divise .button												{margin:15px 0px;}
+.divise .action-bar 										{float:right; width:600px; margin:10px 0px 0px 0px;}
+.divise .action-bar span 									{float:left; margin:0px 25px 0px 0px; font-size:24px; cursor:pointer;}
+.divise .action-bar span.submit 							{color:#0EDF58;}
+.divise .action-bar span.submit:hover						{color:#2BCA12;}
+.divise .action-bar span.cancel 							{color:#FE6022;}
+.divise .action-bar span.cancel:hover						{color:#FD3D00;}
+.divise .button												{width:29px; height:28px; margin:0px 8px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
+.divise .button.submit										{padding:0px; background-position:-26px -175px;}
+.divise .button.submit:hover								{background-position:-26px -147px;}
+.divise .button.cancel										{background-position:-56px -176px;}
+.divise .button.cancel:hover								{background-position:-56px -148px;}
 .divise .additional-links 									{float:left; margin:8px 0px;}
 .divise .additional-link 									{float:left; width:100%; margin:3px 0px;}
 .divise .additional-link a 									{color:#00D3D3; text-decoration:underline;}
@@ -276,7 +282,7 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .divise form .status										{position:absolute; top:25px; right:10px; width:26px; height:26px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .divise form .status.pass									{background-position:0px -180px;}
 .divise form .status.fail									{background-position:0px -152px;}
-                                                    		
+                                                  		
 /* LOGIN */
 .divise.login .title		 								{width:52px; height:21px; background-position:-647px -59px;}
                                                     		
@@ -285,12 +291,12 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .divise form												{float:right;}
 .divise .list 												{float:left; width:100%;}
 .divise .list .heading										{margin:0px 0px 15px 0px; font-size:35px; font-weight:bold; color:#4C4C4C;}
-.divise .list li 											{position:relative; float:right;}
+.divise .list li											{position:relative; float:right;}
 .divise .list li.first										{margin:0px 0px 10px 0px;}
 .divise .list li p 											{float:left; width:600px; font-size:24px;}
-.divise .list li label 										{float:left; margin:0px 15px 0px 0px; padding:18px 0px; font-size:22px; text-align:right;}
-.divise .list li input										{float:left; width:600px; padding:18px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
-.divise .list li input.first								{border-top:1px solid #CACACA;}
+.divise .list li.form-group label 							{float:left; margin:0px 15px 0px 0px; padding:18px 0px; font-size:22px; text-align:right;}
+.divise .list li.form-group input							{float:left; width:600px; padding:18px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
+.divise .list li.form-group input.first						{border-top:1px solid #CACACA;}
 .divise .title 												{width:235px; height:21px; background-position:-254px -59px;}
 
 /* CONTACT */
