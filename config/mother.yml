@@ -5,7 +5,7 @@
 # Edit: edit, update
 
 # assuming a starting point of company entity
-- edit
+- general
 - billing
 
 - employees:
@@ -20,7 +20,7 @@
     - view
     - edit
     
-- users:
+- administrators:
     - create
     - delete
     - view

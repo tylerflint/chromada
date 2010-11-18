@@ -1,13 +1,13 @@
 <div class='nav'>
 	<ul>
 		<li><a href='<%= url_for([:admin, @company, :dashboard]) %>' <% if (active == :dashboard) %>class="active"<% end %>>Dashboard<span class='arrow'></span></a></li>
-		<% if ( may_i?('edit') ) %>
+		<% if ( may_i?('general') ) %>
 			<li><a href='<%= url_for([:edit, :admin, @company]) %>' <% if (active == :edit) %>class="active"<% end %>>General<span class='arrow'></span></a></li>
 		<% end %>
 		<% if ( may_i?('billing') ) %>
 			<li><a href='#link'>Billing<span class='arrow'></span></a></li>
 		<% end %>
-		<% if ( may_i?('users') ) %>
+		<% if ( may_i?('administrators') ) %>
 			<li><a href='<%= url_for([:admin, @company, :users]) %>' <% if (active == :users) %>class="active"<% end %>>Administrators<span class='arrow'></span></a></li>
 		<% end %>
 		<% if ( may_i?('employees') ) %>
