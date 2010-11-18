@@ -37,27 +37,28 @@
 	
 	<form>	
 		<ul class='list'>
-			<li class="first">
+			<li class="form-group first">
 				<h2 class='heading'>Contact Us</h2>
 				<p>We would love to hear from you. Just fill out the form below and leave us a message so we can get back to you!</p>
 			</li>
-			<li>
+			<li class="form-group">
 				<label>Name</label>
 				<input type='text' for='' name='' class='first required name defaultInvalid' value='' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' /><span class='status pass'></span>
 			</li>
-			<li>
+			<li class="form-group">
 				<label>Email</label>
 				<input type='text' for='' name='' class='email' value='' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' /><span class='status pass'></span>
 			</li>
-			<li>
+			<li class="form-group last">
 				<label>Message</label>
 				<textarea class='required defaultInvalid' onFocus='this.value = ""' onBlur='if(this.value == "")this.value = this.defaultValue;'></textarea>
 			</li>
-			<li class="last">
-				<button type="submit" title='Save [Item]' name="commit" id="role_submit" class="admin-button save"></button>
-				<a href='#link' title='Enables [Item] Removal' class='admin-button remove delete'></a>
-			</li>
 		</ul>
+		
+		<div class="action-bar">
+			<span class="submit">Submit</span>
+			<span class="cancel"><a href='#link' title='Enables [Item] Removal' class='button cancel'></a>Cancel</span>
+		</div>
 	</form>
 </div>
 
