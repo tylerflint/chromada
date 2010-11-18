@@ -28,7 +28,7 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
-    arel (2.0.3)
+    arel (2.0.4)
     bcrypt-ruby (2.1.2)
     blockpile (0.5.1)
     bson (1.1.2)
@@ -97,7 +97,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
-    unicorn (2.0.0)
+    unicorn (2.0.1)
       kgio (~> 1.3.1)
       rack
     warden (0.10.7)
