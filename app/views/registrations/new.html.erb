@@ -1,65 +1,66 @@
 
 <div class='divise register'>
 	
+	<div class="header">
+		<h2 class='title'>Registration</h2>
+		<p>Thanks for registering. We promise you won’t be disappointed. Just fill out the form below to get started!</p>
+	</div>
+	
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>	
-		<ul class='list'>
-			<li class="first form-group">
-				<h2 class='heading'>Registration</h2>
-				<p>Thanks for registering. We promise you won’t be disappointed. Just fill out the form below to get started!</p>
-			</li>
-			<li class="form-group">
-				<label>First Name</label>
-				<%= form.text_field :firstname, :class => 'first required name defaultInvalid' %><span class='status pass'></span>
-			</li>
-			<li class="form-group">
-				<label>Last Name</label>
-				<%= form.text_field :lastname, :class => 'required name defaultInvalid' %><span class='status pass'></span>
-			</li>
-			<li class="form-group">
-				<label>Email Address</label>
-				<%= form.text_field :email, :class => 'required email defaultInvalid' %><span class='status pass'></span>
-			</li>
-			<li class="form-group">
-				<label>User Name</label>
-				<%= form.text_field :username, :class => 'required username defaultInvalid' %><span class='status fail'></span>
-			</li>
-			<li class="form-group">
-				<label>Password</label>
-				<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
-			</li>
-			<li class="form-group">
-				<label>Confirm Password</label>
-				<%= form.password_field :password_confirmation, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
-			</li>
-			<li class="last form-group">
-				<div class='alert'>
-					<% resource.errors.full_messages.each do |message| %>
-						<%= message %>
-					<% end %>
-				</div>
-			</li>
-		</ul>
+		<div class="form-group">
+			<label>First Name</label>
+			<%= form.text_field :firstname, :class => 'first required name defaultInvadivd' %><span class='status pass'></span>
+		</div>
+		<div class="form-group">
+			<label>Last Name</label>
+			<%= form.text_field :lastname, :class => 'required name defaultInvadivd' %><span class='status pass'></span>
+		</div>
+		<div class="form-group">
+			<label>Email Address</label>
+			<%= form.text_field :email, :class => 'required email defaultInvadivd' %><span class='status pass'></span>
+		</div>
+		<div class="form-group">
+			<label>User Name</label>
+			<%= form.text_field :username, :class => 'required username defaultInvadivd' %><span class='status fail'></span>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
+		</div>
+		<div class="form-group">
+			<label>Confirm Password</label>
+			<%= form.password_field :password_confirmation, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
+		</div>
+		
+		<div class='alert'>
+			<% resource.errors.full_messages.each do |message| %>
+				<%= message %>
+			<% end %>
+		</div>
 		
 		<div class="action-bar">
-			<span class="submit"><%= form.submit 'login', :class => 'button submit', :value => "" %>Submit</span>
-			<span class="cancel"><a href='#link' title='Enables [Item] Removal' class='button cancel'></a>Cancel</span>
+			<span class="submit"><%= form.submit 'login', :class => '', :value => "Submit" %></span>
+			<div class='additional-links'>
+				<span class='additional-link'>Already Registered? <%= link_to "Login Here", new_session_path(resource_name) %></span>
+			</div>
 		</div>
 	<% end %>
 </div>
 
 <script type="text/javascript">
 	//<![CDATA[
-	
-		// Autofocus on the username input field
-		$(".first").focus();
 		
-		jQuery.validator.addMethod("defaultInvalid", function(value, element) {
+		// Autofocus on the first input field
+		$("input.first").focus();
+		
+		jQuery.validator.addMethod("defaultInvalid", function(value, element)
+		{
 		   return value != element.defaultValue;
 		}, "");
 		
 		$("#user_new").validate();
 		$('#user_new').submit(function(form)
-		{	
+		{
 			if($("#user_new").valid())
 			{
 				form.submit();

@@ -33,31 +33,33 @@
 </div>
 -->
 
-<div class='divise register'>
+<div class='divise contact'>
+	
+	<div class="header">
+		<h2 class='title'>Contact Us</h2>
+		<p>We would love to hear from you. Just fill out the form below and leave us a message so we can get back to you!</p>
+	</div>
 	
 	<form>	
-		<ul class='list'>
-			<li class="form-group first">
-				<h2 class='heading'>Contact Us</h2>
-				<p>We would love to hear from you. Just fill out the form below and leave us a message so we can get back to you!</p>
-			</li>
-			<li class="form-group">
-				<label>Name</label>
-				<input type='text' for='' name='' class='first required name defaultInvalid' value='' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' /><span class='status pass'></span>
-			</li>
-			<li class="form-group">
-				<label>Email</label>
-				<input type='text' for='' name='' class='email' value='' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' /><span class='status pass'></span>
-			</li>
-			<li class="form-group last">
-				<label>Message</label>
-				<textarea class='required defaultInvalid' onFocus='this.value = ""' onBlur='if(this.value == "")this.value = this.defaultValue;'></textarea>
-			</li>
-		</ul>
+		<div class="form-group">
+			<label>Name</label>
+			<input type='text' for='' name='' class='first required name defaultInvalid' /><span class='status pass'></span>
+		</div>
+		<div class="form-group">
+			<label>Email</label>
+			<input type='text' for='' name='' class='email' /><span class='status pass'></span>
+		</div>
+		<div class="form-group">
+			<label>Message</label>
+			<textarea class='required defaultInvalid' ></textarea>
+		</div>
+		
+		<div class='alert'>
+			<%= flash[:alert] %>
+		</div>
 		
 		<div class="action-bar">
-			<span class="submit">Submit</span>
-			<span class="cancel"><a href='#link' title='Enables [Item] Removal' class='button cancel'></a>Cancel</span>
+			<span class="submit"></span>
 		</div>
 	</form>
 </div>

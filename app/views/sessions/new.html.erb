@@ -1,30 +1,31 @@
 
-<div class='divise register'>
+<div class='divise login'>
 	
-	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>	
-		<ul class='list'>
-			<li class="first form-group">
-				<h2 class='heading'>Login</h2>
-				<p>Welcome back. Type your username and password to get started!</p>
-			</li>
-			<li class="form-group">
-				<label>Username</label>
-				<%= form.text_field :username, :class => 'first required username defaultInvalid' %><span class='status pass'></span>
-			</li>
-			<li class="form-group">
-				<label>Password</label>
-				<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
-			</li>
-			<li class="last form-group">
-				<div class='alert'>
-					<%= flash[:alert] %>
-				</div>
-			</li>
-		</ul>
+	<div class='header'>
+		<h2 class="title">Login</h2>
+		<p>Thanks for registering. We promise you won't be disappointed. Just fill out the form below to get started!</p>
+	</div>
+	
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>		
+		<div class="form-group">
+			<label>Username</label>
+			<%= form.text_field :username, :class => 'first required username defaultInvalid' %><span class='status pass'></span>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
+		</div>
+		
+		<div class='alert'>
+			<%= flash[:alert] %>
+		</div>
 		
 		<div class="action-bar">
-			<span class="submit"><%= form.submit 'login', :class => 'button submit', :value => "" %>Submit</span>
-			<span class="cancel"><a href='#link' title='Enables [Item] Removal' class='button cancel'></a>Cancel</span>
+			<span class="submit"><%= form.submit 'login', :class => '', :value => "Submit" %></span>
+			<div class='additional-links'>
+				<span class='additional-link'>New? <%= link_to "Register Here", new_user_registration_url, :class => 'site-link' %></span>
+				<span class='additional-link'><%= link_to "Forgot Your Login or Password?", new_password_path(resource_name), :class => 'site-link' %></span>
+			</div>
 		</div>
 	<% end %>
 </div>
@@ -32,8 +33,8 @@
 <script type="text/javascript">
 	//<![CDATA[
 		
-		// Autofocus on the username input field
-		$(".first").focus();
+		// Autofocus on the first input field
+		$("input.first").focus();
 		
 		jQuery.validator.addMethod("defaultInvalid", function(value, element)
 		{
@@ -46,6 +47,20 @@
 			if($("#user_new").valid())
 			{
 				form.submit();
+			}else{
+				$(".username").attr("value", "test");
+				$(".status").toggle(
+					function () {
+			        	$(".status").removeClass("pass");
+						$(".status").addClass("fail");
+			      	},
+			      	function () {
+			        	$(".status").removeClass("fail");
+						$(".status").addClass("pass");
+			      	}
+			    );
+				
+				
 			}
 		});
 	//]]>
