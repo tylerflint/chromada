@@ -66,8 +66,8 @@ table tr:hover 												{outline:1px solid #00D3D3;}
 label.error													{display:none !important;}
                                                     		
 /* MESSAGING */                                     		
-.message 													{float:left; width:100%; margin:0px 0px 10px 0px; padding:5px; border: 1px solid;}
-.alert 														{float:left; width:100%; margin:18px 0px 1px 0px; color:#E76262;}
+.message 													{float:left; padding:5px; border: 1px solid;}
+.alert 														{float:left; padding:5px; color:#E76262;}
                                                     		
 .success													{}
 .notice 													{color:#516C6B; border-color:#516C6B; background-color:#92BFB3;}
@@ -255,30 +255,31 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
                                                    	
 /***** DIVISE *****/                               	
 .divise 													{float:left; margin:0; width:100%;}
-.divise .title												{margin:0px 0px 15px 0px; font-size:35px; font-weight:bold; color:#4C4C4C;}
-.divise p 													{font-size:24px;}
+.divise .header												{float:right; width:621px; margin:20px 0px;}
+.divise .header .title										{margin:0px 0px 18px 0px; font-size:35px; color:#4C4C4C;}
+.divise .header p 											{font-size:20px;}
 
-.divise form												{float:right; width:725px;}
-.divise form .form-group									{float:left; position:relative;}
-.divise form .content-group									{float:right; width:600px; margin:0px 0px 10px 0px;}
+.divise .alert 												{float:right; width:615px; margin:18px 0px;}
+
+.divise form												{float:right; width:865px;}
 .divise form .status										{position:absolute; top:25px; right:10px; width:26px; height:26px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .divise form .status.pass									{background-position:0px -180px;}
 .divise form .status.fail									{background-position:0px -152px;}
-.divise form textarea										{width:600px; padding:18px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
+.divise form .form-group									{float:left; position:relative; width:100%;}
+.divise form .form-group label 								{float:left; width:200px; padding:17px 0px; font-size:24px; font-weight:bold; text-align:right;}
+.divise form .form-group input								{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
+.divise form .form-group input.first						{border-top:1px solid #CACACA;}
+.divise form .form-group textarea							{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
 
-.divise .form-group label 									{float:left; margin:0px 15px 0px 0px; padding:18px 0px; font-size:22px; text-align:right;}
-.divise .form-group input									{float:left; width:600px; padding:18px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
-.divise .form-group input.first								{border-top:1px solid #CACACA;}
-
-.divise .action-bar 										{float:right; width:600px; margin:10px 0px 0px 0px;}
+.divise .action-bar 										{float:right; width:624px; margin:14px 0px 0px 0px;}
 .divise .action-bar input 									{background:none; border:none; font-size:24px;}
 .divise .action-bar .submit									{float:left; width:29px; height:28px; margin:0px 8px 0px 0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat -26px -175px;}
 .divise .action-bar .submit:hover							{background-position:-26px -147px;}
 .divise .action-bar .submit input 							{float:left; margin:0px 0px 0px 32px; color:#0EDF58;}
 .divise .action-bar .submit:hover input 					{color:#2BCA12;}
 
-.divise .action-bar .additional-links 						{float:right; font-size:12px;}
-.divise .action-bar .additional-links .additional-link 		{float:left;}
+.divise .action-bar .additional-links 						{float:right; width:200px; font-size:12px;}
+.divise .action-bar .additional-links .additional-link 		{float:right;}
                                                   		
 /* LOGIN */
                                                     		

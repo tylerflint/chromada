@@ -1,22 +1,22 @@
 
 <div class='divise login'>
-	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>	
-		<div class='content-group'>
-			<h2 class='title'>Login</h2>
-			<p>Welcome back. Type your username and password to get started!</p>
-		</div>
-			
+	
+	<div class='header'>
+		<h2 class="title">Login</h2>
+		<p>Thanks for registering. We promise you won't be disappointed. Just fill out the form below to get started!</p>
+	</div>
+	
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>		
 		<div class="form-group">
 			<label>Username</label>
 			<%= form.text_field :username, :class => 'first required username defaultInvalid' %><span class='status pass'></span>
 		</div>
-		
 		<div class="form-group">
 			<label>Password</label>
 			<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
 		</div>
 		
-		<div class='alert'>
+		<div class='alert hide'>
 			<%= flash[:alert] %>
 		</div>
 		
@@ -33,7 +33,7 @@
 <script type="text/javascript">
 	//<![CDATA[
 		
-		// Autofocus on the username input field
+		// Autofocus on the first input field
 		$("input.first").focus();
 		
 		jQuery.validator.addMethod("defaultInvalid", function(value, element)
