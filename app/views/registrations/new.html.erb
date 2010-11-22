@@ -32,7 +32,7 @@
 			<%= form.password_field :password_confirmation, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
 		</div>
 		
-		<div class='alert hide'>
+		<div class='alert'>
 			<% resource.errors.full_messages.each do |message| %>
 				<%= message %>
 			<% end %>
