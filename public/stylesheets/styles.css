@@ -71,9 +71,9 @@ label.error													{display:none !important;}
 .alert 														{float:left; padding:5px; color:#E76262;}
                                                     		
 .success													{}
-.notice 													{color:#516C6B; border-color:#516C6B; background-color:#92BFB3;}
-.warning 													{color:#DA7f3C; border-color:#DA7f3C; background-color:#FFD5B7;}
-.error	 													{color:#DA3C3C; border-color:#DA3C3C; background-color:#FFB7B7;}
+.notice 													{}
+.warning 													{}
+.error	 													{}
                                     		        		
 /* SYMBOLS */                         		        		
                                     		        		
@@ -270,6 +270,7 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .divise form .form-group label 								{float:left; width:200px; padding:17px 0px; font-size:24px; font-weight:bold; text-align:right;}
 .divise form .form-group input								{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
 .divise form .form-group input.first						{border-top:1px solid #CACACA;}
+.divise form .form-group input.error 						{color:#DA3C3C;}
 .divise form .form-group textarea							{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
 
 .divise .action-bar 										{float:right; width:624px; margin:14px 0px 0px 0px;}

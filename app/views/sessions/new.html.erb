@@ -47,6 +47,20 @@
 			if($("#user_new").valid())
 			{
 				form.submit();
+			}else{
+				$(".username").attr("value", "test");
+				$(".status").toggle(
+					function () {
+			        	$(".status").removeClass("pass");
+						$(".status").addClass("fail");
+			      	},
+			      	function () {
+			        	$(".status").removeClass("fail");
+						$(".status").addClass("pass");
+			      	}
+			    );
+				
+				
 			}
 		});
 	//]]>
