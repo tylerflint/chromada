@@ -255,9 +255,10 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 
 .divise .action-bar 										{float:right; width:624px; margin:14px 0px 0px 0px;}
 .divise .action-bar input 									{background:none; border:none; font-size:24px;}
+.divise .action-bar .button 								{cursor:pointer;}
 .divise .action-bar .submit									{float:left; width:29px; height:28px; margin:0px 8px 0px 0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat -26px -175px;}
 .divise .action-bar .submit:hover							{background-position:-26px -147px;}
-.divise .action-bar .submit input 							{float:left; margin:0px 0px 0px 32px; color:#0EDF58;}
+.divise .action-bar .submit input 							{float:left; padding:5px 0px 0px 32px; color:#0EDF58;}
 .divise .action-bar .submit:hover input 					{color:#2BCA12;}
 
 .divise .action-bar .additional-links 						{float:right; width:200px; font-size:12px;}
