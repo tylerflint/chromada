@@ -32,14 +32,14 @@
 			<%= form.password_field :password_confirmation, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
 		</div>
 		
-		<div class='alert'>
+		<div class='alert' style="display:none;">
 			<% resource.errors.full_messages.each do |message| %>
 				<%= message %>
 			<% end %>
 		</div>
 		
 		<div class="action-bar">
-			<span class="submit"><%= form.submit 'login', :class => '', :value => "Submit" %></span>
+			<span class="submit"><%= form.submit 'login', :class => "button", :value => "Submit" %></span>
 			<div class='additional-links'>
 				<span class='additional-link'>Already Registered? <%= link_to "Login Here", new_session_path(resource_name) %></span>
 			</div>

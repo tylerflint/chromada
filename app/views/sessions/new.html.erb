@@ -16,12 +16,12 @@
 			<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
 		</div>
 		
-		<div class='alert'>
+		<div class='alert' style="display:none;">
 			<%= flash[:alert] %>
 		</div>
 		
 		<div class="action-bar">
-			<span class="submit"><%= form.submit 'login', :class => '', :value => "Submit" %></span>
+			<span class="submit"><%= form.submit 'login', :class => "button", :value => "Submit" %></span>
 			<div class='additional-links'>
 				<span class='additional-link'>New? <%= link_to "Register Here", new_user_registration_url, :class => 'site-link' %></span>
 				<span class='additional-link'><%= link_to "Forgot Your Login or Password?", new_password_path(resource_name), :class => 'site-link' %></span>
@@ -47,20 +47,6 @@
 			if($("#user_new").valid())
 			{
 				form.submit();
-			}else{
-				$(".username").attr("value", "test");
-				$(".status").toggle(
-					function () {
-			        	$(".status").removeClass("pass");
-						$(".status").addClass("fail");
-			      	},
-			      	function () {
-			        	$(".status").removeClass("fail");
-						$(".status").addClass("pass");
-			      	}
-			    );
-				
-				
 			}
 		});
 	//]]>
