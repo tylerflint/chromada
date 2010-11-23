@@ -3,7 +3,7 @@ Chromada::Application.routes.draw do
   root :to => "static#index"
   
   devise_for :users,
-    :path => "/",
+    # :path => "/",
     :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, 
     :controllers => { :sessions => "sessions", :registrations => 'registrations' }
   
