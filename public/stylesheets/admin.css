@@ -20,54 +20,58 @@
                                                         	
 /***** DASHBOARD *****/                                 	
 #admin .panel 												{float:left; width:100%; min-height:100px; margin:0px 0px 28px 0px;}
-#admin .panel .full-column 									{float:left; width:100%; margin:-15px 0px 32px 0px;}
-#admin .panel .left-column	 								{float:left; width:340px; margin:0px 20px 0px 0px;}
-#admin .panel .left-column .heading 						{float:left; width:100%; margin:0px 0px 15px 0px; color:#4C4C4C; font-size:30px;}
+#admin .panel .column.full 									{float:left; width:100%; margin:-15px 0px 32px 0px;}
+#admin .panel .column.left	 								{float:left; width:340px; margin:0px 20px 0px 0px;}
+#admin .panel .column.left .heading 						{float:left; width:100%; margin:0px 0px 15px 0px; color:#4C4C4C; font-size:30px;}
 #admin .panel .back 										{font-size:16px;}
 #admin .panel .back span									{margin:3px 0px 0px 25px;}
-#admin .panel .right-column	 								{float:left; width:580px;}
+#admin .panel .column.right	 								{float:left; width:580px;}
 
 /***** FULL COLUMN *****/
-#admin .full-column .nav 									{float:left; width:100%;}
-#admin .full-column .nav ul									{float:left; width:100%;}
-#admin .full-column .nav ul li 								{float:left; width:100%;}
-#admin .full-column .nav ul li a	 						{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:30px; font-weight:bold;}
-#admin .full-column .nav ul li a:hover 						{color:#01DBDB;}
-#admin .full-column .nav ul li a.active						{color:#87D8D8;}
-#admin .full-column .nav ul li a .arrow	 					{float:right; width:18px; height:26px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -114px -160px;}
-#admin .full-column .nav ul li a:hover .arrow	 			{background-position:-133px -160px;}
-#admin .full-column .nav ul li a.active .arrow	 			{background-position:0px -95px;}
-#admin .full-column .nav li a.add							{border:none; color:#0EDF58;}
-#admin .full-column .nav li a.add:hover						{border:none; color:#00CA13;}
-#admin .full-column .nav .actions-bar 						{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
-#admin .full-column .nav .actions-bar a 					{border:none; width:28px; height:28px; margin:0px 5px; padding:0px;}
-#admin .full-column .nav .admin-button.add 					{background-position:-56px -176px;}
-#admin .full-column .nav .admin-button.remove 				{background-position:-27px -175px;}
-#admin .full-column .nav .admin-button.add:hover 			{background-position:-56px -148px;}
-#admin .full-column .nav .admin-button.remove:hover			{background-position:-27px -147px;}
-#admin .full-column .nav li input		 					{float:left; padding:15px 0px 12px 0px; border:none; color:#0EDF58; font-size:30px;}
-#admin .full-column .nav li.search 							{border-bottom:1px dotted #989898;}
+#admin .column.full .nav 									{float:left; width:100%;}
+#admin .column.full .nav ul									{float:left; width:100%;}
+#admin .column.full .nav ul li 								{float:left; width:100%;}
+#admin .column.full .nav ul li a	 						{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:30px; font-weight:bold;}
+#admin .column.full .nav ul li a:hover 						{color:#01DBDB;}
+#admin .column.full .nav ul li a.active						{color:#87D8D8;}
+#admin .column.full .nav ul li a .arrow	 					{float:right; width:18px; height:26px; margin:2px 10px 0px 0px; background:url('../images/admin-sprite.png') no-repeat -114px -160px;}
+#admin .column.full .nav ul li a:hover .arrow	 			{background-position:-133px -160px;}
+#admin .column.full .nav ul li a.active .arrow	 			{background-position:0px -95px;}
+#admin .column.full .nav li a.add							{border:none; color:#0EDF58;}
+#admin .column.full .nav li a.add:hover						{border:none; color:#00CA13;}
+#admin .column.full .nav .actions-bar 						{float:right; border:none; margin:15px 0px 0px 0px; padding:0px 5px 0px 0px;}
+#admin .column.full .nav .actions-bar a 					{border:none; width:28px; height:28px; margin:0px 5px; padding:0px;}
+#admin .column.full .nav .admin-button.add 					{background-position:-56px -176px;}
+#admin .column.full .nav .admin-button.remove 				{background-position:-27px -175px;}
+#admin .column.full .nav .admin-button.add:hover 			{background-position:-56px -148px;}
+#admin .column.full .nav .admin-button.remove:hover			{background-position:-27px -147px;}
+#admin .column.full .nav li input		 					{float:left; padding:15px 0px 12px 0px; border:none; color:#0EDF58; font-size:30px;}
+#admin .column.full .nav li.search 							{border-bottom:1px dotted #989898;}
+
+#admin .column.full .nav.select.company .heading			{font-size:30px;}
+#admin .column.full .nav.select.company .wrapper 			{overflow:hidden; width:100%; float:left; margin:10px 0px 0px 0px;}
+#admin .column.full .nav.select.company .list.companies		{position:relative;}
                                                         	
 /***** LEFT COLUMN *****/                               	
-#admin .left-column 										{float:left; width:340px; margin:0px 20px 0px 0px;}
-#admin .left-column .column-heading 						{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
+#admin .column.left 										{float:left; width:340px; margin:0px 20px 0px 0px;}
+#admin .column.left .column-heading 						{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
                                                         	
 /* menu */                                        	
-#admin .left-column .nav 									{float:left; width:100%; border-top:1px solid #989898;}
-#admin .left-column .nav ul									{float:left; width:100%;}
-#admin .left-column .nav ul li 								{float:left; width:100%;}
-#admin .left-column .nav ul li a	 						{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:19px; font-weight:bold;}
-#admin .left-column .nav ul li a:hover 						{color:#01DBDB;}
-#admin .left-column .nav ul li a.active						{color:#87D8D8;}
-#admin .left-column .nav ul li a .arrow	 					{float:right; width:10px; height:15px; margin:5px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -110px;}
-#admin .left-column .nav ul li a:hover .arrow	 			{background-position:0px -80px;}
-#admin .left-column .nav ul li a.active .arrow	 			{background-position:0px -95px;}
+#admin .column.left .nav 									{float:left; width:100%; border-top:1px solid #989898;}
+#admin .column.left .nav ul									{float:left; width:100%;}
+#admin .column.left .nav ul li 								{float:left; width:100%;}
+#admin .column.left .nav ul li a	 						{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:19px; font-weight:bold;}
+#admin .column.left .nav ul li a:hover 						{color:#01DBDB;}
+#admin .column.left .nav ul li a.active						{color:#87D8D8;}
+#admin .column.left .nav ul li a .arrow	 					{float:right; width:10px; height:15px; margin:5px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -110px;}
+#admin .column.left .nav ul li a:hover .arrow	 			{background-position:0px -80px;}
+#admin .column.left .nav ul li a.active .arrow	 			{background-position:0px -95px;}
                                                         	
 /***** RIGHT COLUMN *****/                              	
-#admin .right-column 										{position:relative; float:left; width:580px;}
-#admin .right-column .messaging								{float:left; margin:0px 0px 53px 0px;}
-#admin .right-column .content								{float:left;}
-#admin .right-column .content .body							{margin:0px 0px 0px 0px;}
+#admin .column.right 										{position:relative; float:left; width:580px;}
+#admin .column.right .messaging								{float:left; margin:0px 0px 53px 0px;}
+#admin .column.right .content								{float:left;}
+#admin .column.right .content .body							{margin:0px 0px 0px 0px;}
                                                         	
 /***** BUTTONS *****/                                   	
 .actions-bar 												{overflow:hidden; margin:12px 0px 13px 0px; padding:0px 5px;}
@@ -92,9 +96,9 @@
 /************************************************** PAGES (Admin Layer) **************************************************/
 
 /***** DASHBOARD *****/
-#admin .right-column .dashboard.content 					{float:left; color:#4C4C4C;}
-#admin .right-column .dashboard.content  li					{float:left; width:100%; height:100px; background:url("../images/rule.gif") repeat-x 0px 0px; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
-#admin .right-column .dashboard.content  .heading			{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+#admin .column.right .dashboard.content 					{float:left; color:#4C4C4C;}
+#admin .column.right .dashboard.content  li					{float:left; width:100%; height:100px; background:url("../images/rule.gif") repeat-x 0px 0px; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
+#admin .column.right .dashboard.content  .heading			{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
                                                         	
 /**** COMPANY *****/                                    	
 .content.company 											{float:left; font-size:15px; color:#4C4C4C; border-top:1px solid #989898; border-bottom:1px solid #989898;}

@@ -1,30 +1,42 @@
-<div class='full-column'>
-	<div class='nav'>
-		<ul>
-			<% if (@company && !@company.new_record?) %>
-				<li class='first'><a href='<%= url_for([:admin, @company, :dashboard]) %>'><%= @company.name %><span class='arrow'></span></a></li>
-			<% end %>
-			<% current_user.companies.only(:name).asc(:name).each do |c| %>
-				<% if (c!=@company) %>
-					<li><a href='<%= url_for([:admin, c, :dashboard]) %>'><%= c.name %><span class='arrow'></span></a></li>
-				<% end %>
-			<% end %>
-			<li class='search' title=''>
-				<input id="" value="Add New Company" onFocus='this.value = ""' onBlur='if(this.value == "") this.value = this.defaultValue;' />
-			</li>
-		</ul>
+<div class='column full'>
+	<div class='nav select company'>
+		<% if (@company && !@company.new_record?) %>
+			<h2 class='heading'><a href='<%= url_for([:admin, @company, :dashboard]) %>'><%= @company.name %><span class='arrow'></span></a></h2>
+			<a class="" onclick="toggle()">Switch Company</a>
+			
+			<div class="wrapper">
+				<ul class="list companies">
+					<% current_user.companies.only(:name).asc(:name).each do |c| %>
+						<% if (c!=@company) %>
+							<li><a href='<%= url_for([:admin, c, :dashboard]) %>'><%= c.name %><span class='arrow'></span></a></li>
+						<% end %>
+					<% end %>
+				
+					<li class='last' title=''>
+						<a href='#link' class='add' title="Add New">Add New Company<span class='admin-button add'></span></a>
+					</li>
+				</ul>
+			</div>
+		<% else %>
+			<h2 class='heading'>Dashboard</h2>
+		<% end %>
 	</div>
 </div>
 
-<div class='left-column'>
-	<% if (@company) %>
-		<h2 class='heading company'><%= @company.name %></h2>
-		<a href='<%= url_for([:admin, :dashboard]) %>' title='Back to Dashboard' class='admin-button back'><span>Switch Company</span></a>
-	<% else %>
-		<h2 class='heading company'>Dashboard</h2>
-	<% end %>
-</div>
+<script type="text/javascript">
+	
+	$(".list.companies").css({"margin-top": 0 - $(".list.companies").outerHeight() + "px"});
 
-<div class="right-column">
-	<span></span>
-</div>
+	var isOpen = false;
+	function toggle()
+	{
+		if(isOpen)
+		{
+			$(".list.companies").animate({"margin-top": "-=" + $(".list.companies").outerHeight() + "px"}, 250);
+			isOpen = false;
+		}else{
+			$(".list.companies").animate({"margin-top": "+=" + $(".list.companies").outerHeight() + "px"}, 250);
+			isOpen = true;
+		}
+	}
+</script>
