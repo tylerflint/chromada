@@ -32,10 +32,10 @@
 	{
 		if(isOpen)
 		{
-			$(".list.companies").animate({"margin-top": "-=" + $(".list.companies").outerHeight() + "px"}, 250);
+			$(".list.companies").animate({"margin-top": "-=" + $(".list.companies").outerHeight() + "px"}, {duration:350, easing:'easeOutExpo'});
 			isOpen = false;
 		}else{
-			$(".list.companies").animate({"margin-top": "+=" + $(".list.companies").outerHeight() + "px"}, 250);
+			$(".list.companies").animate({"margin-top": "+=" + $(".list.companies").outerHeight() + "px"}, {duration:350, easing:'easeOutExpo'});
 			isOpen = true;
 		}
 	}
