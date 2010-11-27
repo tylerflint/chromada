@@ -1,7 +1,7 @@
 .messaging	 							{}
 .messaging .message 					{position:relative; float:left; width:570px; height:40px; border:none; background:url(../images/messaging-sprite.png) no-repeat 0px 0px;}
 .messaging .close 						{position:absolute; top:15px; right:15px; x; width:20px; height:20px;}
-.messaging .content 					{position:absolute; top:13px; left:45px; color:#464646; line-height:20px;}
+.messaging .content 					{position:absolute; top:13px; left:45px; color:#464646; line-height:20px; font-size:13px;}
 
 .messaging .message.success				{background:url(../images/messaging-sprite.png) no-repeat 0px 0px;}
 .messaging .message.failure				{background:url(../images/messaging-sprite.png) no-repeat 0px -50px;}
