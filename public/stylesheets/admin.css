@@ -56,16 +56,19 @@
 #admin .column.left 										{float:left; width:340px; margin:0px 20px 0px 0px;}
 #admin .column.left .column-heading 						{float:left; width:100%; margin:0px 0px 10px 0px; color:#ACACAC; font-weight:normal;}
                                                         	
-/* menu */                                        	
-#admin .column.left .nav 									{float:left; width:100%; border-top:1px solid #989898;}
-#admin .column.left .nav ul									{float:left; width:100%;}
-#admin .column.left .nav ul li 								{float:left; width:100%;}
-#admin .column.left .nav ul li a	 						{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:19px; font-weight:bold;}
-#admin .column.left .nav ul li a:hover 						{color:#01DBDB;}
-#admin .column.left .nav ul li a.active						{color:#87D8D8;}
-#admin .column.left .nav ul li a .arrow	 					{float:right; width:10px; height:15px; margin:5px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -110px;}
-#admin .column.left .nav ul li a:hover .arrow	 			{background-position:0px -80px;}
-#admin .column.left .nav ul li a.active .arrow	 			{background-position:0px -95px;}
+/* menu */                                        			
+#admin .column.left ul.nav									{float:left; width:100%; margin:0px 0px 50px 0px;}
+#admin .column.left ul.nav li 								{float:left; width:100%;}
+#admin .column.left ul.nav li a	 							{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:19px; font-weight:bold;}
+#admin .column.left ul.nav li a:hover 						{color:#01DBDB;}
+#admin .column.left ul.nav li a.active						{color:#87D8D8;}
+#admin .column.left ul.nav li a .arrow	 					{float:right; width:10px; height:15px; margin:5px 12px 0px 0px; background:url('../images/admin-sprite.png') no-repeat 0px -110px;}
+#admin .column.left ul.nav li a:hover .arrow	 			{background-position:0px -80px;}
+#admin .column.left ul.nav li a.active .arrow	 			{background-position:0px -95px;}
+#admin .column.left ul.nav li a.add							{color:#0EDF58;}
+#admin .column.left ul.nav li a.add:hover					{color:#00CA13;}
+#admin .column.left ul.nav.company							{float:left; width:100%; border-top:1px solid #989898;}
+#admin .column.left ul.nav.product li.title					{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#A2A2A2; font-size:19px; font-weight:bold;}
                                                         	
 /***** RIGHT COLUMN *****/                              	
 #admin .column.right 										{position:relative; float:left; width:580px;}
