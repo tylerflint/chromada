@@ -1,34 +1,48 @@
 
-<ul class="nav company">
-	<li><a href='<%= url_for([:admin, @company, :dashboard]) %>' <% if (active == :dashboard) %>class="active"<% end %>>Dashboard<span class='arrow'></span></a></li>
-	<% if ( may_i?('general') ) %>
-		<li><a href='<%= url_for([:edit, :admin, @company]) %>' <% if (active == :edit) %>class="active"<% end %>>General<span class='arrow'></span></a></li>
-	<% end %>
-	<% if ( may_i?('billing') ) %>
-		<li><a href='#link'>Billing<span class='arrow'></span></a></li>
-	<% end %>
-	<% if ( may_i?('administrators') ) %>
-		<li><a href='<%= url_for([:admin, @company, :users]) %>' <% if (active == :users) %>class="active"<% end %>>Administrators<span class='arrow'></span></a></li>
-	<% end %>
-	<% if ( may_i?('employees') ) %>
-		<li><a href='<%= url_for([:admin, @company, :employees]) %>' <% if (active == :employees) %>class="active"<% end %>>Employees<span class='arrow'></span></a></li>
-	<% end %>
-	<% if ( may_i?('permissions') ) %>
-		<li><a href='<%= url_for([:admin, @company, :permissions]) %>' <% if (active == :permissions) %>class="active"<% end %>>Permissions<span class='arrow'></span></a></li>
-	<% end %>
-	<li><a href='#link' class="add new">View Additional Products<span class='arrow'></span></a></li>
-</ul>
+<% if(@company) %>
+	<% if(@company.new_record?) %>
+		<ul class='nav company'>
+			<li><a href='<%= url_for([:admin, :dashboard]) %>' <% if (active == :admin_dashboard) %>class="active"<% end %>>Dashboard<span class='arrow'></span></a></li>
+			<li><a href='<%= url_for([:admin, :companies]) %>' <% if (active == :companies) %>class="active"<% end %>>Manage Companies<span class='arrow'></span></a></li>
+		</ul>
+	<% else %>
+		<ul class="nav company">
+			<li><a href='<%= url_for([:admin, @company, :dashboard]) %>' <% if (active == :dashboard) %>class="active"<% end %>>Dashboard<span class='arrow'></span></a></li>
+			<% if ( may_i?('general') ) %>
+				<li><a href='<%= url_for([:edit, :admin, @company]) %>' <% if (active == :edit) %>class="active"<% end %>>General<span class='arrow'></span></a></li>
+			<% end %>
+			<% if ( may_i?('billing') ) %>
+				<li><a href='#link'>Billing<span class='arrow'></span></a></li>
+			<% end %>
+			<% if ( may_i?('administrators') ) %>
+				<li><a href='<%= url_for([:admin, @company, :users]) %>' <% if (active == :users) %>class="active"<% end %>>Administrators<span class='arrow'></span></a></li>
+			<% end %>
+			<% if ( may_i?('employees') ) %>
+				<li><a href='<%= url_for([:admin, @company, :employees]) %>' <% if (active == :employees) %>class="active"<% end %>>Employees<span class='arrow'></span></a></li>
+			<% end %>
+			<% if ( may_i?('permissions') ) %>
+				<li><a href='<%= url_for([:admin, @company, :permissions]) %>' <% if (active == :permissions) %>class="active"<% end %>>Permissions<span class='arrow'></span></a></li>
+			<% end %>
+			<li><a href='#link' class="add new">View [Additional] Products<span class='arrow'></span></a></li>
+		</ul>
+	
+		<ul class="nav product">
+			<li class="title">Ticker</li>
+			<li><a href='#link' class="">Employees<span class='arrow'></span></a></li>
+			<li><a href='#link' class="">Payroll<span class='arrow'></span></a></li>
+			<li><a href='#link' class="">Pay Periods<span class='arrow'></span></a></li>
+		</ul>
 
-<ul class="nav product">
-	<li class="title">Ticker</li>
-	<li><a href='#link' class="">Employees<span class='arrow'></span></a></li>
-	<li><a href='#link' class="">Payroll<span class='arrow'></span></a></li>
-	<li><a href='#link' class="">Pay Periods<span class='arrow'></span></a></li>
-</ul>
-
-<ul class="nav product">
-	<li class="title">Scribble</li>
-	<li><a href='#link' class="">Employees<span class='arrow'></span></a></li>
-	<li><a href='#link' class="">Payroll<span class='arrow'></span></a></li>
-	<li><a href='#link' class="">Pay Periods<span class='arrow'></span></a></li>
-</ul>
+		<ul class="nav product">
+			<li class="title">Scribble</li>
+			<li><a href='#link' class="">Employees<span class='arrow'></span></a></li>
+			<li><a href='#link' class="">Payroll<span class='arrow'></span></a></li>
+			<li><a href='#link' class="">Pay Periods<span class='arrow'></span></a></li>
+		</ul>
+	<% end %>
+<% else %>
+	<ul class='nav company'>
+		<li><a href='<%= url_for([:admin, :dashboard]) %>' <% if (active == :admin_dashboard) %>class="active"<% end %>>Dashboard<span class='arrow'></span></a></li>
+		<li><a href='<%= url_for([:admin, :companies]) %>' <% if (active == :companies) %>class="active"<% end %>>Manage Companies<span class='arrow'></span></a></li>
+	</ul>
+<% end %>

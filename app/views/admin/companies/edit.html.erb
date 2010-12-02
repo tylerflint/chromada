@@ -1,6 +1,6 @@
 <% content_for :left do %>
 	<% if (@company.new_record?) %>
-		<%= render :partial => 'admin/shared/menu', :locals => {:active => :companies} %>
+		<%= render :partial => 'admin/companies/menu', :locals => {:active => :companies} %>
 	<% else %>
 		<%= render :partial => 'admin/companies/menu', :locals => {:active => :edit} %>
 	<% end %>
@@ -17,13 +17,6 @@
 				<h3 class='heading'>company name</h3>
 				<input type='text' for='' name='company[name]' class='required name defaultInvalid' value='<%= @company.name || 'Type Company Name Here' %>' onfocus='this.value = ""' onblur='if(this.value == "")this.value = this.defaultValue;' />
 			</li>
-			
-			<!--
-			<li>
-				<p class='note'>Get started now by selecting which products you would like for this company.</p>
-				<div class='quick-add-sprite quick-add ticker'></div>
-			</li>
-			-->
 		</ul>
 		
 	<% end %>
