@@ -1,26 +1,15 @@
 /************************************************** GLOBAL STYLES **************************************************/
 
-* 															{margin:0px; padding:0px; outline:none;}
-
-/* BASE */
+/* CLEAR */
 html, body, div, span, p, ol, ul, li, img,
-h1, h2, h3, h4, h5, h6										{margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6										{margin:0; padding:0; border:none;}
                                                     		
-/* MAIN PAGE ELEMENTS */      
+/* MAIN */      
 html 														{height:100%;}                      		
 body 														{height:100%; background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif; font-size:12px;}
-                                                	
-/* IMAGES */                                            	
-img															{border:none;}
-                               		                		
-/* WRAPPERS */                       		        		
-.shifter 													{position:relative;}
                                                     		
 /* LISTS */                                         		
-ul															{float:left; list-style-image:none; list-style-type:none; list-style-position:outside;}
-ul li														{float:left;}
-
-.list-image 												{float:right;}
+ul, li														{list-style-image:none; list-style-type:none; list-style-position:outside;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
@@ -31,214 +20,103 @@ h1															{font-size:21px; color:#00D3D3;}
 h2															{font-size:18px; color:#00D3D3;}
 h3															{font-size:17px;}
 h4, h5, h6													{font-size:10px;}
-                                    		        		
-/* PADDERS */                         		        		
-                                    		        		
-/* TEXT FORMATS */                    		        		
-.uppercase			 			    						{text-transform:uppercase;}
-.capitalize			 			    						{text-transform:capitalize;}
-.lowercase			 			    						{text-transform:lowercase;}
-                     			    		        		
-.italic				 			    						{font-style:italic;}
-.bold				 			    						{font-weight:bold;}
-.underline			 			    						{text-decoration:underline;}
-                                                    		
-/* colors */                                        		
-.light-grey-text											{color:#999999;}
-.medium-grey-text											{color:#666666;}
-.dark-grey-text												{color:#333333;}
-                                                        	
-.bright-blue-text											{color:#00D3D3;}
                                                     		
 /* FORM ELEMENTS */                                 		
-input														{float:left; padding:5px; font-family:'Helvetica', Arial, sans-serif;}
+input														{float:left; padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
+textarea 													{float:left; padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
+
 input.checkbox 												{float:left; width:15px !important; height:15px !important;}
-.checkbox-group label 										{margin:4px 0px 0px 8px; padding:0px;}
-textarea 													{float:left; padding:5px; font-family:'Helvetica', Arial, sans-serif;}
+.checkbox label		 										{margin:4px 0px 0px 8px; padding:0px;}
                                                     		
-/* TABLES */                                        		
-table 														{float:left; width:100%; margin:15px 0px; border-collapse:collapse;}
-table th 													{padding:0px 2px; text-align:left;}
-.table-header 												{height:25px; outline:none !important; background:#999999; cursor:auto;}
-table tr	 												{height:70px; cursor:pointer;}
-table tr:hover 												{outline:1px solid #00D3D3;}                                       	
-                                                    		
-/* VALIDATION */                                    		
+/* validation */                                    		
 label.error													{display:none !important;}
                                                     		
-/* MESSAGING */                                     		
-.message 													{float:left; padding:5px; border: 1px solid;}
+/* MESSAGING */
 .alert 														{float:left; padding:5px; color:#FFFFFF;}
-                                                    		
-.success													{}
-.notice 													{}
-.warning 													{}
-.error	 													{}
-                                    		        		
-/* SYMBOLS */                         		        		
-                                    		        		
+
 /* DIVIDERS */
 .pipe 														{float:left; width:1px; background:#D5D5D5; margin:0px 7px;}
-                       		                        		
-/* OTHER */                           		        		
-.hide		 												{display:none;}
-.pointer	 												{cursor:pointer;}
-
-.odd 														{float:left; width:100%; background-color:#F6F6F6;}
-.even 														{float:left; width:100%; background-color:#FFFFFF;}
 
 /* TESTING */
 .todo 														{float:left; color:#FF0000;}
-                                                    		
-/* ALTERNATE CONTENT */                             		
-.alt-content												{}
-
-/* LAYOUT */
-.float-none 												{float:none !important;}
-.float-left 												{float:left;}
-.float-right 												{float:right;}
                                           	
 /************************************************** MAIN ELEMENT STYLES **************************************************/
                                                     	
 /***** SPRITES *****/                               	
-.site-sprite				 								{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.button 													{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px; border:none; cursor:pointer;}
-                                                        	
-.spotlight-sprite			 								{float:left; width:100px; height:100px; background:url('../images/spotlight-sprite.png') no-repeat 0px 0px;}
-                                                    		
-/***** STATES *****/                                		
-.active														{}
-.inactive													{}
-                                                    		
-/***** LINKS *****/                                 		
-.link				 										{width:100%; color:#00D3D3; text-decoration:underline; cursor:pointer;}
-.active-link 												{color:#00D3D3;}
+.sprite.image					 							{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+.sprite.button 												{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px; border:none; cursor:pointer;}
                                                     		
 /***** BUTTONS *****/
-                              		
-.button.close 												{float:right; width:12px; height:12px; background-position:-681px -4px;}
-.button.close:hover 										{background-position:-668px -4px;}
-                                                        	
-.button.sign-up			 									{float:right; width:220px; height:30px; background-position:-280px -90px;}
-.button.sign-up:hover										{background-position:-280px -126px;}
-                                                        	
-.button.admin-panel	 										{float:right; width:150px; height:30px; background-position:-501px -90px;}
-.button.admin-panel:hover 									{background-position:-501px -126px;}      
+.button 													{}
 
-.button.download	 										{display:inline-block; margin:0 auto; float:none; width:113px; height:30px; background-position:-166px -90px;}
-.button.download:hover 										{}
+.button.register			 								{float:right; width:220px; height:30px; background-position:-280px -90px;}
+.button.dashboard	 										{float:right; width:150px; height:30px; background-position:-501px -90px;}
+.button.login 												{float:right; width:32px; height:12px; margin:0px 1px 0px 0px; background-position:-255px -35px;}
+.button.logout	 											{float:right; width:40px; height:12px; background-position:-288px -35px;}
 
-.admin-button.login											{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-.admin-button.login:hover									{background-position:0px -123px;}
-.admin-button.register										{width:91px; height:36px; margin:10px 0px; background-position:0px -86px;}
-.admin-button.register:hover								{background-position:0px -123px;}
+.button.register:hover										{background-position:-280px -126px;}
+.button.dashboard:hover 									{background-position:-501px -126px;}
 
-/* quick add */
-.quick-add 													{cursor:pointer;}
-.quick-add.ticker 											{float:left; width:319px; height:111px;}
-.quick-add.ticker:hover 									{background-position:0px -112px;}
-.quick-add.ticker.active									{background-position:0px -224px;}
-                                                        	
 /***** LAYOUT *****/
-.page-wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
+.page.wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
 .page														{margin:0 auto; width:940px; padding:20px 0px; overflow:hidden;}
 .page .body													{float:left; width:100%; margin:20px 0px 32px 0px;}
-                                                        	
-/***** NAVIGATION *****/                                	
-.nav 														{float:left;}
-.nav a 														{}
                                                     		
 /***** HEADER ******/                               		
-.header														{position:relative; float:left; width:100%;}
-.header .nav 												{margin:4px 0px 3px 0px;}
-.header .nav a												{float:left; width:50px; height:12px; margin:0px 7px 0px 0px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.header .solid-rule											{float:left; width:100%; height:1px; background:#D5D5D5;}
-.header .link-divide	 									{width:5px; height:8px; margin:3px 0px 0px 0px; background-position:-567px -21px;}
-.header ul li 												{margin:0px 5px 0px 2px;}
+.header														{}
+.header .rule												{float:left; width:100%; height:1px; background:#D5D5D5;}
 .header .logo												{width:254px; height:80px; margin:14px 0px 10px 34px;}
-.header .wrapper	 										{float:left; width:100%; margin:25px 0px 0px 0px;}
-.header .additional-links									{float:right; margin:3px 0px 0px 0px;}
-.button.link-login 											{width:32px; height:12px; margin:0px 1px 0px 0px; background-position:-255px -35px;}
-.button.link-logout	 										{width:40px; height:12px; background-position:-288px -35px;}                           	
-.header .search												{float:left; width:174px; margin:1px 0px 0px 0px;}
-.header .search .icon										{float:right; width:12px; height:12px; background-position:-573px -20px;}
-.header .search input 										{float:left; width:160px; padding:0px; border:none; font-size:11px; text-transform:capitalize;}
+.header .wrapper.dashboard									{float:right; margin:3px 0px 0px 0px;}
                                                     		
-/* header nav */                                   	    	
-a#link-products 											{width:55px; background-position:-255px -24px;}
-a#link-services 											{width:50px; background-position:-310px -24px;}
-a#link-downloads											{width:64px; background-position:-360px -24px;}
-a#link-support 												{width:48px; background-position:-426px -24px;}
-a#link-about 												{width:36px; background-position:-472px -24px;}
-a#link-contact 												{width:50px; background-position:-510px -24px;}
+/* header nav */
+.header .nav 												{float:left; margin:4px 0px 3px 0px;}
+.header .nav .link 											{float:left; margin:0px 5px 0px 2px;}                        	    	
+.header .nav .link a	 									{float:left; width:50px; height:12px; margin:0px 7px 0px 0px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+
+.header .nav .link a.products 								{width:55px; background-position:-255px -24px;}
+.header .nav .link a.services 								{width:50px; background-position:-310px -24px;}
+.header .nav .link a.downloads								{width:64px; background-position:-360px -24px;}
+.header .nav .link a.support 								{width:48px; background-position:-426px -24px;}
+.header .nav .link a.about 									{width:36px; background-position:-472px -24px;}
+.header .nav .link a.contact 								{width:50px; background-position:-510px -24px;}
                                                     		
-a#link-products:hover 										{background-position:-255px -12px;}
-a#link-services:hover 										{background-position:-310px -12px;}
-a#link-downloads:hover										{background-position:-360px -12px;}
-a#link-support:hover 										{background-position:-426px -12px;}
-a#link-about:hover 											{background-position:-472px -12px;}
-a#link-contact:hover 										{background-position:-510px -12px;}
+.header .nav .link a.products:hover 						{background-position:-255px -12px;}
+.header .nav .link a.services:hover 						{background-position:-310px -12px;}
+.header .nav .link a.downloads:hover						{background-position:-360px -12px;}
+.header .nav .link a.support:hover 							{background-position:-426px -12px;}
+.header .nav .link a.about:hover 							{background-position:-472px -12px;}
+.header .nav .link a.contact:hover 							{background-position:-510px -12px;}
                                                     		
-a#link-products.active 										{background-position:-255px 0px;}
-a#link-services.active 										{background-position:-310px 0px;}
-a#link-downloads.active										{background-position:-360px 0px;}
-a#link-support.active										{background-position:-426px 0px;}
-a#link-about.active 										{background-position:-472px 0px;}
-a#link-contact.active 										{background-position:-510px 0px;}
+.header .nav .link a.products.active 						{background-position:-255px 0px;}
+.header .nav .link a.services.active 						{background-position:-310px 0px;}
+.header .nav .link a.downloads.active						{background-position:-360px 0px;}
+.header .nav .link a.support.active							{background-position:-426px 0px;}
+.header .nav .link a.about.active 							{background-position:-472px 0px;}
+.header .nav .link a.contact.active 						{background-position:-510px 0px;}
                                                     		
 /***** FOOTER *****/                                		
 .footer 													{position:relative; width:940px; margin:-50px auto 0px; padding:15px 0px; overflow:hidden;}
-.footer .solid-rule											{float:left; width:100%; height:1px; background:#D5D5D5;}
-.footer .wrapper 											{float:left; width:100%;}
-.footer .nav		 										{margin:6px 0px 0px 2px;}
-.footer .nav a 												{float:left; width:50px; height:12px; margin:0px 7px 0px 0px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.footer ul li 												{margin:0px 7px 0px 0px;}
+.footer .rule												{float:left; width:100%; height:1px; background:#D5D5D5;}
                                                         	
-/* footer nav */                                 	    	
-a#link-index												{height:6px; width:64px; background-position:-255px -49px;}
-a#link-send-feedback										{height:6px; width:70px; background-position:-327px -49px;}
-a#link-contact-us 											{height:6px; width:54px; background-position:-404px -49px;}
-a#link-privacy-policy										{height:8px; width:95px; background-position:-465px -49px;}
-a#link-terms-of-use											{height:6px; width:57px; background-position:-567px -49px;}
+/* footer nav */
+.footer .nav		 										{margin:6px 0px 0px 2px;}
+.footer .nav .link 											{margin:0px 7px 0px 0px;}
+.footer .nav .link a 										{float:left; width:50px; height:12px; margin:0px 7px 0px 0px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+                               	    	
+.footer .nav .link a.index									{height:6px; width:64px; background-position:-255px -49px;}
+.footer .nav .link a.feedback								{height:6px; width:70px; background-position:-327px -49px;}
+.footer .nav .link a.contact 								{height:6px; width:54px; background-position:-404px -49px;}
+.footer .nav .link a.privacy								{height:8px; width:95px; background-position:-465px -49px;}
+.footer .nav .link a.tou									{height:6px; width:57px; background-position:-567px -49px;}
                                                     	
 /************************************************** PAGES **************************************************/
-                                                    	
-/***** INDEX (HOME) *****/                          	
-.index.spotlight											{float:left; position:relative;}
-                                                    	
-/* spotlight */                                     	
-.index.spotlight .content									{}
-.index.spotlight .window									{position:relative; overflow:hidden; height:392px;}
-                                                    	
-.index.spotlight #spotlight-left							{position:relative; float:left; width:433px; height:392px; margin:0px 48px 0px 0px;}
-.index.spotlight #spotlight-left .controls					{position:absolute; top:10px; right:50px; z-index:1;}
-.index.spotlight #spotlight-left .pager						{float:left; width:12px; height:4px; margin:0px 2px; border:4px solid #E3E3E3; background:none; cursor:pointer;}
-.index.spotlight #spotlight-left .pager.active				{float:left; background:#E3E3E3;}
-.index.spotlight #spotlight-left .image-reel 				{position:absolute; top:0; left:0;}
-.index.spotlight #spotlight-left .logo						{margin:95px 106px; width:200px; height:275px;}
-.index.spotlight #spotlight-left .logo.chromada 			{background-position:-484px -7px;}
-.index.spotlight #spotlight-left .logo.ticker				{background-position:-708px -10px;}
-                                                    	
-#spotlight-cover 											{position:absolute; top:0px; left:400px; width:40px; height:392px; background-position:-429px 0px;}
-                                                    	
-.index.spotlight #spotlight-right							{float:left; width:375px;}
-.index.spotlight #spotlight-right .content-reel 			{position:absolute; top:0; left:0;}
-.index.spotlight #spotlight-right .content-body				{float:left; width:375px; margin:70px 50px 0px 0px;}
-.index.spotlight #spotlight-right .content-body p			{color:#5D5C5C; line-height:21px;}
-.index.spotlight #spotlight-right .content-body h2			{float:left; width:100%; color:#333333; font-size:32px; font-weight:bold; text-transform:capitalize;}
-.index.spotlight #spotlight-right .content-body h3			{float:left; width:100%; margin:15px 0px; color:#C8C8C8; font-size:16px; font-weight:normal; text-transform:capitalize;}
-                                                  	
-.index.spotlight #spotlight-right .chromada .button			{width:160px; height:36px; margin:45px 0px 0px 0px; background-position:-504px -316px;}
-.index.spotlight #spotlight-right .chromada .button:hover	{background-position:-504px -353px;}
-
-.index.spotlight #spotlight-right .ticker .button 			{width:164px; height:36px; margin:45px 0px 0px 0px; background-position:-732px -316px;}
-.index.spotlight #spotlight-right .ticker .button:hover		{background-position:-732px -353px;}
                                                    	
-/***** DIVISE *****/                               	
+/***** DIVISE (Register, Login, Password, Contact) *****/                               	
 .divise 													{float:left; margin:0; width:100%;}
+
 .divise .header												{float:right; width:621px; margin:20px 0px;}
 .divise .header .title										{margin:0px 0px 18px 0px; font-size:35px; color:#4C4C4C;}
-.divise .header p 											{font-size:20px;}
+.divise .header .message									{font-size:20px;}
 
 .divise .alert 												{float:right; width:615px; margin:18px 0px; font-size:24px; background:#E76262;}
 
@@ -246,39 +124,21 @@ a#link-terms-of-use											{height:6px; width:57px; background-position:-567p
 .divise form .status										{position:absolute; top:25px; right:10px; width:26px; height:26px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
 .divise form .status.pass									{background-position:0px -180px;}
 .divise form .status.fail									{background-position:0px -152px;}
-.divise form .form-group									{float:left; position:relative; width:100%;}
-.divise form .form-group label 								{float:left; width:200px; padding:17px 0px; font-size:24px; font-weight:bold; text-align:right;}
-.divise form .form-group input								{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
-.divise form .form-group input.first						{border-top:1px solid #CACACA;}
-.divise form .form-group input.error 						{color:#DA3C3C;}
-.divise form .form-group textarea							{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
 
-.divise .action-bar 										{float:right; width:624px; margin:14px 0px 0px 0px;}
-.divise .action-bar input 									{background:none; border:none; font-size:24px;}
-.divise .action-bar .button 								{cursor:pointer;}
-.divise .action-bar .submit									{float:left; width:29px; height:28px; margin:0px 8px 0px 0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat -26px -175px;}
-.divise .action-bar .submit:hover							{background-position:-26px -147px;}
-.divise .action-bar .submit input 							{float:left; padding:5px 0px 0px 32px; color:#0EDF58;}
-.divise .action-bar .submit:hover input 					{color:#2BCA12;}
+.divise form .group.form									{float:left; position:relative; width:100%;}
+.divise form .group.form label 								{float:left; width:200px; padding:17px 0px; font-size:24px; font-weight:bold; text-align:right;}
+.divise form .group.form input								{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
+.divise form .group.form textarea							{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
+.divise form .group.form input.first						{border-top:1px solid #CACACA;}
+.divise form .group.form input.error 						{color:#DA3C3C;}
 
-.divise .action-bar .additional-links 						{float:right; width:200px; font-size:12px;}
-.divise .action-bar .additional-links .additional-link 		{float:right;}
-                                                  		
-/* LOGIN */
-                                                    		
-/* REGISTER */
+.divise .wrapper.actions 									{float:right; width:624px; margin:14px 0px 0px 0px;}
+.divise .wrapper.actions input 								{background:none; border:none; font-size:24px;}
+.divise .wrapper.actions .button 							{cursor:pointer;}
+.divise .wrapper.actions .submit							{float:left; width:29px; height:28px; margin:0px 8px 0px 0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat -26px -175px;}
+.divise .wrapper.actions .submit:hover						{background-position:-26px -147px;}
+.divise .wrapper.actions .submit input 						{float:left; padding:0px 0px 0px 32px; color:#0EDF58; cursor:pointer;}
+.divise .wrapper.actions .submit:hover input 				{color:#2BCA12;}
 
-/* CONTACT */
-
-/***** PRODUCTS *****/
-.product 													{width:940px;}
-.product-introduction 										{width:100%; margin:10px 0px;}
-.product .rule		 										{float:left; width:100%; margin:25px 0px; border-bottom:1px solid #D5D5D5;}
-
-/* TICKER */
-.product-feature 											{position:relative; margin:25px auto; width:720px; overflow:hidden;}
-.product-feature .heading 									{float:left; width:100%; font-size:22px; color:#3D3936; line-height:29px;}
-.product-feature .feature-description						{width:300px;}
-.product-feature p 											{float:left; font-size:16px; color:#8E8D8C; line-height:24px;}
-.product-feature .overlay									{position:absolute;}
-.product-feature.download 									{text-align:center;}
+.divise .wrapper.actions .wrapper.links 					{float:right; width:200px; font-size:12px;}
+.divise .wrapper.actions .wrapper.links .link				{float:right;}

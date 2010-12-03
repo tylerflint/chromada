@@ -1,47 +1,47 @@
 
-<div class='divise register'>
+<div class="divise register">
 	
 	<div class="header">
-		<h2 class='title'>Registration</h2>
-		<p>Thanks for registering. We promise you won’t be disappointed. Just fill out the form below to get started!</p>
+		<h2 class="title">Registration</h2>
+		<p class="message">Thanks for registering. We promise you won’t be disappointed. Just fill out the form below to get started!</p>
 	</div>
 	
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>	
-		<div class="form-group">
+		<div class="group form">
 			<label>First Name</label>
-			<%= form.text_field :firstname, :class => 'first required name defaultInvadivd' %><span class='status pass'></span>
+			<%= form.text_field :firstname, :class => "first required name defaultInvalid" %><span class="status pass"></span>
 		</div>
-		<div class="form-group">
+		<div class="group form">
 			<label>Last Name</label>
-			<%= form.text_field :lastname, :class => 'required name defaultInvadivd' %><span class='status pass'></span>
+			<%= form.text_field :lastname, :class => "required name defaultInvalid" %><span class="status pass"></span>
 		</div>
-		<div class="form-group">
+		<div class="group form">
 			<label>Email Address</label>
-			<%= form.text_field :email, :class => 'required email defaultInvadivd' %><span class='status pass'></span>
+			<%= form.text_field :email, :class => "required email defaultInvalid" %><span class="status pass"></span>
 		</div>
-		<div class="form-group">
+		<div class="group form">
 			<label>User Name</label>
-			<%= form.text_field :username, :class => 'required username defaultInvadivd' %><span class='status fail'></span>
+			<%= form.text_field :username, :class => "required username defaultInvalid" %><span class="status fail"></span>
 		</div>
-		<div class="form-group">
+		<div class="group form">
 			<label>Password</label>
-			<%= form.password_field :password, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
+			<%= form.password_field :password, :class => "required password", :value => "", :autocomplete => "off" %><span class="status pass"></span>
 		</div>
-		<div class="form-group">
+		<div class="group form">
 			<label>Confirm Password</label>
-			<%= form.password_field :password_confirmation, :class => 'required password', :value => '', :autocomplete => 'off' %><span class='status pass'></span>
+			<%= form.password_field :password_confirmation, :class => "required password", :value => "", :autocomplete => "off" %><span class="status pass"></span>
 		</div>
 		
-		<div class='alert' style="">
+		<div class="alert" style="">
 			<% resource.errors.full_messages.each do |message| %>
 				<%= message %>
 			<% end %>
 		</div>
 		
-		<div class="action-bar">
-			<span class="submit"><%= form.submit 'login', :class => "button", :value => "Submit" %></span>
-			<div class='additional-links'>
-				<span class='additional-link'>Already Registered? <%= link_to "Login Here", new_session_path(resource_name) %></span>
+		<div class="wrapper actions">
+			<span class="submit"><%= form.submit "login", :class => "button", :value => "Submit" %></span>
+			<div class="wrapper links">
+				<span class="link">Already Registered? <%= link_to "Login Here", new_session_path(resource_name) %></span>
 			</div>
 		</div>
 	<% end %>
@@ -59,7 +59,7 @@
 		}, "");
 		
 		$("#user_new").validate();
-		$('#user_new').submit(function(form)
+		$("#user_new").submit(function(form)
 		{
 			if($("#user_new").valid())
 			{

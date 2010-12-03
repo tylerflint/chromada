@@ -20,8 +20,8 @@ class StaticController < ApplicationController
     @title="Chromada - Downloads"
   end
   
-  def privacy_policy
-    @active = 'privacy-policy'
+  def privacy
+    @active = 'privacy'
     @title="Chromada - Privacy Policy"
   end
   
@@ -45,8 +45,8 @@ class StaticController < ApplicationController
     @title="Chromada - Support"
   end
   
-  def terms_of_use
-    @active = 'terms-of-use'
+  def tou
+    @active = 'tou'
     @title="Chromada - Terms of Use"
   end
 end

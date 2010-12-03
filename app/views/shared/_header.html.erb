@@ -1,47 +1,25 @@
 	
-<%= link_to '', root_url, :class => 'site-sprite logo' %>
+<%= link_to "", root_url, :class => "sprite image logo" %>
 
 <%if user_signed_in? %>
-	<%= link_to '', admin_dashboard_url, :class => 'button admin-panel' %>
+	<%= link_to "", admin_dashboard_url, :class => "sprite button dashboard" %>
 <% else %>
-	<%= link_to '', new_user_registration_url, :class => 'button sign-up'%>
+	<%= link_to "", new_user_registration_url, :class => "sprite button register"%>
 <% end %>
-
-<div class='wrapper'>
 	
-	<!-- PRIMARY NAV -->
-	<div class='solid-rule'></div>
-	<div class='nav'>
-		<ul>
-			<li><%= link_to '', products_url, 						:id => 'link-products', 	:class => (@active == 'products') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li>
-			<!-- <li><%= link_to '', services_url, 						:id => 'link-services', 	:class => (@active == 'services') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li> -->
-			<li><%= link_to '', products_url + '#download', 		:id => 'link-downloads', 	:class => (@active == 'downloads') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li>
-			<!-- <li><%= link_to '', support_url, 						:id => 'link-support', 		:class => (@active == 'support') 	? 'active' : '' %><span class='site-sprite link-divide'></span></li> -->
-			<!-- <li><%= link_to '', about_url, 							:id => 'link-about', 		:class => (@active == 'about') 		? 'active' : '' %><span class='site-sprite link-divide'></span></li> -->
-			<li><%= link_to '', contact_url,						:id => 'link-contact', 		:class => (@active == 'contact') 	? 'active' : '' %></li>
-		</ul>
-	</div>
+<!-- PRIMARY NAV -->
+<div class="rule"></div>
+<ul class="nav">
+	<li class="link"><%= link_to "", products_url, 					:class => (@active == "products") 	? "products active" : "products" %></li>
+	<li class="link"><%= link_to "", products_url + "#download", 	:class => (@active == "downloads") 	? "downloads active" : "downloads" %></li>
+	<li class="link"><%= link_to "", contact_url,					:class => (@active == "contact") 	? "contact active" : "contact" %></li>
+</ul>
 
-	<div class='additional-links'>
-		<%if user_signed_in? %>
-			<%= link_to '', destroy_user_session_url, :class => 'button link-logout' %>
-		<% else %>
-			<%= link_to '', new_user_session_url, :class => 'button link-login'%>
-		<% end %>
-		
-		<!--
-		<div class='pipe' style='height:12px;'></div>
-		-->
-		
-		<!-- SEARCH 
-		<div class='search'>
-			<%= form_for(:search, :url => "/", :html => { :id => 'site-search-form', :class => 'form', :method => :post }) do |form| %>
-				<%= form.text_field :search, :class => 'required', :value => 'search', :onfocus => 'this.value = ""', :onblur => 'if(this.value == "") this.value = this.defaultValue;' %>
-				<div class='button icon'></div>
-			<% end %>
-		</div>
-		-->
-	</div>
-	<div class='solid-rule'></div>
-
+<div class="wrapper dashboard">
+	<%if user_signed_in? %>
+		<%= link_to "", destroy_user_session_url, :class => "sprite button logout" %>
+	<% else %>
+		<%= link_to "", new_user_session_url, :class => "sprite button login" %>
+	<% end %>
 </div>
+<div class="rule"></div>

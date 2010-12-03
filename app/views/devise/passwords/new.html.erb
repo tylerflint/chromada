@@ -1,27 +1,27 @@
 
-<div class='divise forgot-password'>
+<div class="divise password">
 	
-	<div class='header'>
+	<div class="header">
 		<h2 class="title">Forgot Password</h2>
-		<p>Thanks for registering. We promise you won't be disappointed. Just fill out the form below to get started!</p>
+		<p class="message">Oops, Don't worry about it. Just fill out the form below and we'll have you fixed right up in no time!</p>
 	</div>
 	
 	<%= form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |form| %>		
 		
-		<div class='form-group'>
+		<div class="group form">
 			<label>Email Address</label>
-			<%= form.text_field :email, :class => 'first required email defaultInvalid' %>
+			<%= form.text_field :email, :class => "first required email defaultInvalid" %>
 		</div>
 		
-		<div class='alert' style="display:none;">
+		<div class="alert" style="display:none;">
 			<%= flash[:alert] %>
 		</div>
 		
-		<div class="action-bar">
-			<span class="submit"><%= form.submit 'login', :class => "button", :value => "Submit" %></span>
-			<div class='additional-links'>
-				<span class='additional-link'>New? <%= link_to "Register Here", new_user_registration_url, :class => 'site-link' %></span>
-				<span class='additional-link'>Already Registered? <%= link_to "Login Here", new_session_path(resource_name) %></span>
+		<div class="wrapper actions">
+			<span class="submit"><%= form.submit "login", :class => "sprite button", :value => "Submit" %></span>
+			<div class="wrapper links">
+				<span class="link">New? <%= link_to "Register Here", new_user_registration_url %></span>
+				<span class="link">Already Registered? <%= link_to "Login Here", new_session_path(resource_name) %></span>
 			</div>
 		</div>
 	<% end %>
@@ -39,7 +39,7 @@
 		}, "");
 		
 		$("#user_new").validate();
-		$('#user_new').submit(function(form)
+		$("#user_new").submit(function(form)
 		{
 			if($("#user_new").valid())
 			{

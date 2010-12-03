@@ -36,20 +36,20 @@
 		<!-- END TYPEKIT -->
 	</head>
 	
-	<body id='one-column'>
-		<div class='page-wrapper'>
-			<div class='page'>
-				<div id='hd' class='header'>
+	<body class="column one">
+		<div class="wrapper page">
+			<div class="page">
+				<div class="header">
 					<%= render :partial => 'shared/header' %>
 				</div>
 				
-				<div id='bd' class='body'>
+				<div class="body">
 					<%= yield %>
 				</div>
 			</div>			
 		</div>
 		
-		<div id='ft' class='footer'>
+		<div class="footer">
 			<%= render :partial => 'shared/footer' %>
 		</div>
 		
@@ -59,7 +59,7 @@
 				// jQuery: When document is loaded and ready to process:
 				$(document).ready(function() {
 				    //Footer Push: Pushes footer to the bottom of the page. Call the function and pass the ID of your main content element   
-				    footerPush("#bd");
+				    footerPush(".body");
 				});
 				*/
 			//]]>

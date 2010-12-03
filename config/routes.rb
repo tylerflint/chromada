@@ -7,15 +7,15 @@ Chromada::Application.routes.draw do
     :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, 
     :controllers => { :sessions => "sessions", :registrations => 'registrations' }
   
-  match "products"         => "static#products",         :as => "products"
-  match "services"         => "static#services",         :as => "services"      
-  match "downloads"        => "static#downloads",        :as => "downloads"
-  match "support"          => "static#support",          :as => "support"
-  match "about"            => "static#about",            :as => "about"
-  match "contact"          => "static#contact",          :as => "contact"                                        
-  match "feedback"         => "static#feedback",         :as => "feedback"
-  match "privacy-policy"   => "static#privacy_policy",   :as => "privacy_policy"
-  match "terms-of-use"     => "static#terms_of_use",     :as => "terms_of_use"
+  match "products"    => "static#products",     :as => "products"
+  match "services"    => "static#services",     :as => "services"      
+  match "downloads"   => "static#downloads",    :as => "downloads"
+  match "support"     => "static#support",      :as => "support"
+  match "about"       => "static#about",        :as => "about"
+  match "contact"     => "static#contact",      :as => "contact"                                        
+  match "feedback"    => "static#feedback",     :as => "feedback"
+  match "privacy"     => "static#privacy",      :as => "privacy"
+  match "tou"         => "static#tou",          :as => "tou"
   
   namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
     root :to                                    => "admin#dashboard"
