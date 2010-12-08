@@ -1,10 +1,9 @@
 <!-- SECONDARY NAV -->
 <div class="rule"></div>
 <ul class="nav">
-	<li class="link"><%= link_to "", 	root_url, 		:class => (@active == "") 			? "index active" : "index" %></li>
-	<li class="link"><%= link_to "", 	feedback_url,	:class => (@active == "feedback") 	? "feedback active" : "feedback" %></li>
-	<li class="link"><%= link_to "", 	contact_url, 	:class => (@active == "contact") 	? "contact active" : "contact" %></li>
-	<li class="link"><%= link_to "", 	privacy_url, 	:class => (@active == "privacy") 	? "privacy active" : "privacy" %></li>
-	<li class="link"><%= link_to "", 	tou_url, 		:class => (@active == "tou") 		? "tou active" : "tou" %></li>
+	<li class="link"><%= link_to "", 					root_url, 		:class => (@active == "") 			? "index active" : "index" %></li>
+	<li class="link"><%= link_to "Terms of Use", 		terms_url,		:class => (@active == "terms") 		? "terms active" : "terms" %></li>
+	<li class="link"><%= link_to "Privacy Policy", 		privacy_url, 	:class => (@active == "privacy") 	? "privacy active" : "privacy" %></li>
+	<li class="link"><%= link_to "Send Feedback", 		contact_url, 	:class => (@active == "contact") 	? "contact active" : "contact" %></li>
 </ul>
 	

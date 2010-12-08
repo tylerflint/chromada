@@ -8,14 +8,12 @@ Chromada::Application.routes.draw do
     :controllers => { :sessions => "sessions", :registrations => 'registrations' }
   
   match "products"    => "static#products",     :as => "products"
-  match "services"    => "static#services",     :as => "services"      
-  match "downloads"   => "static#downloads",    :as => "downloads"
-  match "support"     => "static#support",      :as => "support"
-  match "about"       => "static#about",        :as => "about"
+  match "how"         => "static#how",          :as => "how"      
+  match "pricing"     => "static#pricing",      :as => "pricing"
   match "contact"     => "static#contact",      :as => "contact"                                        
   match "feedback"    => "static#feedback",     :as => "feedback"
   match "privacy"     => "static#privacy",      :as => "privacy"
-  match "tou"         => "static#tou",          :as => "tou"
+  match "terms"       => "static#terms",        :as => "terms"
   
   namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
     root :to                                    => "admin#dashboard"

@@ -43,73 +43,80 @@ label.error													{display:none !important;}
 /************************************************** MAIN ELEMENT STYLES **************************************************/
                                                     	
 /***** SPRITES *****/                               	
-.sprite.image					 							{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
-.sprite.button 												{float:left; background:url('../images/site-sprite.gif') no-repeat 0px 0px; border:none; cursor:pointer;}
+.sprite							 							{float:left; background:url('../images/chromada.png') no-repeat 0px 0px;}
                                                     		
 /***** BUTTONS *****/
-.button 													{}
+.button 													{border:none; cursor:pointer;}
 
-.button.register			 								{float:right; width:220px; height:30px; background-position:-280px -90px;}
-.button.dashboard	 										{float:right; width:150px; height:30px; background-position:-501px -90px;}
-.button.login 												{float:right; width:32px; height:12px; margin:0px 1px 0px 0px; background-position:-255px -35px;}
-.button.logout	 											{float:right; width:40px; height:12px; background-position:-288px -35px;}
+.button.register			 								{float:right; width:220px; height:30px; margin:0px 3px 0px 0px; background-position:-1px -67px;}
+.button.dashboard	 										{float:right; width:150px; height:30px; background-position:-1px -98px;}
+.button.login 												{float:right; width:32px; height:12px; background-position:-203px -38px;}
+.button.logout	 											{float:right; width:40px; height:12px; background-position:-203px -49px;}
+.button.trial	 											{width:164px; height:51px; background-position:-1px -201px;}
 
-.button.register:hover										{background-position:-280px -126px;}
+.button.register:hover										{background-position:-1px -98px;}
 .button.dashboard:hover 									{background-position:-501px -126px;}
+.button.trial:hover											{background-position:-1px -253px;}
 
 /***** LAYOUT *****/
 .page.wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
-.page														{margin:0 auto; width:940px; padding:20px 0px; overflow:hidden;}
+.page														{margin:0 auto; width:945px; padding:10px 0px; overflow:hidden;}
 .page .body													{float:left; width:100%; margin:20px 0px 32px 0px;}
                                                     		
 /***** HEADER ******/                               		
 .header														{}
 .header .rule												{float:left; width:100%; height:1px; background:#D5D5D5;}
-.header .logo												{width:254px; height:80px; margin:14px 0px 10px 34px;}
+.header .logo												{width:202px; height:67px; margin:16px 0px 0px 32px;}
 .header .wrapper.dashboard									{float:right; margin:3px 0px 0px 0px;}
                                                     		
 /* header nav */
-.header .nav 												{float:left; margin:4px 0px 3px 0px;}
-.header .nav .link 											{float:left; margin:0px 5px 0px 2px;}                        	    	
-.header .nav .link a	 									{float:left; width:50px; height:12px; margin:0px 7px 0px 0px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+.header .nav 												{float:left; width:100%; margin:35px 0px 0px 0px;}
+.header .nav .link 											{float:left; margin:4px 0px 4px 4px;}                        	    	
+.header .nav .link a	 									{float:left; width:50px; height:12px; background:url('../images/chromada.png') no-repeat 0px 0px;}
 
-.header .nav .link a.products 								{width:55px; background-position:-255px -24px;}
-.header .nav .link a.services 								{width:50px; background-position:-310px -24px;}
-.header .nav .link a.downloads								{width:64px; background-position:-360px -24px;}
-.header .nav .link a.support 								{width:48px; background-position:-426px -24px;}
-.header .nav .link a.about 									{width:36px; background-position:-472px -24px;}
-.header .nav .link a.contact 								{width:50px; background-position:-510px -24px;}
+.header .nav .link a.products 								{width:65px; background-position:-202px -25px;}
+.header .nav .link a.how									{width:84px; background-position:-271px -25px;}
+.header .nav .link a.pricing 								{width:52px; background-position:-359px -25px;}
+.header .nav .link a.contact 								{width:46px; background-position:-415px -25px;}
                                                     		
-.header .nav .link a.products:hover 						{background-position:-255px -12px;}
-.header .nav .link a.services:hover 						{background-position:-310px -12px;}
-.header .nav .link a.downloads:hover						{background-position:-360px -12px;}
-.header .nav .link a.support:hover 							{background-position:-426px -12px;}
-.header .nav .link a.about:hover 							{background-position:-472px -12px;}
-.header .nav .link a.contact:hover 							{background-position:-510px -12px;}
+.header .nav .link a.products:hover 						{background-position:-202px -13px;}
+.header .nav .link a.how:hover								{background-position:-271px -13px;}
+.header .nav .link a.pricing:hover 							{background-position:-359px -13px;}
+.header .nav .link a.contact:hover 							{background-position:-415px -13px;}
                                                     		
-.header .nav .link a.products.active 						{background-position:-255px 0px;}
-.header .nav .link a.services.active 						{background-position:-310px 0px;}
-.header .nav .link a.downloads.active						{background-position:-360px 0px;}
-.header .nav .link a.support.active							{background-position:-426px 0px;}
-.header .nav .link a.about.active 							{background-position:-472px 0px;}
-.header .nav .link a.contact.active 						{background-position:-510px 0px;}
+.header .nav .link a.products.active 						{background-position:-202px -1px;}
+.header .nav .link a.how.active								{background-position:-271px -1px;}
+.header .nav .link a.pricing.active 						{background-position:-359px -1px;}
+.header .nav .link a.contact.active 						{background-position:-415px -1px;}
+
+.header .nav .dashboard 									{float:right; margin:5px 5px 0px 0px;}
                                                     		
 /***** FOOTER *****/                                		
 .footer 													{position:relative; width:940px; margin:-50px auto 0px; padding:15px 0px; overflow:hidden;}
 .footer .rule												{float:left; width:100%; height:1px; background:#D5D5D5;}
                                                         	
 /* footer nav */
-.footer .nav		 										{margin:6px 0px 0px 2px;}
-.footer .nav .link 											{margin:0px 7px 0px 0px;}
-.footer .nav .link a 										{float:left; width:50px; height:12px; margin:0px 7px 0px 0px; background:url('../images/site-sprite.gif') no-repeat 0px 0px;}
+.footer .nav		 										{}
+.footer .nav .link 											{}
+.footer .nav .link a 										{float:left;}
                                	    	
-.footer .nav .link a.index									{height:6px; width:64px; background-position:-255px -49px;}
-.footer .nav .link a.feedback								{height:6px; width:70px; background-position:-327px -49px;}
-.footer .nav .link a.contact 								{height:6px; width:54px; background-position:-404px -49px;}
-.footer .nav .link a.privacy								{height:8px; width:95px; background-position:-465px -49px;}
-.footer .nav .link a.tou									{height:6px; width:57px; background-position:-567px -49px;}
+.footer .nav .link a.index									{width:34px; height:34px; background:url('../images/chromada.png') no-repeat -1px -166px;}
                                                     	
 /************************************************** PAGES **************************************************/
+
+/* INDEX */
+.index 														{float:left;}
+
+/* spotlight */
+.spotlight.product.ticker 									{float:left;}
+.spotlight.product.ticker .wrapper.banner					{position:relative; width:944px; height:615px;}
+.spotlight.product.ticker .wrapper.banner .button.trial 	{position:absolute; right:97px; bottom:108px; }
+.spotlight h2 												{margin:37px 0px 20px 5px; font-size:35px; color:#000000;}
+.spotlight .column 											{float:left; width:300px; margin:0px 21px 0px 0px; font-size:14px; line-height:21px;}
+.spotlight .column.last										{margin:0px;}
+.spotlight .column img 										{margin:0px 0px 15px 0px;}
+.spotlight .column .title									{float:left; width:100%; font-size:14px; font-weight:bold;}
+.spotlight .column p										{margin:0px 0px 20px 0px;}
                                                    	
 /***** DIVISE (Register, Login, Password, Contact) *****/                               	
 .divise 													{float:left; margin:0; width:100%;}
