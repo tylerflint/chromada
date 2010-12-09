@@ -1,7 +1,7 @@
 <!-- SECONDARY NAV -->
 <div class="rule"></div>
 <ul class="nav">
-	<li class="link"><%= link_to "", 					root_url, 		:class => (@active == "") 			? "index active" : "index" %></li>
+	<li><%= link_to "", root_url, :class => "sprite logo" %></li>
 	<li class="link"><%= link_to "Terms of Use", 		terms_url,		:class => (@active == "terms") 		? "terms active" : "terms" %></li>
 	<li class="link"><%= link_to "Privacy Policy", 		privacy_url, 	:class => (@active == "privacy") 	? "privacy active" : "privacy" %></li>
 	<li class="link"><%= link_to "Send Feedback", 		contact_url, 	:class => (@active == "contact") 	? "contact active" : "contact" %></li>
