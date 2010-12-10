@@ -132,8 +132,9 @@ label.error													{display:none !important;}
 .pricing.product.ticker .wrapper.callout .button.trial 		{float:right;}
 .pricing.product.ticker .wrapper.callout h2					{float:left; color:#333333; font-size:35px;}
 
-.pricing.product.ticker .wrapper.content 					{float:left; margin:32px 0px 0px 0px;}
-.pricing.product.ticker .wrapper.content .column 			{float:left; width:300px; margin:0px 12px 0px 0px; color:#333333; font-size:14px; line-height:21px;}
+.pricing.product.ticker .wrapper.content 					{float:left; margin:32px 0px 104px 0px;}
+.pricing.product.ticker .wrapper.content .column 			{float:left; width:300px; margin:0px 21px 0px 0px; color:#333333; font-size:14px; line-height:21px;}
+.pricing.product.ticker .wrapper.content .column.last		{margin:0px;}
 .pricing.product.ticker .wrapper.content .column .title		{float:left; width:100%; color:#333333; font-size:14px; font-weight:bold;}
 .pricing.product.ticker .wrapper.content .column p			{margin:0px 0px 20px 0px; color:#444444;}
 .pricing.product.ticker .wrapper.content .column a			{color:#7bC5C5; text-decoration:underline;}
