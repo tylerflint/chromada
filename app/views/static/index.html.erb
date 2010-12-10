@@ -8,8 +8,8 @@
 		
 		<h2>We think Ticker speaks for itself.</h2>
 		<div class="column">
-			<a href="#link"><img src="images/spotlight/feature_1.jpg" alt="" title="ticker features" onmouseover="this.src='images/spotlight/feature_hover_1.jpg'" onmouseout="this.src='images/spotlight/feature_1.jpg'"/></a>
-			<a href="#link"><img src="images/spotlight/feature_2.jpg" alt="" title="ticker admin" onmouseover="this.src='images/spotlight/feature_hover_2.jpg'" onmouseout="this.src='images/spotlight/feature_2.jpg'"/></a>
+			<%= link_to(image_tag("spotlight/feature_1.jpg", {:alt => "", :title => "", :onmouseover => "this.src='images/spotlight/feature_hover_1.jpg'", :onmouseout => "this.src='images/spotlight/feature_1.jpg'"}), pricing_url) %>
+			<%= link_to(image_tag("spotlight/feature_2.jpg", {:alt => "", :title => "", :onmouseover => "this.src='images/spotlight/feature_hover_2.jpg'", :onmouseout => "this.src='images/spotlight/feature_2.jpg'"}), how_url) %>
 		</div>
 		<div class="column">
 			<p>Simple tasks are often the most time consuming, unorganized, and unmeasured details of a business. Ticker offers intuitive web-based, mobile, and desktop tools to give you an unprecedented level of control of your business.</p>
@@ -19,7 +19,7 @@
 		</div>
 		<div class="column last">
 			<p><span class="title">Administration Panel</span>What if someone enters an incorrect punch? The Administration Panel gives you full access to all current and past pay period info to quickly add/remove/edit anything you see fit.</p>
-			<p><span class="title">And Much More</span>See <a href="#link">How It Works</a> to learn about other features and benefits of Ticker. So why not give Ticker a try? Registration is fast, easy, and free. Sign up now to  try Ticker free for 30 days, no commitments. Give it a shot; we believe Ticker speaks for itself.</p>
+			<p><span class="title">And Much More</span>See <%= link_to "How It Works", how_url %> to learn about other features and benefits of Ticker. So why not give Ticker a try? Registration is fast, easy, and free. Sign up now to  try Ticker free for 30 days, no commitments. Give it a shot; we believe Ticker speaks for itself.</p>
 			<span class="sprite button trial"></span>
 		</div>
 	</div>

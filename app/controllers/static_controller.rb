@@ -16,13 +16,13 @@ class StaticController < ApplicationController
   end
   
   def pricing
-    @active = 'how'
-    @title="Chromada - how it works"
+    @active = 'pricing'
+    @title="Chromada - pricing"
   end
   
   def how
-    @active = 'pricing'
-    @title="Chromada - pricing"
+    @active = 'how'
+    @title="Chromada - how it works"
   end
   
   def privacy
