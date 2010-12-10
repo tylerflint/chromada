@@ -99,6 +99,7 @@ label.error													{display:none !important;}
 .footer .nav		 										{float:left; width:100%; margin:21px 0px 0px 2px;}
 .footer .nav .link 											{float:left; margin:9px 0px 0px 15px; font-weight:bold; letter-spacing:1px;}
 .footer .nav .link a 										{float:left;}
+.footer .nav .link a.active									{color:#00D3D3;}
                                	    	
 .footer .nav .logo											{width:34px; height:34px; background-position:-1px -166px;}
                                                     	
@@ -137,7 +138,7 @@ label.error													{display:none !important;}
 .pricing.product.ticker .wrapper.content .column.last		{margin:0px;}
 .pricing.product.ticker .wrapper.content .column .title		{float:left; width:100%; color:#333333; font-size:14px; font-weight:bold;}
 .pricing.product.ticker .wrapper.content .column p			{margin:0px 0px 20px 0px; color:#444444;}
-.pricing.product.ticker .wrapper.content .column a			{color:#7bC5C5; text-decoration:underline;}
+.pricing.product.ticker .wrapper.content .column a			{color:#7BC5C5; text-decoration:underline;}
                                                    	
 /***** DIVISE (Register, Login, Password, Contact) *****/                               	
 .divise 													{float:left; margin:0; width:100%;}
