@@ -112,11 +112,11 @@ label.error													{display:none !important;}
 .spotlight.product.ticker .wrapper.banner					{position:relative; width:944px; height:615px;}
 .spotlight.product.ticker .wrapper.banner .button.trial 	{position:absolute; right:97px; bottom:108px; }
 .spotlight h2 												{margin:37px 0px 25px 5px; font-size:35px; color:#000000;}
-.spotlight .column 											{float:left; width:300px; margin:0px 21px 0px 0px; font-size:14px; line-height:21px;}
+.spotlight .column 											{float:left; width:300px; margin:0px 21px 0px 0px; color:#333333; font-size:14px; line-height:21px;}
 .spotlight .column.last										{margin:0px;}
 .spotlight .column img 										{margin:0px 0px 15px 0px;}
-.spotlight .column .title									{float:left; width:100%; font-size:14px; font-weight:bold;}
-.spotlight .column p										{margin:0px 0px 20px 0px;}
+.spotlight .column .title									{float:left; width:100%; color:#333333; font-size:14px; font-weight:bold;}
+.spotlight .column p										{margin:0px 0px 20px 0px; color:#444444;}
 .spotlight .column a										{color:#7bC5C5; text-decoration:underline;}
                                                    	
 /***** DIVISE (Register, Login, Password, Contact) *****/                               	
@@ -124,17 +124,17 @@ label.error													{display:none !important;}
 
 .divise .header												{float:right; width:621px; margin:20px 0px;}
 .divise .header .title										{margin:0px 0px 18px 0px; font-size:35px; color:#4C4C4C;}
-.divise .header .message									{font-size:20px;}
+.divise .header .message									{color:#444444; font-size:20px;}
 
-.divise .alert 												{float:right; width:615px; margin:18px 0px; font-size:24px; background:#E76262;}
+.divise .alert 												{float:right; width:624px; margin:18px 0px; padding:0px; color:#E76262; font-size:24px; background:none;}
 
 .divise form												{float:right; width:865px;}
-.divise form .status										{position:absolute; top:25px; right:10px; width:26px; height:26px; background:url('../images/admin-sprite.png') no-repeat 0px 0px;}
-.divise form .status.pass									{background-position:0px -180px;}
-.divise form .status.fail									{background-position:0px -152px;}
+.divise form .status										{position:absolute; top:25px; right:10px; width:26px; height:26px; background:url('../images/chromada.png') no-repeat 0px 0px;}
+.divise form .status.pass									{background-position:-267px -38px;}
+.divise form .status.fail									{background-position:-243px -38px;}
 
 .divise form .group.form									{float:left; position:relative; width:100%;}
-.divise form .group.form label 								{float:left; width:200px; padding:17px 0px; font-size:24px; font-weight:bold; text-align:right;}
+.divise form .group.form label 								{float:left; width:200px; padding:17px 0px; color:#333333; font-size:24px; font-weight:bold; text-align:right;}
 .divise form .group.form input								{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
 .divise form .group.form textarea							{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
 .divise form .group.form input.first						{border-top:1px solid #CACACA;}
@@ -143,10 +143,15 @@ label.error													{display:none !important;}
 .divise .wrapper.actions 									{float:right; width:624px; margin:14px 0px 0px 0px;}
 .divise .wrapper.actions input 								{background:none; border:none; font-size:24px;}
 .divise .wrapper.actions .button 							{cursor:pointer;}
-.divise .wrapper.actions .submit							{float:left; width:29px; height:28px; margin:0px 8px 0px 0px; padding:0px; background:url('../images/admin-sprite.png') no-repeat -26px -175px;}
-.divise .wrapper.actions .submit:hover						{background-position:-26px -147px;}
-.divise .wrapper.actions .submit input 						{float:left; padding:0px 0px 0px 32px; color:#0EDF58; cursor:pointer;}
-.divise .wrapper.actions .submit:hover input 				{color:#2BCA12;}
+.divise .wrapper.actions .submit							{width:29px; height:28px; margin:0px 90px 0px 0px; padding:0px; background-position:-189px -135px;}
+.divise .wrapper.actions .submit:hover						{background-position:-189px -163px;}
+.divise .wrapper.actions .submit input 						{float:left; margin:-2px 0px 0px 0px; padding:0px 0px 0px 32px; color:#2BCA12; cursor:pointer;}
+.divise .wrapper.actions .submit:hover input 				{color:#0EDF58;}
+
+.divise .wrapper.actions .cancel							{width:29px; height:28px; margin:0px 8px 0px 0px; padding:0px; background-position:-219px -163px;}
+.divise .wrapper.actions .cancel:hover						{background-position:-219px -135px;}
+.divise .wrapper.actions .cancel input 						{float:left; margin:-2px 0px 0px 0px; padding:0px 0px 0px 32px; color:#FE6022; cursor:pointer;}
+.divise .wrapper.actions .cancel:hover input 				{color:#FD3D00;}
 
 .divise .wrapper.actions .wrapper.links 					{float:right; width:200px; font-size:12px;}
 .divise .wrapper.actions .wrapper.links .link				{float:right;}
