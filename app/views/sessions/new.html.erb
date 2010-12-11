@@ -21,7 +21,8 @@
 		</div>
 		
 		<div class="wrapper actions">
-			<span class="submit"><%= form.submit 'login', :class => "button", :value => "Submit" %></span>
+			<span class="sprite button submit"><%= form.submit "login", :value => "Submit" %></span>
+			<span class="sprite button cancel"><%= form.submit "login", :value => "Cancel" %></span>
 			<div class="wrapper links">
 				<span class="link">New? <%= link_to "Register Here", new_user_registration_url %></span>
 				<span class="link"><%= link_to "Forgot Your Login or Password?", new_password_path(resource_name) %></span>

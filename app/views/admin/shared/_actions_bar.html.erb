@@ -1,7 +1,15 @@
-<div class='actions-bar'>
-	<a href='<%= back_url %>' title='Back to [Previous Location]' class='admin-button back'><span>Back</span></a>
-	<button type="submit" title='Save [Item]' name="commit" id="role_submit" class="admin-button save"></button>
+<div class="actions-bar">
+	<a href="<%= back_url %>" title="Back to [Previous Location]" class="admin-button back"><span>Back</span></a>
+	<button type="submit" title="Save [Item]" name="commit" id="role_submit" class="admin-button save"></button>
 	<% if (!object.new_record?) %>
-		<a href='<%= delete_url %>' title='Enables [Item] Removal' class='admin-button remove delete'></a>
+		<a href="<%= delete_url %>" title="Enables [Item] Removal" class="admin-button remove delete"></a>
 	<% end %>
+	
+	<div class="wrapper actions">
+		<span class="submit"><%= form.submit 'login', :class => "button", :value => "Submit" %></span>
+		<span class="cancel"><%= form.submit 'login', :class => "button", :value => "Cancel" %></span>
+		
+		<button type="submit" title="Save" name="commit" id="role_submit" class="button save"></button>
+		<a href="<%= delete_url %>" title="Delete" name="commit" class="button remove delete"></a>
+	</div>
 </div>
