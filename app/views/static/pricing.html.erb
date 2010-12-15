@@ -1,13 +1,13 @@
 
 <div class="pricing product ticker">
 	<div class="wrapper banner">
-		<img class="banner" src="images/pricing/ticker.gif" width="625" height="196" alt="" title="" />
+		<%= image_tag "pricing/ticker.gif", :alt => "Ticker - $5 per employee/month", :title => "Ticker is only $5 per employee/month!", :size => "625x196" %>
 	</div>
 	
 	<div class="rule"></div>
 	<div class="wrapper callout">
 		<h2>Start free for 30 days now!</h2>
-		<span class="sprite button trial"></span>
+		<%= link_to "", new_user_registration_url, :title => "Register and download a free 30 day trial of Ticker", :class => "sprite button trial" %>
 	</div>
 	<div class="rule"></div>
 	
@@ -20,12 +20,12 @@
 			<p><span class="title">Pricing</span>- $5 per employee, per month. That’s it!</p>
 			<p><span class="title">Whats included in your account</span>
 				<ul>
-					<li>- 30 Day free trial</li>
-					<li>- Ticker application, free</li>
-					<li>- Administration panel access, free</li>
-					<li>- Instant unlimited data backup, free</li>
-					<li>- Add unlimited companies, free</li>
-					<li>- Invite unlimited company administrators, free</li>
+					<li>- Free 30 Day trial</li>
+					<li>- Free ticker application</li>
+					<li>- Free administration panel access</li>
+					<li>- Free instant unlimited data backup</li>
+					<li>- Free managing of unlimited companies</li>
+					<li>- Free unlimited number of administrators</li>
 				</ul>
 			</p>
 		</div>

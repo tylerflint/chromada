@@ -1,5 +1,4 @@
 	
 <%= link_to "", root_url, :class => "sprite admin logo" %>
 
-<p class="welcome">Welcome to your Chromada administration panel. <a href="<%= destroy_user_session_url %>">Logout</a></p>
-<div class="rule"></div>
+<p class="welcome">Welcome to your Chromada administration panel. <%= link_to "Logout", destroy_user_session_url %></p>

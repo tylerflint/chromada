@@ -1,19 +1,19 @@
-<div class='column full'>
-	<div class='nav select company'>
+<div class="column full">
+	<div class="nav select company">
 		<% if (@company && !@company.new_record?) %>
-			<h2 class='heading'><a href='<%= url_for([:admin, @company, :dashboard]) %>'><%= @company.name %><span class='arrow'></span></a></h2>
-			<a class="" onclick="toggle()">Switch Company</a>
+			<h2 class="heading"><a href="<%= url_for([:admin, @company, :dashboard]) %>"><%= @company.name %><span class="arrow"></span></a></h2>
+			<span class="sprite button toggle"><a href="#link" onclick="toggle()">Switch Company</a></span>
 			
 			<div class="wrapper">
 				<ul class="list companies">
 					<% current_user.companies.only(:name).asc(:name).each do |c| %>
 						<% if (c!=@company) %>
-							<li><a href='<%= url_for([:admin, c, :dashboard]) %>'><%= c.name %><span class='arrow'></span></a></li>
+							<li><a href="<%= url_for([:admin, c, :dashboard]) %>"><%= c.name %><span class="arrow"></span></a></li>
 						<% end %>
 					<% end %>
 				
-					<li class='last' title=''>
-						<a href='#link' class='add' title="Add New">Add New Company<span class='admin-button add'></span></a>
+					<li class="last" title="">
+						<a href="#link" class="add" title="Add New">Add New Company<span class="sprite button add"></span></a>
 					</li>
 				</ul>
 			</div>

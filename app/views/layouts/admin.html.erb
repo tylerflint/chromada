@@ -46,6 +46,7 @@
 			<div class='page'>
 				<div class='header'>
 					<%= render :partial => 'admin/shared/header' %>
+					<div class="rule"></div>
 				</div>
 				
 				<div class='body'>
@@ -62,11 +63,11 @@
 						<%= yield %>
 					</div>
 				</div>
+				
+				<div class='footer'>
+					<%= render :partial => 'shared/footer' %>
+				</div>
 			</div>			
-		</div>
-		
-		<div class='footer'>
-			<%= render :partial => 'shared/footer' %>
 		</div>
 		
 		<!-- BEGIN OLARK -->
