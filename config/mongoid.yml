@@ -19,11 +19,11 @@ test:
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  host: flame.mongohq.com
-  port: 27036
-  username: root
-  password: root
   database: chromada
+  # host: flame.mongohq.com
+  # port: 27036
+  # username: root
+  # password: root
   # host: <%= ENV['MONGOID_HOST'] %>
   # port: <%= ENV['MONGOID_PORT'] %>
   # username: <%= ENV['MONGOID_USERNAME'] %>
