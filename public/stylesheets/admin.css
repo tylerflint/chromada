@@ -104,10 +104,10 @@
 .admin .column.right .dashboard.content  .heading			{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
 
 .admin .arrow 												{float:right; width:10px; height:15px; margin:6px 11px 0px 0px; background:url('../images/chromada.png') no-repeat 0px -125px;}
-.admin .arrow.small 										{}
-.admin .arrow.medium 										{}
-.admin .arrow.large 										{}
-.admin .arrow.toggle 										{}
+.admin .arrow.up 											{}
+.admin .arrow.right 										{}
+.admin .arrow.down 											{}
+.admin .arrow.left 											{}
                                                         	
 /**** COMPANY *****/                                    	
 .content.company 											{float:left; font-size:15px; color:#4C4C4C; border-top:1px solid #989898; border-bottom:1px solid #989898;}
