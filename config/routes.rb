@@ -3,7 +3,7 @@ Chromada::Application.routes.draw do
   root :to => "static#index"
   
   # sinatra app for quick deploys via post-receive-hooks
-  post "/deploy" => GitDeployApp
+  match "/deploy" => GitDeployApp
   
   devise_for :users,
     # :path => "/",
