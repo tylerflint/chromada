@@ -18,8 +18,8 @@ Chromada::Application.routes.draw do
   match "privacy"     => "static#privacy",      :as => "privacy"
   match "terms"       => "static#terms",        :as => "terms"
   
-  # namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
-  namespace :admin, :path => "admin" do
+  namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
+  # namespace :admin, :path => "admin" do
     root :to                                    => "admin#dashboard"
     match "dashboard"                           => "admin#dashboard",     :as => "dashboard"
     match "companies/:id/dashboard"             => "companies#dashboard", :as => "company_dashboard"
