@@ -3,7 +3,10 @@ require 'sinatra'
 class GitDeployApp < Sinatra::Base
 
   get '/deploy' do
-    Dir.pwd
+    `git pull`
+    `bundle install`
+    `service chromada reload`
+    "ok"
     # %{
     #   <form method="post" action="/deploy">
     #     <input type="text" name="payload" />
