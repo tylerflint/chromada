@@ -6,7 +6,7 @@ class GitDeployApp < Sinatra::Base
     `git pull`
     `bundle install`
     `service chromada reload`
-    "ok"
+    "okie dokey"
     # %{
     #   <form method="post" action="/deploy">
     #     <input type="text" name="payload" />
