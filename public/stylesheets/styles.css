@@ -176,9 +176,3 @@ label.error													{display:none !important;}
 
 .divise .wrapper.actions .wrapper.links 					{float:right; width:200px; font-size:12px;}
 .divise .wrapper.actions .wrapper.links .link				{float:right;}
-
-.divise.register 											{width:560px; margin:0 auto;}
-.divise.register .icon 										{float:left; width:66px; height:61px;}
-.divise.register .rule 										{float:left; width:100%; height:1px; background:#D5D5D5;}
-.divise.register .header 									{float:left; width:162px; height:26px; background-position:-316px -38px;}
-.divise.register .logo	 									{float:left; width:116px; height:23px; background-position:-85px -19px;}
