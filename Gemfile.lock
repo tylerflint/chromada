@@ -93,7 +93,11 @@ GEM
       rspec-expectations (~> 2.0.1)
     rspec-rails (2.0.1)
       rspec (~> 2.0.0)
+    sinatra (1.1.0)
+      rack (~> 1.1)
+      tilt (~> 1.1)
     thor (0.14.6)
+    tilt (1.1)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
@@ -119,4 +123,5 @@ DEPENDENCIES
   rails
   rails3-generators
   rspec-rails (~> 2.0.1)
+  sinatra
   unicorn
