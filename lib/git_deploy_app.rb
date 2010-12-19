@@ -3,7 +3,7 @@ require 'sinatra'
 class GitDeployApp < Sinatra::Base
 
   get '/deploy' do
-    "test"
+    "I freakin deployed!"
   end
 
   post '/deploy' do
