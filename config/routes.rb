@@ -1,5 +1,7 @@
 Chromada::Application.routes.draw do
   
+  scope "", :protocol => 'http'
+  
   root :to => "static#index", :protocol => 'http'
   
   # sinatra app for quick deploys via post-receive-hooks
