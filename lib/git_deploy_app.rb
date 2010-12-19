@@ -3,22 +3,15 @@ require 'sinatra'
 class GitDeployApp < Sinatra::Base
 
   get '/deploy' do
-    `git pull`
-    `bundle install`
-    `service chromada reload`
-    "okie dokey"
-    # %{
-    #   <form method="post" action="/deploy">
-    #     <input type="text" name="payload" />
-    #     <input type="submit" value="Submit" />
-    #   </form>
-    # }
+    "test"
   end
 
   post '/deploy' do
     push = JSON.parse(params[:payload])
     if push["ref"] == "refs/heads/deploy"
-      
+      `git pull`
+      `bundle install`
+      `service chromada reload`
     end
   end
 
