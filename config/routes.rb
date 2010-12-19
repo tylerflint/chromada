@@ -1,6 +1,6 @@
 Chromada::Application.routes.draw do
   
-  root :to => "static#index"
+  root :to => "static#index", :protocol => 'http'
   
   # sinatra app for quick deploys via post-receive-hooks
   match "/deploy" => GitDeployApp
@@ -19,7 +19,6 @@ Chromada::Application.routes.draw do
   match "terms"       => "static#terms",        :as => "terms"
   
   namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
-  # namespace :admin, :path => "admin" do
     root :to                                    => "admin#dashboard"
     match "dashboard"                           => "admin#dashboard",     :as => "dashboard"
     match "companies/:id/dashboard"             => "companies#dashboard", :as => "company_dashboard"
