@@ -2,10 +2,6 @@ require 'sinatra'
 
 class GitDeployApp < Sinatra::Base
 
-  get '/deploy' do
-    "I freakin deployed!"
-  end
-
   post '/deploy' do
     push = JSON.parse(params[:payload])
     if push["ref"] == "refs/heads/deploy"
