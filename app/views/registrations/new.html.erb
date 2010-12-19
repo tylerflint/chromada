@@ -1,5 +1,3 @@
-
-<!-- 
 <div class="divise register">
 	
 	<div class="header">
@@ -47,78 +45,6 @@
 			</div>
 		</div>
 	<% end %>
-</div>
--->
-
-<div class="divise register">
-	
-	<span class="sprite icon"></span>
-	
-	<span class="rule"></span>
-	
-	<span class="sprite header"></span>
-	<p class="message">Thanks for registering. Once you complete the form, start enjoying Ticker free for 30 days!</p>
-	
-	<div class="header">
-		<h2 class="title">User Profile Setup</h2>
-	</div>
-	
-	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>	
-		<div class="group form">
-			<%= label_tag "Name" %>
-			<%= form.text_field :firstname, :class => "first required name defaultInvalid", :value => "Type your name here" %><span class="status pass"></span>
-		</div>
-		<div class="group form">
-			<%= label_tag "Email" %>
-			<%= form.text_field :email, :class => "required email defaultInvalid", :value => "Type your email here" %><span class="status pass"></span>
-		</div>
-		<div class="group form">
-			<%= label_tag "Username" %>
-			<%= form.text_field :username, :class => "required username defaultInvalid", :value => "Choose a name that others will see" %><span class="status fail"></span>
-		</div>
-		<div class="group form">
-			<%= label_tag "Password" %>
-			<%= form.password_field :password, :class => "required password", :value => "", :autocomplete => "off", :value => "Type your password" %><span class="status pass"></span>
-		</div>
-		<div class="group form">
-			<%= label_tag "Confirm Password" %>
-			<%= form.password_field :password_confirmation, :class => "required password", :value => "", :autocomplete => "off", :value => "Retype your password" %><span class="status pass"></span>
-		</div>
-	<% end %>
-	
-	<div class="header">
-		<h2 class="title">Company Setup</h2>
-	</div>
-	
-	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>	
-		<div class="group form">
-			<%= label_tag "Company Name" %>
-			<%= form.text_field :firstname, :class => "first required name defaultInvalid", :value => "Type your company name here" %><span class="status pass"></span>
-		</div>
-		<div class="group form">
-			<%= label_tag "Invite Others!" %>
-			<%= form.text_field :email, :class => "required email defaultInvalid", :value => "Add emails here to invite new administrators" %><span class="status pass"></span>
-		</div>
-		
-		<div class="alert" style="">
-			<% resource.errors.full_messages.each do |message| %>
-				<%= message %>
-			<% end %>
-		</div>
-		
-		<div class="wrapper actions">
-			<span class="sprite button submit"><%= form.submit "login", :value => "Submit" %></span>
-			<span class="sprite button cancel"><%= form.submit "login", :value => "Cancel" %></span>
-			<div class="wrapper links">
-				<span class="link">Already Registered? <%= link_to "Login Here", new_session_path(resource_name) %></span>
-			</div>
-		</div>
-	<% end %>
-	
-	<span class="rule"></span>
-	
-	<span class="sprite logo"></span>
-	
 </div>
 
 <script type="text/javascript">

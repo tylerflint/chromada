@@ -59,9 +59,9 @@
 .admin .column.left ul.nav li a	 							{float:left; width:100%; padding:14px 0px 12px 0px; border-bottom:1px solid #989898; color:#4C4C4C; font-size:19px; font-weight:bold;}
 .admin .column.left ul.nav li a:hover 						{color:#01DBDB;}
 .admin .column.left ul.nav li a.active						{color:#87D8D8;}
-.admin .column.left ul.nav li a .arrow	 					{float:right; width:10px; height:15px; margin:5px 12px 0px 0px; background:url('../images/chromada.png') no-repeat 0px -110px;}
-.admin .column.left ul.nav li a:hover .arrow	 			{background-position:0px -80px;}
-.admin .column.left ul.nav li a.active .arrow	 			{background-position:0px -95px;}
+.admin .column.left ul.nav li a .arrow	 					{float:right; width:10px; height:14px; margin:5px 12px 0px 0px; background:url('../images/chromada.png') no-repeat -288px -172px;}
+.admin .column.left ul.nav li a:hover .arrow	 			{background-position:-288px -142px;}
+.admin .column.left ul.nav li a.active .arrow	 			{background-position:-288px -157px;}
 .admin .column.left ul.nav li a.add							{color:#0EDF58;}
 .admin .column.left ul.nav li a.add:hover					{color:#00CA13;}
 .admin .column.left ul.nav.company							{float:left; width:100%; border-top:1px solid #989898;}
@@ -102,6 +102,12 @@
 .admin .column.right .dashboard.content 					{float:left; color:#4C4C4C;}
 .admin .column.right .dashboard.content  li					{float:left; width:100%; height:100px; background:url("../images/rule.gif") repeat-x 0px 0px; margin:0px 0px 25px 0px; padding:5px 0px 0px 0px;}
 .admin .column.right .dashboard.content  .heading			{float:left; width:100%; margin:0px 0px 8px 0px; font-size:15px; font-weight:normal; text-transform:capitalize;}
+
+.admin .arrow 												{float:right; width:10px; height:15px; margin:6px 11px 0px 0px; background:url('../images/chromada.png') no-repeat 0px -125px;}
+.admin .arrow.small 										{}
+.admin .arrow.medium 										{}
+.admin .arrow.large 										{}
+.admin .arrow.toggle 										{}
                                                         	
 /**** COMPANY *****/                                    	
 .content.company 											{float:left; font-size:15px; color:#4C4C4C; border-top:1px solid #989898; border-bottom:1px solid #989898;}
