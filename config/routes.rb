@@ -2,6 +2,9 @@ Chromada::Application.routes.draw do
   
   root :to => "static#index"
   
+  # sinatra app for quick deploys via post-receive-hooks
+  post "/deploy" => GitDeployApp
+  
   devise_for :users,
     # :path => "/",
     :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, 

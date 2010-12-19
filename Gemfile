@@ -1,6 +1,7 @@
 source :gemcutter
 
 gem 'rails'
+gem 'sinatra'
 gem 'haml'
 gem "devise"
 gem "mongoid", "2.0.0.beta.19"
