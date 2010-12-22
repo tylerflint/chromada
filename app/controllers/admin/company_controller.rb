@@ -9,7 +9,7 @@ class Admin::CompanyController < Admin::AdminController
       @company = current_user.companies.find(params[:company_id])
     rescue ActiveRecord::RecordNotFound
       flash[:error] = "Invalid company"
-      redirect_to admin_dashboard_url
+      redirect_to admin_root_url
     end
   end
   

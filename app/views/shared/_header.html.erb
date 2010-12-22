@@ -2,7 +2,7 @@
 <%= link_to "", root_url, :class => "sprite logo" %>
 
 <%if user_signed_in? %>
-	<%= link_to "", admin_dashboard_url, :class => "sprite button dashboard" %>
+	<%= link_to "", admin_root_url, :class => "sprite button dashboard" %>
 <% else %>
 	<%= link_to "", new_user_registration_url, :class => "sprite button register"%>
 <% end %>
