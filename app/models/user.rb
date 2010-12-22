@@ -31,7 +31,7 @@ class User
   validates_uniqueness_of :email
   
   def name
-    self.username
+    self.email
   end
   
   def set_permissions(company, permission_ids)
