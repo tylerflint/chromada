@@ -2,15 +2,8 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
   
-  field :firstname
-  field :lastname
-  field :username
   field :email
-  
-  index :firstname
-  index :lastname
   index :email
-  index :username
 
   references_many \
     :permissions, 
@@ -31,14 +24,14 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :username, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation
   
-  validates_presence_of :username, :email
+  validates_presence_of :email
   validates_presence_of :password, :on => :create
-  validates_uniqueness_of :username, :email
+  validates_uniqueness_of :email
   
   def name
-    self.username
+    self.email
   end
   
   def set_permissions(company, permission_ids)
