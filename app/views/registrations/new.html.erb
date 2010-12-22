@@ -6,27 +6,9 @@
 	</div>
 	
 	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |form| %>	
-		
-		<div class="group header">
-			<h2 class="title">User Setup</h2>
-			<p class="message">Fill out the form below to set up your user profile.</p>
-		</div>
-		
-		<div class="group form">
-			<%= label_tag "First Name" %>
-			<%= form.text_field :firstname, :class => "first required name defaultInvalid" %><span class="status pass"></span>
-		</div>
-		<div class="group form">
-			<%= label_tag "Last Name" %>
-			<%= form.text_field :lastname, :class => "required name defaultInvalid" %><span class="status pass"></span>
-		</div>
 		<div class="group form">
 			<%= label_tag "Email Address" %>
-			<%= form.text_field :email, :class => "required email defaultInvalid" %><span class="status pass"></span>
-		</div>
-		<div class="group form">
-			<%= label_tag "User Name" %>
-			<%= form.text_field :username, :class => "required username defaultInvalid" %><span class="status fail"></span>
+			<%= form.text_field :email, :class => "first required email defaultInvalid" %><span class="status pass"></span>
 		</div>
 		<div class="group form">
 			<%= label_tag "Password" %>
@@ -34,21 +16,6 @@
 		</div>
 		<div class="group form">
 			<%= label_tag "Confirm Password" %>
-			<%= form.password_field :password_confirmation, :class => "required password", :value => "", :autocomplete => "off" %><span class="status pass"></span>
-		</div>
-		
-		<div class="group header">
-			<h2 class="title">Company Setup</h2>
-			<p class="message">Fill out the form below to create your first company! Otherwise, if your just here to collaborate with someone else, just <a href="#link">skip this step</a>.</p>
-		</div>
-		
-		<div class="group form">
-			<%= label_tag "Company Name" %>
-			<%= form.password_field :password_confirmation, :class => "required password", :value => "", :autocomplete => "off" %><span class="status pass"></span>
-		</div>
-		
-		<div class="group form">
-			<%= label_tag "Send an Invite" %>
 			<%= form.password_field :password_confirmation, :class => "required password", :value => "", :autocomplete => "off" %><span class="status pass"></span>
 		</div>
 		
