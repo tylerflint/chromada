@@ -2,15 +2,15 @@
 	<ul class="list <%= p.object_label_plural.downcase %>">
 		<li class="first search" title="Search <%= p.object_label_plural.capitalize %> List"><span class="admin-sprite icon"></span><input id="search-filter" value="Search <%= p.object_label_plural.capitalize %>" onfocus="if(this.value=='Search <%= p.object_label_plural.capitalize %>')value=''" onblur="if(this.value=='')this.value='Search <%= p.object_label_plural.capitalize %>'"/>
 			<div class='actions-bar'>
-				<a href="<%= url_for [:new, :admin, @company, p.object] %>" title="Add New <%= p.object_label_plural %>" class="admin-button add"></a>
-				<a href="#link" title="Enables [Item] Removal" class="admin-button remove" onclick="toggleRemove()"></a>
+				<a href="<%= url_for [:new, :admin, @company, p.object] %>" title="Add New <%= p.object_label_plural %>" class="sprite add"></a>
+				<a href="#link" title="Enables [Item] Removal" class="sprite remove" onclick="toggleRemove()"></a>
 			</div>
 		</li>
 		<div class="results">
 			<%= p.list %>
 		</div>
 		
-		<li class="last"><a href="<%= url_for [:new, :admin, @company, p.object] %>" class="add" title="Add New">Add New <%= p.object_label %><span class="admin-button add"></span></a></li>
+		<li class="last"><a href="<%= url_for [:new, :admin, @company, p.object] %>" class="add" title="Add New">Add New <%= p.object_label %><span class="sprite add"></span></a></li>
 	</ul>
 </div>
 
