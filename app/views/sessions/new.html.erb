@@ -8,7 +8,7 @@
 	
 	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form| %>		
 		<div class="group form">
-			<%= label_tag "Login (Email)" %>
+			<%= label_tag "Email" %>
 			<%= form.text_field :username, :class => "first required username defaultInvalid" %><span class="status pass"></span>
 		</div>
 		<div class="group form">
