@@ -23,7 +23,7 @@
 			<% if ( may_i?('permissions') ) %>
 				<li><a href='<%= url_for([:admin, @company, :permissions]) %>' <% if (active == :permissions) %>class="active"<% end %>>Permissions<span class='arrow'></span></a></li>
 			<% end %>
-			<li><a href='#link' class="add new">View [Additional] Products<span class='arrow'></span></a></li>
+			<li><a href='#link' class="add new">View [Additional] Products<span class='arrow add'></span></a></li>
 		</ul>
 	
 		<ul class="nav product">

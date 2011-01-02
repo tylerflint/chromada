@@ -1,10 +1,12 @@
 <div class="column full">
 	<div class="nav select company">
 		<% if (@company && !@company.new_record?) %>
-			<h2 class="heading"><a href="<%= url_for([:admin, @company, :dashboard]) %>"><%= @company.name %><span class="arrow"></span></a></h2>
-			<span class="sprite button toggle"><a href="#link" onclick="toggle()">Switch Company</a></span>
-			
 			<div class="wrapper">
+				<h2 class="heading"><a href="<%= url_for([:admin, @company, :dashboard]) %>"><%= @company.name %><span class="arrow"></span></a></h2>
+				<span class="sprite button toggle"><a href="#link" onclick="toggle()">Switch Company</a></span>
+			</div>
+			
+			<div class="wrapper last">
 				<ul class="list companies">
 					<% current_user.companies.only(:name).asc(:name).each do |c| %>
 						<% if (c!=@company) %>
@@ -12,8 +14,8 @@
 						<% end %>
 					<% end %>
 				
-					<li class="last" title="">
-						<a href="#link" class="add" title="Add New">Add New Company<span class="sprite button add"></span></a>
+					<li class="last">
+						<a href="<%= new_admin_company_url %>" class="add last" title="Add New">Add New Company<span class="sprite button add"></span></a>
 					</li>
 				</ul>
 			</div>
@@ -24,9 +26,11 @@
 </div>
 
 <script type="text/javascript">
-	
-	$(".list.companies").css({"margin-top": 0 - $(".list.companies").outerHeight() + "px"});
 
+	$(document).ready(function() {
+	   $(".list.companies").css({"margin-top": 0 - $(".list.companies").outerHeight() + "px"});
+	});
+	
 	var isOpen = false;
 	function toggle()
 	{
