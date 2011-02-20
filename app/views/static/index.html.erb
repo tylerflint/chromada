@@ -7,7 +7,7 @@
 
 <script type="text/javascript">
 	//<![CDATA[
-		function goToAnchor(anchor){
+		function goToAnchor(anchor, link){
 			$(".section.gutter.nav").fadeOut();
 			$("html, body").delay(250).animate({scrollTop: $(anchor).offset().top}, 1000, 'easeInOutExpo', function(){
 				if (anchor != "#home"){
