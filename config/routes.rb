@@ -11,13 +11,8 @@ Chromada::Application.routes.draw do
     :controllers => { :sessions => "sessions", :registrations => 'registrations' }
 
   scope "", :protocol => 'http' do
-    match "products"    => "static#products",     :as => "products"
-    match "how"         => "static#how",          :as => "how"      
-    match "pricing"     => "static#pricing",      :as => "pricing"
-    match "contact"     => "static#contact",      :as => "contact"                                        
-    match "feedback"    => "static#feedback",     :as => "feedback"
-    match "privacy"     => "static#privacy",      :as => "privacy"
-    match "terms"       => "static#terms",        :as => "terms"
+    match "privacy-policy" => "static#privacy"
+    match "terms-of-use" => "static#terms"
   end
   
   namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
