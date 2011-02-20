@@ -6,173 +6,70 @@ h1, h2, h3, h4, h5, h6										{margin:0; padding:0; outline:none; border:none;
                                                     		
 /* MAIN */      
 html 														{}                      		
-body 														{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif; font-size:12px;}
+body 														{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; color:#454851; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif; font-size:12px;}
                                                     		
 /* LISTS */                                         		
-ul, li														{list-style-image:none; list-style-type:none; list-style-position:outside;}
+ul, li														{list-style-image:none; list-style-position:outside;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
 a:hover														{text-decoration:none; color:#00D3D3;}
                                     		        		
 /* HEADERS */                                       		
-h1															{font-size:21px; color:#00D3D3;}                     		
-h2															{font-size:18px; color:#00D3D3;}
-h3															{font-size:17px;}
+h1, h2, h3, h4, h5, h6 										{text-transform:uppercase;}
+h1															{}                     		
+h2															{font-size:12px;}
+h3															{font-size:12px;}
 h4, h5, h6													{font-size:10px;}
                                                     		
 /* FORM ELEMENTS */                                 		
-input														{float:left; padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
-textarea 													{float:left; padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
+input														{padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
+textarea 													{padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
 
-input.checkbox 												{float:left; width:15px !important; height:15px !important;}
-.checkbox label		 										{margin:4px 0px 0px 8px; padding:0px;}
-                                                    		
-/* validation */                                    		
-label.error													{display:none !important;}
-                                                    		
-/* MESSAGING */
-.alert 														{float:left; padding:5px; color:#FFFFFF;}
+.clear 														{clear:both;}
 
-/* DIVIDERS */
-.pipe 														{float:left; width:1px; background:#D5D5D5; margin:0px 7px;}
-
-/* TESTING */
-.todo 														{float:left; color:#FF0000;}
-                                          	
 /************************************************** MAIN ELEMENT STYLES **************************************************/
+
+.rule 														{display:block;}
+.rule.thin 													{width:100%; height:1px; background:#454851;}
+.rule.thick 												{width:100%; height:5px; background:#454851;}
                                                     	
-/***** SPRITES *****/                               	
-.sprite							 							{float:left; background:url('../images/chromada.png') no-repeat 0px 0px;}
-                                                    		
-/***** BUTTONS *****/
-.button 													{border:none; cursor:pointer;}
-
-.button.register			 								{float:right; width:220px; height:30px; margin:0px 3px 0px 0px; background-position:-1px -67px;}
-.button.dashboard	 										{float:right; width:150px; height:30px; background-position:-222px -67px;}
-.button.login 												{float:right; width:32px; height:12px; background-position:-203px -38px;}
-.button.logout	 											{float:right; width:40px; height:12px; background-position:-203px -49px;}
-.button.trial	 											{width:164px; height:51px; background-position:-1px -201px;}
-
-.button.register:hover										{background-position:-1px -98px;}
-.button.dashboard:hover 									{background-position:-222px -98px;}
-.button.trial:hover											{background-position:-1px -253px;}
-
 /***** LAYOUT *****/
 .page.wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
 .page														{margin:0 auto; width:945px; padding:10px 0px; overflow:hidden;}
-.page .body													{float:left; width:100%; margin:20px 0px 32px 0px;}
+.page .body													{position:relative; width:100%; margin:20px 0px 32px 0px;}
+
+.nav.panel 													{float:right; list-style-type:none;}
+.nav.panel .link 											{float:left; margin:25px 0px; margin-right:25px; color:#ADB1BD; text-transform:uppercase; font-weight:bold;}
+.nav.panel .link.last 										{margin-right:0px;}
+.nav.panel .link a 											{color:#ADB1BD;}
                                                     		
 /***** HEADER ******/                               		
 .header														{}
-.header .rule												{float:left; width:100%; height:1px; background:#D5D5D5;}
-.header .logo												{width:202px; height:67px; margin:16px 0px 0px 32px;}
-.header .wrapper.dashboard									{float:right; margin:3px 0px 0px 0px;}
-                                                    		
-/* header nav */
-.header .nav 												{float:left; width:100%; margin:35px 0px 0px 0px;}
-.header .nav .link 											{float:left; margin:4px 0px 4px 4px;}                        	    	
-.header .nav .link a	 									{float:left; width:50px; height:12px; background:url('../images/chromada.png') no-repeat 0px 0px;}
-
-.header .nav .link a.products 								{width:65px; background-position:-202px -25px;}
-.header .nav .link a.how									{width:84px; background-position:-271px -25px;}
-.header .nav .link a.pricing 								{width:52px; background-position:-359px -25px;}
-.header .nav .link a.contact 								{width:46px; background-position:-415px -25px;}
-                                                    		
-.header .nav .link a.products:hover 						{background-position:-202px -13px;}
-.header .nav .link a.how:hover								{background-position:-271px -13px;}
-.header .nav .link a.pricing:hover 							{background-position:-359px -13px;}
-.header .nav .link a.contact:hover 							{background-position:-415px -13px;}
-                                                    		
-.header .nav .link a.products.active 						{background-position:-202px -1px;}
-.header .nav .link a.how.active								{background-position:-271px -1px;}
-.header .nav .link a.pricing.active 						{background-position:-359px -1px;}
-.header .nav .link a.contact.active 						{background-position:-415px -1px;}
-
-.header .nav .dashboard 									{float:right; margin:5px 5px 0px 0px;}
-                                                    		
+.header .nav 												{}
+.header .rule 												{}      
+                                              		
 /***** FOOTER *****/                                		
 .footer 													{position:relative; width:940px; overflow:hidden;}
-.footer .rule												{float:left; width:100%; height:1px; background:#D5D5D5;}
-                                                        	
-/* footer nav */
-.footer .nav		 										{float:left; width:100%; margin:21px 0px 0px 2px;}
-.footer .nav .link 											{float:left; margin:9px 0px 0px 15px; font-weight:bold; letter-spacing:1px;}
-.footer .nav .link a 										{float:left;}
-.footer .nav .link a.active									{color:#00D3D3;}
-                               	    	
-.footer .nav .logo											{width:34px; height:34px; background-position:-1px -166px;}
-                                                    	
+.footer .rule												{width:100%; height:1px; background:#454851;}
+.footer .section.foot 										{clear:both; height:171px; color:#ADB1BD; background:#454851;}
+
 /************************************************** PAGES **************************************************/
 
 /* INDEX */
-.index 														{float:left;}
+.section.gutter.nav 										{position:absolute; top:0px; left:0px; width:130px;list-style-type:none;}
+.section.gutter.nav a										{color:#ADB1BD; text-transform:uppercase;}
+.section.gutter.nav .link 									{padding:10px 0px; border-bottom:1px solid #ADB1BD;}
+.section.gutter.nav .link.last 								{border:none;}
 
-/* spotlight */
-.spotlight.product.ticker 									{float:left;}
-.spotlight.product.ticker .wrapper.banner					{position:relative; width:944px; height:615px;}
-.spotlight.product.ticker .wrapper.banner .button.trial 	{position:absolute; right:97px; bottom:108px; }
-.spotlight h2 												{margin:37px 0px 25px 5px; font-size:35px; color:#333333;}
-.spotlight .column 											{float:left; width:300px; margin:0px 21px 0px 0px; color:#333333; font-size:14px; line-height:21px;}
-.spotlight .column.last										{margin:0px;}
-.spotlight .column img 										{margin:0px 0px 15px 0px;}
-.spotlight .column .title									{float:left; width:100%; color:#333333; font-size:14px; font-weight:bold;}
-.spotlight .column p										{margin:0px 0px 20px 0px; color:#444444;}
-.spotlight .column a										{color:#7bC5C5; text-decoration:underline;}
+.section.wrapper											{float:right; width:770px; padding:25px 0px;}
+.section.wrapper .headline.wrapper							{margin:25px 0px;}
+.section.wrapper .headline.wrapper .headline				{margin:15px 0px; font-size:18px;}
+.section.wrapper .section.column 							{float:left; width:240px; margin:0px 25px 0px 0px; line-height:21px;}
+.section.wrapper .section.column.last						{margin:0px;}
+.section.wrapper .section.column .heading 					{margin:0px 0px 15px 0px;}
 
-/* PRICING */
-.pricing 													{width:625px; margin:0 auto;}
+.section.wrapper.products .list 							{padding:0px 0px 0px 15px;}
 
-/* ticker */
-.pricing.product.ticker .rule 								{float:left; width:100%; height:2px; background:#D5D5D5;}
-
-.pricing.product.ticker .wrapper.banner						{float:left; margin:89px 0px 30px 0px;}
-.pricing.product.ticker .wrapper.banner .button.trial 		{float:right;}
-
-.pricing.product.ticker .wrapper.callout					{float:left; width:100%; padding:20px 0px;}
-.pricing.product.ticker .wrapper.callout .button.trial 		{float:right;}
-.pricing.product.ticker .wrapper.callout h2					{float:left; color:#333333; font-size:35px;}
-
-.pricing.product.ticker .wrapper.content 					{float:left; margin:32px 0px 104px 0px;}
-.pricing.product.ticker .wrapper.content .column 			{float:left; width:300px; margin:0px 21px 0px 0px; color:#333333; font-size:14px; line-height:21px;}
-.pricing.product.ticker .wrapper.content .column.last		{margin:0px;}
-.pricing.product.ticker .wrapper.content .column .title		{float:left; width:100%; color:#333333; font-size:14px; font-weight:bold;}
-.pricing.product.ticker .wrapper.content .column p			{margin:0px 0px 20px 0px; color:#444444;}
-.pricing.product.ticker .wrapper.content .column a			{color:#7BC5C5; text-decoration:underline;}
-                                                   	
-/***** DIVISE (Register, Login, Password, Contact) *****/                               	
-.divise 													{float:left; margin:0; width:100%;}
-
-.divise .header												{float:right; width:621px; margin:20px 0px;}
-.divise .header .title										{margin:0px 0px 18px 0px; font-size:35px; color:#4C4C4C;}
-.divise .header .message									{color:#444444; font-size:20px;}
-
-.divise .alert 												{float:right; width:624px; margin:18px 0px; padding:0px; color:#E76262; font-size:24px; background:none;}
-
-.divise form												{float:right; width:865px;}
-.divise form .status										{position:absolute; top:25px; right:10px; width:26px; height:26px; background:url('../images/chromada.png') no-repeat 0px 0px;}
-.divise form .status.pass									{background-position:-267px -38px;}
-.divise form .status.fail									{background-position:-243px -38px;}
-
-.divise form .group.form									{float:left; position:relative; width:100%;}
-.divise form .group.form label 								{float:left; width:200px; padding:17px 0px; color:#333333; font-size:24px; font-weight:bold; text-align:right;}
-.divise form .group.form input								{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
-.divise form .group.form textarea							{float:right; width:614px; padding:17px 5px; border:none; border-bottom:1px solid #CACACA; font-size:30px; color:#C9C9C9;}
-.divise form .group.form input.first						{border-top:1px solid #CACACA;}
-.divise form .group.form input.error 						{color:#DA3C3C;}
-
-.divise .wrapper.actions 									{float:right; width:624px; margin:14px 0px 0px 0px;}
-.divise .wrapper.actions input 								{background:none; border:none; font-size:24px;}
-
-.divise .wrapper.actions .submit							{width:29px; height:28px; margin:0px 90px 0px 0px; padding:0px; background-position:-189px -135px;}
-.divise .wrapper.actions .submit:hover						{background-position:-189px -163px;}
-.divise .wrapper.actions .submit input 						{float:left; margin:-2px 0px 0px 0px; padding:0px 0px 0px 32px; color:#2BCA12; cursor:pointer;}
-.divise .wrapper.actions .submit:hover input 				{color:#0EDF58;}
-
-.divise .wrapper.actions .cancel							{width:29px; height:28px; margin:0px 8px 0px 0px; padding:0px; background-position:-219px -163px;}
-.divise .wrapper.actions .cancel:hover						{background-position:-219px -135px;}
-.divise .wrapper.actions .cancel input 						{float:left; margin:-2px 0px 0px 0px; padding:0px 0px 0px 32px; color:#FE6022; cursor:pointer;}
-.divise .wrapper.actions .cancel:hover input 				{color:#FD3D00;}
-
-.divise .wrapper.actions .wrapper.links 					{float:right; width:200px; font-size:12px;}
-.divise .wrapper.actions .wrapper.links .link				{float:right;}
+.section.title 												{clear:both;}
+.section.title .heading										{margin:15px 0px;}

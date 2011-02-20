@@ -1,26 +1,145 @@
+<ul class="section gutter nav">
+	<li class="link"><a href="#link" onclick="goToAnchor('#products')">our products</a></li>
+	<li class="link"><a href="#link" onclick="goToAnchor('#how-it-works')">how it works</a></li>
+	<li class="link last"><a href="#link" onclick="goToAnchor('#contact-us')">contact us</a></li>
+</ul>
 
-<div class='index'>
-	<div class="spotlight product ticker">
-		<div class="wrapper banner">
-			<%= image_tag "spotlight/ticker.gif", :alt => "Ticker - $5 per employee/month", :title => "Ticker is only $5 per employee/month!", :size => "944x615" %>
-			<%= link_to "", new_user_registration_url, :title => "Register and download a free 30 day trial of Ticker", :class => "sprite button trial" %>
+<script type="text/javascript">
+	//<![CDATA[
+		function goToAnchor(anchor){
+			$(".section.gutter.nav").fadeOut();
+			$("html, body").delay(250).animate({scrollTop: $(anchor).offset().top}, 1000, 'easeInOutExpo', function(){$(".section.gutter.nav").fadeIn()});
+		}
+	//]]>
+</script>
+
+
+<div class="section chromada wrapper">
+	<img src="images/site/banners/chromada.gif" width="770" height="368" class="banner" />
+	
+	<div class="wrapper headline">
+		<span class="rule thin"></span>
+		<p class="headline">Welcome to Chromada. We design and build web base software to keep your business organized, efficient, and profitable.</p>
+		<span class="rule thin"></span>
+	</div>
+
+	<div class="section">
+		<div class="section column">
+			<a href="#link" onclick="goToAnchor('#products')">
+				<img src="images/site/products_link.gif" width="240" height="110" />
+				<h3>see our products</h3>
+			</a>
 		</div>
-		
-		<h2>We think Ticker speaks for itself.</h2>
-		<div class="column">
-			<%= link_to(image_tag("spotlight/feature_1.jpg", {:alt => "Ticker - Pricing plan", :title => "Ticker is only $5 per employee/month!", :mouseover => "spotlight/feature_hover_1.jpg"}), pricing_url) %>
-			<%= link_to(image_tag("spotlight/feature_2.jpg", {:alt => "Ticker - How it works", :title => "Click here to see how easy it is to use Ticker!", :mouseover => "spotlight/feature_hover_2.jpg"}), how_url) %>
+		<div class="section column">
+			<a href="#link" onclick="goToAnchor('#how-it-works')">
+				<img src="images/site/how_it_works_link.gif" width="240" height="110" />
+				<h3>learn how it works</h3>
+			</a>
 		</div>
-		<div class="column">
-			<p>Simple tasks are often the most time consuming, unorganized, and unmeasured details of a business. Ticker offers intuitive web-based, mobile, and desktop tools to give you an unprecedented level of control of your business.</p>
-			<p><span class="title">Simplicity</span>The beauty of Ticker is how simple it is to use. All your employees need to do is clock in and out. We take care of boring stuff like system backup, and compiling time punch summary info.</p>
-			<p><span class="title">Access Online or Offline</span>Ticker is web based. However, an internet connection is not necessary to use Ticker. How? Ticker is built into an air application that stores all information internally and then uploads any new data the next time you connect to the internet.</p>
-			<p><span class="title">Print/Export</span>Ah the frustrations of file exporting. We aim to change that. All printed files are automatically formatted to 8.5 x 11. If you need to export work to another program we use .AAA, a widely supported format.</p>
+		<div class="section column last">
+			<a href="#link" onclick="goToAnchor('#contact-us')">
+				<img src="images/site/contact_us_link.gif" width="240" height="110" />
+				<h3>contact us</h3>
+			</a>
 		</div>
-		<div class="column last">
-			<p><span class="title">Administration Panel</span>What if someone enters an incorrect punch? The Administration Panel gives you full access to all current and past pay period info to quickly add/remove/edit anything you see fit.</p>
-			<p><span class="title">And Much More</span>See <%= link_to "How It Works", how_url, :title => "Click here to see how easy it is to use Ticker!" %> to learn about other features and benefits of Ticker. So why not give Ticker a try? Registration is fast, easy, and free. Sign up now to  try Ticker free for 30 days, no commitments. Give it a shot; we believe Ticker speaks for itself.</p>
-			<%= link_to "", new_user_registration_url, :title => "Register and download a free 30 day trial of Ticker", :class => "sprite button trial" %>
-		</div>
+	</div>
+</div>
+
+<div id="products" class="section title">
+	<div class="rule thick"></div>
+	<h2 class="heading">our products</h2>
+	<div class="rule thin"></div>
+</div>
+
+<div class="section products wrapper">
+	
+	<img src="images/site/banners/products.gif" width="770" height="443" class="banner" />
+	
+	<div class="wrapper headline">
+		<span class="rule thin"></span>
+		<p class="headline">Ticker is a simple web-based punch clock with a very powerful administrator tool set. Manage employees from anywhere, anytime.</p>
+		<span class="rule thin"></span>
+	</div>
+	
+	<div class="section column">
+		<h3 class="heading">overview</h3>
+		<p>With a progressive, streamlined, and minimal approach, Ticker gives you everything you need and nothing you don’t. Use Chromada’s equally sleek administration panel to review, edit, and print/export time sheets for your employees. Say goodbye to tedious data entry. The administration panel saves all</p>
+	</div>
+	<div class="section column">
+		<h3 class="heading">&nbsp</h3>
+		<p>your employee information and gives you the summaries you need. It also gives you the power to delegate, letting you invite other Chromada users to your company. You can then give these additional administrators permission to oversee and complete your assigned tasks. Try it out with our free <a href="#link">DEMO.</a></p>
+	</div>
+	<div class="section column last">
+		<h3 class="heading">summary</h3>
+		<ul class="list">
+			<li>$5 per employee, per month</li>
+			<li>Full administration panel access</li>
+			<li>Add users/permissions in admin panel</li>
+			<li>Automatic backup online or offline</li>
+			<li>Free unlimited scaling</li>
+			<li>No commitments, cancel whenever</li>
+			<li>Insanely simple!</li>
+		</ul>
+	</div>
+</div>
+
+<div id="how-it-works" class="section title">
+	<div class="rule thick"></div>
+	<h2 class="heading">how it works</h2>
+	<div class="rule thin"></div>
+</div>
+
+<div class="section how-it-works wrapper">
+	
+	<img src="images/site/banners/how_it_works.gif" width="770" height="286" class="banner" />
+	
+	<div class="wrapper headline">
+		<span class="rule thin"></span>
+		<p class="headline">All of our products revolve around and communicate through Chromada via web-based infrastructures. Result: simple and secure software.</p>
+		<span class="rule thin"></span>
+	</div>
+	
+	<div class="section column">
+		<img src="images/site/holder.gif" width="240" height="110" />
+		<h3 class="heading">web-based</h3>
+		<p>Chromada is built around a centralized web infrastructure. The benefits of this are unparalleled. You don’t need to worry about data backup. Security is no longer an issue; all data is 100% secure. Most importantly, a constant web connection is not required. All data is saved temporarily, and then automatically copied onto the web infrastructure the next moment your internet is available.</p>
+	</div>
+	<div class="section column">
+		<img src="images/site/holder.gif" width="240" height="110" />
+		<h3 class="heading">administrate</h3>
+		<p>Chromada’s administration panel is your hub to control your Chromada products. From here you have the ability to add/remove additional administrators, edit employees and all associated data. You have the power to create roles and permissions in order to grant different levels of control to your team of administrators. It works just like your business; delegation from the top down.</p>
+	</div>
+	<div class="section column last">
+		<img src="images/site/holder.gif" width="240" height="110" />
+		<h3 class="heading">cross-platform</h3>
+		<p>Our goal is to give you access to oversee your company whenever you want. Any device that has an internet connection makes this possible. Even your phone can become your destination for company management (coming soon). Our products and the administration interface are designed to save you time and money, letting you focus on more important business related tasks.</p>
+	</div>
+</div>
+
+<div id="contact-us" class="section title">
+	<div class="rule thick"></div>
+	<h2 class="heading">contact us</h2>
+	<div class="rule thin"></div>
+</div>
+
+<div class="section contact-us wrapper">
+	
+	<div class="wrapper headline">
+		<p class="headline">Thanks for visiting. We love what we do and want to continually improve. Please send any feedback or ideas that you have to make a good product better.</p>
+		<span class="rule thin"></span>
+	</div>
+	
+	<div class="section column">
+		<h3 class="heading">send us your thoughts</h3>
+		<form>
+		</form>
+	</div>
+	<div class="section column">
+		<h3 class="heading">a little about us</h3>
+		<p>Chromada was created in response to all the out-dated, over-priced, and stagnant business management solutions that currently dominate the workplace. We believe a better way exists. We also think others will agree!</p>
+	</div>
+	<div class="section column last">
+		<h3 class="heading">boring legal stuff</h3>
+		<p>Take a look at Chromada’s <a href="#link">Terms of Use</a> or our <a href="#link">Privacy Policy</a> if you have questions. Otherwise, use the form to the left to send us a message.</p>
 	</div>
 </div>

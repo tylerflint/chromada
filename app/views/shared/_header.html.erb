@@ -1,26 +1,2 @@
-	
-<%= link_to "", root_url, :class => "sprite logo" %>
-
-<%if user_signed_in? %>
-	<%= link_to "", admin_root_url, :class => "sprite button dashboard" %>
-<% else %>
-	<%= link_to "", new_user_registration_url, :class => "sprite button register"%>
-<% end %>
-	
-<!-- PRIMARY NAV -->
-<ul class="nav">
-	<div class="rule"></div>
-	<li class="link"><%= link_to "", products_url, 	 :class => (@active == "products") 	? "products active" : "products" %></li>
-	<li class="link"><%= link_to "", how_url, 		 :class => (@active == "how") 		? "how active" : "how" %></li>
-	<li class="link"><%= link_to "", pricing_url,	 :class => (@active == "pricing") 	? "pricing active" : "pricing" %></li>
-	<li class="link"><%= link_to "", contact_url,	 :class => (@active == "contact") 	? "contact active" : "contact" %></li>
-	<li class="dashboard">
-		<%if user_signed_in? %>
-			<%= link_to "", destroy_user_session_url, :class => "sprite button logout" %>
-		<% else %>
-			<%= link_to "", new_user_session_url, :class => "sprite button login" %>
-		<% end %>
-	</li>
-	<div class="rule"></div>
-</ul>
-
+<%= render :partial => 'shared/navigation' %>
+<div class="rule thick clear"></div>

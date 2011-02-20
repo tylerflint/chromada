@@ -1,9 +1,6 @@
-<!-- SECONDARY NAV -->
-<div class="rule"></div>
-<ul class="nav">
-	<li><%= link_to "", root_url, :class => "sprite logo" %></li>
-	<li class="link"><%= link_to "Terms of Use", 		terms_url,		:class => (@active == "terms") 		? "terms active" : "terms" %></li>
-	<li class="link"><%= link_to "Privacy Policy", 		privacy_url, 	:class => (@active == "privacy") 	? "privacy active" : "privacy" %></li>
-	<li class="link"><%= link_to "Send Feedback", 		contact_url, 	:class => (@active == "contact") 	? "contact active" : "contact" %></li>
-</ul>
-	
+<div class="rule thin"></div>
+<%= render :partial => 'shared/navigation' %>
+
+<div class="section foot">
+	(c) 2011 chromada inc all rights reserved
+</div>
