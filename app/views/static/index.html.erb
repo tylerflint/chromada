@@ -1,4 +1,5 @@
 <ul class="section gutter nav">
+	<li id="home-link" class="link" style="display:none;"><a href="#link" onclick="goToAnchor('#home')">home</a></li>
 	<li class="link"><a href="#link" onclick="goToAnchor('#products')">our products</a></li>
 	<li class="link"><a href="#link" onclick="goToAnchor('#how-it-works')">how it works</a></li>
 	<li class="link last"><a href="#link" onclick="goToAnchor('#contact-us')">contact us</a></li>
@@ -8,7 +9,22 @@
 	//<![CDATA[
 		function goToAnchor(anchor){
 			$(".section.gutter.nav").fadeOut();
-			$("html, body").delay(250).animate({scrollTop: $(anchor).offset().top}, 1000, 'easeInOutExpo', function(){$(".section.gutter.nav").fadeIn()});
+			$("html, body").delay(250).animate({scrollTop: $(anchor).offset().top}, 1000, 'easeInOutExpo', function(){
+				if (anchor != "#home"){
+					$("#home-link").show();
+					$(".section.gutter.nav").css("top", $(anchor).offset().top - $(anchor).height() + 12);
+				}else{
+					$("#home-link").hide();
+					$(".section.gutter.nav").css("top", 12);
+				};
+				
+				$(".section.gutter.nav li").each(function(){
+					$(this).removeClass("bold");
+				});
+				$(anchor).addClass("bold");
+				
+				$(".section.gutter.nav").fadeIn();
+			});
 		}
 	//]]>
 </script>
@@ -123,7 +139,6 @@
 </div>
 
 <div class="section contact-us wrapper">
-	
 	<div class="wrapper headline">
 		<p class="headline">Thanks for visiting. We love what we do and want to continually improve. Please send any feedback or ideas that you have to make a good product better.</p>
 		<span class="rule thin"></span>
