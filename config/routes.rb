@@ -1,20 +1,20 @@
 Chromada::Application.routes.draw do
   
-  root :to => "static#index", :protocol => 'http'
-  
   # sinatra app for quick deploys via post-receive-hooks
   match "/deploy" => GitDeployApp
   
-  devise_for :users,
-    # :path => "/",
-    :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, 
-    :controllers => { :sessions => "sessions", :registrations => 'registrations' }
-
+  root :to => "static#index", :protocol => 'http'
+  
   scope "", :protocol => 'http' do
     match "privacy-policy" => "static#privacy"
     match "terms-of-use" => "static#terms"
   end
   
+  # devise_for :users,
+  #     # :path => "/",
+  #     :path_names => { :sign_in => 'login', :sign_out => 'logout', :sign_up => 'signup' }, 
+  #     :controllers => { :sessions => "sessions", :registrations => 'registrations' }
+
   # namespace :admin, :path => "admin", :protocol => (Rails.env.production?)? 'https' : 'http'  do
   #     root :to                                    => "admin#index"
   #     match "companies/:id/dashboard"             => "companies#dashboard", :as => "company_dashboard"
