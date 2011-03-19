@@ -140,25 +140,6 @@
 
 <script type="text/javascript">
 	//<![CDATA[
-		function goToAnchor(anchor, link){
-			$(".section.gutter.nav").fadeOut();
-			$("html, body").delay(250).animate({scrollTop: $(anchor).offset().top}, 1000, 'easeInOutExpo', function(){
-				if (anchor != "#home"){
-					$("#home-link").show();
-					$(".section.gutter.nav").css("top", $(anchor).offset().top - $(anchor).height() + 12);
-				}else{
-					$("#home-link").hide();
-					$(".section.gutter.nav").css("top", 12);
-				};
-				
-				$(".section.gutter.nav").fadeIn();
-			});
-		}
-	//]]>
-</script>
-
-<script type="text/javascript">
-	//<![CDATA[
 		$(".section.gutter.nav li a").click(function(){
 			$(".section.gutter.nav li").each(function (){
 				$(this).removeClass("active");
@@ -179,21 +160,38 @@
 			return false;
 	    });
 	
-		$(window).scroll(function (){
-			if(Math.abs($("html, body").offset().top) >= $("#products").offset().top && Math.abs($("html, body").offset().top) <= $("#how-it-works").offset().top){
-				//$(".section.gutter.nav").fadeOut()
-				$(".section.gutter.nav").css("top", $("#products").offset().top);
-			}else if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top && Math.abs($("html, body").offset().top) <= $("#contact-us").offset().top){
-				//$(".section.gutter.nav").fadeOut()
-				$(".section.gutter.nav").css("top", $("#how-it-works").offset().top);
-			}else if(Math.abs($("html, body").offset().top) >= $("#contact-us").offset().top){
-				//$(".section.gutter.nav").fadeOut()
-				$(".section.gutter.nav").css("top", $("#contact-us").offset().top);
-			}else{
-				//$(".section.gutter.nav").fadeOut()
-				$(".section.gutter.nav").css("top", $("#home").offset().top);
-			}
-		});
+		$(".section .section.column a").click(function(){
+			
+			anchor = $(this).attr("href");
+		
+			$(".section.gutter.nav").fadeOut();
+			$("html, body").delay(250).animate(
+					{scrollTop: $(anchor).offset().top}
+					,1000
+					,'easeInOutExpo'
+					,function(){
+						$(".section.gutter.nav").css("top", $(anchor).offset().top);
+						$(".section.gutter.nav").fadeIn();
+					});
+					
+			return false;
+	    });
+	
+		// $(window).scroll(function (){
+		// 			if(Math.abs($("html, body").offset().top) >= $("#products").offset().top && Math.abs($("html, body").offset().top) <= $("#how-it-works").offset().top){
+		// 				//$(".section.gutter.nav").fadeOut()
+		// 				$(".section.gutter.nav").css("top", $("#products").offset().top);
+		// 			}else if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top && Math.abs($("html, body").offset().top) <= $("#contact-us").offset().top){
+		// 				//$(".section.gutter.nav").fadeOut()
+		// 				$(".section.gutter.nav").css("top", $("#how-it-works").offset().top);
+		// 			}else if(Math.abs($("html, body").offset().top) >= $("#contact-us").offset().top){
+		// 				//$(".section.gutter.nav").fadeOut()
+		// 				$(".section.gutter.nav").css("top", $("#contact-us").offset().top);
+		// 			}else{
+		// 				//$(".section.gutter.nav").fadeOut()
+		// 				$(".section.gutter.nav").css("top", $("#home").offset().top);
+		// 			}
+		// 		});
 	
 	//]]>
 </script>
