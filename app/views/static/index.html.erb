@@ -1,32 +1,12 @@
 <ul class="section gutter nav">
-	<li id="home-link" class="link" style="display:none;"><a href="#link" onclick="goToAnchor('#home')">home</a></li>
-	<li class="link"><a href="#link" onclick="goToAnchor('#products')">our products</a></li>
-	<li class="link"><a href="#link" onclick="goToAnchor('#how-it-works')">how it works</a></li>
-	<li class="link last"><a href="#link" onclick="goToAnchor('#contact-us')">contact us</a></li>
+	<li class="link active"><a href="#home">home</a></li>
+	<li class="link"><a href="#products">our products</a></li>
+	<li class="link"><a href="#how-it-works">how it works</a></li>
+	<li class="link last"><a href="#contact-us">contact us</a></li>
 </ul>
 
-<script type="text/javascript">
-	//<![CDATA[
-		function goToAnchor(anchor, link){
-			$(".section.gutter.nav").fadeOut();
-			$("html, body").delay(250).animate({scrollTop: $(anchor).offset().top}, 1000, 'easeInOutExpo', function(){
-				if (anchor != "#home"){
-					$("#home-link").show();
-					$(".section.gutter.nav").css("top", $(anchor).offset().top - $(anchor).height() + 12);
-				}else{
-					$("#home-link").hide();
-					$(".section.gutter.nav").css("top", 12);
-				};
-				
-				$(".section.gutter.nav").fadeIn();
-			});
-		}
-	//]]>
-</script>
-
-
 <div class="section chromada wrapper">
-	<img src="images/site/banners/chromada.gif" width="770" height="368" class="banner" />
+	<img src="images/site/home-1.jpg" width="770" height="368" class="banner" />
 	
 	<div class="wrapper headline">
 		<span class="rule thin"></span>
@@ -36,20 +16,20 @@
 
 	<div class="section">
 		<div class="section column">
-			<a href="#link" onclick="goToAnchor('#products')">
-				<img src="images/site/products_link.gif" width="240" height="110" />
+			<a href="#products">
+				<img src="images/site/home-2.jpg" width="240" height="108" />
 				<h3>see our products</h3>
 			</a>
 		</div>
 		<div class="section column">
-			<a href="#link" onclick="goToAnchor('#how-it-works')">
-				<img src="images/site/how_it_works_link.gif" width="240" height="110" />
+			<a href="#how-it-works">
+				<img src="images/site/home-3.jpg" width="240" height="108" />
 				<h3>learn how it works</h3>
 			</a>
 		</div>
 		<div class="section column last">
-			<a href="#link" onclick="goToAnchor('#contact-us')">
-				<img src="images/site/contact_us_link.gif" width="240" height="110" />
+			<a href="#contact-us">
+				<img src="images/site/home-4.jpg" width="240" height="108" />
 				<h3>contact us</h3>
 			</a>
 		</div>
@@ -62,9 +42,13 @@
 	<div class="rule thin"></div>
 </div>
 
-<div class="section products wrapper">
+<div class="section wrapper products">
 	
-	<img src="images/site/banners/products.gif" width="770" height="443" class="banner" />
+	<!--
+	<img src="images/site/products-1.jpg" width="770" height="443" class="banner" />
+	<img src="images/site/products-2.jpg" width="770" height="443" class="banner" />
+	-->
+	<img src="images/site/products-3.jpg" width="770" height="443" class="banner" />
 	
 	<div class="wrapper headline">
 		<span class="rule thin"></span>
@@ -100,9 +84,9 @@
 	<div class="rule thin"></div>
 </div>
 
-<div class="section how-it-works wrapper">
+<div class="section wrapper how-it-works">
 	
-	<img src="images/site/banners/how_it_works.gif" width="770" height="286" class="banner" />
+	<img src="images/site/howitworks-1.jpg" width="770" height="286" class="banner" />
 	
 	<div class="wrapper headline">
 		<span class="rule thin"></span>
@@ -111,17 +95,17 @@
 	</div>
 	
 	<div class="section column">
-		<img src="images/site/holder.gif" width="240" height="110" />
+		<img src="images/site/howitworks-2.jpg" width="240" height="108" />
 		<h3 class="heading">web-based</h3>
 		<p>Chromada is built around a centralized web infrastructure. The benefits of this are unparalleled. You don’t need to worry about data backup. Security is no longer an issue; all data is 100% secure. Most importantly, a constant web connection is not required. All data is saved temporarily, and then automatically copied onto the web infrastructure the next moment your internet is available.</p>
 	</div>
 	<div class="section column">
-		<img src="images/site/holder.gif" width="240" height="110" />
+		<img src="images/site/howitworks-3.jpg" width="240" height="108" />
 		<h3 class="heading">administrate</h3>
 		<p>Chromada’s administration panel is your hub to control your Chromada products. From here you have the ability to add/remove additional administrators, edit employees and all associated data. You have the power to create roles and permissions in order to grant different levels of control to your team of administrators. It works just like your business; delegation from the top down.</p>
 	</div>
 	<div class="section column last">
-		<img src="images/site/holder.gif" width="240" height="110" />
+		<img src="images/site/howitworks-4.jpg" width="240" height="108" />
 		<h3 class="heading">cross-platform</h3>
 		<p>Our goal is to give you access to oversee your company whenever you want. Any device that has an internet connection makes this possible. Even your phone can become your destination for company management (coming soon). Our products and the administration interface are designed to save you time and money, letting you focus on more important business related tasks.</p>
 	</div>
@@ -133,7 +117,7 @@
 	<div class="rule thin"></div>
 </div>
 
-<div class="section contact-us wrapper">
+<div class="section wrapper contact-us">
 	<div class="wrapper headline">
 		<p class="headline">Thanks for visiting. We love what we do and want to continually improve. Please send any feedback or ideas that you have to make a good product better.</p>
 		<span class="rule thin"></span>
@@ -153,3 +137,63 @@
 		<p>Take a look at Chromada’s <a href="terms-of-use">Terms of Use</a> or our <a href="privacy-policy">Privacy Policy</a> if you have questions. Otherwise, use the form to the left to send us a message.</p>
 	</div>
 </div>
+
+<script type="text/javascript">
+	//<![CDATA[
+		function goToAnchor(anchor, link){
+			$(".section.gutter.nav").fadeOut();
+			$("html, body").delay(250).animate({scrollTop: $(anchor).offset().top}, 1000, 'easeInOutExpo', function(){
+				if (anchor != "#home"){
+					$("#home-link").show();
+					$(".section.gutter.nav").css("top", $(anchor).offset().top - $(anchor).height() + 12);
+				}else{
+					$("#home-link").hide();
+					$(".section.gutter.nav").css("top", 12);
+				};
+				
+				$(".section.gutter.nav").fadeIn();
+			});
+		}
+	//]]>
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+		$(".section.gutter.nav li a").click(function(){
+			$(".section.gutter.nav li").each(function (){
+				$(this).removeClass("active");
+			}); $(this).addClass("active");
+		
+			anchor = $(this).attr("href");
+		
+			$(".section.gutter.nav").fadeOut();
+			$("html, body").delay(250).animate(
+					{scrollTop: $(anchor).offset().top}
+					,1000
+					,'easeInOutExpo'
+					,function(){
+						$(".section.gutter.nav").css("top", $(anchor).offset().top);
+						$(".section.gutter.nav").fadeIn();
+					});
+					
+			return false;
+	    });
+	
+		$(window).scroll(function (){
+			if(Math.abs($("html, body").offset().top) >= $("#products").offset().top && Math.abs($("html, body").offset().top) <= $("#how-it-works").offset().top){
+				//$(".section.gutter.nav").fadeOut()
+				$(".section.gutter.nav").css("top", $("#products").offset().top);
+			}else if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top && Math.abs($("html, body").offset().top) <= $("#contact-us").offset().top){
+				//$(".section.gutter.nav").fadeOut()
+				$(".section.gutter.nav").css("top", $("#how-it-works").offset().top);
+			}else if(Math.abs($("html, body").offset().top) >= $("#contact-us").offset().top){
+				//$(".section.gutter.nav").fadeOut()
+				$(".section.gutter.nav").css("top", $("#contact-us").offset().top);
+			}else{
+				//$(".section.gutter.nav").fadeOut()
+				$(".section.gutter.nav").css("top", $("#home").offset().top);
+			}
+		});
+	
+	//]]>
+</script>

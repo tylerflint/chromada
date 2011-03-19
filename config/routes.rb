@@ -3,11 +3,11 @@ Chromada::Application.routes.draw do
   # sinatra app for quick deploys via post-receive-hooks
   match "/deploy" => GitDeployApp
   
-  root :to => "static#index", :protocol => 'http'
+  root :to => "static#index"
   
-  scope "", :protocol => 'http' do
-    match "privacy-policy" => "static#privacy"
-    match "terms-of-use" => "static#terms"
+  scope "" do
+    match "privacy-policy"    => "static#privacy"
+    match "terms-of-use"      => "static#terms"
   end
   
   # devise_for :users,
