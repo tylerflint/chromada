@@ -10,7 +10,7 @@ body 														{background:#FFFFFF url('../images/bg-texture.gif') repeat 0p
                                                     		
 /* LISTS */                                         		
 ul, li														{list-style-image:none; list-style-type:none; list-style-position:outside;}
-ul li 														{list-style-type:disc;}
+ul.disc li													{list-style-type:disc;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
