@@ -9,11 +9,12 @@ html 														{}
 body 														{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; color:#454851; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif; font-size:12px;}
                                                     		
 /* LISTS */                                         		
-ul, li														{list-style-image:none; list-style-position:outside;}
+ul, li														{list-style-image:none; list-style-type:none; list-style-position:outside;}
+ul li 														{list-style-type:disc;}
                                     		        		
 /* LINKS */                           		        		
 a															{text-decoration:none; color:#616161;}
-a:hover														{text-decoration:none; color:#00D3D3;}
+a:hover														{text-decoration:none; color:#22b3b8;}
                                     		        		
 /* HEADERS */                                       		
 h1, h2, h3, h4, h5, h6 										{text-transform:uppercase;}
@@ -38,7 +39,7 @@ textarea 													{padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2'
 /***** LAYOUT *****/
 .page.wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
 .page														{margin:0 auto; width:945px; padding:10px 0px; overflow:hidden;}
-.page .body													{position:relative; width:100%; margin:20px 0px 32px 0px;}
+.page .body													{position:relative; width:100%;}
 
 .nav.panel 													{float:right; list-style-type:none;}
 .nav.panel .link 											{float:left; margin:25px 0px; margin-right:25px; color:#ADB1BD; text-transform:uppercase; font-weight:bold;}
@@ -67,5 +68,16 @@ textarea 													{padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2'
 
 .section.wrapper.products .list 							{padding:0px 0px 0px 15px;}
 
-.section.title 												{clear:both;}
+.section.title 												{clear:both; width:100%; padding:25px 0px; border-bottom:1px solid #454851;}
 .section.title .heading										{margin:15px 0px;}
+
+/***** LEGAL *****/
+.section.legal 												{width:500px; margin:125px auto;}
+.section.legal a		 									{color:#22b3b8;}
+.section.legal .list 										{padding:15px;}
+.section.legal .section 									{line-height:22px;}
+.section.legal .section h2									{margin:0px 0px 12px 0px;}
+.section.legal .section h3 									{font-weight:normal;}
+.section.legal .section h6 									{display:inline;}
+.section.legal .section p 									{margin:0px 0px 21px 0px;}
+.section.legal .section address 							{margin:0pc 0pc 21px 0px;}

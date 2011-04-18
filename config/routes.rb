@@ -5,10 +5,8 @@ Chromada::Application.routes.draw do
   
   root :to => "static#index"
   
-  scope "" do
-    match "privacy-policy"    => "static#privacy"
-    match "terms-of-use"      => "static#terms"
-  end
+  get "privacy-policy" => "static#privacy_policy"
+  get "terms-of-use" => "static#terms_of_use"
   
   # devise_for :users,
   #     # :path => "/",

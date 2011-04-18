@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-  helper :all
   protect_from_forgery
+  
+  helper :all
+  
   layout 'onecolumn'
 end

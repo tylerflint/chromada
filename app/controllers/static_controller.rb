@@ -5,43 +5,14 @@ class StaticController < ApplicationController
     @title="Chromada - Home"
   end
   
-  def contact
-    @active = 'contact'
-    @title="Chromada - Contact"
-  end
-  
-  def downloads
-    @active = 'downloads'
-    @title="Chromada - Downloads"
-  end
-  
-  def pricing
-    @active = 'pricing'
-    @title="Chromada - pricing"
-  end
-  
-  def how
-    @active = 'how'
-    @title="Chromada - how it works"
-  end
-  
-  def privacy
+  def privacy_policy
     @active = 'privacy'
     @title="Chromada - Privacy Policy"
   end
   
-  def products
-    @active = 'products'
-    @title="Chromada - Products"
-  end
-  
-  def feedback
-    @active = 'send-feedback'
-    @title="Chromada - Send Feedback"
-  end
-  
-  def terms
+  def terms_of_use
     @active = 'terms'
     @title="Chromada - Terms of Use"
   end
+  
 end
