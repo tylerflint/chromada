@@ -59,7 +59,7 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 /************************************************** PAGES **************************************************/
 
 /* INDEX */
-.section.gutter.nav 										{position:absolute; top:12px; left:0px; width:92px; list-style-type:none; font-family:'Tahoma', Arial, sans-serif;}
+.section.gutter.nav 										{position:absolute; top:12px; left:0px; width:105px; list-style-type:none; font-family:'Tahoma', Arial, sans-serif;}
 .section.gutter.nav a										{color:#ADB1BD; text-transform:uppercase;}
 .section.gutter.nav .link 									{padding:10px 0px; border-bottom:1px solid #ADB1BD;}
 .section.gutter.nav .link.last 								{border:none;}
