@@ -6,33 +6,38 @@ h1, h2, h3, h4, h5, h6										{margin:0; padding:0; outline:none; border:none;
                                                     		
 /* MAIN */      
 html 														{}                      		
-body 														{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; color:#454851; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif; font-size:12px;}
+body 														{background:#FFFFFF url('../images/bg-texture.gif') repeat 0px 0px; color:#454851; font-family:'Arial', Arial, sans-serif; font-size:12px;}
                                                     		
 /* LISTS */                                         		
-ul, li														{list-style-image:none; list-style-type:none; list-style-position:outside;}
+ul, li														{list-style-type:none; list-style-position:outside;}
 ul.disc li													{list-style-type:disc;}
+ul.lalpha li 												{list-style-type:lower-alpha;}
+ul.decimal li 												{list-style-type:decimal;}
                                     		        		
 /* LINKS */                           		        		
-a															{text-decoration:none; color:#616161;}
-a:hover														{text-decoration:none; color:#22b3b8;}
+a															{text-decoration:none; color:#22B3B8;}
+a:hover														{text-decoration:none; color:#22B3B8;}
                                     		        		
 /* HEADERS */                                       		
-h1, h2, h3, h4, h5, h6 										{text-transform:uppercase;}
+h1, h2, h3, h4, h5, h6 										{text-transform:uppercase; font-family:'Tahoma', Arial, sans-serif; letter-spacing:0.75px;}
 h1															{}                     		
 h2															{font-size:12px;}
 h3															{font-size:12px;}
 h4, h5, h6													{font-size:10px;}
-                                                    		
+
+/* TEXT */
+p                                                    		{font-family:'Arial', Arial, sans-serif; letter-spacing:0.5px;}
+
 /* FORM ELEMENTS */                                 		
-input														{padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
-textarea 													{padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2', 'Helvetica', Arial, sans-serif;}
+input														{padding:5px; font-family:'Arial', Arial, sans-serif;}
+textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resize:none;}
 
 .bold 														{font-weight:bold;}
 .clear 														{clear:both;}
 
 /************************************************** MAIN ELEMENT STYLES **************************************************/
 
-.rule 														{display:block;}
+.rule 														{clear:both; display:block;}
 .rule.thin 													{width:100%; height:1px; background:#454851;}
 .rule.thick 												{width:100%; height:5px; background:#454851;}
                                                     	
@@ -60,21 +65,26 @@ textarea 													{padding:5px; font-family:'ff-enzo-web-1', 'ff-enzo-web-2'
 .section.gutter.nav .link.last 								{border:none;}
 
 .section.wrapper											{float:right; width:770px; padding:25px 0px;}
+.section.title 												{clear:both; width:100%; padding:25px 0px;}
 .section.wrapper .headline.wrapper							{margin:25px 0px;}
-.section.wrapper .headline.wrapper .headline				{margin:15px 0px; font-size:18px;}
+.section.wrapper .headline.wrapper .headline				{margin:15px 0px; color:#797A7D; font-size:24px; font-family:'calluna-1', 'calluna-2', 'Times New Roman', Times, sans-serif; line-height:32px;}
 .section.wrapper .section.column 							{float:left; width:240px; margin:0px 25px 0px 0px; line-height:21px;}
 .section.wrapper .section.column.last						{margin:0px;}
 .section.wrapper .section.column .heading 					{margin:0px 0px 15px 0px;}
 
-.section.wrapper.products .list 							{padding:0px 0px 0px 15px;}
+/* products */
+.section.wrapper.products ul								{padding:0px 0px 0px 15px;}
 
-.section.title 												{clear:both; width:100%; padding:25px 0px; border-bottom:1px solid #454851;}
-.section.title .heading										{margin:15px 0px;}
+/* contact */
+.section.wrapper.contact label								{width:95%;}
+.section.wrapper.contact input 								{width:95%; background:#E2E3E9; border:none;}
+.section.wrapper.contact textarea 							{width:95%; background:#E2E3E9; border:none;}
+.section.wrapper.contact input.button 						{width:auto; color:#22B3B8; background:none;}
 
 /***** LEGAL *****/
 .section.legal 												{width:500px; margin:125px auto;}
 .section.legal a		 									{color:#22b3b8;}
-.section.legal .list 										{padding:15px;}
+.section.legal ul	 										{padding:15px;}
 .section.legal .section 									{line-height:22px;}
 .section.legal .section h2									{margin:0px 0px 12px 0px;}
 .section.legal .section h3 									{font-weight:normal;}
