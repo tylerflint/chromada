@@ -42,7 +42,7 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .rule.thick 												{width:100%; height:5px; background:#454851;}
                                                     	
 /***** LAYOUT *****/
-.page.wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
+.page.wrapper 			 									{position:relative; margin:0 auto; width:1000px; min-height:100%; background:#FFFFFF; overflow:hidden;}
 .page														{margin:0 auto; width:900px; padding:10px 0px; overflow:hidden;}
 .page .body													{position:relative; width:100%;}
 
@@ -55,6 +55,7 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .footer 													{position:relative; width:940px; overflow:hidden;}
 .footer .rule												{width:100%; height:1px; background:#454851;}
 .footer .section.foot 										{clear:both; height:171px; color:#ADB1BD; background:#454851;}
+.footer .copyright 											{position:absolute; bottom:0px; left:0px;}
 
 /************************************************** PAGES **************************************************/
 
