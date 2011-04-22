@@ -38,8 +38,8 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 /************************************************** MAIN ELEMENT STYLES **************************************************/
 
 .rule 														{clear:both; display:block;}
-.rule.thin 													{width:100%; height:1px; background:#454851;}
-.rule.thick 												{width:100%; height:5px; background:#DADDE5;}
+.rule.thin 													{width:100%; height:1px; background:#DADDE5;}
+.rule.thick 												{width:100%; height:5px; background:#454851;}
                                                     	
 /***** LAYOUT *****/
 .page.wrapper 			 									{position:relative; margin:0 auto; width:980px; min-height:100%; background:#FFFFFF; overflow:hidden;}
