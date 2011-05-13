@@ -15,4 +15,8 @@ class StaticController < ApplicationController
     @title="Chromada - Terms of Use"
   end
   
+  def contact
+    puts params[:contact]
+  end
+  
 end

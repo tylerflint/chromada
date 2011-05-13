@@ -4,4 +4,8 @@ class RegistrationsController < Devise::RegistrationsController
     admin_root_url
   end
   
+  def new
+    # render page
+  end
+  
 end
