@@ -91,7 +91,7 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .section.wrapper.products .controls .next:hover				{background-position:-148px 0px;}
 .section.wrapper.products .controls #count					{float:left; letter-spacing:4px; margin:18px 0px 0px 28px; color:#D4D6DE; font-family:'Tahoma', Arial, sans-serif; font-weight:bold;}
 .section.wrapper.products h1 								{position:relative;}
-.section.wrapper.products .trial							{position:absolute; top:2px; right:58px; width:182px; height:39px; background-position:0px -77px;}
+.section.wrapper.products .trial							{position:absolute; top:2px; right:58px; width:182px; height:39px; background-position:0px -37px;}
 .section.wrapper.products .trial:hover						{background-position:0px -77px;}
 .section.wrapper.products h2 								{margin:14px 0px 39px 0px;}
 .section.wrapper.products ul								{padding:0px 0px 0px 12px; line-height:22px; list-style-type:inside;}

@@ -35,16 +35,64 @@
 </div>
 <div class="section wrapper products">
 	
-	<!--
-	<img src="images/site/products-1.jpg" width="770" height="443" class="banner" />
-	<img src="images/site/products-2.jpg" width="770" height="443" class="banner" />
-	-->
-	<img src="images/site/products-3.jpg" width="770" height="443" class="banner" />
+	<img src="images/site/products-1.jpg" width="770" height="443" class="banner" style="display:none;"/>
+	<img src="images/site/products-2.jpg" width="770" height="443" class="banner" style="display:none;"/>
+	<img src="images/site/products-3.jpg" width="770" height="443" class="banner" style="display:none;"/>
 	<div class="controls">
 		<span class="sprite previous"></span>
 		<span class="sprite next"></span>
 		<p id="count">#/#</p>
 	</div>
+	
+	<script>
+		var banners = $('.section.wrapper.products .banner')
+				,cur_banner = 0
+		
+		banners.each(function(){
+			$(this).hide()
+		})
+		
+		banners.eq(0).fadeIn()
+		$('#count').html((cur_banner + 1) + '/' + banners.length)
+
+		rotate = setInterval(function() {
+			banners.eq(cur_banner).fadeOut(250, function(){
+				if(cur_banner >= (banners.length - 1)){
+					cur_banner = 0
+				}else{
+					cur_banner += 1
+				}
+				$('#count').html((cur_banner + 1) + '/' + banners.length)
+				banners.eq(cur_banner).fadeIn(250)
+			})
+		}, 7500)
+		
+		$('.previous').click(function(){
+			clearInterval(rotate)
+			banners.eq(cur_banner).fadeOut(250, function(){
+				if(cur_banner >= (banners.length - 1)){
+					cur_banner = 0
+				}else{
+					cur_banner += 1
+				}
+				$('#count').html((cur_banner + 1) + '/' + banners.length)
+				banners.eq(cur_banner).fadeIn(250)
+			})
+		})
+		
+		$('.next').click(function(){
+			clearInterval(rotate)
+			banners.eq(cur_banner).fadeOut(250, function(){
+				if(cur_banner <= 0){
+					cur_banner -= 1
+				}else{
+					cur_banner = banners.length
+				}
+				$('#count').html((cur_banner + 1) + '/' + banners.length)
+				banners.eq(cur_banner).fadeIn(250)
+			})
+		})
+	</script>
 	
 	<h1>Ticker Punch Clock <a href="/" class="sprite trial"></a></h1>
 	<h2>Ticker is a simple web-based punch clock with a very powerful administrator tool set. Manage employees from anywhere, anytime.</h2>
