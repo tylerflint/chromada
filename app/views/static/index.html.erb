@@ -1,5 +1,5 @@
 <ul class="section gutter nav">
-	<li class="active"><a href="#home">home</a></li>
+	<li><a href="#home" class="active">home</a></li>
 	<li><a href="#products">our products</a></li>
 	<li><a href="#how-it-works">how it works</a></li>
 	<li class="last"><a href="#contact-us">contact us</a></li>
@@ -130,16 +130,40 @@
 	//<![CDATA[
 		//***** MAIN NAV SCROLL *****//
 		var section_gutter_nav = $(".section.gutter.nav")
+				,section_gutter_nav_link = $(".section.gutter.nav li a")
 				,padding = 25
+				,anchor = ''
 				
-		section_gutter_nav.find("li a").click(function(){
-			section_gutter_nav.find("li").each(function (){
-				$(this).removeClass("active")
-			})
-			$(this).addClass("active")
+		section_gutter_nav_link.click(function(){
+			scrollWindowToSection($(this))
+			return false
+		})
 		
-			anchor = $(this).attr("href")
+		$(".section .section.column a").click(function(){
+			scrollWindowToSection($(this))
+			return false
+		})
 		
+		$(window).scroll(function (){
+			setWindowSection("#home", 0)
+			if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#products").offset().top){
+				setWindowSection("#products", 1)
+				if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#how-it-works").offset().top){
+					setWindowSection("#how-it-works", 2)
+					if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#contact-us").offset().top){
+						setWindowSection("#contact-us", 3)
+					}
+				}
+			}
+		})
+		
+		function setWindowSection(anchor, link_index){
+			section_gutter_nav.css("top", ($(anchor).offset().top + padding))
+			setActiveSectionLink($(".section.gutter.nav li a").eq(link_index))
+		}
+		
+		function scrollWindowToSection(_anchor){
+			anchor = _anchor.attr("href")
 			section_gutter_nav.fadeOut()
 			$("html, body").delay(250).animate(
 				{scrollTop: $(anchor).offset().top}
@@ -147,41 +171,18 @@
 				,'easeInOutExpo'
 				,function(){
 					section_gutter_nav.css("top", ($(anchor).offset().top + padding))
+					setActiveSectionLink(_anchor)
 					section_gutter_nav.fadeIn()
 				}
 			)
-			return false
-		})
+		}
 		
-		$(".section .section.column a").click(function(){
-			
-			anchor = $(this).attr("href")
-		
-			section_gutter_nav.fadeOut();
-			$("html, body").delay(250).animate(
-				{scrollTop: $(anchor).offset().top}
-				,1000
-				,'easeInOutExpo'
-				,function(){
-					section_gutter_nav.css("top", ($(anchor).offset().top + padding))
-					section_gutter_nav.fadeIn()
-				}
-			)
-			return false
-		})
-		
-		$(window).scroll(function (){
-			section_gutter_nav.css("top", ($("#home").offset().top + padding))
-			if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#products").offset().top){
-				section_gutter_nav.css("top", ($("#products").offset().top + padding))
-				if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#how-it-works").offset().top){
-					section_gutter_nav.css("top", ($("#how-it-works").offset().top + padding))
-					if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#contact-us").offset().top){
-						section_gutter_nav.css("top", ($("#contact-us").offset().top + padding))
-					}
-				}
-			}
-		})
+		function setActiveSectionLink(link){
+			section_gutter_nav_link.each(function(){
+				$(this).removeClass("active")
+			})
+			$(link).addClass("active")
+		}
 		//***** END MAIN NAV SCROLL *****//
 		
 		//***** PRODUCT BANNER *****//
