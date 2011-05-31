@@ -11,19 +11,19 @@
 	<h2 class="headline">Welcome to Chromada. We design and build web based software to keep your business organized, efficient, and profitable.</h2>
 
 	<div class="section column">
-		<a href="#products">
+		<a href="#products" class="anchor">
 			<img src="images/web/home-2.jpg" width="240" height="108" />
 			<h4>see our products</h4>
 		</a>
 	</div>
 	<div class="section column">
-		<a href="#how-it-works">
+		<a href="#how-it-works" class="anchor">
 			<img src="images/web/home-3.jpg" width="240" height="108" />
 			<h4>learn how it works</h4>
 		</a>
 	</div>
 	<div class="section column last">
-		<a href="#contact-us">
+		<a href="#contact-us" class="anchor">
 			<img src="images/web/home-4.jpg" width="240" height="108" />
 			<h4>contact us</h4>
 		</a>
@@ -170,7 +170,7 @@
 			return false
 		})
 		
-		$(".section .section.column a").click(function(){
+		$(".section .section.column a.anchor").click(function(){
 			scrollWindowToSection($(this))
 			return false
 		})
