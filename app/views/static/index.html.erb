@@ -146,7 +146,7 @@
 				,1000
 				,'easeInOutExpo'
 				,function(){
-					section_gutter_nav.css("top", ($(anchor).offset().top))
+					section_gutter_nav.css("top", ($(anchor).offset().top + padding))
 					section_gutter_nav.fadeIn()
 				}
 			)
@@ -171,18 +171,15 @@
 		})
 		
 		$(window).scroll(function (){
-			if(Math.abs($("html, body").offset().top) >= $("#products").offset().top){
-				if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top){
-					if(Math.abs($("html, body").offset().top) >= $("#contact-us").offset().top){
-						if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top){
-							section_gutter_nav.css("top", ($("#contact-us").offset().top + padding))
-						}else{
-							section_gutter_nav.css("top", ($("#home").offset().top + padding))
-						}
-					}
-					section_gutter_nav.css("top", ($("#how-it-works").offset().top + padding))
-				}
+			section_gutter_nav.css("top", ($("#home").offset().top + padding))
+			if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#products").offset().top){
 				section_gutter_nav.css("top", ($("#products").offset().top + padding))
+				if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#how-it-works").offset().top){
+					section_gutter_nav.css("top", ($("#how-it-works").offset().top + padding))
+					if((Math.abs($("html, body").offset().top) + $(window).height()) >= $("#contact-us").offset().top){
+						section_gutter_nav.css("top", ($("#contact-us").offset().top + padding))
+					}
+				}
 			}
 		})
 		//***** END MAIN NAV SCROLL *****//
