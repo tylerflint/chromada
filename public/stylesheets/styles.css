@@ -84,9 +84,11 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .section.wrapper .section.column .heading 					{margin:0px 0px 14px 0px;}
 
 /* products */
+.section.wrapper.products #banner-wrapper 					{position:relative; width:770px; height:443px;}
+.section.wrapper.products #banner-wrapper .banner 			{position:absolute; top:0px; left:0px;}
 .section.wrapper.products .controls							{width:100%; height:60px; margin:-3px 0px 0px 0px; background:#5A636B;}
-.section.wrapper.products .controls .previous 				{float:left; width:33px; height:35px; margin:12px 0px 0px 15px; background-position:-50px 0px;}
-.section.wrapper.products .controls .next 					{float:left; width:33px; height:35px; margin:12px 0px 0px 9px; background-position:-82px 0px;}
+.section.wrapper.products .controls .previous 				{float:left; width:33px; height:35px; margin:12px 0px 0px 15px; background-position:-50px 0px; cursor:pointer;}
+.section.wrapper.products .controls .next 					{float:left; width:33px; height:35px; margin:12px 0px 0px 9px; background-position:-82px 0px; cursor:pointer;}
 .section.wrapper.products .controls .previous:hover			{background-position:-116px 0px;}
 .section.wrapper.products .controls .next:hover				{background-position:-148px 0px;}
 .section.wrapper.products .controls #count					{float:left; letter-spacing:4px; margin:18px 0px 0px 28px; color:#D4D6DE; font-family:'Tahoma', Arial, sans-serif; font-weight:bold;}

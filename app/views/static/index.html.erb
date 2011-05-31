@@ -34,65 +34,17 @@
 	<h3 class="heading">our products</h3>
 </div>
 <div class="section wrapper products">
-	
-	<img src="images/site/products-1.jpg" width="770" height="443" class="banner" style="display:none;"/>
-	<img src="images/site/products-2.jpg" width="770" height="443" class="banner" style="display:none;"/>
-	<img src="images/site/products-3.jpg" width="770" height="443" class="banner" style="display:none;"/>
+
+	<div id="banner-wrapper" class="wrapper">
+		<img src="images/site/products-1.jpg" width="770" height="443" class="banner"/>
+		<img src="images/site/products-2.jpg" width="770" height="443" class="banner"/>
+		<img src="images/site/products-3.jpg" width="770" height="443" class="banner"/>
+	</div>
 	<div class="controls">
 		<span class="sprite previous"></span>
 		<span class="sprite next"></span>
 		<p id="count">#/#</p>
 	</div>
-	
-	<script>
-		var banners = $('.section.wrapper.products .banner')
-				,cur_banner = 0
-		
-		banners.each(function(){
-			$(this).hide()
-		})
-		
-		banners.eq(0).fadeIn()
-		$('#count').html((cur_banner + 1) + '/' + banners.length)
-
-		rotate = setInterval(function() {
-			banners.eq(cur_banner).fadeOut(250, function(){
-				if(cur_banner >= (banners.length - 1)){
-					cur_banner = 0
-				}else{
-					cur_banner += 1
-				}
-				$('#count').html((cur_banner + 1) + '/' + banners.length)
-				banners.eq(cur_banner).fadeIn(250)
-			})
-		}, 7500)
-		
-		$('.previous').click(function(){
-			clearInterval(rotate)
-			banners.eq(cur_banner).fadeOut(250, function(){
-				if(cur_banner >= (banners.length - 1)){
-					cur_banner = 0
-				}else{
-					cur_banner += 1
-				}
-				$('#count').html((cur_banner + 1) + '/' + banners.length)
-				banners.eq(cur_banner).fadeIn(250)
-			})
-		})
-		
-		$('.next').click(function(){
-			clearInterval(rotate)
-			banners.eq(cur_banner).fadeOut(250, function(){
-				if(cur_banner <= 0){
-					cur_banner -= 1
-				}else{
-					cur_banner = banners.length
-				}
-				$('#count').html((cur_banner + 1) + '/' + banners.length)
-				banners.eq(cur_banner).fadeIn(250)
-			})
-		})
-	</script>
 	
 	<h1>Ticker Punch Clock <a href="/" class="sprite trial"></a></h1>
 	<h2>Ticker is a simple web-based punch clock with a very powerful administrator tool set. Manage employees from anywhere, anytime.</h2>
@@ -176,58 +128,118 @@
 
 <script type="text/javascript">
 	//<![CDATA[
-		$(".section.gutter.nav li a").click(function(){
-			$(".section.gutter.nav li").each(function (){
-				$(this).removeClass("active");
-			}); $(this).addClass("active");
+		//***** MAIN NAV SCROLL *****//
+		var section_gutter_nav = $(".section.gutter.nav")
+				,padding = 25
+				
+		section_gutter_nav.find("li a").click(function(){
+			section_gutter_nav.find("li").each(function (){
+				$(this).removeClass("active")
+			})
+			$(this).addClass("active")
 		
-			anchor = $(this).attr("href");
+			anchor = $(this).attr("href")
 		
-			$(".section.gutter.nav").fadeOut();
+			section_gutter_nav.fadeOut()
 			$("html, body").delay(250).animate(
-					{scrollTop: $(anchor).offset().top}
-					,1000
-					,'easeInOutExpo'
-					,function(){
-						$(".section.gutter.nav").css("top", $(anchor).offset().top);
-						$(".section.gutter.nav").fadeIn();
-					});
-					
-			return false;
-	    });
-	
+				{scrollTop: $(anchor).offset().top}
+				,1000
+				,'easeInOutExpo'
+				,function(){
+					section_gutter_nav.css("top", ($(anchor).offset().top))
+					section_gutter_nav.fadeIn()
+				}
+			)
+			return false
+		})
+		
 		$(".section .section.column a").click(function(){
 			
-			anchor = $(this).attr("href");
+			anchor = $(this).attr("href")
 		
-			$(".section.gutter.nav").fadeOut();
+			section_gutter_nav.fadeOut();
 			$("html, body").delay(250).animate(
-					{scrollTop: $(anchor).offset().top}
-					,1000
-					,'easeInOutExpo'
-					,function(){
-						$(".section.gutter.nav").css("top", $(anchor).offset().top);
-						$(".section.gutter.nav").fadeIn();
-					});
-					
-			return false;
-	    });
-	
-		// $(window).scroll(function (){
-		// 			if(Math.abs($("html, body").offset().top) >= $("#products").offset().top && Math.abs($("html, body").offset().top) <= $("#how-it-works").offset().top){
-		// 				//$(".section.gutter.nav").fadeOut()
-		// 				$(".section.gutter.nav").css("top", $("#products").offset().top);
-		// 			}else if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top && Math.abs($("html, body").offset().top) <= $("#contact-us").offset().top){
-		// 				//$(".section.gutter.nav").fadeOut()
-		// 				$(".section.gutter.nav").css("top", $("#how-it-works").offset().top);
-		// 			}else if(Math.abs($("html, body").offset().top) >= $("#contact-us").offset().top){
-		// 				//$(".section.gutter.nav").fadeOut()
-		// 				$(".section.gutter.nav").css("top", $("#contact-us").offset().top);
-		// 			}else{
-		// 				//$(".section.gutter.nav").fadeOut()
-		// 				$(".section.gutter.nav").css("top", $("#home").offset().top);
-		// 			}
-		// 		});
+				{scrollTop: $(anchor).offset().top}
+				,1000
+				,'easeInOutExpo'
+				,function(){
+					section_gutter_nav.css("top", ($(anchor).offset().top + padding))
+					section_gutter_nav.fadeIn()
+				}
+			)
+			return false
+		})
+		
+		$(window).scroll(function (){
+			if(Math.abs($("html, body").offset().top) >= $("#products").offset().top){
+				if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top){
+					if(Math.abs($("html, body").offset().top) >= $("#contact-us").offset().top){
+						if(Math.abs($("html, body").offset().top) >= $("#how-it-works").offset().top){
+							section_gutter_nav.css("top", ($("#contact-us").offset().top + padding))
+						}else{
+							section_gutter_nav.css("top", ($("#home").offset().top + padding))
+						}
+					}
+					section_gutter_nav.css("top", ($("#how-it-works").offset().top + padding))
+				}
+				section_gutter_nav.css("top", ($("#products").offset().top + padding))
+			}
+		})
+		//***** END MAIN NAV SCROLL *****//
+		
+		//***** PRODUCT BANNER *****//
+		var banners = $('.section.wrapper.products .banner')
+				,cur_banner = 0
+
+		banners.each(function(){
+			$(this).hide()
+		})
+
+		banners.eq(0).fadeIn()
+		$('#count').html((cur_banner + 1) + '/' + banners.length)
+
+		rotate = setInterval(function() {
+			loadNextBanner('next')
+		}, 2500)
+
+		$('.previous').click(function(){
+			clearInterval(rotate)
+			loadNextBanner('previous')
+		})
+
+		$('.next').click(function(){
+			clearInterval(rotate)
+			loadNextBanner('next')
+		})
+
+		function loadNextBanner(direction){
+			banners.eq(cur_banner).fadeOut(0250)
+			switch(direction){
+				case 'previous':
+					if(cur_banner <= 0){
+						cur_banner = (banners.length - 1)
+					}else{
+						cur_banner -= 1
+					}
+					break
+				case 'next':
+					if(cur_banner >= (banners.length - 1)){
+						cur_banner = 0
+					}else{
+						cur_banner += 1
+					}
+					break
+				default:
+					alert('Oops! Make sure you provide the direction of rotation (previous/next)')
+			}
+			updateCount()
+		}
+
+		function updateCount(){
+			$('#count').html((cur_banner + 1) + '/' + banners.length)
+			banners.eq(cur_banner).fadeIn(250)
+		}
+		//***** END PRODUCT BANNER *****//
 	
 	//]]>
 </script>
