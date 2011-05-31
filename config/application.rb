@@ -1,15 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-# require 'rails/all'
-
-# Instead of requiring all of rails, lets just pick what we need:
-# since we are using mongodb and mongoid, let's disable active_record altogether
-# require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "active_resource/railtie"
-require "rails/test_unit/railtie"
-
+require 'rails/all'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -21,14 +12,14 @@ module Chromada
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Add additional load paths for your own custom dirs
-    config.autoload_paths += %W( #{Rails.root}/lib )
+    # Custom directories with classes and modules you want to be autoloadable.
+    # config.autoload_paths += %W(#{config.root}/extras)
 
     # Only load the plugins named here, in the order given (default is alphabetical).
-    # :all can be used as a placeholder for all plugins not explicitly named
+    # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
-    # Activate observers that should always be running
+    # Activate observers that should always be running.
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
@@ -39,22 +30,13 @@ module Chromada
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Configure generators values. Many other options are available, be sure to check the documentation.
-    config.generators do |g|
-      # g.orm :active_record
-      g.orm :mongoid
-      # g.template_engine :haml
-      g.stylesheets false
-      g.test_framework  :rspec, :fixture => true
-      # g.fixture_replacement :factory_girl
-      g.fixture_replacement :fabrication, :dir => "spec/fabricators"
-    end
+    # JavaScript files you want as :defaults (application.js is always included).
+    # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    
   end
 end

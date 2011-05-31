@@ -40,6 +40,13 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 /***** SPRITES *****/
 .sprite 													{background:url('/images/site/sitesprite.png');}
 
+/***** BUTTONS *****/
+.button 													{cursor:pointer;}
+
+/***** VALIDATION *****/
+.error 														{border:1px solid #FF0000 !important;}
+label.error 												{display:none !important;}
+
 /************************************************** MAIN ELEMENT STYLES **************************************************/
 
 .rule 														{clear:both; display:block;}
@@ -105,6 +112,13 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .section.wrapper.contact input 								{width:95%; height:20px; margin:0px 0px 10px 0px; background:#E2E3E9; border:none;}
 .section.wrapper.contact textarea 							{width:95%; height:80px; margin:0px 0px 5px 0px; background:#E2E3E9; border:none;}
 .section.wrapper.contact input.button 						{width:auto; margin:0px; padding:0px; color:#22B3B8; font-size:12px; font-weight:bold; background:none;}
+
+/* registration */
+.section.wrapper.registration h2 							{margin-top:0px; padding-top:0px; border-top:none;}
+.section.wrapper.registration label							{width:95%; margin:0px 0px 5px 0px;}
+.section.wrapper.registration input 						{width:95%; height:20px; margin:0px 0px 10px 0px; background:#E2E3E9; border:none;}
+.section.wrapper.registration textarea 						{width:95%; height:80px; margin:0px 0px 5px 0px; background:#E2E3E9; border:none;}
+.section.wrapper.registration input.button 					{width:auto; margin:0px; padding:0px; color:#22B3B8; font-size:12px; font-weight:bold; background:none;}
 
 /***** LEGAL *****/
 .section.legal 												{width:512px; margin:140px 130px;}

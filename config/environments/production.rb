@@ -1,5 +1,5 @@
 Chromada::Application.configure do
-  # Settings specified here will take precedence over those in config/environment.rb
+  # Settings specified here will take precedence over those in config/application.rb
 
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
@@ -39,7 +39,11 @@ Chromada::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  
+
+  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+  # the I18n.default_locale when a translation can not be found)
+  config.i18n.fallbacks = true
+
+  # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 end

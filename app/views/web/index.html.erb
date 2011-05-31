@@ -105,8 +105,8 @@
 	
 	<div class="section column">
 		<h4 class="heading">send us your thoughts</h4>
-		<form method="post" action="contact">
-			<label>Name (Optional)</label>
+		<form id='contact-us-form' method="post" action="/contact">
+			<label>Name / Email (Optional)</label>
 			<input type="text" name="contact[name]"/>
 			
 			<label>Message</label>
@@ -124,6 +124,38 @@
 		<p>Take a look at Chromada’s <a href="terms-of-use">Terms of Use</a> or our <a href="privacy-policy">Privacy Policy</a> if you have questions. Otherwise, use the form to the left to send us a message.</p>
 	</div>
 </div>
+
+
+
+<div id="register" class="section title">
+	<h3 class="heading">registration</h3>
+</div>
+<div class="section wrapper registration">
+	<h2>Thanks for registering with us. Just fill out the form below, you're only seconds from enjoying business productivity.</h2>
+	
+	<div class="section column">
+		<h4 class="heading">registration form</h4>
+		<form id="registration-form" method="post" action="/register">
+			<label>Email</label>
+			<input type="text" name="user[name]"/>
+			
+			<label>Password</label>
+			<input type="password" name="user[password]"/>
+			
+			<input type="submit" value="SUBMIT" class="button" />
+		</form>
+	</div>
+	<div class="section column">
+		<h4 class="heading">a little about us</h4>
+		<p>Chromada was created in response to all the out-dated, over-priced, and stagnant business management solutions that currently dominate the workplace. We believe a better way exists. We also think others will agree!</p>
+	</div>
+	<div class="section column last">
+		<h4 class="heading">boring legal stuff</h4>
+		<p>By registering you are agreeing to our <a href="terms-of-use">Terms of Use</a> and <a href="privacy-policy">Privacy Policy</a>.</p>
+	</div>
+</div>
+
+
 
 <script type="text/javascript">
 	//<![CDATA[
@@ -237,6 +269,51 @@
 			banners.eq(cur_banner).fadeIn(250)
 		}
 		//***** END PRODUCT BANNER *****//
+		
+		$('form#contact-us-form').validate({
+			rules: {
+			'contact[message]': {
+					required: true
+				}
+			}
+			,messages: {
+				'contact[message]': {
+					required: ''
+				}
+			}
+			,invalidHandler: function(element, errorClass, validClass){
+				$(element).addClass('error')
+			}
+			,unhighlight: function(element, errorClass, validClass){
+				$(element).removeClass('error');
+			}
+		})
+		
+		$('form#registration-form').validate({
+			rules: {
+			'user[name]': {
+					required: true
+				}
+			}
+			,'user[password]': {
+					required: true
+				}
+			}
+			,messages: {
+				'user[name]': {
+					required: ''
+				}
+				,'user[password]': {
+					required: ''
+				}
+			}
+			,invalidHandler: function(element, errorClass, validClass){
+				$(element).addClass('error')
+			}
+			,unhighlight: function(element, errorClass, validClass){
+				$(element).removeClass('error');
+			}
+		})
 	
 	//]]>
 </script>

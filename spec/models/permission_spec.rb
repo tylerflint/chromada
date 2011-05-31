@@ -1,5 +1,0 @@
-describe Permission do
-  
-  
-  
-end

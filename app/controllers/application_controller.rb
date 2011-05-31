@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  
   protect_from_forgery
   
   helper :all
@@ -13,4 +14,5 @@ class ApplicationController < ActionController::Base
       redirect_to '/mobile'
     end
   end
+  
 end
