@@ -14,6 +14,6 @@ Chromada::Application.routes.draw do
   get 'mobile'                                     => 'mobile#index'
   
   ### USERS
-  post 'register'                                  => 'users#register'
+  get 'register'                                   => 'users#new'
   
 end
