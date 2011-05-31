@@ -9,9 +9,8 @@
 		<meta name="revisit-after" content="1 month"/>
 		
 		<!-- LOAD CSS -->
-		<%= stylesheet_link_tag 'styles' %>
+		<%= stylesheet_link_tag 'mobile' %>
 		<%= stylesheet_link_tag 'messaging' %>
-		<%= stylesheet_link_tag 'olark' %>
 		
 		<!-- LOAD JAVASCRIPT -->
 		<%= javascript_include_tag 'jquery-1.5.min' %>
@@ -36,11 +35,11 @@
 		<!-- END TYPEKIT -->
 	</head>
 	
-	<body id="home" class="column one">
+	<body id="home" class="mobile">
 		<div class="wrapper page">
 			<div class="page">
 				<div class="header">
-					<%= render :partial => 'shared/header' %>
+					<%= render :partial => 'shared/mobile/header' %>
 				</div>
 				
 				<div class="section body">
@@ -48,26 +47,9 @@
 				</div>
 				
 				<div class="footer">
-					<%= render :partial => 'shared/footer' %>
+					<%= render :partial => 'shared/mobile/footer' %>
 				</div>
 			</div>			
 		</div>
-		
-		<script type='text/javascript'>
-			//<![CDATA[
-				/*
-				// jQuery: When document is loaded and ready to process:
-				$(document).ready(function() {
-				    //Footer Push: Pushes footer to the bottom of the page. Call the function and pass the ID of your main content element   
-				    footerPush(".body");
-				});
-				*/
-			//]]>
-		</script>
-		
-		<!-- BEGIN OLARK -->
-		<%= render :partial => 'shared/olark' %>
-		<!-- END OLARK -->
-		
 	</body>
 </html>

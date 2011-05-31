@@ -52,8 +52,8 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .header 													{height:70px; border-bottom:solid 5px #454851;}
                                                     	
 /***** LAYOUT *****/
-.page.wrapper 			 									{position:relative; margin:0 auto; width:1000px; min-height:100%; background:#FFFFFF; overflow:hidden;}
-.page														{margin:0 auto; width:900px; overflow:hidden;}
+.mobile .page.wrapper 			 							{position:relative; margin:0 auto; width:100%; min-height:100%; background:#FFFFFF; overflow:hidden;}
+.mobile .page												{margin:0 auto; width:86%; overflow:hidden;}
 .page .body													{position:relative; width:100%;}
 
 .nav.panel 													{float:right; padding:30px 0px 27px 0px; list-style-type:none;}
@@ -65,7 +65,7 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 /***** FOOTER *****/                                		
 .footer 													{clear:both; position:relative; width:100%; overflow:hidden;}
 .footer .rule												{width:100%; height:1px; background:#454851;}
-.footer .section.foot 										{clear:both; height:171px; color:#ADB1BD; background:#454851;}
+.mobile .footer .section.foot 								{clear:both; height:96px; color:#ADB1BD; background:#454851;}
 .footer .copyright 											{position:absolute; bottom:15px; left:20px; letter-spacing:1px; text-transform:uppercase; font-family:'Tahoma', Arial, sans-serif; font-size:11px; font-weight:bold;}
 
 /************************************************** PAGES **************************************************/
@@ -77,9 +77,11 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .section.gutter.nav li.last 								{border:none;}
 .section.gutter.nav li a.active 							{font-weight:bold;}
 
-.section.wrapper											{float:right; width:770px; padding:33px 0px 115px 0px;}
+.section.wrapper											{float:right; width:100%; padding:33px 0px 115px 0px;}
 .section.title 												{clear:both; width:100%; padding:25px 0px 26px 0px; border-top:5px solid #454851; border-bottom:1px solid #DADDE5;}
-.section.wrapper .section.column 							{float:left; width:240px; margin:0px 25px 0px 0px; line-height:21px;}
+.mobile .section.wrapper .section.column.first 				{width:240px; margin:0px 25px 25px 0px; line-height:21px;}
+.mobile .section.wrapper .section.column 					{width:240px; margin:25px 25px 25px 0px; line-height:21px;}
+.mobile .section.wrapper .section.column.last 				{width:240px; margin:25px 25px 0px 0px; line-height:21px;}
 .section.wrapper .section.column img						{margin:0px 0px 7px 0px;}
 .section.wrapper .section.column.last						{margin:0px;}
 .section.wrapper .section.column .heading 					{margin:0px 0px 14px 0px;}

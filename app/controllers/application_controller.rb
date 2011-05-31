@@ -3,5 +3,5 @@ class ApplicationController < ActionController::Base
   
   helper :all
   
-  layout 'onecolumn'
+  layout 'site'
 end
