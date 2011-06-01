@@ -38,7 +38,7 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .clear 														{clear:both;}
 
 /***** SPRITES *****/
-.sprite 													{background:url('/images/web/sitesprite.png');}
+.sprite 													{background:url('/images/web/web_sprite.png');}
 
 /***** BUTTONS *****/
 .button 													{cursor:pointer;}
