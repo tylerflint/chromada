@@ -2,6 +2,8 @@ class MobileController < ApplicationController
   
   layout 'mobile'
   
+  skip_before_filter :check_mobile
+  
   def index
     @title  = 'Chromada - Home'
   end
