@@ -49,7 +49,7 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 .logo 														{float:left; width:35px; height:35px; margin:17px 0px 0px 0px; background-position:-1px 0px;}
 
 /***** HEADER *****/
-.header 													{height:70px; border-bottom:solid 5px #454851;}
+.mobile .header 											{border-bottom:solid 5px #454851;}
                                                     	
 /***** LAYOUT *****/
 .mobile .page.wrapper 			 							{position:relative; margin:0 auto; width:100%; min-height:100%; background:#FFFFFF; overflow:hidden;}
