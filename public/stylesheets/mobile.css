@@ -79,9 +79,9 @@ textarea 													{padding:5px; font-family:'Arial', Arial, sans-serif; resi
 
 .section.wrapper											{float:right; width:100%; padding:33px 0px 115px 0px;}
 .section.title 												{clear:both; width:100%; padding:25px 0px 26px 0px; border-top:5px solid #454851; border-bottom:1px solid #DADDE5;}
-.mobile .section.wrapper .section.column.first 				{width:240px; margin:0px 25px 25px 0px; line-height:21px;}
-.mobile .section.wrapper .section.column 					{width:240px; margin:25px 25px 25px 0px; line-height:21px;}
-.mobile .section.wrapper .section.column.last 				{width:240px; margin:25px 25px 0px 0px; line-height:21px;}
+.mobile .section.wrapper .section.column.first 				{width:100%; margin:0px 25px 25px 0px; line-height:21px;}
+.mobile .section.wrapper .section.column 					{width:100%; margin:25px 25px 25px 0px; line-height:21px;}
+.mobile .section.wrapper .section.column.last 				{width:100%; margin:25px 25px 0px 0px; line-height:21px;}
 .section.wrapper .section.column img						{margin:0px 0px 7px 0px;}
 .section.wrapper .section.column.last						{margin:0px;}
 .section.wrapper .section.column .heading 					{margin:0px 0px 14px 0px;}
